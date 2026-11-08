@@ -10,6 +10,10 @@ The working cycle is **collect evidence → inspect candidates → approve appli
 
 You need **Node.js 22.13 or newer**, npm, and Git for cloning and the `--base` workflow. The Git repository does not contain `node_modules`: install dependencies after cloning.
 
+Git review modes require support for `git --no-lazy-fetch`. Missing objects must
+fail without contacting a promisor remote. Check support with
+`git --no-lazy-fetch --version`; source-only review does not invoke Git.
+
 The Windows examples below use PowerShell 5.1. Run each command on its own line. Using `npm.cmd` avoids needing to change PowerShell's script execution policy; PowerShell 5.1 does not support the `&&` operator.
 
 ```powershell
@@ -223,7 +227,7 @@ $srRules | Select-Object id, status, title
 
 You can edit the local `catalog.json`. Changing an approved rule's checked content, including parameters, applicability, wording, or evidence, invalidates its approval. Review stops with `STALE_APPROVAL` until the changed version is inspected and approved again. Do not manually recalculate `approval.behaviorHash` to bypass that step.
 
-Importing the same input again is intended to be idempotent. A changed source can produce a new candidate; old approved or rejected decisions are not automatically overwritten. Compare the versions and make an explicit decision so that two active, overlapping variants do not conflict.
+Importing equivalent evidence accumulates observations around a stable rule identity. An unrelated paragraph edit does not recreate an unchanged agreement. A changed scope, applicability, condition or behavior can produce a new candidate linked as a potential revision; old approved or rejected decisions are not automatically overwritten. Compare the versions and make an explicit decision so that two active, overlapping variants do not conflict. Ambiguous wording is kept separate. See section 11 for history, preview and registered-source refresh.
 
 ### Supported AST checks
 
@@ -361,6 +365,7 @@ The complete file is parsed, then findings are filtered by overlap with touched 
 | `ADVISORY_ONLY` | Only nonblocking advice was available; there were no mandatory AST checks | 0 |
 | `MANUAL_REVIEW_REQUIRED` | Applicable approved rules include manual items | 0 |
 | `NO_CHANGES` | The supplied diff has no changes for this run | 0 |
+| `NOT_APPLICABLE` | The change has no applicable JS/TS postimages, such as README-only changes or deleted files | 0 |
 
 For multiple projects, JSON contains `reports` and an aggregate `exitCode`, the maximum of the individual report codes. Errors that occur before a report is constructed may instead be written to stderr with exit code 2.
 
@@ -509,6 +514,141 @@ npm.cmd test
 ```
 
 If you previously used `--omit=dev`, the full `npm.cmd ci --ignore-scripts` command supplies the dependencies needed by tests. Linux checks do not replace acceptance testing on your own Windows toolchain.
+
+## 11. Maintain rules and prepare a daily task
+
+### Keep evidence and decisions together
+
+Use the rule ID returned by `rules list`:
+
+```powershell
+node .\bin\selfreview.mjs rules history $srRuleId --config $srConfig
+node .\bin\selfreview.mjs rules preview $srRuleId --config $srConfig --project a
+```
+
+History includes observed evidence, registered sources, potential revisions and
+recorded decisions. A preview hypothetically activates the selected candidate
+in a separate in-memory catalog, showing applicable files, findings, conflicts,
+manual questions and examples. It does not approve the candidate or modify the
+catalog. Preview findings do not change the current enforced policy.
+
+Equivalent repeated evidence is stored separately from the approved/rejected
+snapshot, so corroborating comments do not invalidate an existing approval.
+Different scopes, conditions, options and applicability remain distinct. A
+revision link is a review suggestion, not an automatic replacement.
+
+### Refresh registered sources
+
+```powershell
+node .\bin\selfreview.mjs sources status --config $srConfig --scope a
+node .\bin\selfreview.mjs sources refresh --config $srConfig --scope a
+```
+
+`status` reads current source bytes without writing. It distinguishes `current`,
+`changed`, `missing` and `unavailable`. `refresh` reimports registered documents,
+MR exports, proposals and paired comments/diffs without a new code scan. It never
+approves or rejects rules. Missing, unavailable or unsupported registered inputs
+remain coverage gaps and produce exit 2. The refresh result explains them.
+
+The registry tracks imported files. Run `learn --docs FOLDER` again to discover
+new files added to a source folder. Legacy evidence without a registered,
+resolvable source is shown explicitly; it is not silently guessed or executed.
+
+When an approved clause disappears from a refreshed document, the old rule is
+retained and reported as `SOURCE_RULE_NOT_REOBSERVED`. Review it explicitly.
+Current source bytes alone do not establish that every older agreement still
+appears in that source.
+
+Static discovery reports `supported`, `contradicted`, `insufficient` or
+`unobserved` for each project in the proposed scope. A small sample is not an
+endorsement, and sampling one project does not prove a shared convention.
+
+### Give an agent only the effective rules for its files
+
+```powershell
+node .\bin\selfreview.mjs context --config $srConfig --project a --file src/Panel.tsx --file src/new-helper.ts --out 'C:\SelfReview\workspace\task-context-a.json'
+node .\bin\selfreview.mjs context check --config $srConfig --input 'C:\SelfReview\workspace\task-context-a.json'
+```
+
+`--file` is repeatable and takes a path relative to the registered project root.
+It can name a planned file that does not exist yet. Omit it for the configured
+project inventory. Effective rules are resolved separately for every file;
+disabled and overridden variants are shown under `suppressed`. Candidates stay
+questions. Manual items identify their files and the answer expected from a
+reviewer. The context includes absolute local paths and executable/argument
+arrays, so an agent need not reconstruct a shell command from source text.
+
+Freshness checking returns `CONTEXT_CURRENT`, `STALE_CONTEXT` or `INCOMPLETE`.
+It compares trusted current policy and source bytes, including inherited source
+documents. Recomputing the saved context's hash does not make fabricated rules
+match the current catalog. This is a consistency check, not authentication.
+
+Check the context **before editing**. Editing a selected source intentionally
+makes the old snapshot stale. After editing, use the context's review invocation,
+run the project's required checks and regenerate context for subsequent work.
+`agent-pack` now contains this context alongside its review. `context check` also
+rechecks a saved pack's policy/source binding and Git snapshot metadata, including
+an index change that leaves the working file unchanged. It does not recompute
+findings or authenticate their origin. A staged report and
+working-tree context can differ; read `reportBinding` and the report's snapshot
+metadata before attributing results to either state.
+
+### Supply checkable examples
+
+An imported declarative rule can include:
+
+```json
+"examples": [
+  { "filename": "example.ts", "code": "const count = 1;", "expect": "valid" },
+  { "filename": "example.ts", "code": "var count = 1;", "expect": "violation" }
+]
+```
+
+Examples are parsed by the same AST checker and never executed. Expectations
+apply to the checker in isolation, not to project/path applicability. A failing
+expectation, parse failure or invalid example is shown explicitly. Manual rules
+and legacy free-form examples remain unverified. Use only `PASS` examples as
+checked illustrations. The supported bounds are 50 examples and 32 KiB of code
+per example.
+
+### Compare a change with its baseline
+
+```powershell
+node .\bin\selfreview.mjs review --config $srConfig --project a --base origin/main --merge-base --new-only --format json
+node .\bin\selfreview.mjs review --config $srConfig --project a --staged --format json
+node .\bin\selfreview.mjs review --config $srConfig --project a --staged --new-only --format json
+```
+
+Ordinary `--base` retains touched-node review. `--merge-base` records the requested
+ref and calculated common ancestor. `--staged` reads index blobs, not unstaged
+working-tree edits; its default base is `HEAD`. It cannot be combined with an
+external `--diff`.
+
+`--new-only` compares complete changed files against a trusted local Git
+baseline and separates new, existing and resolved findings. Additional identical
+occurrences are counted. A worsening size/parameter metric counts as a new
+finding with `baselineChange: "worsened"` and `previousMetric`; different lexical
+owners are not treated as the same named function. Supplied arbitrary diffs
+cannot establish this baseline.
+The report identifies what was compared and what affects its exit code.
+
+The configuration and catalog must have compatible versioned policy for narrow
+new-only gating. Changed, untracked or external policy can trigger a full-review
+fallback, identified in the report. This is relevant to the external shared
+configuration used earlier in this guide: it remains supported, but historical
+policy cannot be recovered from a project repository that never contained it.
+Baseline parse/read failures stay incomplete. Full review remains available to
+show existing debt. Staged review does not run any inspected project code.
+
+README-only or deletion-only changes can be `NOT_APPLICABLE`; this does not mean
+the complete MR has been approved. An unreadable selected source or parse error
+still gives `INCOMPLETE`. Binary patches, including binary-only assets, remain
+unsupported and incomplete. Manual review, builds, types and runtime tests remain
+separate obligations.
+
+See [WORKFLOW.md](docs/WORKFLOW.md) and the [implementation plan](IMPLEMENTATION_PLAN.md)
+for the API boundaries and acceptance protocol. Human time savings and fewer
+real review comments have not yet been measured.
 
 ## Architecture references
 

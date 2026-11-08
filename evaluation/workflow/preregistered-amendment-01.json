@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "registeredAt": "2026-11-08T10:21:11.134Z",
+  "originalRegistrationSha256": "5a89ac190677a5e17f5fc07fa15d7bc547bde490c708b8a424e2e8a30dc5943f",
+  "files": [
+    {
+      "path": "ADJUDICATION.md",
+      "sha256": "37ecc882dcec1a624ae34122504f3bee1bbaa51d58786b64282d9d98bbaf77a1"
+    },
+    {
+      "path": "amendments/001-sparse-sample.json",
+      "sha256": "4e7d483dcff366bccd5d4ac31a643eea5d6fc2291b8f44a38d437dfb74f2b2e9"
+    }
+  ],
+  "statement": "A single evaluator precondition correction, registered before any improved-implementation run. Original input, expectations, runner and historical-01 retained."
+}

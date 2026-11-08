@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "name": "SelfReview deterministic workflow acceptance pilot",
+  "historicalCommit": "67a42ad980a4b82f8b58c0c9c7e2bbaed19e4fe4",
+  "frozenApprovalDate": "2026-11-08T00:00:00.000Z",
+  "settings": {
+    "bestPractices": false,
+    "minSamples": 5,
+    "threshold": 0.9
+  },
+  "measurementsNotPerformed": [
+    "developerTimeSaved",
+    "reviewerCommentsPrevented",
+    "agentOutputQuality",
+    "inferenceCost",
+    "realTeamFalsePositiveRate",
+    "generalRecall",
+    "architectureCorrectness",
+    "teamAdoption"
+  ],
+  "fixtures": {
+    "scopedSources": {
+      "src/main.js": "var value = 1;\nconsole.log(value);\nconsole.warn(value);\nif (value == null) {}\nif (value == '1') {}\n",
+      "src/shadowed.js": "export function render(console) {\n  console.log('local logger');\n}\n",
+      "src/text.js": "// var phantom; console.log('not executable');\nexport const sample = \"var phantom; console.log('not executable');\";\n",
+      "test/helper.js": "console.log('test helper');\n"
+    },
+    "initialDocument": "# Agreements\n\n- No var.\n",
+    "editedDocument": "# Agreements\n\n- No var.\n\n## Notes\nThis guide is maintained by the team.\n",
+    "changedDocument": "# Agreements\n\n- Allow var in this legacy project.\n",
+    "manualDocument": "# Agreements\n\n- Use a separate validation layer only when payment capture is retried.\n- Use a separate validation layer only when an import is retried.\n",
+    "firstMr": {
+      "title": "Synthetic MR one",
+      "comments": [
+        {
+          "id": "comment-one",
+          "body": "No var.",
+          "path": "src/main.js",
+          "line": 1,
+          "side": "new"
+        }
+      ]
+    },
+    "secondMr": {
+      "title": "Synthetic MR two",
+      "comments": [
+        {
+          "id": "comment-two",
+          "body": "No var.",
+          "path": "src/main.js",
+          "line": 1,
+          "side": "new"
+        }
+      ]
+    },
+    "minimalSource": "var value = 1;\n",
+    "modernSample": "const value0 = 0;\nconst value1 = 1;\nconst value2 = 2;\nconst value3 = 3;\nconst value4 = 4;\nconst value5 = 5;\nconst value6 = 6;\nconst value7 = 7;\nconst value8 = 8;\nconst value9 = 9;\nconst value10 = 10;\nconst value11 = 11;\nconst value12 = 12;\nconst value13 = 13;\nconst value14 = 14;\nconst value15 = 15;\nconst value16 = 16;\nconst value17 = 17;\nconst value18 = 18;\nconst value19 = 19;\n",
+    "sparseLegacySample": "var legacy0 = 0;\nvar legacy1 = 1;\nvar legacy2 = 2;\nvar legacy3 = 3;\n",
+    "docsDiff": "diff --git a/README.md b/README.md\n--- a/README.md\n+++ b/README.md\n@@ -1 +1 @@\n-Old documentation.\n+Updated documentation.\n",
+    "invalidSource": "export function broken( {\n",
+    "invalidSourceDiff": "diff --git a/src/main.js b/src/main.js\n--- a/src/main.js\n+++ b/src/main.js\n@@ -1 +1 @@\n-export const value = 1;\n+export function broken( {\n",
+    "baselineOriginal": "console.log('legacy');\nexport const value = 1;\n",
+    "baselineMoved": "// Added context for this module.\n\nconsole.log('legacy');\nexport const value = 1;\n",
+    "baselineDuplicate": "console.log('legacy');\nconsole.log('legacy');\nexport const value = 1;\n",
+    "baselineResolved": "export const value = 1;\n",
+    "baselineInvalid": "function broken( {\nconsole.log('legacy');\n",
+    "baselinePolicySource": "console.warn('newly permitted');\nconsole.log('still blocked');\nexport const value = 1;\n"
+  },
+  "cases": [
+    {
+      "id": "scoped-syntax-and-exceptions",
+      "family": "syntax",
+      "driver": "scopedSyntax",
+      "comparator": "eslint-equivalent",
+      "expect": {
+        "findings": [
+          [
+            "a",
+            "src/main.js",
+            "no-console",
+            2
+          ],
+          [
+            "b",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "c",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "d",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "e",
+            "src/main.js",
+            "strict-equality",
+            5
+          ]
+        ],
+        "eslintFindingsMatch": true,
+        "negativeFixtureFindings": 0
+      }
+    },
+    {
+      "id": "candidate-never-autoapproved",
+      "family": "lifecycle",
+      "driver": "candidateOnly",
+      "expect": {
+        "logicalNoVarRules": 1,
+        "approvedRules": 0,
+        "enforcedFindings": 0,
+        "approvedAutomatically": 0
+      }
+    },
+    {
+      "id": "repeated-mr-keeps-one-approved-policy",
+      "family": "lifecycle",
+      "driver": "repeatedMr",
+      "expect": {
+        "logicalNoVarRules": 1,
+        "originalRuleIdPreserved": true,
+        "originalApprovedSnapshotUnchanged": true,
+        "approvalStillValid": true,
+        "evidenceSources": 2
+      }
+    },
+    {
+      "id": "unrelated-document-edit-keeps-rule-identity",
+      "family": "lifecycle",
+      "driver": "unrelatedDocumentEdit",
+      "expect": {
+        "logicalNoVarRules": 1,
+        "originalRuleIdPreserved": true,
+        "originalApprovedSnapshotUnchanged": true,
+        "approvalStillValid": true
+      }
+    },
+    {
+      "id": "authoritative-document-changed",
+      "family": "source-freshness",
+      "driver": "sourceChanged",
+      "expect": {
+        "sourceStates": [
+          "changed"
+        ],
+        "originalApprovedSnapshotUnchanged": true,
+        "readOnly": true
+      }
+    },
+    {
+      "id": "authoritative-document-missing",
+      "family": "source-freshness",
+      "driver": "sourceMissing",
+      "expect": {
+        "sourceStates": [
+          "missing"
+        ],
+        "originalApprovedSnapshotUnchanged": true,
+        "readOnly": true
+      }
+    },
+    {
+      "id": "distinct-conditional-manual-requirements",
+      "family": "lifecycle",
+      "driver": "manualDistinct",
+      "expect": {
+        "manualRules": 2,
+        "uniqueRuleIds": 2,
+        "approvedRules": 0
+      }
+    },
+    {
+      "id": "sampled-project-does-not-cover-unobserved-project",
+      "family": "sampling",
+      "driver": "sampledSubset",
+      "expect": {
+        "projects": {
+          "large": "supported",
+          "small": "unobserved"
+        },
+        "approvedRules": 0
+      }
+    },
+    {
+      "id": "small-contradictory-sample-is-insufficient",
+      "family": "sampling",
+      "driver": "sparseProject",
+      "expect": {
+        "projects": {
+          "large": "supported",
+          "small": "insufficient"
+        },
+        "approvedRules": 0
+      }
+    },
+    {
+      "id": "documentation-only-diff-is-not-applicable",
+      "family": "diff",
+      "driver": "docsOnlyDiff",
+      "expect": {
+        "status": "NOT_APPLICABLE",
+        "exitCode": 0,
+        "selectedFiles": 0
+      }
+    },
+    {
+      "id": "selected-parse-failure-is-incomplete",
+      "family": "diff",
+      "driver": "invalidCurrentSource",
+      "expect": {
+        "status": "INCOMPLETE",
+        "exitCode": 2,
+        "hasParseError": true
+      }
+    },
+    {
+      "id": "baseline-retained-finding-moves-lines",
+      "family": "baseline",
+      "driver": "baselineMoved",
+      "expect": {
+        "baselineStatus": "COMPARED",
+        "counts": {
+          "new": 0,
+          "existing": 1,
+          "resolved": 0
+        },
+        "enforcedFindings": 0,
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "baseline-extra-identical-occurrence-is-new",
+      "family": "baseline",
+      "driver": "baselineDuplicate",
+      "expect": {
+        "baselineStatus": "COMPARED",
+        "counts": {
+          "new": 1,
+          "existing": 1,
+          "resolved": 0
+        },
+        "enforcedFindings": 1,
+        "exitCode": 1
+      }
+    },
+    {
+      "id": "baseline-removed-occurrence-is-resolved",
+      "family": "baseline",
+      "driver": "baselineResolved",
+      "expect": {
+        "baselineStatus": "COMPARED",
+        "counts": {
+          "new": 0,
+          "existing": 0,
+          "resolved": 1
+        },
+        "enforcedFindings": 0,
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "invalid-base-source-prevents-clean-comparison",
+      "family": "baseline",
+      "driver": "baselineInvalid",
+      "expect": {
+        "status": "INCOMPLETE",
+        "baselineStatus": "INCOMPLETE",
+        "exitCode": 2
+      }
+    },
+    {
+      "id": "changed-policy-requires-full-current-review",
+      "family": "baseline",
+      "driver": "baselinePolicyChanged",
+      "expect": {
+        "baselineStatus": "POLICY_CHANGED_FULL_REVIEW",
+        "enforcedFindings": 1,
+        "exitCode": 1
+      }
+    }
+  ]
+}
+

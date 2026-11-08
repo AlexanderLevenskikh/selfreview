@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 
-export const VERSION = '0.1.0';
+export const VERSION = '0.2.0';
 export const EXTENSIONS = new Set(['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.mts', '.cts']);
 export const DEFAULT_INCLUDE = [...EXTENSIONS].map(e => `**/*${e}`);
 export const EXCLUDED_DIRS = new Set(['node_modules', '.git', '.selfreview', 'dist', 'build', 'coverage', '.next', '.nuxt', 'vendor']);
@@ -68,7 +68,7 @@ export function walk(root, { include = DEFAULT_INCLUDE, exclude = [], maxFiles =
       }
       if (!entry.isFile() || !matches(relative, include, exclude)) continue;
       if (onlyPaths && !onlyPaths.has(relative)) continue;
-      if (extensions && (!extensions.has(path.extname(relative).toLowerCase()) || /\.d\.(?:ts|mts|cts)$/.test(relative))) {
+      if (extensions && (!extensions.has(path.extname(relative).toLowerCase()) || /\.d\.(?:ts|mts|cts)$/i.test(relative))) {
         skipped.push({ path: relative, reason: 'UNSUPPORTED_OR_DECLARATION_FILE' }); continue;
       }
       if (files.length >= maxFiles) { errors.push({ path: relative, reason: 'FILE_LIMIT' }); continue; }

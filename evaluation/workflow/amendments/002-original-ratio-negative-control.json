@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "002-original-ratio-negative-control",
+  "reason": "Retain the original 20+4 fixture as an additional boundary control instead of removing its behavior from acceptance.",
+  "parentAmendmentId": "001-sparse-sample-precondition",
+  "addedCases": [
+    {
+      "id": "aggregate-below-threshold-has-no-proposal",
+      "family": "sampling",
+      "driver": "belowAggregateThreshold",
+      "expect": {
+        "aggregateNoVarProposals": 0,
+        "logicalNoVarRules": 0,
+        "approvedRules": 0
+      }
+    }
+  ],
+  "fixtureSource": "Original fixtures.modernSample (20 const) and fixtures.sparseLegacySample (4 var) from unchanged cases.json.",
+  "expectedExistingOutcomesChanged": false,
+  "caseCountAfterAmendment": 17
+}
+

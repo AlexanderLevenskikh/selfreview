@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "registeredAt": "2026-11-08T10:22:32.107Z",
+  "parentRegistrationSha256": "b38f766e65984e27e4f1cb3d7051c22b05fca80a81d52411e8429db56b0b520b",
+  "files": [
+    {
+      "path": "ADJUDICATION-02.md",
+      "sha256": "6ab9acb8a6b206e0ff95cbd0ef7598e65d3cba2d949475a07348425243a6787f"
+    },
+    {
+      "path": "amendments/002-original-ratio-negative-control.json",
+      "sha256": "e0955b9fc75b65907625585d1ac1dfac298bf7a77942fdce2110350d43547384"
+    }
+  ],
+  "caseCount": 17,
+  "statement": "Additional negative boundary control registered before the first improved-implementation run. Original 20+4 fixture retained; amended protocol has 17 cases."
+}

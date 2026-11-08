@@ -11,7 +11,7 @@ Use one scope for project A, another for B/C/D, and a third for E. Export the sa
 catalog as a human-readable reference, an agent review pack, or a Skill snapshot.
 General best-practice checks remain advisory and yield to approved conventions.
 
-**Version:** 0.1.0 · **Runtime:** Node.js 22.13+ · **Languages:** JS / TS / JSX / TSX
+**Version:** 0.2.0 · **Runtime:** Node.js 22.13+ · **Languages:** JS / TS / JSX / TSX
 
 [English user guide](USERGUIDE.md) · [Руководство на русском](USERGUIDE.ru.md) ·
 [Verification report](VERIFICATION.md) ·
@@ -136,13 +136,60 @@ formats, rule variants, approval, ESLint setup, agent workflows, and troubleshoo
 | `2` | Configuration or analysis is incomplete |
 
 A successful process exit is not full code-review approval. Read the report status:
-`ADVISORY_ONLY`, `MANUAL_REVIEW_REQUIRED`, and `NO_CHANGES` describe different
+`ADVISORY_ONLY`, `MANUAL_REVIEW_REQUIRED`, `NOT_APPLICABLE`, and `NO_CHANGES` describe different
 coverage limits. Manual rules stay in a checklist; advisory checks do not become
 project conventions automatically.
 
+## Daily workflow and rule maintenance
+
+Repeated equivalent evidence now accumulates around a stable rule identity.
+Approved and rejected snapshots are retained; a changed convention is a candidate
+revision, never an automatic policy update. Preview its impact before deciding:
+
+```sh
+node bin/selfreview.mjs sources status --config selfreview.config.json --scope team
+node bin/selfreview.mjs sources refresh --config selfreview.config.json --scope team
+node bin/selfreview.mjs rules history RULE_ID --config selfreview.config.json
+node bin/selfreview.mjs rules preview RULE_ID --config selfreview.config.json --project app
+```
+
+Prepare the effective rules for the files an agent will edit, including planned
+new files. The saved context contains exact local invocation arguments, checked
+examples, applicable manual questions, source state and consistency hashes:
+
+```sh
+node bin/selfreview.mjs context --config selfreview.config.json --project app --file src/example.ts --out task-context.json
+node bin/selfreview.mjs context check --config selfreview.config.json --input task-context.json
+node bin/selfreview.mjs review --config selfreview.config.json --project app --file src/example.ts
+```
+
+Check freshness before editing; after editing, run a fresh review and regenerate
+the context. Only examples with a `PASS` result have checked syntax expectations.
+Manual and legacy examples remain explicitly unverified.
+
+For a Git repository with versioned policy, `review --base origin/main
+--merge-base --new-only` compares baseline and current findings. `--staged`
+selects index contents, including when the working tree differs. Policy changes
+or unavailable historical policy cause a visible full-review fallback rather
+than an unsupported new-only result. Ordinary `--base` keeps its existing
+touched-node behavior.
+
+See the [implementation plan](IMPLEMENTATION_PLAN.md),
+[workflow contract](docs/WORKFLOW.md), and the daily-workflow sections of the
+[English](USERGUIDE.md#11-maintain-rules-and-prepare-a-daily-task) and
+[Russian](USERGUIDE.ru.md#11-поддерживать-правила-и-готовить-ежедневную-задачу) guides.
+
 ## Validation and known limits
 
-The recorded Linux run on Node.js 24.22.1 passed **107 tests with no skips**.
+The 0.2.0 local gate passed **163 tests with no failures or skips**, replayed all
+**229 selected public source files**, and passed **17 frozen workflow cases**.
+The comparable historical workflow run had 5 passes, 3 reproduced failures and
+9 unavailable capabilities. Syntax parity with equivalent ESLint was equal;
+the new outcomes concern lifecycle and review workflow, not a claim of superior
+general syntax analysis. See [the 0.2.0 verification record](verification/workflow-v0.2/README.md)
+and [workflow results and protocol amendments](evaluation/workflow/RESULTS.md).
+
+The initial recorded Linux run on Node.js 24.22.1 passed **107 tests with no skips**.
 It includes CLI subprocess workflows and real ESLint integration. A source-only
 evaluation parsed **229 selected files** from pinned revisions of `p-limit`,
 `usehooks-ts`, and `underscore`. Synthetic evaluation includes contrasting
@@ -164,13 +211,18 @@ Current limitations:
   and architecture still require judgment.
 - API-name checks do not provide full type or data-flow analysis. Aliases and
   unrelated methods with the same name can require manual review.
-- A touched AST node can contain an older violation. Diff review does not prove
-  that the current change introduced it.
+- Default diff review reports touched AST nodes, which may contain older
+  violations. Opt-in `--new-only` requires an analyzable trusted Git baseline
+  and compatible historical policy; its report states fallback and incomplete
+  outcomes explicitly.
 - Supported source extensions are `.js`, `.jsx`, `.ts`, `.tsx`, `.mjs`, `.cjs`,
   `.mts`, and `.cts`. Flow, Vue/Svelte single-file components, C#, PDF, and DOCX
   ingestion are not implemented.
 - The analyzer does not run the inspected project's code, dependencies, builds,
   or tests, and does not replace them.
+- Git review modes require support for `git --no-lazy-fetch`; missing Git
+  objects fail without fetching. Binary patches remain explicitly incomplete,
+  including binary-only assets outside JS/TS coverage.
 - There is no desktop application, hosted service, watcher, or automatic Skill
   installation in this version. CLI and exports work locally without AI API calls.
 

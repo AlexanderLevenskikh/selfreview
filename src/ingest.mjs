@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { stableCandidateId } from './rules.mjs';
 import { parseUnifiedDiff } from './diff.mjs';
 
 const MAX_SOURCE_BYTES = 4 * 1024 * 1024;
@@ -55,12 +56,9 @@ function familyFor(check, description) {
 }
 
 function candidate(check, description, options, evidence, custom = {}) {
-  const scopeSlug = options.scope.replace(/[^a-z0-9._-]/gu, '-').replace(/-+/gu, '-').slice(0, 48) || 'scope';
-  const kindSlug = textOf(check.kind).replace(/[^a-z0-9-]/gu, '-').slice(0, 32) || 'unknown';
   const applicability = custom.applicability ?? { include: ['**/*'], exclude: [] };
-  const digest = fingerprint({ scope: options.scope, check, description, applicability, evidence });
   const rule = {
-    id: `candidate-${scopeSlug}-${kindSlug}-${digest.slice(0, 12)}`,
+    id: 'candidate-pending-identity',
     family: typeof custom.family === 'string' ? custom.family : familyFor(check, description),
     title: typeof custom.title === 'string' && custom.title.trim() ? custom.title : TITLES[check.kind] ?? `Проверка ${check.kind}`,
     description,
@@ -77,6 +75,7 @@ function candidate(check, description, options, evidence, custom = {}) {
   if (custom.overrides !== undefined) rule.overrides = custom.overrides;
   if (custom.overrideReason !== undefined) rule.overrideReason = custom.overrideReason;
   if (custom.examples !== undefined) rule.examples = custom.examples;
+  rule.id = stableCandidateId(rule);
   return rule;
 }
 
@@ -549,9 +548,9 @@ export function discoverConventions(records, { scope, minSamples = 5, threshold 
       confidence: ratio,
       rationale: 'Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.',
     });
-    // Include the full observation set in the identity, even when displayed evidence is bounded.
-    result.id = result.id.replace(/[0-9a-f]{12}$/u, digest.slice(0, 12));
+    // Dataset identity belongs to the observation, not the logical policy.
     result.observations = { minSamples, threshold, ratio, files: selected.length, evidenceFilesShown: evidence.length, datasetSha256: digest };
+    result.id = stableCandidateId(result);
     candidates.push(result);
   }
   const declarations = total.const + total.let + total.var;

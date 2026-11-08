@@ -18,7 +18,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^[a-z0-9][a-z0-9._-]{0,159}$"
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,159}$",
+      "description": "Persistent rule record ID. New imports use a logical policy identity independent of source hashes and line positions; existing v1 IDs remain valid."
     },
     "scope": {
       "type": "string"
@@ -151,7 +152,44 @@
     "rejection": {
       "type": "object"
     },
-    "examples": {},
+    "examples": {
+      "description": "Preferred structured examples are checked by evaluateRuleExamples. Arbitrary older example data remains valid v1 data and is explicitly marked unverified; example code is never executed.",
+      "anyOf": [
+        {
+          "type": "array",
+          "maxItems": 50,
+          "items": {
+            "type": "object",
+            "required": [
+              "code",
+              "expect"
+            ],
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "At most 32 KiB of UTF-8 JS/TS source, parsed only."
+              },
+              "expect": {
+                "enum": [
+                  "valid",
+                  "violation"
+                ]
+              },
+              "filename": {
+                "type": "string",
+                "description": "Supported project-relative JS/TS example filename; default example.ts."
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "description": "Unrestricted legacy JSON is retained for v1 compatibility. This branch does not establish that a declared structured example is valid or passing."
+        }
+      ]
+    },
     "check": {
       "oneOf": [
         {

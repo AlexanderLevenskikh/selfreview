@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "registeredAt": "2026-11-08T10:10:45.226Z",
+  "historicalCommit": "67a42ad980a4b82f8b58c0c9c7e2bbaed19e4fe4",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "sha256": "5e5def0db833cab39f6eb38facce146c641cee29605986633b07ce61cf176e05"
+    },
+    {
+      "path": "cases.json",
+      "sha256": "28231f676a6b8b4d4d31398bc846db76bd4d5c78fee8a246e0ba1e21cecfdccf"
+    }
+  ],
+  "caseCount": 16,
+  "statement": "Expected semantic outcomes and fixture bytes recorded before running the improved implementation. Runner API adapters are not preregistered."
+}

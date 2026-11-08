@@ -2,9 +2,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadConfig, loadCatalog, mutateCatalog, projectInfo, allScopeRules } from '../src/config.mjs';
-import { approveRule, KINDS } from '../src/rules.mjs';
+import { approveRule, behaviorHash, KINDS } from '../src/rules.mjs';
 import { reviewProject, renderReport, diffFromGit } from '../src/review.mjs';
-import { learnScope } from '../src/learn.mjs';
+import { learnScope, refreshScope } from '../src/learn.mjs';
+import { sourceStatus, ruleHistory, previewRule, recordRuleDecision } from '../src/lifecycle.mjs';
+import { createTaskContext, checkTaskContext } from '../src/context.mjs';
 import { exportScope, createAgentPack } from '../src/export.mjs';
 import { assert, readJson, writeJson, writeAtomic, slug, posix, VERSION } from '../src/util.mjs';
 
@@ -19,9 +21,16 @@ learn --scope NAME [--docs FILE_OR_FOLDER ...] [--mr FILE ...]
       [--code FOLDER ...] [--min-samples 5] [--threshold 0.9]
 rules list [--scope NAME] [--json]
 rules show RULE_ID
+rules history RULE_ID
+rules preview RULE_ID [--project ID] [--file PATH ...]
 rules approve RULE_ID --by NAME --reason TEXT
 rules reject RULE_ID --by NAME --reason TEXT
-review --project ID [--diff FILE | --base REF] [--format text|json] [--out FILE]
+sources status [--scope NAME]
+sources refresh --scope NAME
+context --project ID [--file PATH ...] [--out FILE]
+context check --input FILE
+review --project ID [--diff FILE | --base REF] [--file PATH ...]
+       [--merge-base] [--staged] [--new-only] [--format text|json] [--out FILE]
 review --scope NAME [--format text|json] [--out FILE]
 agent-pack --project ID [--diff FILE | --base REF] --out FILE
 export --scope NAME --out NEW_FOLDER [--project ID]
@@ -31,14 +40,15 @@ Global: --config FILE (default: ./selfreview.config.json), --help, --version
 
 Import creates candidates only. Approve each reviewed rule explicitly.
 Exit codes: 0 = completed, 1 = enforced error, 2 = incomplete/configuration error.
-ADVISORY_ONLY, NO_CHANGES and MANUAL_REVIEW_REQUIRED are not full code approval.
+ADVISORY_ONLY, NO_CHANGES, NOT_APPLICABLE and MANUAL_REVIEW_REQUIRED are not full code approval.
+--file paths are project-relative; repeat the option for multiple files.
 No AI API or network requests; no execution of inspected project code.
 `;
 
 function argumentsOf(args) {
   const positional=[],options={};
-  const booleans=new Set(['help','version','json','no-code']);
-  const values=new Set(['config','scope','project','extends','docs','mr','diff','comments','proposals','code','min-samples','threshold','by','reason','format','out','base']);
+  const booleans=new Set(['help','version','json','no-code','merge-base','staged','new-only']);
+  const values=new Set(['config','scope','project','extends','docs','mr','diff','comments','proposals','code','min-samples','threshold','by','reason','format','out','base','file','input']);
   for (let i=0;i<args.length;i++) {
     const arg=args[i];
     if (!arg.startsWith('--')) {positional.push(arg);continue;}
@@ -78,8 +88,13 @@ function selectedProjects(context,options) {
 }
 function reviewOptions(context,project,options) {
   const diff=one(options,'diff'),base=one(options,'base');assert(!(diff&&base),'Use --diff or --base, not both');
-  if(base)return diffFromGit(projectInfo(context,project).root,base);
-  return diff?{diffText:fs.readFileSync(path.resolve(diff),'utf8')}:{};
+  assert(!options['merge-base']||base,'--merge-base requires --base');
+  assert(!options.staged||!diff,'--staged cannot be combined with --diff');
+  assert(!options['new-only']||base||options.staged,'--new-only requires --base or --staged');
+  assert(!options['new-only']||!diff,'--new-only requires a trusted local Git baseline');
+  const selection={...(options.file?{files:options.file}:{}),newOnly:!!options['new-only']};
+  if(base||options.staged)return {...diffFromGit(projectInfo(context,project).root,base??'HEAD',{mergeBase:!!options['merge-base'],staged:!!options.staged}),...selection};
+  return diff?{diffText:fs.readFileSync(path.resolve(diff),'utf8'),...selection}:selection;
 }
 export function main(args=process.argv.slice(2)) {
   const {positional,options}=argumentsOf(args),[command,action,id]=positional;
@@ -117,21 +132,52 @@ export function main(args=process.argv.slice(2)) {
       const by=one(options,'by'),reason=one(options,'reason');assert(by?.trim()&&reason?.trim(),'Decision requires --by and --reason');
       const result=mutateCatalog(context,catalog=>{
         const index=catalog.rules.findIndex(r=>r.id===id);assert(index>=0,`Unknown rule: ${id}`);
+        const before=structuredClone(catalog.rules[index]);
         if(action==='approve')catalog.rules[index]=approveRule(catalog.rules[index],by,reason);
         else {catalog.rules[index]={...catalog.rules[index],status:'rejected',rejection:{by,reason,at:new Date().toISOString()}};delete catalog.rules[index].approval;}
+        const after=catalog.rules[index];
+        recordRuleDecision(catalog,id,{from:before.status,to:after.status,by,reason,at:after.approval?.at??after.rejection.at,behaviorHash:behaviorHash(after),before});
         return catalog.rules[index];
       },{allowStale:true});output(result,options);return 0;
     }
     const catalog=loadCatalog(context,{allowStale:true});
     if(action==='show') {const rule=catalog.rules.find(r=>r.id===id);assert(rule,`Unknown rule: ${id}`);output(rule,options);return 0;}
-    assert(action==='list','Use rules list/show/approve/reject');
+    if(action==='history') {assert(id,'rules history requires RULE_ID');output(ruleHistory(context,catalog,id),options);return 0;}
+    if(action==='preview') {
+      assert(id,'rules preview requires RULE_ID');
+      const projectId=one(options,'project');
+      assert(!one(options,'diff')&&!one(options,'base')&&!options.staged&&!options['new-only']&&!options['merge-base'],'Candidate preview uses current files; Git baseline modes belong to review');
+      const result=previewRule(context,catalog,id,{projectId,scope:one(options,'scope'),files:options.file});
+      output(result,options);return result.reports?.some(report=>report.exitCode===2)?2:0;
+    }
+    assert(action==='list','Use rules list/show/history/preview/approve/reject');
     const scope=one(options,'scope'),rules=scope?allScopeRules(context.config,catalog,scope):catalog.rules;
     output(rules,options,{text:rules.map(r=>`${r.id} | ${r.scope} | ${r.status} | ${r.check.kind} | ${r.title}`).join('\n')+'\n'});return 0;
   }
   const catalog=loadCatalog(context);
+  if(command==='sources') {
+    assert(['status','refresh'].includes(action),'Use sources status or sources refresh');
+    const scope=one(options,'scope');
+    if(action==='status') {output(sourceStatus(context,catalog,{scope}),options);return 0;}
+    assert(scope,'sources refresh requires --scope');
+    const result=refreshScope(context,scope);output(result,options);
+    return result.exitCode??(result.status==='INCOMPLETE'?2:0);
+  }
+  if(command==='context') {
+    if(action==='check') {
+      assert(!['project','scope','file','base','diff','staged','new-only','merge-base'].some(key=>options[key]!==undefined),'context check uses the saved selection; do not supply project/scope/file or Git mode selectors');
+      const input=one(options,'input');assert(input,'context check requires --input');
+      assert(fs.statSync(path.resolve(input)).size<=8*1024*1024,'Saved context exceeds 8 MiB');
+      const result=checkTaskContext(context,catalog,readJson(path.resolve(input)));output(result,options);return result.exitCode;
+    }
+    assert(!action,'Use context or context check');
+    assert(!one(options,'diff')&&!one(options,'base')&&!options.staged&&!options['new-only']&&!options['merge-base'],'context prepares working-tree files; use agent-pack for a Git review');
+    const ids=selectedProjects(context,options);assert(ids.length===1,'context requires a single project');
+    const result=createTaskContext(context,catalog,ids[0],{files:options.file});output(result,options);return result.exitCode;
+  }
   if(command==='review'||command==='agent-pack') {
     const ids=selectedProjects(context,options);
-    assert(ids.length===1||(!one(options,'diff')&&!one(options,'base')),'Diff/base requires one project');
+    assert(ids.length===1||(!one(options,'diff')&&!one(options,'base')&&!options.staged&&!options.file),'Diff/base/staged/file selection requires one project');
     const reports=ids.map(project=>reviewProject(context,catalog,project,reviewOptions(context,project,options)));
     if(command==='agent-pack'){assert(ids.length===1,'agent-pack requires a single project');assert(one(options,'out'),'agent-pack requires --out');output(createAgentPack(context,catalog,reports[0]),{...options,format:['json']});}
     else output(reports.length===1?reports[0]:{schemaVersion:1,reports,exitCode:Math.max(...reports.map(r=>r.exitCode))},options,{text:reports.map(renderReport).join('\n')});

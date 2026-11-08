@@ -1,0 +1,115 @@
+{
+  "status": "OBSERVATIONS_MATCH_IN_SELECTED_CORPUS",
+  "repositories": [
+    {
+      "id": "p-limit",
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+      "files": 1,
+      "parsedFiles": 1,
+      "counterFailures": 0,
+      "metrics": {
+        "declarations": {
+          "const": 14,
+          "let": 2,
+          "var": 0
+        },
+        "equality": {
+          "strict": 3,
+          "loose": 0,
+          "nullLoose": 0
+        },
+        "braces": {
+          "braced": 9,
+          "unbraced": 0
+        }
+      },
+      "candidates": [
+        {
+          "kind": "no-var",
+          "options": {}
+        },
+        {
+          "kind": "require-braces",
+          "options": {}
+        }
+      ],
+      "adviceCounts": {
+        "bp.function-size": 1
+      },
+      "analysisMs": 85
+    },
+    {
+      "id": "usehooks-ts",
+      "revision": "61949134144d3690fe9f521260a16c779a6d3797",
+      "files": 67,
+      "parsedFiles": 67,
+      "counterFailures": 0,
+      "metrics": {
+        "declarations": {
+          "const": 160,
+          "let": 8,
+          "var": 0
+        },
+        "equality": {
+          "strict": 37,
+          "loose": 0,
+          "nullLoose": 0
+        },
+        "braces": {
+          "braced": 75,
+          "unbraced": 7
+        }
+      },
+      "candidates": [
+        {
+          "kind": "no-var",
+          "options": {}
+        },
+        {
+          "kind": "strict-equality",
+          "options": {
+            "allowNull": false
+          }
+        },
+        {
+          "kind": "require-braces",
+          "options": {}
+        }
+      ],
+      "adviceCounts": {
+        "bp.function-size": 5
+      },
+      "analysisMs": 191
+    },
+    {
+      "id": "underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "files": 161,
+      "parsedFiles": 161,
+      "counterFailures": 0,
+      "metrics": {
+        "declarations": {
+          "const": 0,
+          "let": 0,
+          "var": 282
+        },
+        "equality": {
+          "strict": 71,
+          "loose": 59,
+          "nullLoose": 41
+        },
+        "braces": {
+          "braced": 115,
+          "unbraced": 115
+        }
+      },
+      "candidates": [],
+      "adviceCounts": {
+        "bp.no-var": 215,
+        "bp.strict-equality": 18,
+        "bp.function-size": 2
+      },
+      "analysisMs": 98
+    }
+  ]
+}

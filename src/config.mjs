@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { assert, readJson, writeJson, matches, globRegex, DEFAULT_INCLUDE, contained, posix, digest } from './util.mjs';
 import { validateRule, BEST_PRACTICES } from './rules.mjs';
+import { validateLifecycleMetadata } from './lifecycle.mjs';
 
 export function loadConfig(filename = 'selfreview.config.json') {
   const absolute = path.resolve(filename), config = readJson(absolute), baseDir = path.dirname(absolute);
@@ -61,6 +62,7 @@ export function validateCatalog(context,catalog,{allowStale=false}={}) {
   }
   const knownIds=new Set([...ids,...BEST_PRACTICES.map(r=>r.id)]);
   for(const scope of context.config.scopes)for(const disabled of scope.disabledRules??[])assert(knownIds.has(disabled.id),`${scope.id}: unknown disabled rule ${disabled.id}`);
+  validateLifecycleMetadata(catalog,context);
   return catalog;
 }
 export function mutateCatalog(context, update, options = {}) {
@@ -72,7 +74,7 @@ export function mutateCatalog(context, update, options = {}) {
   try {
     fs.writeFileSync(fd, JSON.stringify({ pid:process.pid, time:new Date().toISOString() }));
     const catalog = loadCatalog(context, options), result = update(catalog);
-    for (const rule of catalog.rules) validateRule(options.allowStale && rule.status === 'approved' ? {...rule,status:'candidate'} : rule);
+    validateCatalog(context,catalog,options);
     writeJson(context.catalogPath, catalog); return result;
   } finally { fs.closeSync(fd); fs.unlinkSync(lock); }
 }
@@ -83,7 +85,7 @@ export function projectInfo(context, id) {
 }
 export function resolveRules(config, catalog, scope, relativePath) {
   const chain = scopeChain(config, scope);
-  const candidates = catalog.rules.filter(r => chain.includes(r.scope) && r.status === 'candidate');
+  const candidates = catalog.rules.filter(r => chain.includes(r.scope) && r.status === 'candidate' && matches(relativePath,r.applicability?.include,r.applicability?.exclude));
   const active = catalog.rules.filter(r => chain.includes(r.scope) && r.status === 'approved' && matches(relativePath, r.applicability?.include, r.applicability?.exclude));
   const disabled = chain.flatMap(id => config.scopes.find(s => s.id === id).disabledRules ?? []);
   const suppressed = [], conflicts = [];

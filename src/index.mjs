@@ -4,5 +4,8 @@ export { validateRule, approveRule, behaviorHash, KINDS, BEST_PRACTICES } from '
 export { parseUnifiedDiff } from './diff.mjs';
 export { extractDocument, importMr, discoverConventions } from './ingest.mjs';
 export { reviewProject, renderReport, diffFromGit } from './review.mjs';
-export { learnScope } from './learn.mjs';
+export { learnScope, refreshScope } from './learn.mjs';
+export { sourceStatus, ruleHistory, previewRule, recordRuleDecision } from './lifecycle.mjs';
+export { createTaskContext, checkTaskContext } from './context.mjs';
+export { evaluateRuleExamples } from './examples.mjs';
 export { exportScope, createAgentPack, renderReference } from './export.mjs';

@@ -125,7 +125,7 @@ export function parseUnifiedDiff(text) {
 
   function newFile(line) {
     return {
-      oldPath: null, newPath: null, addedLines: [], touchedRanges: [],
+      oldPath: null, newPath: null, addedLines: [], touchedRanges: [], hunks: [],
       newLineContent: [], deleted: false, _line: line, _hunks: 0,
       _oldHeader: false, _newHeader: false, _metadata: false,
       _previousOldEnd: -1, _previousNewEnd: -1,
@@ -272,6 +272,7 @@ export function parseUnifiedDiff(text) {
       current._previousOldEnd = oldStart + oldCount;
       current._previousNewEnd = newStart + newCount;
       current._hunks += 1;
+      current.hunks.push({ oldStart, oldCount, newStart, newCount });
       hunk = { oldStart, oldCount, newStart, newCount, oldRead: 0, newRead: 0 };
       continue;
     }

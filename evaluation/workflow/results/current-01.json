@@ -1,0 +1,4338 @@
+{
+  "schemaVersion": 1,
+  "label": "current-amended-17",
+  "createdAt": "2026-11-08T10:29:52.667Z",
+  "status": "ALL_DECLARED_CASES_MET",
+  "preregistration": {
+    "schemaVersion": 1,
+    "registeredAt": "2026-11-08T10:10:45.226Z",
+    "historicalCommit": "67a42ad980a4b82f8b58c0c9c7e2bbaed19e4fe4",
+    "files": [
+      {
+        "path": "PLAN.md",
+        "sha256": "5e5def0db833cab39f6eb38facce146c641cee29605986633b07ce61cf176e05"
+      },
+      {
+        "path": "cases.json",
+        "sha256": "28231f676a6b8b4d4d31398bc846db76bd4d5c78fee8a246e0ba1e21cecfdccf"
+      }
+    ],
+    "caseCount": 16,
+    "statement": "Expected semantic outcomes and fixture bytes recorded before running the improved implementation. Runner API adapters are not preregistered."
+  },
+  "appliedAmendment": {
+    "id": "001-sparse-sample-precondition",
+    "registration": {
+      "schemaVersion": 1,
+      "registeredAt": "2026-11-08T10:21:11.134Z",
+      "originalRegistrationSha256": "5a89ac190677a5e17f5fc07fa15d7bc547bde490c708b8a424e2e8a30dc5943f",
+      "files": [
+        {
+          "path": "ADJUDICATION.md",
+          "sha256": "37ecc882dcec1a624ae34122504f3bee1bbaa51d58786b64282d9d98bbaf77a1"
+        },
+        {
+          "path": "amendments/001-sparse-sample.json",
+          "sha256": "4e7d483dcff366bccd5d4ac31a643eea5d6fc2291b8f44a38d437dfb74f2b2e9"
+        }
+      ],
+      "statement": "A single evaluator precondition correction, registered before any improved-implementation run. Original input, expectations, runner and historical-01 retained."
+    }
+  },
+  "addedBoundaryControl": {
+    "id": "002-original-ratio-negative-control",
+    "registration": {
+      "schemaVersion": 1,
+      "registeredAt": "2026-11-08T10:22:32.107Z",
+      "parentRegistrationSha256": "b38f766e65984e27e4f1cb3d7051c22b05fca80a81d52411e8429db56b0b520b",
+      "files": [
+        {
+          "path": "ADJUDICATION-02.md",
+          "sha256": "6ab9acb8a6b206e0ff95cbd0ef7598e65d3cba2d949475a07348425243a6787f"
+        },
+        {
+          "path": "amendments/002-original-ratio-negative-control.json",
+          "sha256": "e0955b9fc75b65907625585d1ac1dfac298bf7a77942fdce2110350d43547384"
+        }
+      ],
+      "caseCount": 17,
+      "statement": "Additional negative boundary control registered before the first improved-implementation run. Original 20+4 fixture retained; amended protocol has 17 cases."
+    }
+  },
+  "protocol": "17 cases: original 16 with one disclosed input-precondition correction, plus one additional negative boundary control.",
+  "implementation": {
+    "reference": "working tree",
+    "stableDuringRun": true,
+    "files": [
+      {
+        "path": "package.json",
+        "bytes": 741,
+        "sha256": "ce051456d158060df271073d5bee49a2f31fce77c783a01854770711ed2c8ab7"
+      },
+      {
+        "path": "src/agent-guidance.mjs",
+        "bytes": 1212,
+        "sha256": "e70abc88be2b1698d14d4012e5fdbd25e1983f99f334f87cead10af6e58b7ec1"
+      },
+      {
+        "path": "src/ast.mjs",
+        "bytes": 20312,
+        "sha256": "ecbc886e3315a35c934e2d9b778c35a0621774a5e967bd9fe1de19db023c6a99"
+      },
+      {
+        "path": "src/baseline.mjs",
+        "bytes": 5780,
+        "sha256": "538458b3efff77aef0d7d0cc4476d1ccf395937db386d37a4552c56305a8903e"
+      },
+      {
+        "path": "src/config.mjs",
+        "bytes": 8683,
+        "sha256": "5659360551c620cb1631b9b736555d83e992f56e9e2c3f73c0ba344a06d64c8c"
+      },
+      {
+        "path": "src/context.mjs",
+        "bytes": 10052,
+        "sha256": "7fdf591c84ce9dc565bb5900bf86d1fbc3275d0f20f20d5e70a6c2a152f004f2"
+      },
+      {
+        "path": "src/diff.mjs",
+        "bytes": 13451,
+        "sha256": "d0afccdbfc865e4b5bfd2f96ed78f4341b1f43d6ab458d836b56b4263a2e2667"
+      },
+      {
+        "path": "src/eslint.mjs",
+        "bytes": 9413,
+        "sha256": "00d744004f908584dda8cd62ec603a611c3ac2bd3984597db38b3198888be862"
+      },
+      {
+        "path": "src/examples.mjs",
+        "bytes": 2830,
+        "sha256": "512fc9a409a759922ef3f1e486ec95e34c7ca68e06ed377c73b24ad47d5dfa97"
+      },
+      {
+        "path": "src/export.mjs",
+        "bytes": 9851,
+        "sha256": "50263091f871a0fe65bc69f1ca5eaa8cc5406b222578f860fbbe9c58ad3cc8dc"
+      },
+      {
+        "path": "src/git.mjs",
+        "bytes": 9271,
+        "sha256": "4c3f2097a9d121478e2792f5ae693ccdb133c200a35348dcff3e06fc1ae7f41b"
+      },
+      {
+        "path": "src/index.mjs",
+        "bytes": 818,
+        "sha256": "6b87addea616d77409ecd9a10e8383ad13e07db0b2d02e92393719e42875ef83"
+      },
+      {
+        "path": "src/ingest.mjs",
+        "bytes": 38680,
+        "sha256": "f2718f60b224ca37c719ffafc634e898e2eab4555d386bd8ba6d5ded1d328452"
+      },
+      {
+        "path": "src/learn.mjs",
+        "bytes": 13422,
+        "sha256": "48f2e72943f53069b6774c42d6baf818ce63689ba0d0f7bc0a1ba3997e9c6286"
+      },
+      {
+        "path": "src/lifecycle.mjs",
+        "bytes": 28670,
+        "sha256": "ed9b9a0e08c05b73cf185311bec604cec0e92385ed7a7a924ec44e071f512d29"
+      },
+      {
+        "path": "src/review.mjs",
+        "bytes": 21698,
+        "sha256": "ba9197bcac884e991087e15a43f1c4ed7eaebe4439aec0f320fbfda1fe77b5a6"
+      },
+      {
+        "path": "src/rules.mjs",
+        "bytes": 12305,
+        "sha256": "7709c363141251005da5c2066a17ba1556ed05b9b86e2033372f5b5366ff0d1b"
+      },
+      {
+        "path": "src/util.mjs",
+        "bytes": 5318,
+        "sha256": "3803a90d33b9ed72b400ac79a12155a8e5e295f0ddf4697eb7ddf127c68d0d06"
+      },
+      {
+        "path": "bin/selfreview.mjs",
+        "bytes": 13842,
+        "sha256": "c34454709d43d4e96cb3d9236e4eebb9fe4e15e6d4f226e562068b21c22bc5bc"
+      }
+    ]
+  },
+  "runner": {
+    "path": "evaluation/workflow/run.mjs",
+    "sha256": "4dd5b8ded3fa4983ffa701ac6541e09283156903f428e62395fdc245156d89e3"
+  },
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "arch": "x64",
+    "eslint": "10.14.0"
+  },
+  "diagnosticElapsedMs": 970,
+  "timingInterpretation": "Diagnostic elapsed time only; no performance or time-savings benchmark was performed.",
+  "measurementsNotPerformed": {
+    "developerTimeSaved": "NOT_MEASURED",
+    "reviewerCommentsPrevented": "NOT_MEASURED",
+    "agentOutputQuality": "NOT_MEASURED",
+    "inferenceCost": "NOT_MEASURED",
+    "realTeamFalsePositiveRate": "NOT_MEASURED",
+    "generalRecall": "NOT_MEASURED",
+    "architectureCorrectness": "NOT_MEASURED",
+    "teamAdoption": "NOT_MEASURED"
+  },
+  "counts": {
+    "total": 17,
+    "passed": 17,
+    "failed": 0,
+    "notAvailable": 0,
+    "errors": 0
+  },
+  "byFamily": {
+    "syntax": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "notAvailable": 0,
+      "errors": 0
+    },
+    "lifecycle": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "notAvailable": 0,
+      "errors": 0
+    },
+    "source-freshness": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "notAvailable": 0,
+      "errors": 0
+    },
+    "sampling": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "notAvailable": 0,
+      "errors": 0
+    },
+    "diff": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "notAvailable": 0,
+      "errors": 0
+    },
+    "baseline": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "notAvailable": 0,
+      "errors": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "scoped-syntax-and-exceptions",
+      "family": "syntax",
+      "outcome": "PASS",
+      "expected": {
+        "findings": [
+          [
+            "a",
+            "src/main.js",
+            "no-console",
+            2
+          ],
+          [
+            "b",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "c",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "d",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "e",
+            "src/main.js",
+            "strict-equality",
+            5
+          ]
+        ],
+        "eslintFindingsMatch": true,
+        "negativeFixtureFindings": 0
+      },
+      "observed": {
+        "findings": [
+          [
+            "a",
+            "src/main.js",
+            "no-console",
+            2
+          ],
+          [
+            "b",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "c",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "d",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "e",
+            "src/main.js",
+            "strict-equality",
+            5
+          ]
+        ],
+        "eslintFindingsMatch": true,
+        "negativeFixtureFindings": 0
+      },
+      "details": {
+        "selfreview": [
+          {
+            "project": "a",
+            "status": "VIOLATIONS",
+            "errors": [],
+            "findings": [
+              {
+                "ruleId": "a.console",
+                "family": "no-console",
+                "title": "Declared synthetic workflow policy: a.console",
+                "message": "Console member log is not allowed in this scope.",
+                "severity": "error",
+                "mode": "enforce",
+                "startLine": 2,
+                "endLine": 2,
+                "column": 1,
+                "endColumn": 12,
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "synthetic:workflow/cases.json",
+                    "sha256": "c1766ad92cadf3e6184676be923f33b40ceb7e9e75858837805947ce894cbef9",
+                    "excerpt": "Declared synthetic workflow policy: a.console"
+                  }
+                ],
+                "project": "a",
+                "path": "src/main.js",
+                "scope": "scope-a",
+                "changeRelation": "not-compared",
+                "sourceHash": "71cca7be40bee1be61b68a7af02275bcbdc305aeb84e23ce02ede7b5359d916f"
+              }
+            ]
+          },
+          {
+            "project": "b",
+            "status": "VIOLATIONS",
+            "errors": [],
+            "findings": [
+              {
+                "ruleId": "bcd.variables",
+                "family": "no-var",
+                "title": "Declared synthetic workflow policy: bcd.variables",
+                "message": "Use let or const instead of var.",
+                "severity": "error",
+                "mode": "enforce",
+                "startLine": 1,
+                "endLine": 1,
+                "column": 1,
+                "endColumn": 14,
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "synthetic:workflow/cases.json",
+                    "sha256": "00dae907dd0e3aa2089b968dc1a347edfecd0a658a6c8e63934ec9ceeb141e74",
+                    "excerpt": "Declared synthetic workflow policy: bcd.variables"
+                  }
+                ],
+                "project": "b",
+                "path": "src/main.js",
+                "scope": "scope-bcd",
+                "changeRelation": "not-compared",
+                "sourceHash": "71cca7be40bee1be61b68a7af02275bcbdc305aeb84e23ce02ede7b5359d916f"
+              }
+            ]
+          },
+          {
+            "project": "c",
+            "status": "VIOLATIONS",
+            "errors": [],
+            "findings": [
+              {
+                "ruleId": "bcd.variables",
+                "family": "no-var",
+                "title": "Declared synthetic workflow policy: bcd.variables",
+                "message": "Use let or const instead of var.",
+                "severity": "error",
+                "mode": "enforce",
+                "startLine": 1,
+                "endLine": 1,
+                "column": 1,
+                "endColumn": 14,
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "synthetic:workflow/cases.json",
+                    "sha256": "00dae907dd0e3aa2089b968dc1a347edfecd0a658a6c8e63934ec9ceeb141e74",
+                    "excerpt": "Declared synthetic workflow policy: bcd.variables"
+                  }
+                ],
+                "project": "c",
+                "path": "src/main.js",
+                "scope": "scope-bcd",
+                "changeRelation": "not-compared",
+                "sourceHash": "71cca7be40bee1be61b68a7af02275bcbdc305aeb84e23ce02ede7b5359d916f"
+              }
+            ]
+          },
+          {
+            "project": "d",
+            "status": "VIOLATIONS",
+            "errors": [],
+            "findings": [
+              {
+                "ruleId": "bcd.variables",
+                "family": "no-var",
+                "title": "Declared synthetic workflow policy: bcd.variables",
+                "message": "Use let or const instead of var.",
+                "severity": "error",
+                "mode": "enforce",
+                "startLine": 1,
+                "endLine": 1,
+                "column": 1,
+                "endColumn": 14,
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "synthetic:workflow/cases.json",
+                    "sha256": "00dae907dd0e3aa2089b968dc1a347edfecd0a658a6c8e63934ec9ceeb141e74",
+                    "excerpt": "Declared synthetic workflow policy: bcd.variables"
+                  }
+                ],
+                "project": "d",
+                "path": "src/main.js",
+                "scope": "scope-bcd",
+                "changeRelation": "not-compared",
+                "sourceHash": "71cca7be40bee1be61b68a7af02275bcbdc305aeb84e23ce02ede7b5359d916f"
+              }
+            ]
+          },
+          {
+            "project": "e",
+            "status": "VIOLATIONS",
+            "errors": [],
+            "findings": [
+              {
+                "ruleId": "e.equality",
+                "family": "strict-equality",
+                "title": "Declared synthetic workflow policy: e.equality",
+                "message": "Use ===; loose equality is not allowed by this rule.",
+                "severity": "error",
+                "mode": "enforce",
+                "startLine": 5,
+                "endLine": 5,
+                "column": 5,
+                "endColumn": 17,
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "synthetic:workflow/cases.json",
+                    "sha256": "96034a73b2027c9db5e9bc251da086b3d17df708c4db44adcb2a2c445aefc0c0",
+                    "excerpt": "Declared synthetic workflow policy: e.equality"
+                  }
+                ],
+                "project": "e",
+                "path": "src/main.js",
+                "scope": "scope-e",
+                "changeRelation": "not-compared",
+                "sourceHash": "71cca7be40bee1be61b68a7af02275bcbdc305aeb84e23ce02ede7b5359d916f"
+              }
+            ]
+          }
+        ],
+        "eslintFindings": [
+          [
+            "a",
+            "src/main.js",
+            "no-console",
+            2
+          ],
+          [
+            "b",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "c",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "d",
+            "src/main.js",
+            "no-var",
+            1
+          ],
+          [
+            "e",
+            "src/main.js",
+            "strict-equality",
+            5
+          ]
+        ],
+        "comparator": "ESLint equivalent rules only; locations compared by line, not wording or columns."
+      },
+      "mismatches": []
+    },
+    {
+      "id": "candidate-never-autoapproved",
+      "family": "lifecycle",
+      "outcome": "PASS",
+      "expected": {
+        "logicalNoVarRules": 1,
+        "approvedRules": 0,
+        "enforcedFindings": 0,
+        "approvedAutomatically": 0
+      },
+      "observed": {
+        "logicalNoVarRules": 1,
+        "approvedRules": 0,
+        "enforcedFindings": 0,
+        "approvedAutomatically": 0
+      },
+      "details": {
+        "imported": {
+          "schemaVersion": 1,
+          "scope": "team",
+          "status": "CANDIDATES_READY",
+          "added": [
+            "candidate-team-no-var-04518d9654a764dbb23783c5"
+          ],
+          "unchanged": [],
+          "revisions": [],
+          "mergedEvidence": [],
+          "sources": [
+            "source-c803410b35f696c2dba022cab1b0ef32"
+          ],
+          "codeFilesAnalyzed": 0,
+          "inputs": [
+            {
+              "path": "<fixture>/candidate-never-autoapproved/agreements.md",
+              "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+              "kind": "document",
+              "complete": true
+            }
+          ],
+          "unmapped": [],
+          "warnings": [],
+          "discovery": null,
+          "proposalCoverage": [
+            {
+              "ruleId": "candidate-team-no-var-04518d9654a764dbb23783c5",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "projects": [
+                {
+                  "project": "app",
+                  "status": "unobserved",
+                  "supported": 0,
+                  "total": 0,
+                  "ratio": null,
+                  "minSamples": 5,
+                  "threshold": 0.9,
+                  "reason": "CODE_NOT_SAMPLED"
+                }
+              ]
+            }
+          ],
+          "sourceCoverage": [
+            {
+              "source": "<fixture>/candidate-never-autoapproved/agreements.md",
+              "units": 1,
+              "headings": 1,
+              "ignoredHeadings": 0,
+              "contextualizedCandidates": 1,
+              "headingManualCandidates": 0,
+              "ignoredCodeBlocks": 0,
+              "structuredBlocks": 0,
+              "sourceBytes": 24,
+              "complete": true,
+              "candidates": 1,
+              "executableCandidates": 1,
+              "manualCandidates": 0
+            }
+          ],
+          "coverage": {
+            "complete": true,
+            "exhaustive": false,
+            "approvedAutomatically": 0,
+            "discoveryFamilies": [
+              "no-var",
+              "strict-equality",
+              "require-braces"
+            ],
+            "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "tool": {
+            "name": "SelfReview",
+            "version": "0.1.0"
+          },
+          "project": "app",
+          "scope": "team",
+          "status": "ADVISORY_ONLY",
+          "exitCode": 0,
+          "authority": "STATIC_SYNTAX_ONLY",
+          "resultScope": "selected-files",
+          "diffCorrelation": null,
+          "configHash": "32b9ba745c5a565345c0af10e1407160725d4cce8bb15a0e4bc447319cf61919",
+          "catalogHash": "697241ebcb131421e7feb0196aabaa18dfaf8f7e7f5f232db539af01b72c82fd",
+          "generatedAt": "2026-11-08T10:29:51.912Z",
+          "durationMs": 1,
+          "coverage": {
+            "discoveredFiles": 1,
+            "selectedFiles": 1,
+            "parsedFiles": 1,
+            "activeRules": 0,
+            "enforcedAstRules": 0,
+            "candidateRulesNotEnforced": 1,
+            "manualRules": 0,
+            "skippedFiles": 0,
+            "fullProjectTypeCheck": false,
+            "runtimeTests": false
+          },
+          "findings": [],
+          "errors": [],
+          "skipped": [],
+          "suppressed": [],
+          "manualChecklist": [],
+          "sources": [
+            {
+              "path": "src/main.js",
+              "sha256": "806b000d746c17c4763add8f810c6673ed1d424ff44e0a05f54e2d6cfb2f4486"
+            }
+          ],
+          "limitations": [
+            "Only configured JS/TS syntax checks are evaluated; no proof of architecture, business logic, type safety or runtime correctness.",
+            "Changed-node findings may predate this change; use an eligible Git new-only comparison for occurrence attribution.",
+            "Natural-language conventions require an agent or human review; candidate rules are not enforced."
+          ],
+          "warnings": []
+        },
+        "catalog": {
+          "schemaVersion": 1,
+          "rules": [
+            {
+              "id": "candidate-team-no-var-04518d9654a764dbb23783c5",
+              "family": "no-var",
+              "title": "Agreements — Не использовать var",
+              "description": "# Agreements\n\nNo var.",
+              "scope": "team",
+              "status": "candidate",
+              "severity": "error",
+              "mode": "enforce",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "applicability": {
+                "include": [
+                  "**/*"
+                ],
+                "exclude": []
+              },
+              "evidence": [
+                {
+                  "kind": "document",
+                  "path": "<fixture>/candidate-never-autoapproved/agreements.md",
+                  "excerpt": "# Agreements\n\nNo var.",
+                  "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                  "line": 3,
+                  "headingContext": [
+                    {
+                      "level": 1,
+                      "title": "Agreements",
+                      "line": 1,
+                      "classification": "neutral",
+                      "reason": "DOCUMENT_LABEL"
+                    }
+                  ],
+                  "headingResolution": "UNQUALIFIED_CONTEXT"
+                }
+              ],
+              "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+            }
+          ],
+          "lifecycle": {
+            "schemaVersion": 1,
+            "sources": [
+              {
+                "id": "source-c803410b35f696c2dba022cab1b0ef32",
+                "scope": "team",
+                "kind": "document",
+                "path": "<fixture>/candidate-never-autoapproved/agreements.md",
+                "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                "firstImportedAt": "2026-11-08T10:29:51.908Z",
+                "lastImportedAt": "2026-11-08T10:29:51.908Z",
+                "ruleIds": [
+                  "candidate-team-no-var-04518d9654a764dbb23783c5"
+                ],
+                "lastRuleIds": [
+                  "candidate-team-no-var-04518d9654a764dbb23783c5"
+                ],
+                "complete": true
+              }
+            ],
+            "rules": [
+              {
+                "ruleId": "candidate-team-no-var-04518d9654a764dbb23783c5",
+                "logicalKey": "04518d9654a764dbb23783c5c5ff32912824dd5f3502f8dede38e9c7e0806190",
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "<fixture>/candidate-never-autoapproved/agreements.md",
+                    "excerpt": "# Agreements\n\nNo var.",
+                    "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                    "line": 3,
+                    "headingContext": [
+                      {
+                        "level": 1,
+                        "title": "Agreements",
+                        "line": 1,
+                        "classification": "neutral",
+                        "reason": "DOCUMENT_LABEL"
+                      }
+                    ],
+                    "headingResolution": "UNQUALIFIED_CONTEXT"
+                  }
+                ],
+                "sourceIds": [
+                  "source-c803410b35f696c2dba022cab1b0ef32"
+                ],
+                "firstObservedAt": "2026-11-08T10:29:51.908Z",
+                "lastObservedAt": "2026-11-08T10:29:51.908Z",
+                "projectCoverage": [
+                  {
+                    "project": "app",
+                    "status": "unobserved",
+                    "supported": 0,
+                    "total": 0,
+                    "ratio": null,
+                    "minSamples": 5,
+                    "threshold": 0.9,
+                    "reason": "CODE_NOT_SAMPLED"
+                  }
+                ]
+              }
+            ],
+            "revisions": [],
+            "decisions": []
+          }
+        }
+      },
+      "mismatches": []
+    },
+    {
+      "id": "repeated-mr-keeps-one-approved-policy",
+      "family": "lifecycle",
+      "outcome": "PASS",
+      "expected": {
+        "logicalNoVarRules": 1,
+        "originalRuleIdPreserved": true,
+        "originalApprovedSnapshotUnchanged": true,
+        "approvalStillValid": true,
+        "evidenceSources": 2
+      },
+      "observed": {
+        "logicalNoVarRules": 1,
+        "originalRuleIdPreserved": true,
+        "originalApprovedSnapshotUnchanged": true,
+        "approvalStillValid": true,
+        "evidenceSources": 2
+      },
+      "details": {
+        "initialImport": {
+          "schemaVersion": 1,
+          "scope": "team",
+          "status": "CANDIDATES_READY",
+          "added": [
+            "candidate-team-no-var-583de4aa0f7b653627c46822"
+          ],
+          "unchanged": [],
+          "revisions": [],
+          "mergedEvidence": [],
+          "sources": [
+            "source-a1034caf7e189884b2698f68d7167f24"
+          ],
+          "codeFilesAnalyzed": 0,
+          "inputs": [
+            {
+              "path": "<fixture>/repeated-mr-keeps-one-approved-policy/first-mr.json",
+              "sha256": "2b7fca4c0ca2572b01865534cd2f71c88bd43b88066dacf70d532c0a5b26c051",
+              "kind": "mr",
+              "complete": true
+            }
+          ],
+          "unmapped": [],
+          "warnings": [],
+          "discovery": null,
+          "proposalCoverage": [
+            {
+              "ruleId": "candidate-team-no-var-583de4aa0f7b653627c46822",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "projects": [
+                {
+                  "project": "app",
+                  "status": "unobserved",
+                  "supported": 0,
+                  "total": 0,
+                  "ratio": null,
+                  "minSamples": 5,
+                  "threshold": 0.9,
+                  "reason": "CODE_NOT_SAMPLED"
+                }
+              ]
+            }
+          ],
+          "sourceCoverage": [
+            {
+              "source": "<fixture>/repeated-mr-keeps-one-approved-policy/first-mr.json",
+              "comments": 1,
+              "systemComments": 0,
+              "invalidComments": 0,
+              "units": 1,
+              "candidates": 1,
+              "executableCandidates": 1,
+              "manualCandidates": 0,
+              "sourceBytes": 122,
+              "complete": true
+            }
+          ],
+          "coverage": {
+            "complete": true,
+            "exhaustive": false,
+            "approvedAutomatically": 0,
+            "discoveryFamilies": [
+              "no-var",
+              "strict-equality",
+              "require-braces"
+            ],
+            "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+          }
+        },
+        "secondImport": {
+          "schemaVersion": 1,
+          "scope": "team",
+          "status": "CANDIDATES_READY",
+          "added": [],
+          "unchanged": [
+            "candidate-team-no-var-583de4aa0f7b653627c46822"
+          ],
+          "revisions": [],
+          "mergedEvidence": [
+            {
+              "ruleId": "candidate-team-no-var-583de4aa0f7b653627c46822",
+              "addedEvidence": 1
+            }
+          ],
+          "sources": [
+            "source-2479f1c7a9a49dea708dda823e8bb1cd"
+          ],
+          "codeFilesAnalyzed": 0,
+          "inputs": [
+            {
+              "path": "<fixture>/repeated-mr-keeps-one-approved-policy/second-mr.json",
+              "sha256": "73d673e7a644da29aafd78eca484595bfbe68d6d9e577ecd273d4f7c38943087",
+              "kind": "mr",
+              "complete": true
+            }
+          ],
+          "unmapped": [],
+          "warnings": [],
+          "discovery": null,
+          "proposalCoverage": [
+            {
+              "ruleId": "candidate-team-no-var-583de4aa0f7b653627c46822",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "projects": [
+                {
+                  "project": "app",
+                  "status": "unobserved",
+                  "supported": 0,
+                  "total": 0,
+                  "ratio": null,
+                  "minSamples": 5,
+                  "threshold": 0.9,
+                  "reason": "CODE_NOT_SAMPLED"
+                }
+              ]
+            }
+          ],
+          "sourceCoverage": [
+            {
+              "source": "<fixture>/repeated-mr-keeps-one-approved-policy/second-mr.json",
+              "comments": 1,
+              "systemComments": 0,
+              "invalidComments": 0,
+              "units": 1,
+              "candidates": 1,
+              "executableCandidates": 1,
+              "manualCandidates": 0,
+              "sourceBytes": 122,
+              "complete": true
+            }
+          ],
+          "coverage": {
+            "complete": true,
+            "exhaustive": false,
+            "approvedAutomatically": 0,
+            "discoveryFamilies": [
+              "no-var",
+              "strict-equality",
+              "require-braces"
+            ],
+            "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+          }
+        },
+        "catalog": {
+          "schemaVersion": 1,
+          "rules": [
+            {
+              "id": "candidate-team-no-var-583de4aa0f7b653627c46822",
+              "family": "no-var",
+              "title": "Не использовать var",
+              "description": "No var.",
+              "scope": "team",
+              "status": "approved",
+              "severity": "error",
+              "mode": "enforce",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "applicability": {
+                "include": [
+                  "**/*"
+                ],
+                "exclude": []
+              },
+              "evidence": [
+                {
+                  "kind": "mr",
+                  "path": "<fixture>/repeated-mr-keeps-one-approved-policy/first-mr.json",
+                  "excerpt": "No var.",
+                  "sha256": "2b7fca4c0ca2572b01865534cd2f71c88bd43b88066dacf70d532c0a5b26c051",
+                  "commentIndex": 1,
+                  "contextVerified": false,
+                  "commentId": "comment-one",
+                  "targetPath": "src/main.js",
+                  "targetLine": 1,
+                  "side": "new",
+                  "mrTitle": "Synthetic MR one",
+                  "contextState": "no-diff"
+                }
+              ],
+              "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки.",
+              "approval": {
+                "by": "Workflow fixture reviewer",
+                "reason": "Explicit approval in a synthetic acceptance fixture.",
+                "at": "2026-11-08T00:00:00.000Z",
+                "behaviorHash": "e13e228c916e900cf48e4a76abe2d5ef358fe3b3839aad79a31cb095f29103b0"
+              }
+            }
+          ],
+          "lifecycle": {
+            "schemaVersion": 1,
+            "sources": [
+              {
+                "id": "source-a1034caf7e189884b2698f68d7167f24",
+                "scope": "team",
+                "kind": "mr",
+                "path": "<fixture>/repeated-mr-keeps-one-approved-policy/first-mr.json",
+                "sha256": "2b7fca4c0ca2572b01865534cd2f71c88bd43b88066dacf70d532c0a5b26c051",
+                "firstImportedAt": "2026-11-08T10:29:51.915Z",
+                "lastImportedAt": "2026-11-08T10:29:51.915Z",
+                "ruleIds": [
+                  "candidate-team-no-var-583de4aa0f7b653627c46822"
+                ],
+                "lastRuleIds": [
+                  "candidate-team-no-var-583de4aa0f7b653627c46822"
+                ],
+                "complete": true
+              },
+              {
+                "id": "source-2479f1c7a9a49dea708dda823e8bb1cd",
+                "scope": "team",
+                "kind": "mr",
+                "path": "<fixture>/repeated-mr-keeps-one-approved-policy/second-mr.json",
+                "sha256": "73d673e7a644da29aafd78eca484595bfbe68d6d9e577ecd273d4f7c38943087",
+                "firstImportedAt": "2026-11-08T10:29:51.919Z",
+                "lastImportedAt": "2026-11-08T10:29:51.919Z",
+                "ruleIds": [
+                  "candidate-team-no-var-583de4aa0f7b653627c46822"
+                ],
+                "lastRuleIds": [
+                  "candidate-team-no-var-583de4aa0f7b653627c46822"
+                ],
+                "complete": true
+              }
+            ],
+            "rules": [
+              {
+                "ruleId": "candidate-team-no-var-583de4aa0f7b653627c46822",
+                "logicalKey": "583de4aa0f7b653627c4682231c7d79a595d2b5531572710e78ef6e55aef83e4",
+                "evidence": [
+                  {
+                    "kind": "mr",
+                    "path": "<fixture>/repeated-mr-keeps-one-approved-policy/first-mr.json",
+                    "excerpt": "No var.",
+                    "sha256": "2b7fca4c0ca2572b01865534cd2f71c88bd43b88066dacf70d532c0a5b26c051",
+                    "commentIndex": 1,
+                    "contextVerified": false,
+                    "commentId": "comment-one",
+                    "targetPath": "src/main.js",
+                    "targetLine": 1,
+                    "side": "new",
+                    "mrTitle": "Synthetic MR one",
+                    "contextState": "no-diff"
+                  },
+                  {
+                    "kind": "mr",
+                    "path": "<fixture>/repeated-mr-keeps-one-approved-policy/second-mr.json",
+                    "excerpt": "No var.",
+                    "sha256": "73d673e7a644da29aafd78eca484595bfbe68d6d9e577ecd273d4f7c38943087",
+                    "commentIndex": 1,
+                    "contextVerified": false,
+                    "commentId": "comment-two",
+                    "targetPath": "src/main.js",
+                    "targetLine": 1,
+                    "side": "new",
+                    "mrTitle": "Synthetic MR two",
+                    "contextState": "no-diff"
+                  }
+                ],
+                "sourceIds": [
+                  "source-a1034caf7e189884b2698f68d7167f24",
+                  "source-2479f1c7a9a49dea708dda823e8bb1cd"
+                ],
+                "firstObservedAt": "2026-11-08T10:29:51.915Z",
+                "lastObservedAt": "2026-11-08T10:29:51.919Z",
+                "projectCoverage": [
+                  {
+                    "project": "app",
+                    "status": "unobserved",
+                    "supported": 0,
+                    "total": 0,
+                    "ratio": null,
+                    "minSamples": 5,
+                    "threshold": 0.9,
+                    "reason": "CODE_NOT_SAMPLED"
+                  }
+                ]
+              }
+            ],
+            "revisions": [],
+            "decisions": []
+          }
+        }
+      },
+      "mismatches": []
+    },
+    {
+      "id": "unrelated-document-edit-keeps-rule-identity",
+      "family": "lifecycle",
+      "outcome": "PASS",
+      "expected": {
+        "logicalNoVarRules": 1,
+        "originalRuleIdPreserved": true,
+        "originalApprovedSnapshotUnchanged": true,
+        "approvalStillValid": true
+      },
+      "observed": {
+        "logicalNoVarRules": 1,
+        "originalRuleIdPreserved": true,
+        "originalApprovedSnapshotUnchanged": true,
+        "approvalStillValid": true
+      },
+      "details": {
+        "initialImport": {
+          "schemaVersion": 1,
+          "scope": "team",
+          "status": "CANDIDATES_READY",
+          "added": [
+            "candidate-team-no-var-04518d9654a764dbb23783c5"
+          ],
+          "unchanged": [],
+          "revisions": [],
+          "mergedEvidence": [],
+          "sources": [
+            "source-ee439c3eb2b6e6cd2e75759529441fe9"
+          ],
+          "codeFilesAnalyzed": 0,
+          "inputs": [
+            {
+              "path": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+              "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+              "kind": "document",
+              "complete": true
+            }
+          ],
+          "unmapped": [],
+          "warnings": [],
+          "discovery": null,
+          "proposalCoverage": [
+            {
+              "ruleId": "candidate-team-no-var-04518d9654a764dbb23783c5",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "projects": [
+                {
+                  "project": "app",
+                  "status": "unobserved",
+                  "supported": 0,
+                  "total": 0,
+                  "ratio": null,
+                  "minSamples": 5,
+                  "threshold": 0.9,
+                  "reason": "CODE_NOT_SAMPLED"
+                }
+              ]
+            }
+          ],
+          "sourceCoverage": [
+            {
+              "source": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+              "units": 1,
+              "headings": 1,
+              "ignoredHeadings": 0,
+              "contextualizedCandidates": 1,
+              "headingManualCandidates": 0,
+              "ignoredCodeBlocks": 0,
+              "structuredBlocks": 0,
+              "sourceBytes": 24,
+              "complete": true,
+              "candidates": 1,
+              "executableCandidates": 1,
+              "manualCandidates": 0
+            }
+          ],
+          "coverage": {
+            "complete": true,
+            "exhaustive": false,
+            "approvedAutomatically": 0,
+            "discoveryFamilies": [
+              "no-var",
+              "strict-equality",
+              "require-braces"
+            ],
+            "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+          }
+        },
+        "nextImport": {
+          "schemaVersion": 1,
+          "scope": "team",
+          "status": "CANDIDATES_WITH_COVERAGE_GAPS",
+          "added": [
+            "candidate-team-manual-106bbf9dcd794317aeb44b9b"
+          ],
+          "unchanged": [
+            "candidate-team-no-var-04518d9654a764dbb23783c5"
+          ],
+          "revisions": [],
+          "mergedEvidence": [
+            {
+              "ruleId": "candidate-team-no-var-04518d9654a764dbb23783c5",
+              "addedEvidence": 1
+            }
+          ],
+          "sources": [
+            "source-ee439c3eb2b6e6cd2e75759529441fe9"
+          ],
+          "codeFilesAnalyzed": 0,
+          "inputs": [
+            {
+              "path": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+              "sha256": "5e3c3dc7da92eff2d796dffec0391659ec42e63691e1bae3b0ddcdace3161d2f",
+              "kind": "document",
+              "complete": true
+            }
+          ],
+          "unmapped": [
+            {
+              "ruleId": "candidate-team-manual-106bbf9dcd794317aeb44b9b",
+              "reason": "HEADING_APPLICABILITY_UNRESOLVED",
+              "kind": "document",
+              "path": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+              "excerpt": "# Agreements\n## Notes\n\nThis guide is maintained by the team.",
+              "sha256": "5e3c3dc7da92eff2d796dffec0391659ec42e63691e1bae3b0ddcdace3161d2f",
+              "line": 6,
+              "headingContext": [
+                {
+                  "level": 1,
+                  "title": "Agreements",
+                  "line": 1,
+                  "classification": "neutral",
+                  "reason": "DOCUMENT_LABEL"
+                },
+                {
+                  "level": 2,
+                  "title": "Notes",
+                  "line": 5,
+                  "classification": "unknown",
+                  "reason": "UNRECOGNIZED_HEADING_CONTEXT"
+                }
+              ],
+              "headingResolution": "MANUAL_APPLICABILITY_REQUIRED"
+            }
+          ],
+          "warnings": [
+            "Heading context at source line 5: UNRECOGNIZED_HEADING_CONTEXT; manual applicability review required; no paths were inferred"
+          ],
+          "discovery": null,
+          "proposalCoverage": [
+            {
+              "ruleId": "candidate-team-no-var-04518d9654a764dbb23783c5",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "projects": [
+                {
+                  "project": "app",
+                  "status": "unobserved",
+                  "supported": 0,
+                  "total": 0,
+                  "ratio": null,
+                  "minSamples": 5,
+                  "threshold": 0.9,
+                  "reason": "CODE_NOT_SAMPLED"
+                }
+              ]
+            },
+            {
+              "ruleId": "candidate-team-manual-106bbf9dcd794317aeb44b9b",
+              "check": {
+                "kind": "manual",
+                "options": {}
+              },
+              "projects": [
+                {
+                  "project": "app",
+                  "status": "unobserved",
+                  "supported": 0,
+                  "total": 0,
+                  "ratio": null,
+                  "minSamples": 5,
+                  "threshold": 0.9,
+                  "reason": "CODE_NOT_SAMPLED"
+                }
+              ]
+            }
+          ],
+          "sourceCoverage": [
+            {
+              "source": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+              "units": 2,
+              "headings": 2,
+              "ignoredHeadings": 0,
+              "contextualizedCandidates": 2,
+              "headingManualCandidates": 1,
+              "ignoredCodeBlocks": 0,
+              "structuredBlocks": 0,
+              "sourceBytes": 72,
+              "complete": true,
+              "candidates": 2,
+              "executableCandidates": 1,
+              "manualCandidates": 1
+            }
+          ],
+          "coverage": {
+            "complete": true,
+            "exhaustive": false,
+            "approvedAutomatically": 0,
+            "discoveryFamilies": [
+              "no-var",
+              "strict-equality",
+              "require-braces"
+            ],
+            "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+          }
+        },
+        "catalog": {
+          "schemaVersion": 1,
+          "rules": [
+            {
+              "id": "candidate-team-no-var-04518d9654a764dbb23783c5",
+              "family": "no-var",
+              "title": "Agreements — Не использовать var",
+              "description": "# Agreements\n\nNo var.",
+              "scope": "team",
+              "status": "approved",
+              "severity": "error",
+              "mode": "enforce",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "applicability": {
+                "include": [
+                  "**/*"
+                ],
+                "exclude": []
+              },
+              "evidence": [
+                {
+                  "kind": "document",
+                  "path": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+                  "excerpt": "# Agreements\n\nNo var.",
+                  "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                  "line": 3,
+                  "headingContext": [
+                    {
+                      "level": 1,
+                      "title": "Agreements",
+                      "line": 1,
+                      "classification": "neutral",
+                      "reason": "DOCUMENT_LABEL"
+                    }
+                  ],
+                  "headingResolution": "UNQUALIFIED_CONTEXT"
+                }
+              ],
+              "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки.",
+              "approval": {
+                "by": "Workflow fixture reviewer",
+                "reason": "Explicit approval in a synthetic acceptance fixture.",
+                "at": "2026-11-08T00:00:00.000Z",
+                "behaviorHash": "ef1d0899219332e7fd4cb1495cae2df253dd6e55f84359c8903a04bb93e67f5a"
+              }
+            },
+            {
+              "id": "candidate-team-manual-106bbf9dcd794317aeb44b9b",
+              "family": "manual:a07e71df092efb7a",
+              "title": "Agreements > Notes — This guide is maintained by the team.",
+              "description": "# Agreements\n## Notes\n\nThis guide is maintained by the team.",
+              "scope": "team",
+              "status": "candidate",
+              "severity": "info",
+              "mode": "advisory",
+              "check": {
+                "kind": "manual",
+                "options": {}
+              },
+              "applicability": {
+                "include": [
+                  "**/*"
+                ],
+                "exclude": []
+              },
+              "evidence": [
+                {
+                  "kind": "document",
+                  "path": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+                  "excerpt": "# Agreements\n## Notes\n\nThis guide is maintained by the team.",
+                  "sha256": "5e3c3dc7da92eff2d796dffec0391659ec42e63691e1bae3b0ddcdace3161d2f",
+                  "line": 6,
+                  "headingContext": [
+                    {
+                      "level": 1,
+                      "title": "Agreements",
+                      "line": 1,
+                      "classification": "neutral",
+                      "reason": "DOCUMENT_LABEL"
+                    },
+                    {
+                      "level": 2,
+                      "title": "Notes",
+                      "line": 5,
+                      "classification": "unknown",
+                      "reason": "UNRECOGNIZED_HEADING_CONTEXT"
+                    }
+                  ],
+                  "headingResolution": "MANUAL_APPLICABILITY_REQUIRED"
+                }
+              ],
+              "rationale": "Заголовки ограничивают или неоднозначно задают применимость. Сохранён ручной кандидат; укажите подтверждённую область в структурированном правиле. Пути и условия не были угаданы."
+            }
+          ],
+          "lifecycle": {
+            "schemaVersion": 1,
+            "sources": [
+              {
+                "id": "source-ee439c3eb2b6e6cd2e75759529441fe9",
+                "scope": "team",
+                "kind": "document",
+                "path": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+                "sha256": "5e3c3dc7da92eff2d796dffec0391659ec42e63691e1bae3b0ddcdace3161d2f",
+                "firstImportedAt": "2026-11-08T10:29:51.924Z",
+                "lastImportedAt": "2026-11-08T10:29:51.931Z",
+                "ruleIds": [
+                  "candidate-team-manual-106bbf9dcd794317aeb44b9b",
+                  "candidate-team-no-var-04518d9654a764dbb23783c5"
+                ],
+                "lastRuleIds": [
+                  "candidate-team-manual-106bbf9dcd794317aeb44b9b",
+                  "candidate-team-no-var-04518d9654a764dbb23783c5"
+                ],
+                "complete": true
+              }
+            ],
+            "rules": [
+              {
+                "ruleId": "candidate-team-no-var-04518d9654a764dbb23783c5",
+                "logicalKey": "04518d9654a764dbb23783c5c5ff32912824dd5f3502f8dede38e9c7e0806190",
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+                    "excerpt": "# Agreements\n\nNo var.",
+                    "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                    "line": 3,
+                    "headingContext": [
+                      {
+                        "level": 1,
+                        "title": "Agreements",
+                        "line": 1,
+                        "classification": "neutral",
+                        "reason": "DOCUMENT_LABEL"
+                      }
+                    ],
+                    "headingResolution": "UNQUALIFIED_CONTEXT"
+                  },
+                  {
+                    "kind": "document",
+                    "path": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+                    "excerpt": "# Agreements\n\nNo var.",
+                    "sha256": "5e3c3dc7da92eff2d796dffec0391659ec42e63691e1bae3b0ddcdace3161d2f",
+                    "line": 3,
+                    "headingContext": [
+                      {
+                        "level": 1,
+                        "title": "Agreements",
+                        "line": 1,
+                        "classification": "neutral",
+                        "reason": "DOCUMENT_LABEL"
+                      }
+                    ],
+                    "headingResolution": "UNQUALIFIED_CONTEXT"
+                  }
+                ],
+                "sourceIds": [
+                  "source-ee439c3eb2b6e6cd2e75759529441fe9"
+                ],
+                "firstObservedAt": "2026-11-08T10:29:51.924Z",
+                "lastObservedAt": "2026-11-08T10:29:51.931Z",
+                "projectCoverage": [
+                  {
+                    "project": "app",
+                    "status": "unobserved",
+                    "supported": 0,
+                    "total": 0,
+                    "ratio": null,
+                    "minSamples": 5,
+                    "threshold": 0.9,
+                    "reason": "CODE_NOT_SAMPLED"
+                  }
+                ]
+              },
+              {
+                "ruleId": "candidate-team-manual-106bbf9dcd794317aeb44b9b",
+                "logicalKey": "106bbf9dcd794317aeb44b9b15c51d4cd5d2ad54e55dfaed2d7961a9376867d3",
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "<fixture>/unrelated-document-edit-keeps-rule-identity/agreements.md",
+                    "excerpt": "# Agreements\n## Notes\n\nThis guide is maintained by the team.",
+                    "sha256": "5e3c3dc7da92eff2d796dffec0391659ec42e63691e1bae3b0ddcdace3161d2f",
+                    "line": 6,
+                    "headingContext": [
+                      {
+                        "level": 1,
+                        "title": "Agreements",
+                        "line": 1,
+                        "classification": "neutral",
+                        "reason": "DOCUMENT_LABEL"
+                      },
+                      {
+                        "level": 2,
+                        "title": "Notes",
+                        "line": 5,
+                        "classification": "unknown",
+                        "reason": "UNRECOGNIZED_HEADING_CONTEXT"
+                      }
+                    ],
+                    "headingResolution": "MANUAL_APPLICABILITY_REQUIRED"
+                  }
+                ],
+                "sourceIds": [
+                  "source-ee439c3eb2b6e6cd2e75759529441fe9"
+                ],
+                "firstObservedAt": "2026-11-08T10:29:51.931Z",
+                "lastObservedAt": "2026-11-08T10:29:51.931Z",
+                "projectCoverage": [
+                  {
+                    "project": "app",
+                    "status": "unobserved",
+                    "supported": 0,
+                    "total": 0,
+                    "ratio": null,
+                    "minSamples": 5,
+                    "threshold": 0.9,
+                    "reason": "CODE_NOT_SAMPLED"
+                  }
+                ]
+              }
+            ],
+            "revisions": [],
+            "decisions": []
+          }
+        }
+      },
+      "mismatches": []
+    },
+    {
+      "id": "authoritative-document-changed",
+      "family": "source-freshness",
+      "outcome": "PASS",
+      "expected": {
+        "sourceStates": [
+          "changed"
+        ],
+        "originalApprovedSnapshotUnchanged": true,
+        "readOnly": true
+      },
+      "observed": {
+        "sourceStates": [
+          "changed"
+        ],
+        "originalApprovedSnapshotUnchanged": true,
+        "readOnly": true
+      },
+      "details": {
+        "sourceStatus": {
+          "schemaVersion": 1,
+          "readOnly": true,
+          "status": "SOURCES_REQUIRE_ATTENTION",
+          "sources": [
+            {
+              "id": "source-456f86f8c5e2fc01a23c7bacd18172bd",
+              "scope": "team",
+              "kind": "document",
+              "path": "<fixture>/authoritative-document-changed/agreements.md",
+              "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+              "firstImportedAt": "2026-11-08T10:29:51.937Z",
+              "lastImportedAt": "2026-11-08T10:29:51.937Z",
+              "ruleIds": [
+                "candidate-team-no-var-04518d9654a764dbb23783c5"
+              ],
+              "lastRuleIds": [
+                "candidate-team-no-var-04518d9654a764dbb23783c5"
+              ],
+              "complete": true,
+              "registered": true,
+              "importedSha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+              "observedSha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+              "currentSha256": "a56f52ee67ea8b82ec163843b4b74491fe418dfe8ee040b9e4fde176bcbf0e55",
+              "state": "changed",
+              "reason": "SOURCE_BYTES_CHANGED",
+              "unobservedApprovedRuleIds": [],
+              "requiresReview": true
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "current": 0,
+            "changed": 1,
+            "missing": 0,
+            "unavailable": 0,
+            "unregistered": 0,
+            "requiresReview": 1,
+            "unobservedApprovedRules": 0
+          },
+          "note": "Freshness compares current bytes with the last imported snapshot. It does not approve new evidence or invalidate a prior decision automatically."
+        },
+        "catalog": {
+          "schemaVersion": 1,
+          "rules": [
+            {
+              "id": "candidate-team-no-var-04518d9654a764dbb23783c5",
+              "family": "no-var",
+              "title": "Agreements — Не использовать var",
+              "description": "# Agreements\n\nNo var.",
+              "scope": "team",
+              "status": "approved",
+              "severity": "error",
+              "mode": "enforce",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "applicability": {
+                "include": [
+                  "**/*"
+                ],
+                "exclude": []
+              },
+              "evidence": [
+                {
+                  "kind": "document",
+                  "path": "<fixture>/authoritative-document-changed/agreements.md",
+                  "excerpt": "# Agreements\n\nNo var.",
+                  "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                  "line": 3,
+                  "headingContext": [
+                    {
+                      "level": 1,
+                      "title": "Agreements",
+                      "line": 1,
+                      "classification": "neutral",
+                      "reason": "DOCUMENT_LABEL"
+                    }
+                  ],
+                  "headingResolution": "UNQUALIFIED_CONTEXT"
+                }
+              ],
+              "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки.",
+              "approval": {
+                "by": "Workflow fixture reviewer",
+                "reason": "Explicit approval in a synthetic acceptance fixture.",
+                "at": "2026-11-08T00:00:00.000Z",
+                "behaviorHash": "533203a51671d688d3a6657d5d6775ff43c5d94aee3f20ea507bd791741a518b"
+              }
+            }
+          ],
+          "lifecycle": {
+            "schemaVersion": 1,
+            "sources": [
+              {
+                "id": "source-456f86f8c5e2fc01a23c7bacd18172bd",
+                "scope": "team",
+                "kind": "document",
+                "path": "<fixture>/authoritative-document-changed/agreements.md",
+                "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                "firstImportedAt": "2026-11-08T10:29:51.937Z",
+                "lastImportedAt": "2026-11-08T10:29:51.937Z",
+                "ruleIds": [
+                  "candidate-team-no-var-04518d9654a764dbb23783c5"
+                ],
+                "lastRuleIds": [
+                  "candidate-team-no-var-04518d9654a764dbb23783c5"
+                ],
+                "complete": true
+              }
+            ],
+            "rules": [
+              {
+                "ruleId": "candidate-team-no-var-04518d9654a764dbb23783c5",
+                "logicalKey": "04518d9654a764dbb23783c5c5ff32912824dd5f3502f8dede38e9c7e0806190",
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "<fixture>/authoritative-document-changed/agreements.md",
+                    "excerpt": "# Agreements\n\nNo var.",
+                    "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                    "line": 3,
+                    "headingContext": [
+                      {
+                        "level": 1,
+                        "title": "Agreements",
+                        "line": 1,
+                        "classification": "neutral",
+                        "reason": "DOCUMENT_LABEL"
+                      }
+                    ],
+                    "headingResolution": "UNQUALIFIED_CONTEXT"
+                  }
+                ],
+                "sourceIds": [
+                  "source-456f86f8c5e2fc01a23c7bacd18172bd"
+                ],
+                "firstObservedAt": "2026-11-08T10:29:51.937Z",
+                "lastObservedAt": "2026-11-08T10:29:51.937Z",
+                "projectCoverage": [
+                  {
+                    "project": "app",
+                    "status": "unobserved",
+                    "supported": 0,
+                    "total": 0,
+                    "ratio": null,
+                    "minSamples": 5,
+                    "threshold": 0.9,
+                    "reason": "CODE_NOT_SAMPLED"
+                  }
+                ]
+              }
+            ],
+            "revisions": [],
+            "decisions": []
+          }
+        }
+      },
+      "mismatches": []
+    },
+    {
+      "id": "authoritative-document-missing",
+      "family": "source-freshness",
+      "outcome": "PASS",
+      "expected": {
+        "sourceStates": [
+          "missing"
+        ],
+        "originalApprovedSnapshotUnchanged": true,
+        "readOnly": true
+      },
+      "observed": {
+        "sourceStates": [
+          "missing"
+        ],
+        "originalApprovedSnapshotUnchanged": true,
+        "readOnly": true
+      },
+      "details": {
+        "sourceStatus": {
+          "schemaVersion": 1,
+          "readOnly": true,
+          "status": "SOURCES_REQUIRE_ATTENTION",
+          "sources": [
+            {
+              "id": "source-1f972fc5d0c4ca8a9d99ef081a7149a7",
+              "scope": "team",
+              "kind": "document",
+              "path": "<fixture>/authoritative-document-missing/agreements.md",
+              "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+              "firstImportedAt": "2026-11-08T10:29:51.944Z",
+              "lastImportedAt": "2026-11-08T10:29:51.944Z",
+              "ruleIds": [
+                "candidate-team-no-var-04518d9654a764dbb23783c5"
+              ],
+              "lastRuleIds": [
+                "candidate-team-no-var-04518d9654a764dbb23783c5"
+              ],
+              "complete": true,
+              "registered": true,
+              "importedSha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+              "observedSha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+              "currentSha256": null,
+              "state": "missing",
+              "reason": "ENOENT",
+              "unobservedApprovedRuleIds": [],
+              "requiresReview": true
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "current": 0,
+            "changed": 0,
+            "missing": 1,
+            "unavailable": 0,
+            "unregistered": 0,
+            "requiresReview": 1,
+            "unobservedApprovedRules": 0
+          },
+          "note": "Freshness compares current bytes with the last imported snapshot. It does not approve new evidence or invalidate a prior decision automatically."
+        },
+        "catalog": {
+          "schemaVersion": 1,
+          "rules": [
+            {
+              "id": "candidate-team-no-var-04518d9654a764dbb23783c5",
+              "family": "no-var",
+              "title": "Agreements — Не использовать var",
+              "description": "# Agreements\n\nNo var.",
+              "scope": "team",
+              "status": "approved",
+              "severity": "error",
+              "mode": "enforce",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "applicability": {
+                "include": [
+                  "**/*"
+                ],
+                "exclude": []
+              },
+              "evidence": [
+                {
+                  "kind": "document",
+                  "path": "<fixture>/authoritative-document-missing/agreements.md",
+                  "excerpt": "# Agreements\n\nNo var.",
+                  "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                  "line": 3,
+                  "headingContext": [
+                    {
+                      "level": 1,
+                      "title": "Agreements",
+                      "line": 1,
+                      "classification": "neutral",
+                      "reason": "DOCUMENT_LABEL"
+                    }
+                  ],
+                  "headingResolution": "UNQUALIFIED_CONTEXT"
+                }
+              ],
+              "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки.",
+              "approval": {
+                "by": "Workflow fixture reviewer",
+                "reason": "Explicit approval in a synthetic acceptance fixture.",
+                "at": "2026-11-08T00:00:00.000Z",
+                "behaviorHash": "5cfac4959a0f663b2d187536e09029508ac9cd68f82674d71e2531c0737c46b0"
+              }
+            }
+          ],
+          "lifecycle": {
+            "schemaVersion": 1,
+            "sources": [
+              {
+                "id": "source-1f972fc5d0c4ca8a9d99ef081a7149a7",
+                "scope": "team",
+                "kind": "document",
+                "path": "<fixture>/authoritative-document-missing/agreements.md",
+                "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                "firstImportedAt": "2026-11-08T10:29:51.944Z",
+                "lastImportedAt": "2026-11-08T10:29:51.944Z",
+                "ruleIds": [
+                  "candidate-team-no-var-04518d9654a764dbb23783c5"
+                ],
+                "lastRuleIds": [
+                  "candidate-team-no-var-04518d9654a764dbb23783c5"
+                ],
+                "complete": true
+              }
+            ],
+            "rules": [
+              {
+                "ruleId": "candidate-team-no-var-04518d9654a764dbb23783c5",
+                "logicalKey": "04518d9654a764dbb23783c5c5ff32912824dd5f3502f8dede38e9c7e0806190",
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "<fixture>/authoritative-document-missing/agreements.md",
+                    "excerpt": "# Agreements\n\nNo var.",
+                    "sha256": "d9a43fd1448e0362ea2fd85fc4a8218ed97b556b560d371dfa22c62229e4046c",
+                    "line": 3,
+                    "headingContext": [
+                      {
+                        "level": 1,
+                        "title": "Agreements",
+                        "line": 1,
+                        "classification": "neutral",
+                        "reason": "DOCUMENT_LABEL"
+                      }
+                    ],
+                    "headingResolution": "UNQUALIFIED_CONTEXT"
+                  }
+                ],
+                "sourceIds": [
+                  "source-1f972fc5d0c4ca8a9d99ef081a7149a7"
+                ],
+                "firstObservedAt": "2026-11-08T10:29:51.944Z",
+                "lastObservedAt": "2026-11-08T10:29:51.944Z",
+                "projectCoverage": [
+                  {
+                    "project": "app",
+                    "status": "unobserved",
+                    "supported": 0,
+                    "total": 0,
+                    "ratio": null,
+                    "minSamples": 5,
+                    "threshold": 0.9,
+                    "reason": "CODE_NOT_SAMPLED"
+                  }
+                ]
+              }
+            ],
+            "revisions": [],
+            "decisions": []
+          }
+        }
+      },
+      "mismatches": []
+    },
+    {
+      "id": "distinct-conditional-manual-requirements",
+      "family": "lifecycle",
+      "outcome": "PASS",
+      "expected": {
+        "manualRules": 2,
+        "uniqueRuleIds": 2,
+        "approvedRules": 0
+      },
+      "observed": {
+        "manualRules": 2,
+        "uniqueRuleIds": 2,
+        "approvedRules": 0
+      },
+      "details": {
+        "imported": {
+          "schemaVersion": 1,
+          "scope": "team",
+          "status": "CANDIDATES_READY",
+          "added": [
+            "candidate-team-manual-91f4ecd439f659dc867f66b5",
+            "candidate-team-manual-bfa4d804a76fa381eae9156c"
+          ],
+          "unchanged": [],
+          "revisions": [],
+          "mergedEvidence": [],
+          "sources": [
+            "source-bd70798e1c68a71cbfb470c055b9e97d"
+          ],
+          "codeFilesAnalyzed": 0,
+          "inputs": [
+            {
+              "path": "<fixture>/distinct-conditional-manual-requirements/agreements.md",
+              "sha256": "87d0a244250b91745f8c388fde8dc909a9a0ad7685a9335e06ce2f775275b905",
+              "kind": "document",
+              "complete": true
+            }
+          ],
+          "unmapped": [
+            {
+              "ruleId": "candidate-team-manual-91f4ecd439f659dc867f66b5",
+              "reason": "MANUAL_REVIEW_REQUIRED",
+              "kind": "document",
+              "path": "<fixture>/distinct-conditional-manual-requirements/agreements.md",
+              "excerpt": "# Agreements\n\nUse a separate validation layer only when payment capture is retried.",
+              "sha256": "87d0a244250b91745f8c388fde8dc909a9a0ad7685a9335e06ce2f775275b905",
+              "line": 3,
+              "headingContext": [
+                {
+                  "level": 1,
+                  "title": "Agreements",
+                  "line": 1,
+                  "classification": "neutral",
+                  "reason": "DOCUMENT_LABEL"
+                }
+              ],
+              "headingResolution": "UNQUALIFIED_CONTEXT"
+            },
+            {
+              "ruleId": "candidate-team-manual-bfa4d804a76fa381eae9156c",
+              "reason": "MANUAL_REVIEW_REQUIRED",
+              "kind": "document",
+              "path": "<fixture>/distinct-conditional-manual-requirements/agreements.md",
+              "excerpt": "# Agreements\n\nUse a separate validation layer only when an import is retried.",
+              "sha256": "87d0a244250b91745f8c388fde8dc909a9a0ad7685a9335e06ce2f775275b905",
+              "line": 4,
+              "headingContext": [
+                {
+                  "level": 1,
+                  "title": "Agreements",
+                  "line": 1,
+                  "classification": "neutral",
+                  "reason": "DOCUMENT_LABEL"
+                }
+              ],
+              "headingResolution": "UNQUALIFIED_CONTEXT"
+            }
+          ],
+          "warnings": [],
+          "discovery": null,
+          "proposalCoverage": [
+            {
+              "ruleId": "candidate-team-manual-91f4ecd439f659dc867f66b5",
+              "check": {
+                "kind": "manual",
+                "options": {}
+              },
+              "projects": [
+                {
+                  "project": "app",
+                  "status": "unobserved",
+                  "supported": 0,
+                  "total": 0,
+                  "ratio": null,
+                  "minSamples": 5,
+                  "threshold": 0.9,
+                  "reason": "CODE_NOT_SAMPLED"
+                }
+              ]
+            },
+            {
+              "ruleId": "candidate-team-manual-bfa4d804a76fa381eae9156c",
+              "check": {
+                "kind": "manual",
+                "options": {}
+              },
+              "projects": [
+                {
+                  "project": "app",
+                  "status": "unobserved",
+                  "supported": 0,
+                  "total": 0,
+                  "ratio": null,
+                  "minSamples": 5,
+                  "threshold": 0.9,
+                  "reason": "CODE_NOT_SAMPLED"
+                }
+              ]
+            }
+          ],
+          "sourceCoverage": [
+            {
+              "source": "<fixture>/distinct-conditional-manual-requirements/agreements.md",
+              "units": 2,
+              "headings": 1,
+              "ignoredHeadings": 0,
+              "contextualizedCandidates": 2,
+              "headingManualCandidates": 0,
+              "ignoredCodeBlocks": 0,
+              "structuredBlocks": 0,
+              "sourceBytes": 152,
+              "complete": true,
+              "candidates": 2,
+              "executableCandidates": 0,
+              "manualCandidates": 2
+            }
+          ],
+          "coverage": {
+            "complete": true,
+            "exhaustive": false,
+            "approvedAutomatically": 0,
+            "discoveryFamilies": [
+              "no-var",
+              "strict-equality",
+              "require-braces"
+            ],
+            "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+          }
+        },
+        "catalog": {
+          "schemaVersion": 1,
+          "rules": [
+            {
+              "id": "candidate-team-manual-91f4ecd439f659dc867f66b5",
+              "family": "manual:e3aa04d525bf6813",
+              "title": "Agreements — Use a separate validation layer only when payment capture is retried.",
+              "description": "# Agreements\n\nUse a separate validation layer only when payment capture is retried.",
+              "scope": "team",
+              "status": "candidate",
+              "severity": "info",
+              "mode": "advisory",
+              "check": {
+                "kind": "manual",
+                "options": {}
+              },
+              "applicability": {
+                "include": [
+                  "**/*"
+                ],
+                "exclude": []
+              },
+              "evidence": [
+                {
+                  "kind": "document",
+                  "path": "<fixture>/distinct-conditional-manual-requirements/agreements.md",
+                  "excerpt": "# Agreements\n\nUse a separate validation layer only when payment capture is retried.",
+                  "sha256": "87d0a244250b91745f8c388fde8dc909a9a0ad7685a9335e06ce2f775275b905",
+                  "line": 3,
+                  "headingContext": [
+                    {
+                      "level": 1,
+                      "title": "Agreements",
+                      "line": 1,
+                      "classification": "neutral",
+                      "reason": "DOCUMENT_LABEL"
+                    }
+                  ],
+                  "headingResolution": "UNQUALIFIED_CONTEXT"
+                }
+              ],
+              "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+            },
+            {
+              "id": "candidate-team-manual-bfa4d804a76fa381eae9156c",
+              "family": "manual:2fd5b262b50d2607",
+              "title": "Agreements — Use a separate validation layer only when an import is retried.",
+              "description": "# Agreements\n\nUse a separate validation layer only when an import is retried.",
+              "scope": "team",
+              "status": "candidate",
+              "severity": "info",
+              "mode": "advisory",
+              "check": {
+                "kind": "manual",
+                "options": {}
+              },
+              "applicability": {
+                "include": [
+                  "**/*"
+                ],
+                "exclude": []
+              },
+              "evidence": [
+                {
+                  "kind": "document",
+                  "path": "<fixture>/distinct-conditional-manual-requirements/agreements.md",
+                  "excerpt": "# Agreements\n\nUse a separate validation layer only when an import is retried.",
+                  "sha256": "87d0a244250b91745f8c388fde8dc909a9a0ad7685a9335e06ce2f775275b905",
+                  "line": 4,
+                  "headingContext": [
+                    {
+                      "level": 1,
+                      "title": "Agreements",
+                      "line": 1,
+                      "classification": "neutral",
+                      "reason": "DOCUMENT_LABEL"
+                    }
+                  ],
+                  "headingResolution": "UNQUALIFIED_CONTEXT"
+                }
+              ],
+              "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+            }
+          ],
+          "lifecycle": {
+            "schemaVersion": 1,
+            "sources": [
+              {
+                "id": "source-bd70798e1c68a71cbfb470c055b9e97d",
+                "scope": "team",
+                "kind": "document",
+                "path": "<fixture>/distinct-conditional-manual-requirements/agreements.md",
+                "sha256": "87d0a244250b91745f8c388fde8dc909a9a0ad7685a9335e06ce2f775275b905",
+                "firstImportedAt": "2026-11-08T10:29:51.951Z",
+                "lastImportedAt": "2026-11-08T10:29:51.951Z",
+                "ruleIds": [
+                  "candidate-team-manual-91f4ecd439f659dc867f66b5",
+                  "candidate-team-manual-bfa4d804a76fa381eae9156c"
+                ],
+                "lastRuleIds": [
+                  "candidate-team-manual-91f4ecd439f659dc867f66b5",
+                  "candidate-team-manual-bfa4d804a76fa381eae9156c"
+                ],
+                "complete": true
+              }
+            ],
+            "rules": [
+              {
+                "ruleId": "candidate-team-manual-91f4ecd439f659dc867f66b5",
+                "logicalKey": "91f4ecd439f659dc867f66b52ffc32b8d8aa1942c3cdaa34f2b1836269fa00c6",
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "<fixture>/distinct-conditional-manual-requirements/agreements.md",
+                    "excerpt": "# Agreements\n\nUse a separate validation layer only when payment capture is retried.",
+                    "sha256": "87d0a244250b91745f8c388fde8dc909a9a0ad7685a9335e06ce2f775275b905",
+                    "line": 3,
+                    "headingContext": [
+                      {
+                        "level": 1,
+                        "title": "Agreements",
+                        "line": 1,
+                        "classification": "neutral",
+                        "reason": "DOCUMENT_LABEL"
+                      }
+                    ],
+                    "headingResolution": "UNQUALIFIED_CONTEXT"
+                  }
+                ],
+                "sourceIds": [
+                  "source-bd70798e1c68a71cbfb470c055b9e97d"
+                ],
+                "firstObservedAt": "2026-11-08T10:29:51.951Z",
+                "lastObservedAt": "2026-11-08T10:29:51.951Z",
+                "projectCoverage": [
+                  {
+                    "project": "app",
+                    "status": "unobserved",
+                    "supported": 0,
+                    "total": 0,
+                    "ratio": null,
+                    "minSamples": 5,
+                    "threshold": 0.9,
+                    "reason": "CODE_NOT_SAMPLED"
+                  }
+                ]
+              },
+              {
+                "ruleId": "candidate-team-manual-bfa4d804a76fa381eae9156c",
+                "logicalKey": "bfa4d804a76fa381eae9156c3fee21ec6f310c63ed537885540365a7a8eda886",
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "<fixture>/distinct-conditional-manual-requirements/agreements.md",
+                    "excerpt": "# Agreements\n\nUse a separate validation layer only when an import is retried.",
+                    "sha256": "87d0a244250b91745f8c388fde8dc909a9a0ad7685a9335e06ce2f775275b905",
+                    "line": 4,
+                    "headingContext": [
+                      {
+                        "level": 1,
+                        "title": "Agreements",
+                        "line": 1,
+                        "classification": "neutral",
+                        "reason": "DOCUMENT_LABEL"
+                      }
+                    ],
+                    "headingResolution": "UNQUALIFIED_CONTEXT"
+                  }
+                ],
+                "sourceIds": [
+                  "source-bd70798e1c68a71cbfb470c055b9e97d"
+                ],
+                "firstObservedAt": "2026-11-08T10:29:51.951Z",
+                "lastObservedAt": "2026-11-08T10:29:51.951Z",
+                "projectCoverage": [
+                  {
+                    "project": "app",
+                    "status": "unobserved",
+                    "supported": 0,
+                    "total": 0,
+                    "ratio": null,
+                    "minSamples": 5,
+                    "threshold": 0.9,
+                    "reason": "CODE_NOT_SAMPLED"
+                  }
+                ]
+              }
+            ],
+            "revisions": [],
+            "decisions": []
+          }
+        }
+      },
+      "mismatches": []
+    },
+    {
+      "id": "sampled-project-does-not-cover-unobserved-project",
+      "family": "sampling",
+      "outcome": "PASS",
+      "expected": {
+        "projects": {
+          "large": "supported",
+          "small": "unobserved"
+        },
+        "approvedRules": 0
+      },
+      "observed": {
+        "projects": {
+          "large": "supported",
+          "small": "unobserved"
+        },
+        "approvedRules": 0
+      },
+      "details": {
+        "imported": {
+          "schemaVersion": 1,
+          "scope": "team",
+          "status": "CANDIDATES_READY",
+          "added": [
+            "candidate-team-no-var-91953fb20f85e3437eb1b712"
+          ],
+          "unchanged": [],
+          "revisions": [],
+          "mergedEvidence": [],
+          "sources": [
+            "source-830a37ad53888f27b256a02fb3e43cb8"
+          ],
+          "codeFilesAnalyzed": 1,
+          "inputs": [
+            {
+              "path": "<fixture>/sampled-project-does-not-cover-unobserved-project/projects/large/src/main.js",
+              "evidencePath": "large/src/main.js",
+              "sha256": "d774b491dcc209863ab9873d0c9238785272bfb9fc262541cd5634483cc6a421",
+              "kind": "code",
+              "project": "large",
+              "complete": true
+            }
+          ],
+          "unmapped": [],
+          "warnings": [],
+          "discovery": {
+            "aggregate": {
+              "declarations": {
+                "const": 20,
+                "let": 0,
+                "var": 0
+              },
+              "equality": {
+                "strict": 0,
+                "loose": 0,
+                "nullLoose": 0
+              },
+              "braces": {
+                "braced": 0,
+                "unbraced": 0
+              },
+              "functionLines": {
+                "count": 0
+              },
+              "componentLines": {
+                "count": 0
+              },
+              "parameters": {
+                "count": 0
+              },
+              "imports": []
+            },
+            "byProject": [
+              {
+                "project": "large",
+                "observations": {
+                  "declarations": {
+                    "const": 20,
+                    "let": 0,
+                    "var": 0
+                  },
+                  "equality": {
+                    "strict": 0,
+                    "loose": 0,
+                    "nullLoose": 0
+                  },
+                  "braces": {
+                    "braced": 0,
+                    "unbraced": 0
+                  },
+                  "functionLines": {
+                    "count": 0
+                  },
+                  "componentLines": {
+                    "count": 0
+                  },
+                  "parameters": {
+                    "count": 0
+                  },
+                  "imports": []
+                },
+                "coverage": {
+                  "files": 1,
+                  "filesWithMetrics": 1,
+                  "opportunities": {
+                    "declarations": 20,
+                    "comparisons": 0,
+                    "controls": 0
+                  },
+                  "candidates": 1,
+                  "executableCandidates": 1,
+                  "manualCandidates": 0,
+                  "complete": true,
+                  "vocabulary": [
+                    "no-var",
+                    "strict-equality",
+                    "require-braces"
+                  ],
+                  "architecturalConventionsInferred": false
+                },
+                "suggestedChecks": [
+                  {
+                    "kind": "no-var",
+                    "options": {}
+                  }
+                ]
+              },
+              {
+                "project": "small",
+                "observations": {
+                  "declarations": {
+                    "const": 0,
+                    "let": 0,
+                    "var": 0
+                  },
+                  "equality": {
+                    "strict": 0,
+                    "loose": 0,
+                    "nullLoose": 0
+                  },
+                  "braces": {
+                    "braced": 0,
+                    "unbraced": 0
+                  },
+                  "functionLines": {
+                    "count": 0
+                  },
+                  "componentLines": {
+                    "count": 0
+                  },
+                  "parameters": {
+                    "count": 0
+                  },
+                  "imports": []
+                },
+                "coverage": {
+                  "files": 0,
+                  "filesWithMetrics": 0,
+                  "opportunities": {
+                    "declarations": 0,
+                    "comparisons": 0,
+                    "controls": 0
+                  },
+                  "candidates": 0,
+                  "executableCandidates": 0,
+                  "manualCandidates": 0,
+                  "complete": true,
+                  "vocabulary": [
+                    "no-var",
+                    "strict-equality",
+                    "require-braces"
+                  ],
+                  "architecturalConventionsInferred": false
+                },
+                "suggestedChecks": []
+              }
+            ],
+            "samplePaths": [
+              "<fixture>/sampled-project-does-not-cover-unobserved-project/projects/large"
+            ],
+            "note": "Sampling restricts observations, not the candidate scope. Review applicability before approval; per-project profiles can reveal inconsistent conventions.",
+            "withheldCandidates": [],
+            "proposals": [
+              {
+                "ruleId": "candidate-team-no-var-91953fb20f85e3437eb1b712",
+                "check": {
+                  "kind": "no-var",
+                  "options": {}
+                },
+                "projects": [
+                  {
+                    "project": "large",
+                    "status": "supported",
+                    "supported": 20,
+                    "total": 20,
+                    "ratio": 1,
+                    "minSamples": 5,
+                    "threshold": 0.9
+                  },
+                  {
+                    "project": "small",
+                    "status": "unobserved",
+                    "supported": 0,
+                    "total": 0,
+                    "ratio": null,
+                    "minSamples": 5,
+                    "threshold": 0.9
+                  }
+                ]
+              }
+            ]
+          },
+          "proposalCoverage": [
+            {
+              "ruleId": "candidate-team-no-var-91953fb20f85e3437eb1b712",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "projects": [
+                {
+                  "project": "large",
+                  "status": "supported",
+                  "supported": 20,
+                  "total": 20,
+                  "ratio": 1,
+                  "minSamples": 5,
+                  "threshold": 0.9
+                },
+                {
+                  "project": "small",
+                  "status": "unobserved",
+                  "supported": 0,
+                  "total": 0,
+                  "ratio": null,
+                  "minSamples": 5,
+                  "threshold": 0.9
+                }
+              ]
+            }
+          ],
+          "sourceCoverage": [
+            {
+              "source": "static discovery",
+              "files": 1,
+              "filesWithMetrics": 1,
+              "opportunities": {
+                "declarations": 20,
+                "comparisons": 0,
+                "controls": 0
+              },
+              "candidates": 1,
+              "executableCandidates": 1,
+              "manualCandidates": 0,
+              "complete": true,
+              "vocabulary": [
+                "no-var",
+                "strict-equality",
+                "require-braces"
+              ],
+              "architecturalConventionsInferred": false
+            }
+          ],
+          "coverage": {
+            "complete": true,
+            "exhaustive": false,
+            "approvedAutomatically": 0,
+            "discoveryFamilies": [
+              "no-var",
+              "strict-equality",
+              "require-braces"
+            ],
+            "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+          }
+        },
+        "catalog": {
+          "schemaVersion": 1,
+          "rules": [
+            {
+              "id": "candidate-team-no-var-91953fb20f85e3437eb1b712",
+              "family": "no-var",
+              "title": "Не использовать var",
+              "description": "В выборке 20 из 20 объявлений используют const/let; это кандидат на запрет var.",
+              "scope": "team",
+              "status": "candidate",
+              "severity": "error",
+              "mode": "enforce",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "applicability": {
+                "include": [
+                  "**/*"
+                ],
+                "exclude": []
+              },
+              "evidence": [
+                {
+                  "kind": "code",
+                  "path": "large/src/main.js",
+                  "sha256": "d774b491dcc209863ab9873d0c9238785272bfb9fc262541cd5634483cc6a421",
+                  "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":0,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":0}}"
+                }
+              ],
+              "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+              "confidence": 1,
+              "observations": {
+                "minSamples": 5,
+                "threshold": 0.9,
+                "ratio": 1,
+                "files": 1,
+                "evidenceFilesShown": 1,
+                "datasetSha256": "f29053a0cabb5b4f792121564b86c462673adc2341f2cdb542e5c8c786fb1e44"
+              }
+            }
+          ],
+          "lifecycle": {
+            "schemaVersion": 1,
+            "sources": [
+              {
+                "id": "source-830a37ad53888f27b256a02fb3e43cb8",
+                "scope": "team",
+                "kind": "code",
+                "path": "<fixture>/sampled-project-does-not-cover-unobserved-project/projects/large/src/main.js",
+                "project": "large",
+                "evidencePath": "large/src/main.js",
+                "sha256": "d774b491dcc209863ab9873d0c9238785272bfb9fc262541cd5634483cc6a421",
+                "firstImportedAt": "2026-11-08T10:29:51.964Z",
+                "lastImportedAt": "2026-11-08T10:29:51.964Z",
+                "ruleIds": [
+                  "candidate-team-no-var-91953fb20f85e3437eb1b712"
+                ],
+                "lastRuleIds": [
+                  "candidate-team-no-var-91953fb20f85e3437eb1b712"
+                ],
+                "complete": true
+              }
+            ],
+            "rules": [
+              {
+                "ruleId": "candidate-team-no-var-91953fb20f85e3437eb1b712",
+                "logicalKey": "91953fb20f85e3437eb1b712b5ff5ed13d5cb5b5e87a3c19b93d0aaeb36ee028",
+                "evidence": [
+                  {
+                    "kind": "code",
+                    "path": "large/src/main.js",
+                    "sha256": "d774b491dcc209863ab9873d0c9238785272bfb9fc262541cd5634483cc6a421",
+                    "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":0,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":0}}"
+                  }
+                ],
+                "sourceIds": [
+                  "source-830a37ad53888f27b256a02fb3e43cb8"
+                ],
+                "firstObservedAt": "2026-11-08T10:29:51.964Z",
+                "lastObservedAt": "2026-11-08T10:29:51.964Z",
+                "projectCoverage": [
+                  {
+                    "project": "large",
+                    "status": "supported",
+                    "supported": 20,
+                    "total": 20,
+                    "ratio": 1,
+                    "minSamples": 5,
+                    "threshold": 0.9
+                  },
+                  {
+                    "project": "small",
+                    "status": "unobserved",
+                    "supported": 0,
+                    "total": 0,
+                    "ratio": null,
+                    "minSamples": 5,
+                    "threshold": 0.9
+                  }
+                ],
+                "lastObservation": {
+                  "observations": {
+                    "minSamples": 5,
+                    "threshold": 0.9,
+                    "ratio": 1,
+                    "files": 1,
+                    "evidenceFilesShown": 1,
+                    "datasetSha256": "f29053a0cabb5b4f792121564b86c462673adc2341f2cdb542e5c8c786fb1e44"
+                  },
+                  "confidence": 1
+                }
+              }
+            ],
+            "revisions": [],
+            "decisions": []
+          }
+        }
+      },
+      "mismatches": []
+    },
+    {
+      "id": "small-contradictory-sample-is-insufficient",
+      "family": "sampling",
+      "outcome": "PASS",
+      "expected": {
+        "projects": {
+          "large": "supported",
+          "small": "insufficient"
+        },
+        "approvedRules": 0
+      },
+      "observed": {
+        "projects": {
+          "large": "supported",
+          "small": "insufficient"
+        },
+        "approvedRules": 0
+      },
+      "details": {
+        "imported": {
+          "schemaVersion": 1,
+          "scope": "team",
+          "status": "CANDIDATES_READY",
+          "added": [
+            "candidate-team-no-var-91953fb20f85e3437eb1b712"
+          ],
+          "unchanged": [],
+          "revisions": [],
+          "mergedEvidence": [],
+          "sources": [
+            "source-0025829077e0d2ff1d34a83e563a385d",
+            "source-e0e8e7d4267791c36832814e3df93e18"
+          ],
+          "codeFilesAnalyzed": 2,
+          "inputs": [
+            {
+              "path": "<fixture>/small-contradictory-sample-is-insufficient/projects/large/src/main.js",
+              "evidencePath": "large/src/main.js",
+              "sha256": "ef3858d4c2b0bfe20712d64766ff3c62c9fcd1e1681559dbdc6818b4ef4b3e51",
+              "kind": "code",
+              "project": "large",
+              "complete": true
+            },
+            {
+              "path": "<fixture>/small-contradictory-sample-is-insufficient/projects/small/src/main.js",
+              "evidencePath": "small/src/main.js",
+              "sha256": "31ba00015147cc94c907fbc926296a89902455dfc3877e669096e2e369f6165f",
+              "kind": "code",
+              "project": "small",
+              "complete": true
+            }
+          ],
+          "unmapped": [],
+          "warnings": [],
+          "discovery": {
+            "aggregate": {
+              "declarations": {
+                "const": 200,
+                "let": 0,
+                "var": 4
+              },
+              "equality": {
+                "strict": 0,
+                "loose": 0,
+                "nullLoose": 0
+              },
+              "braces": {
+                "braced": 0,
+                "unbraced": 0
+              },
+              "functionLines": {
+                "count": 0
+              },
+              "componentLines": {
+                "count": 0
+              },
+              "parameters": {
+                "count": 0
+              },
+              "imports": []
+            },
+            "byProject": [
+              {
+                "project": "large",
+                "observations": {
+                  "declarations": {
+                    "const": 200,
+                    "let": 0,
+                    "var": 0
+                  },
+                  "equality": {
+                    "strict": 0,
+                    "loose": 0,
+                    "nullLoose": 0
+                  },
+                  "braces": {
+                    "braced": 0,
+                    "unbraced": 0
+                  },
+                  "functionLines": {
+                    "count": 0
+                  },
+                  "componentLines": {
+                    "count": 0
+                  },
+                  "parameters": {
+                    "count": 0
+                  },
+                  "imports": []
+                },
+                "coverage": {
+                  "files": 1,
+                  "filesWithMetrics": 1,
+                  "opportunities": {
+                    "declarations": 200,
+                    "comparisons": 0,
+                    "controls": 0
+                  },
+                  "candidates": 1,
+                  "executableCandidates": 1,
+                  "manualCandidates": 0,
+                  "complete": true,
+                  "vocabulary": [
+                    "no-var",
+                    "strict-equality",
+                    "require-braces"
+                  ],
+                  "architecturalConventionsInferred": false
+                },
+                "suggestedChecks": [
+                  {
+                    "kind": "no-var",
+                    "options": {}
+                  }
+                ]
+              },
+              {
+                "project": "small",
+                "observations": {
+                  "declarations": {
+                    "const": 0,
+                    "let": 0,
+                    "var": 4
+                  },
+                  "equality": {
+                    "strict": 0,
+                    "loose": 0,
+                    "nullLoose": 0
+                  },
+                  "braces": {
+                    "braced": 0,
+                    "unbraced": 0
+                  },
+                  "functionLines": {
+                    "count": 0
+                  },
+                  "componentLines": {
+                    "count": 0
+                  },
+                  "parameters": {
+                    "count": 0
+                  },
+                  "imports": []
+                },
+                "coverage": {
+                  "files": 1,
+                  "filesWithMetrics": 1,
+                  "opportunities": {
+                    "declarations": 4,
+                    "comparisons": 0,
+                    "controls": 0
+                  },
+                  "candidates": 0,
+                  "executableCandidates": 0,
+                  "manualCandidates": 0,
+                  "complete": true,
+                  "vocabulary": [
+                    "no-var",
+                    "strict-equality",
+                    "require-braces"
+                  ],
+                  "architecturalConventionsInferred": false
+                },
+                "suggestedChecks": []
+              }
+            ],
+            "samplePaths": [],
+            "note": "Sampling restricts observations, not the candidate scope. Review applicability before approval; per-project profiles can reveal inconsistent conventions.",
+            "withheldCandidates": [],
+            "proposals": [
+              {
+                "ruleId": "candidate-team-no-var-91953fb20f85e3437eb1b712",
+                "check": {
+                  "kind": "no-var",
+                  "options": {}
+                },
+                "projects": [
+                  {
+                    "project": "large",
+                    "status": "supported",
+                    "supported": 200,
+                    "total": 200,
+                    "ratio": 1,
+                    "minSamples": 5,
+                    "threshold": 0.9
+                  },
+                  {
+                    "project": "small",
+                    "status": "insufficient",
+                    "supported": 0,
+                    "total": 4,
+                    "ratio": 0,
+                    "minSamples": 5,
+                    "threshold": 0.9
+                  }
+                ]
+              }
+            ]
+          },
+          "proposalCoverage": [
+            {
+              "ruleId": "candidate-team-no-var-91953fb20f85e3437eb1b712",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "projects": [
+                {
+                  "project": "large",
+                  "status": "supported",
+                  "supported": 200,
+                  "total": 200,
+                  "ratio": 1,
+                  "minSamples": 5,
+                  "threshold": 0.9
+                },
+                {
+                  "project": "small",
+                  "status": "insufficient",
+                  "supported": 0,
+                  "total": 4,
+                  "ratio": 0,
+                  "minSamples": 5,
+                  "threshold": 0.9
+                }
+              ]
+            }
+          ],
+          "sourceCoverage": [
+            {
+              "source": "static discovery",
+              "files": 2,
+              "filesWithMetrics": 2,
+              "opportunities": {
+                "declarations": 204,
+                "comparisons": 0,
+                "controls": 0
+              },
+              "candidates": 1,
+              "executableCandidates": 1,
+              "manualCandidates": 0,
+              "complete": true,
+              "vocabulary": [
+                "no-var",
+                "strict-equality",
+                "require-braces"
+              ],
+              "architecturalConventionsInferred": false
+            }
+          ],
+          "coverage": {
+            "complete": true,
+            "exhaustive": false,
+            "approvedAutomatically": 0,
+            "discoveryFamilies": [
+              "no-var",
+              "strict-equality",
+              "require-braces"
+            ],
+            "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+          }
+        },
+        "catalog": {
+          "schemaVersion": 1,
+          "rules": [
+            {
+              "id": "candidate-team-no-var-91953fb20f85e3437eb1b712",
+              "family": "no-var",
+              "title": "Не использовать var",
+              "description": "В выборке 200 из 204 объявлений используют const/let; это кандидат на запрет var.",
+              "scope": "team",
+              "status": "candidate",
+              "severity": "error",
+              "mode": "enforce",
+              "check": {
+                "kind": "no-var",
+                "options": {}
+              },
+              "applicability": {
+                "include": [
+                  "**/*"
+                ],
+                "exclude": []
+              },
+              "evidence": [
+                {
+                  "kind": "code",
+                  "path": "large/src/main.js",
+                  "sha256": "ef3858d4c2b0bfe20712d64766ff3c62c9fcd1e1681559dbdc6818b4ef4b3e51",
+                  "excerpt": "AST observation: {\"declarations\":{\"const\":200,\"let\":0,\"var\":0},\"equality\":{\"strict\":0,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":0}}"
+                },
+                {
+                  "kind": "code",
+                  "path": "small/src/main.js",
+                  "sha256": "31ba00015147cc94c907fbc926296a89902455dfc3877e669096e2e369f6165f",
+                  "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":4},\"equality\":{\"strict\":0,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":0}}"
+                }
+              ],
+              "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+              "confidence": 0.9803921568627451,
+              "observations": {
+                "minSamples": 5,
+                "threshold": 0.9,
+                "ratio": 0.9803921568627451,
+                "files": 2,
+                "evidenceFilesShown": 2,
+                "datasetSha256": "2be1f25c10b340f96ddfcb3629b1b8a4e73210361d367d746daae36d2c7d5843"
+              }
+            }
+          ],
+          "lifecycle": {
+            "schemaVersion": 1,
+            "sources": [
+              {
+                "id": "source-0025829077e0d2ff1d34a83e563a385d",
+                "scope": "team",
+                "kind": "code",
+                "path": "<fixture>/small-contradictory-sample-is-insufficient/projects/large/src/main.js",
+                "project": "large",
+                "evidencePath": "large/src/main.js",
+                "sha256": "ef3858d4c2b0bfe20712d64766ff3c62c9fcd1e1681559dbdc6818b4ef4b3e51",
+                "firstImportedAt": "2026-11-08T10:29:51.995Z",
+                "lastImportedAt": "2026-11-08T10:29:51.995Z",
+                "ruleIds": [
+                  "candidate-team-no-var-91953fb20f85e3437eb1b712"
+                ],
+                "lastRuleIds": [
+                  "candidate-team-no-var-91953fb20f85e3437eb1b712"
+                ],
+                "complete": true
+              },
+              {
+                "id": "source-e0e8e7d4267791c36832814e3df93e18",
+                "scope": "team",
+                "kind": "code",
+                "path": "<fixture>/small-contradictory-sample-is-insufficient/projects/small/src/main.js",
+                "project": "small",
+                "evidencePath": "small/src/main.js",
+                "sha256": "31ba00015147cc94c907fbc926296a89902455dfc3877e669096e2e369f6165f",
+                "firstImportedAt": "2026-11-08T10:29:51.995Z",
+                "lastImportedAt": "2026-11-08T10:29:51.995Z",
+                "ruleIds": [
+                  "candidate-team-no-var-91953fb20f85e3437eb1b712"
+                ],
+                "lastRuleIds": [
+                  "candidate-team-no-var-91953fb20f85e3437eb1b712"
+                ],
+                "complete": true
+              }
+            ],
+            "rules": [
+              {
+                "ruleId": "candidate-team-no-var-91953fb20f85e3437eb1b712",
+                "logicalKey": "91953fb20f85e3437eb1b712b5ff5ed13d5cb5b5e87a3c19b93d0aaeb36ee028",
+                "evidence": [
+                  {
+                    "kind": "code",
+                    "path": "large/src/main.js",
+                    "sha256": "ef3858d4c2b0bfe20712d64766ff3c62c9fcd1e1681559dbdc6818b4ef4b3e51",
+                    "excerpt": "AST observation: {\"declarations\":{\"const\":200,\"let\":0,\"var\":0},\"equality\":{\"strict\":0,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":0}}"
+                  },
+                  {
+                    "kind": "code",
+                    "path": "small/src/main.js",
+                    "sha256": "31ba00015147cc94c907fbc926296a89902455dfc3877e669096e2e369f6165f",
+                    "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":4},\"equality\":{\"strict\":0,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":0}}"
+                  }
+                ],
+                "sourceIds": [
+                  "source-0025829077e0d2ff1d34a83e563a385d",
+                  "source-e0e8e7d4267791c36832814e3df93e18"
+                ],
+                "firstObservedAt": "2026-11-08T10:29:51.995Z",
+                "lastObservedAt": "2026-11-08T10:29:51.995Z",
+                "projectCoverage": [
+                  {
+                    "project": "large",
+                    "status": "supported",
+                    "supported": 200,
+                    "total": 200,
+                    "ratio": 1,
+                    "minSamples": 5,
+                    "threshold": 0.9
+                  },
+                  {
+                    "project": "small",
+                    "status": "insufficient",
+                    "supported": 0,
+                    "total": 4,
+                    "ratio": 0,
+                    "minSamples": 5,
+                    "threshold": 0.9
+                  }
+                ],
+                "lastObservation": {
+                  "observations": {
+                    "minSamples": 5,
+                    "threshold": 0.9,
+                    "ratio": 0.9803921568627451,
+                    "files": 2,
+                    "evidenceFilesShown": 2,
+                    "datasetSha256": "2be1f25c10b340f96ddfcb3629b1b8a4e73210361d367d746daae36d2c7d5843"
+                  },
+                  "confidence": 0.9803921568627451
+                }
+              }
+            ],
+            "revisions": [],
+            "decisions": []
+          }
+        }
+      },
+      "mismatches": []
+    },
+    {
+      "id": "documentation-only-diff-is-not-applicable",
+      "family": "diff",
+      "outcome": "PASS",
+      "expected": {
+        "status": "NOT_APPLICABLE",
+        "exitCode": 0,
+        "selectedFiles": 0
+      },
+      "observed": {
+        "status": "NOT_APPLICABLE",
+        "exitCode": 0,
+        "selectedFiles": 0
+      },
+      "details": {
+        "report": {
+          "schemaVersion": 1,
+          "tool": {
+            "name": "SelfReview",
+            "version": "0.1.0"
+          },
+          "project": "app",
+          "scope": "team",
+          "status": "NOT_APPLICABLE",
+          "exitCode": 0,
+          "authority": "STATIC_SYNTAX_ONLY",
+          "resultScope": "changed-node-ranges",
+          "diffCorrelation": "SUPPLIED_NEW_SIDE_LINES_ONLY",
+          "configHash": "32b9ba745c5a565345c0af10e1407160725d4cce8bb15a0e4bc447319cf61919",
+          "catalogHash": "01f07a250f4a7a17b6f455619c0e6f8b55544296f705c094ed27bd3d3c25268f",
+          "generatedAt": "2026-11-08T10:29:52.003Z",
+          "durationMs": 3,
+          "coverage": {
+            "discoveredFiles": 0,
+            "selectedFiles": 0,
+            "parsedFiles": 0,
+            "activeRules": 0,
+            "enforcedAstRules": 0,
+            "candidateRulesNotEnforced": 0,
+            "manualRules": 0,
+            "skippedFiles": 1,
+            "fullProjectTypeCheck": false,
+            "runtimeTests": false
+          },
+          "findings": [],
+          "errors": [],
+          "skipped": [
+            {
+              "path": "README.md",
+              "reason": "OUTSIDE_JS_TS_COVERAGE"
+            }
+          ],
+          "suppressed": [],
+          "manualChecklist": [],
+          "sources": [],
+          "limitations": [
+            "Only configured JS/TS syntax checks are evaluated; no proof of architecture, business logic, type safety or runtime correctness.",
+            "Changed-node findings may predate this change; use an eligible Git new-only comparison for occurrence attribution.",
+            "Natural-language conventions require an agent or human review; candidate rules are not enforced."
+          ],
+          "warnings": []
+        }
+      },
+      "mismatches": []
+    },
+    {
+      "id": "selected-parse-failure-is-incomplete",
+      "family": "diff",
+      "outcome": "PASS",
+      "expected": {
+        "status": "INCOMPLETE",
+        "exitCode": 2,
+        "hasParseError": true
+      },
+      "observed": {
+        "status": "INCOMPLETE",
+        "exitCode": 2,
+        "hasParseError": true
+      },
+      "details": {
+        "report": {
+          "schemaVersion": 1,
+          "tool": {
+            "name": "SelfReview",
+            "version": "0.1.0"
+          },
+          "project": "app",
+          "scope": "team",
+          "status": "INCOMPLETE",
+          "exitCode": 2,
+          "authority": "STATIC_SYNTAX_ONLY",
+          "resultScope": "changed-node-ranges",
+          "diffCorrelation": "SUPPLIED_NEW_SIDE_LINES_ONLY",
+          "configHash": "32b9ba745c5a565345c0af10e1407160725d4cce8bb15a0e4bc447319cf61919",
+          "catalogHash": "01f07a250f4a7a17b6f455619c0e6f8b55544296f705c094ed27bd3d3c25268f",
+          "generatedAt": "2026-11-08T10:29:52.007Z",
+          "durationMs": 2,
+          "coverage": {
+            "discoveredFiles": 1,
+            "selectedFiles": 1,
+            "parsedFiles": 0,
+            "activeRules": 0,
+            "enforcedAstRules": 0,
+            "candidateRulesNotEnforced": 0,
+            "manualRules": 0,
+            "skippedFiles": 0,
+            "fullProjectTypeCheck": false,
+            "runtimeTests": false
+          },
+          "findings": [],
+          "errors": [
+            {
+              "path": "src/main.js",
+              "reason": "PARSE_ERROR",
+              "code": 1005,
+              "line": 2,
+              "column": 1,
+              "message": "'}' expected."
+            }
+          ],
+          "skipped": [],
+          "suppressed": [],
+          "manualChecklist": [],
+          "sources": [
+            {
+              "path": "src/main.js",
+              "sha256": "a3fb1bf706e21f00ff73d9143b409bc650fc8c59d1f35d5e1a9e349f7c2d721c"
+            }
+          ],
+          "limitations": [
+            "Only configured JS/TS syntax checks are evaluated; no proof of architecture, business logic, type safety or runtime correctness.",
+            "Changed-node findings may predate this change; use an eligible Git new-only comparison for occurrence attribution.",
+            "Natural-language conventions require an agent or human review; candidate rules are not enforced."
+          ],
+          "warnings": []
+        }
+      },
+      "mismatches": []
+    },
+    {
+      "id": "baseline-retained-finding-moves-lines",
+      "family": "baseline",
+      "outcome": "PASS",
+      "expected": {
+        "baselineStatus": "COMPARED",
+        "counts": {
+          "new": 0,
+          "existing": 1,
+          "resolved": 0
+        },
+        "enforcedFindings": 0,
+        "exitCode": 0
+      },
+      "observed": {
+        "status": "CHECKS_PASSED",
+        "baselineStatus": "COMPARED",
+        "counts": {
+          "new": 0,
+          "existing": 1,
+          "resolved": 0
+        },
+        "enforcedFindings": 0,
+        "exitCode": 0
+      },
+      "details": {
+        "report": {
+          "schemaVersion": 1,
+          "tool": {
+            "name": "SelfReview",
+            "version": "0.1.0"
+          },
+          "project": "app",
+          "scope": "team",
+          "status": "CHECKS_PASSED",
+          "exitCode": 0,
+          "authority": "STATIC_SYNTAX_ONLY",
+          "resultScope": "changed-files-baseline",
+          "diffCorrelation": "LOCAL_GIT_SNAPSHOT",
+          "git": {
+            "requestedBase": "0a19686df4ab013fef6436e399582f9254210671",
+            "resolvedBase": "0a19686df4ab013fef6436e399582f9254210671",
+            "headCommit": "0a19686df4ab013fef6436e399582f9254210671",
+            "baseCommit": "0a19686df4ab013fef6436e399582f9254210671",
+            "baseMode": "ref",
+            "target": "working-tree",
+            "diffSha256": "2092e670470f99a8a90c4fc31b829b63aac13b3cdbcf44ea2ebaec39b09d8b3c",
+            "indexSha256": "76bacc23645bde03ac225122789e6aeed441b25aff20ce19fc9459aed09dfc15",
+            "capturedAt": "2026-11-08T10:29:52.096Z",
+            "postimages": [
+              {
+                "path": "src/main.js",
+                "sha256": "a08d24ffeccd43a4ab50472a8096f2dde77a0d0b54b735ece19188626c8fe0a6"
+              }
+            ]
+          },
+          "policyComparison": {
+            "status": "UNCHANGED",
+            "currentHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "baseHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "policyFiles": [
+              "selfreview.config.json",
+              ".selfreview/catalog.json"
+            ]
+          },
+          "fullReviewReason": null,
+          "baseline": {
+            "status": "COMPARED",
+            "baseCommit": "0a19686df4ab013fef6436e399582f9254210671",
+            "policyHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "newOnlyApplied": true,
+            "matching": "per-file-rule-token-occurrences-v1",
+            "counts": {
+              "new": 0,
+              "existing": 1,
+              "resolved": 0
+            },
+            "newFindings": [],
+            "existingFindings": [
+              {
+                "ruleId": "team.console",
+                "family": "no-console",
+                "title": "Declared synthetic workflow policy: team.console",
+                "message": "Console member log is not allowed in this scope.",
+                "severity": "error",
+                "mode": "enforce",
+                "startLine": 3,
+                "endLine": 3,
+                "column": 1,
+                "endColumn": 12,
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "synthetic:workflow/cases.json",
+                    "sha256": "29f6b7b2eab78be1e3b2bfd7b1c2340a0d5eb9182949db990aa1d51298636a92",
+                    "excerpt": "Declared synthetic workflow policy: team.console"
+                  }
+                ],
+                "project": "app",
+                "path": "src/main.js",
+                "scope": "team",
+                "changeRelation": "compared-to-base",
+                "sourceHash": "a08d24ffeccd43a4ab50472a8096f2dde77a0d0b54b735ece19188626c8fe0a6",
+                "baselineState": "existing",
+                "baselineFingerprint": "4d49ce96c4cb1c0e6571edd1c46f8892b922b38cc7ed81f96593aea9da60487f",
+                "baselineLocation": {
+                  "path": "src/main.js",
+                  "startLine": 1,
+                  "endLine": 1,
+                  "column": 1,
+                  "endColumn": 12
+                }
+              }
+            ],
+            "resolvedFindings": [],
+            "sources": [
+              {
+                "path": "src/main.js",
+                "sha256": "da9df677ff19ffdbb3ad85c487bb1ee3ba1c3f9e595a3400a0247793e0aec65f",
+                "gitBlobOid": "ac34daa8dc3196be5200c30c8cbb838986f9c0fa"
+              }
+            ],
+            "limitations": [
+              "Occurrence matching is syntactic, not proof of semantic identity. Named size/parameter violations remain attached to the same symbol; other checks require matching tokens.",
+              "Only compared files are classified. A resolved finding means the selected checker no longer reports that occurrence."
+            ]
+          },
+          "configHash": "5d7d91d1c5ef24a114efc1efaa341b4977a750e5701bc0d4d5fe65a08ca90b87",
+          "catalogHash": "36562def3c00b0d66596b6c4807a8571951d3cdbd9cd872e0e0d6a728b6d671e",
+          "generatedAt": "2026-11-08T10:29:52.152Z",
+          "durationMs": 56,
+          "coverage": {
+            "discoveredFiles": 1,
+            "selectedFiles": 1,
+            "parsedFiles": 1,
+            "activeRules": 1,
+            "enforcedAstRules": 1,
+            "candidateRulesNotEnforced": 0,
+            "manualRules": 0,
+            "skippedFiles": 0,
+            "fullProjectTypeCheck": false,
+            "runtimeTests": false
+          },
+          "findings": [],
+          "errors": [],
+          "skipped": [],
+          "suppressed": [],
+          "manualChecklist": [],
+          "sources": [
+            {
+              "path": "src/main.js",
+              "sha256": "a08d24ffeccd43a4ab50472a8096f2dde77a0d0b54b735ece19188626c8fe0a6",
+              "origin": "working-tree"
+            }
+          ],
+          "limitations": [
+            "Only configured JS/TS syntax checks are evaluated; no proof of architecture, business logic, type safety or runtime correctness.",
+            "New/existing attribution uses occurrence matching under the same current policy; it is not semantic equivalence.",
+            "Natural-language conventions require an agent or human review; candidate rules are not enforced."
+          ],
+          "warnings": []
+        },
+        "baseCommit": "0a19686df4ab013fef6436e399582f9254210671"
+      },
+      "mismatches": []
+    },
+    {
+      "id": "baseline-extra-identical-occurrence-is-new",
+      "family": "baseline",
+      "outcome": "PASS",
+      "expected": {
+        "baselineStatus": "COMPARED",
+        "counts": {
+          "new": 1,
+          "existing": 1,
+          "resolved": 0
+        },
+        "enforcedFindings": 1,
+        "exitCode": 1
+      },
+      "observed": {
+        "status": "VIOLATIONS",
+        "baselineStatus": "COMPARED",
+        "counts": {
+          "new": 1,
+          "existing": 1,
+          "resolved": 0
+        },
+        "enforcedFindings": 1,
+        "exitCode": 1
+      },
+      "details": {
+        "report": {
+          "schemaVersion": 1,
+          "tool": {
+            "name": "SelfReview",
+            "version": "0.1.0"
+          },
+          "project": "app",
+          "scope": "team",
+          "status": "VIOLATIONS",
+          "exitCode": 1,
+          "authority": "STATIC_SYNTAX_ONLY",
+          "resultScope": "changed-files-baseline",
+          "diffCorrelation": "LOCAL_GIT_SNAPSHOT",
+          "git": {
+            "requestedBase": "0a19686df4ab013fef6436e399582f9254210671",
+            "resolvedBase": "0a19686df4ab013fef6436e399582f9254210671",
+            "headCommit": "0a19686df4ab013fef6436e399582f9254210671",
+            "baseCommit": "0a19686df4ab013fef6436e399582f9254210671",
+            "baseMode": "ref",
+            "target": "working-tree",
+            "diffSha256": "b9a53f9731cd7c78d276c02e5665a77c06a19f8f7c0e5a0f4bbd3dacd3d7935c",
+            "indexSha256": "76bacc23645bde03ac225122789e6aeed441b25aff20ce19fc9459aed09dfc15",
+            "capturedAt": "2026-11-08T10:29:52.229Z",
+            "postimages": [
+              {
+                "path": "src/main.js",
+                "sha256": "c185eafa0151cd633daf1feacf737f275e924ce690fdea5aed99298bb0e65547"
+              }
+            ]
+          },
+          "policyComparison": {
+            "status": "UNCHANGED",
+            "currentHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "baseHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "policyFiles": [
+              "selfreview.config.json",
+              ".selfreview/catalog.json"
+            ]
+          },
+          "fullReviewReason": null,
+          "baseline": {
+            "status": "COMPARED",
+            "baseCommit": "0a19686df4ab013fef6436e399582f9254210671",
+            "policyHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "newOnlyApplied": true,
+            "matching": "per-file-rule-token-occurrences-v1",
+            "counts": {
+              "new": 1,
+              "existing": 1,
+              "resolved": 0
+            },
+            "newFindings": [
+              {
+                "ruleId": "team.console",
+                "family": "no-console",
+                "title": "Declared synthetic workflow policy: team.console",
+                "message": "Console member log is not allowed in this scope.",
+                "severity": "error",
+                "mode": "enforce",
+                "startLine": 2,
+                "endLine": 2,
+                "column": 1,
+                "endColumn": 12,
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "synthetic:workflow/cases.json",
+                    "sha256": "29f6b7b2eab78be1e3b2bfd7b1c2340a0d5eb9182949db990aa1d51298636a92",
+                    "excerpt": "Declared synthetic workflow policy: team.console"
+                  }
+                ],
+                "project": "app",
+                "path": "src/main.js",
+                "scope": "team",
+                "changeRelation": "compared-to-base",
+                "sourceHash": "c185eafa0151cd633daf1feacf737f275e924ce690fdea5aed99298bb0e65547",
+                "baselineState": "new",
+                "baselineFingerprint": "4d49ce96c4cb1c0e6571edd1c46f8892b922b38cc7ed81f96593aea9da60487f"
+              }
+            ],
+            "existingFindings": [
+              {
+                "ruleId": "team.console",
+                "family": "no-console",
+                "title": "Declared synthetic workflow policy: team.console",
+                "message": "Console member log is not allowed in this scope.",
+                "severity": "error",
+                "mode": "enforce",
+                "startLine": 1,
+                "endLine": 1,
+                "column": 1,
+                "endColumn": 12,
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "synthetic:workflow/cases.json",
+                    "sha256": "29f6b7b2eab78be1e3b2bfd7b1c2340a0d5eb9182949db990aa1d51298636a92",
+                    "excerpt": "Declared synthetic workflow policy: team.console"
+                  }
+                ],
+                "project": "app",
+                "path": "src/main.js",
+                "scope": "team",
+                "changeRelation": "compared-to-base",
+                "sourceHash": "c185eafa0151cd633daf1feacf737f275e924ce690fdea5aed99298bb0e65547",
+                "baselineState": "existing",
+                "baselineFingerprint": "4d49ce96c4cb1c0e6571edd1c46f8892b922b38cc7ed81f96593aea9da60487f",
+                "baselineLocation": {
+                  "path": "src/main.js",
+                  "startLine": 1,
+                  "endLine": 1,
+                  "column": 1,
+                  "endColumn": 12
+                }
+              }
+            ],
+            "resolvedFindings": [],
+            "sources": [
+              {
+                "path": "src/main.js",
+                "sha256": "da9df677ff19ffdbb3ad85c487bb1ee3ba1c3f9e595a3400a0247793e0aec65f",
+                "gitBlobOid": "ac34daa8dc3196be5200c30c8cbb838986f9c0fa"
+              }
+            ],
+            "limitations": [
+              "Occurrence matching is syntactic, not proof of semantic identity. Named size/parameter violations remain attached to the same symbol; other checks require matching tokens.",
+              "Only compared files are classified. A resolved finding means the selected checker no longer reports that occurrence."
+            ]
+          },
+          "configHash": "5d7d91d1c5ef24a114efc1efaa341b4977a750e5701bc0d4d5fe65a08ca90b87",
+          "catalogHash": "36562def3c00b0d66596b6c4807a8571951d3cdbd9cd872e0e0d6a728b6d671e",
+          "generatedAt": "2026-11-08T10:29:52.284Z",
+          "durationMs": 55,
+          "coverage": {
+            "discoveredFiles": 1,
+            "selectedFiles": 1,
+            "parsedFiles": 1,
+            "activeRules": 1,
+            "enforcedAstRules": 1,
+            "candidateRulesNotEnforced": 0,
+            "manualRules": 0,
+            "skippedFiles": 0,
+            "fullProjectTypeCheck": false,
+            "runtimeTests": false
+          },
+          "findings": [
+            {
+              "ruleId": "team.console",
+              "family": "no-console",
+              "title": "Declared synthetic workflow policy: team.console",
+              "message": "Console member log is not allowed in this scope.",
+              "severity": "error",
+              "mode": "enforce",
+              "startLine": 2,
+              "endLine": 2,
+              "column": 1,
+              "endColumn": 12,
+              "evidence": [
+                {
+                  "kind": "document",
+                  "path": "synthetic:workflow/cases.json",
+                  "sha256": "29f6b7b2eab78be1e3b2bfd7b1c2340a0d5eb9182949db990aa1d51298636a92",
+                  "excerpt": "Declared synthetic workflow policy: team.console"
+                }
+              ],
+              "project": "app",
+              "path": "src/main.js",
+              "scope": "team",
+              "changeRelation": "compared-to-base",
+              "sourceHash": "c185eafa0151cd633daf1feacf737f275e924ce690fdea5aed99298bb0e65547",
+              "baselineState": "new",
+              "baselineFingerprint": "4d49ce96c4cb1c0e6571edd1c46f8892b922b38cc7ed81f96593aea9da60487f"
+            }
+          ],
+          "errors": [],
+          "skipped": [],
+          "suppressed": [],
+          "manualChecklist": [],
+          "sources": [
+            {
+              "path": "src/main.js",
+              "sha256": "c185eafa0151cd633daf1feacf737f275e924ce690fdea5aed99298bb0e65547",
+              "origin": "working-tree"
+            }
+          ],
+          "limitations": [
+            "Only configured JS/TS syntax checks are evaluated; no proof of architecture, business logic, type safety or runtime correctness.",
+            "New/existing attribution uses occurrence matching under the same current policy; it is not semantic equivalence.",
+            "Natural-language conventions require an agent or human review; candidate rules are not enforced."
+          ],
+          "warnings": []
+        },
+        "baseCommit": "0a19686df4ab013fef6436e399582f9254210671"
+      },
+      "mismatches": []
+    },
+    {
+      "id": "baseline-removed-occurrence-is-resolved",
+      "family": "baseline",
+      "outcome": "PASS",
+      "expected": {
+        "baselineStatus": "COMPARED",
+        "counts": {
+          "new": 0,
+          "existing": 0,
+          "resolved": 1
+        },
+        "enforcedFindings": 0,
+        "exitCode": 0
+      },
+      "observed": {
+        "status": "CHECKS_PASSED",
+        "baselineStatus": "COMPARED",
+        "counts": {
+          "new": 0,
+          "existing": 0,
+          "resolved": 1
+        },
+        "enforcedFindings": 0,
+        "exitCode": 0
+      },
+      "details": {
+        "report": {
+          "schemaVersion": 1,
+          "tool": {
+            "name": "SelfReview",
+            "version": "0.1.0"
+          },
+          "project": "app",
+          "scope": "team",
+          "status": "CHECKS_PASSED",
+          "exitCode": 0,
+          "authority": "STATIC_SYNTAX_ONLY",
+          "resultScope": "changed-files-baseline",
+          "diffCorrelation": "LOCAL_GIT_SNAPSHOT",
+          "git": {
+            "requestedBase": "0a19686df4ab013fef6436e399582f9254210671",
+            "resolvedBase": "0a19686df4ab013fef6436e399582f9254210671",
+            "headCommit": "0a19686df4ab013fef6436e399582f9254210671",
+            "baseCommit": "0a19686df4ab013fef6436e399582f9254210671",
+            "baseMode": "ref",
+            "target": "working-tree",
+            "diffSha256": "01b333d9022b4984233eaa142ce412e27d2a3cee8df2f13b26189839afac8b91",
+            "indexSha256": "76bacc23645bde03ac225122789e6aeed441b25aff20ce19fc9459aed09dfc15",
+            "capturedAt": "2026-11-08T10:29:52.354Z",
+            "postimages": [
+              {
+                "path": "src/main.js",
+                "sha256": "5d8f65d2774e206bc9f7a7a4ad39ca2dc563b5c31e46ab57ef4874961237ce29"
+              }
+            ]
+          },
+          "policyComparison": {
+            "status": "UNCHANGED",
+            "currentHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "baseHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "policyFiles": [
+              "selfreview.config.json",
+              ".selfreview/catalog.json"
+            ]
+          },
+          "fullReviewReason": null,
+          "baseline": {
+            "status": "COMPARED",
+            "baseCommit": "0a19686df4ab013fef6436e399582f9254210671",
+            "policyHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "newOnlyApplied": true,
+            "matching": "per-file-rule-token-occurrences-v1",
+            "counts": {
+              "new": 0,
+              "existing": 0,
+              "resolved": 1
+            },
+            "newFindings": [],
+            "existingFindings": [],
+            "resolvedFindings": [
+              {
+                "ruleId": "team.console",
+                "family": "no-console",
+                "title": "Declared synthetic workflow policy: team.console",
+                "message": "Console member log is not allowed in this scope.",
+                "severity": "error",
+                "mode": "enforce",
+                "startLine": 1,
+                "endLine": 1,
+                "column": 1,
+                "endColumn": 12,
+                "evidence": [
+                  {
+                    "kind": "document",
+                    "path": "synthetic:workflow/cases.json",
+                    "sha256": "29f6b7b2eab78be1e3b2bfd7b1c2340a0d5eb9182949db990aa1d51298636a92",
+                    "excerpt": "Declared synthetic workflow policy: team.console"
+                  }
+                ],
+                "project": "app",
+                "path": "src/main.js",
+                "scope": "team",
+                "changeRelation": "base-commit",
+                "sourceHash": "da9df677ff19ffdbb3ad85c487bb1ee3ba1c3f9e595a3400a0247793e0aec65f",
+                "baselineState": "resolved",
+                "baselineFingerprint": "4d49ce96c4cb1c0e6571edd1c46f8892b922b38cc7ed81f96593aea9da60487f"
+              }
+            ],
+            "sources": [
+              {
+                "path": "src/main.js",
+                "sha256": "da9df677ff19ffdbb3ad85c487bb1ee3ba1c3f9e595a3400a0247793e0aec65f",
+                "gitBlobOid": "ac34daa8dc3196be5200c30c8cbb838986f9c0fa"
+              }
+            ],
+            "limitations": [
+              "Occurrence matching is syntactic, not proof of semantic identity. Named size/parameter violations remain attached to the same symbol; other checks require matching tokens.",
+              "Only compared files are classified. A resolved finding means the selected checker no longer reports that occurrence."
+            ]
+          },
+          "configHash": "5d7d91d1c5ef24a114efc1efaa341b4977a750e5701bc0d4d5fe65a08ca90b87",
+          "catalogHash": "36562def3c00b0d66596b6c4807a8571951d3cdbd9cd872e0e0d6a728b6d671e",
+          "generatedAt": "2026-11-08T10:29:52.402Z",
+          "durationMs": 48,
+          "coverage": {
+            "discoveredFiles": 1,
+            "selectedFiles": 1,
+            "parsedFiles": 1,
+            "activeRules": 1,
+            "enforcedAstRules": 1,
+            "candidateRulesNotEnforced": 0,
+            "manualRules": 0,
+            "skippedFiles": 0,
+            "fullProjectTypeCheck": false,
+            "runtimeTests": false
+          },
+          "findings": [],
+          "errors": [],
+          "skipped": [],
+          "suppressed": [],
+          "manualChecklist": [],
+          "sources": [
+            {
+              "path": "src/main.js",
+              "sha256": "5d8f65d2774e206bc9f7a7a4ad39ca2dc563b5c31e46ab57ef4874961237ce29",
+              "origin": "working-tree"
+            }
+          ],
+          "limitations": [
+            "Only configured JS/TS syntax checks are evaluated; no proof of architecture, business logic, type safety or runtime correctness.",
+            "New/existing attribution uses occurrence matching under the same current policy; it is not semantic equivalence.",
+            "Natural-language conventions require an agent or human review; candidate rules are not enforced."
+          ],
+          "warnings": []
+        },
+        "baseCommit": "0a19686df4ab013fef6436e399582f9254210671"
+      },
+      "mismatches": []
+    },
+    {
+      "id": "invalid-base-source-prevents-clean-comparison",
+      "family": "baseline",
+      "outcome": "PASS",
+      "expected": {
+        "status": "INCOMPLETE",
+        "baselineStatus": "INCOMPLETE",
+        "exitCode": 2
+      },
+      "observed": {
+        "status": "INCOMPLETE",
+        "baselineStatus": "INCOMPLETE",
+        "counts": null,
+        "enforcedFindings": 0,
+        "exitCode": 2
+      },
+      "details": {
+        "report": {
+          "schemaVersion": 1,
+          "tool": {
+            "name": "SelfReview",
+            "version": "0.1.0"
+          },
+          "project": "app",
+          "scope": "team",
+          "status": "INCOMPLETE",
+          "exitCode": 2,
+          "authority": "STATIC_SYNTAX_ONLY",
+          "resultScope": "changed-node-ranges",
+          "diffCorrelation": "LOCAL_GIT_SNAPSHOT",
+          "git": {
+            "requestedBase": "acb3e624a03f43337785631af9202181f3ebc9f2",
+            "resolvedBase": "acb3e624a03f43337785631af9202181f3ebc9f2",
+            "headCommit": "acb3e624a03f43337785631af9202181f3ebc9f2",
+            "baseCommit": "acb3e624a03f43337785631af9202181f3ebc9f2",
+            "baseMode": "ref",
+            "target": "working-tree",
+            "diffSha256": "70950a378d46219623bdb5043ed549e93804a1a4497fa645405eff7ae5ca9024",
+            "indexSha256": "610cc83a47f8dd4a1a244b54a15d2fff840b1b8b2650afd913329317c0a0fb1e",
+            "capturedAt": "2026-11-08T10:29:52.480Z",
+            "postimages": [
+              {
+                "path": "src/main.js",
+                "sha256": "5d8f65d2774e206bc9f7a7a4ad39ca2dc563b5c31e46ab57ef4874961237ce29"
+              }
+            ]
+          },
+          "policyComparison": {
+            "status": "UNCHANGED",
+            "currentHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "baseHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "policyFiles": [
+              "selfreview.config.json",
+              ".selfreview/catalog.json"
+            ]
+          },
+          "fullReviewReason": null,
+          "baseline": {
+            "status": "INCOMPLETE",
+            "baseCommit": "acb3e624a03f43337785631af9202181f3ebc9f2",
+            "policyHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "newOnlyApplied": false,
+            "matching": "per-file-rule-token-occurrences-v1",
+            "counts": null,
+            "newFindings": [],
+            "existingFindings": [],
+            "resolvedFindings": [],
+            "sources": [
+              {
+                "path": "src/main.js",
+                "sha256": "c6e7cb521671ad12ae02dfc03ddfac296ca1053f4476aa51217eac795f09686f",
+                "gitBlobOid": "61a6230cb7bc32afaaaa2eb8e3151ed0f460287e"
+              }
+            ],
+            "limitations": [
+              "Occurrence matching is syntactic, not proof of semantic identity. Named size/parameter violations remain attached to the same symbol; other checks require matching tokens.",
+              "Only compared files are classified. A resolved finding means the selected checker no longer reports that occurrence."
+            ]
+          },
+          "configHash": "5d7d91d1c5ef24a114efc1efaa341b4977a750e5701bc0d4d5fe65a08ca90b87",
+          "catalogHash": "36562def3c00b0d66596b6c4807a8571951d3cdbd9cd872e0e0d6a728b6d671e",
+          "generatedAt": "2026-11-08T10:29:52.531Z",
+          "durationMs": 51,
+          "coverage": {
+            "discoveredFiles": 1,
+            "selectedFiles": 1,
+            "parsedFiles": 1,
+            "activeRules": 1,
+            "enforcedAstRules": 1,
+            "candidateRulesNotEnforced": 0,
+            "manualRules": 0,
+            "skippedFiles": 0,
+            "fullProjectTypeCheck": false,
+            "runtimeTests": false
+          },
+          "findings": [],
+          "errors": [
+            {
+              "path": "src/main.js",
+              "reason": "BASELINE_PARSE_ERROR",
+              "code": 1005,
+              "line": 2,
+              "column": 8,
+              "message": "',' expected."
+            },
+            {
+              "path": "src/main.js",
+              "reason": "BASELINE_PARSE_ERROR",
+              "code": 1005,
+              "line": 2,
+              "column": 12,
+              "message": "',' expected."
+            }
+          ],
+          "skipped": [],
+          "suppressed": [],
+          "manualChecklist": [],
+          "sources": [
+            {
+              "path": "src/main.js",
+              "sha256": "5d8f65d2774e206bc9f7a7a4ad39ca2dc563b5c31e46ab57ef4874961237ce29",
+              "origin": "working-tree"
+            }
+          ],
+          "limitations": [
+            "Only configured JS/TS syntax checks are evaluated; no proof of architecture, business logic, type safety or runtime correctness.",
+            "Changed-node findings may predate this change; use an eligible Git new-only comparison for occurrence attribution.",
+            "Natural-language conventions require an agent or human review; candidate rules are not enforced."
+          ],
+          "warnings": []
+        },
+        "baseCommit": "acb3e624a03f43337785631af9202181f3ebc9f2"
+      },
+      "mismatches": []
+    },
+    {
+      "id": "changed-policy-requires-full-current-review",
+      "family": "baseline",
+      "outcome": "PASS",
+      "expected": {
+        "baselineStatus": "POLICY_CHANGED_FULL_REVIEW",
+        "enforcedFindings": 1,
+        "exitCode": 1
+      },
+      "observed": {
+        "status": "VIOLATIONS",
+        "baselineStatus": "POLICY_CHANGED_FULL_REVIEW",
+        "counts": null,
+        "enforcedFindings": 1,
+        "exitCode": 1
+      },
+      "details": {
+        "report": {
+          "schemaVersion": 1,
+          "tool": {
+            "name": "SelfReview",
+            "version": "0.1.0"
+          },
+          "project": "app",
+          "scope": "team",
+          "status": "VIOLATIONS",
+          "exitCode": 1,
+          "authority": "STATIC_SYNTAX_ONLY",
+          "resultScope": "full-project-policy-review",
+          "diffCorrelation": "LOCAL_GIT_SNAPSHOT",
+          "git": {
+            "requestedBase": "642b9e4312f281babad43dcdac5d8deefddc6b05",
+            "resolvedBase": "642b9e4312f281babad43dcdac5d8deefddc6b05",
+            "headCommit": "642b9e4312f281babad43dcdac5d8deefddc6b05",
+            "baseCommit": "642b9e4312f281babad43dcdac5d8deefddc6b05",
+            "baseMode": "ref",
+            "target": "working-tree",
+            "diffSha256": "d69b33d1895117b5e4e86b766557fedf764b7d76a4a5434780fb6a3ceee17712",
+            "indexSha256": "ba1913bce247aaa0e8898ad241ce33bb12d08eeeda5d736f965a6ff663f092f9",
+            "capturedAt": "2026-11-08T10:29:52.608Z",
+            "postimages": []
+          },
+          "policyComparison": {
+            "status": "CHANGED",
+            "currentHash": "2f45f3482bbb922cc6eebe1e04b3ff69ff567b65408f1d1b19ec608341a74813",
+            "baseHash": "9cabce30050ff988583c86f111baae64007e1e83646021016adb68da3430a96b",
+            "policyFiles": [
+              "selfreview.config.json",
+              ".selfreview/catalog.json"
+            ]
+          },
+          "fullReviewReason": "POLICY_CHANGED",
+          "baseline": {
+            "status": "POLICY_CHANGED_FULL_REVIEW",
+            "baseCommit": "642b9e4312f281babad43dcdac5d8deefddc6b05",
+            "policyHash": "2f45f3482bbb922cc6eebe1e04b3ff69ff567b65408f1d1b19ec608341a74813",
+            "newOnlyApplied": false,
+            "matching": "per-file-rule-token-occurrences-v1",
+            "counts": null,
+            "newFindings": [],
+            "existingFindings": [],
+            "resolvedFindings": [],
+            "sources": [],
+            "limitations": [
+              "Occurrence matching is syntactic, not proof of semantic identity. Named size/parameter violations remain attached to the same symbol; other checks require matching tokens.",
+              "Only compared files are classified. A resolved finding means the selected checker no longer reports that occurrence."
+            ]
+          },
+          "configHash": "5d7d91d1c5ef24a114efc1efaa341b4977a750e5701bc0d4d5fe65a08ca90b87",
+          "catalogHash": "c2097618515547de41d4d57ac4f285aba12d54a563bcf331f74a1d426e38a3c7",
+          "generatedAt": "2026-11-08T10:29:52.651Z",
+          "durationMs": 43,
+          "coverage": {
+            "discoveredFiles": 1,
+            "selectedFiles": 1,
+            "parsedFiles": 1,
+            "activeRules": 1,
+            "enforcedAstRules": 1,
+            "candidateRulesNotEnforced": 0,
+            "manualRules": 0,
+            "skippedFiles": 1,
+            "fullProjectTypeCheck": false,
+            "runtimeTests": false
+          },
+          "findings": [
+            {
+              "ruleId": "team.console",
+              "family": "no-console",
+              "title": "Declared synthetic workflow policy: team.console",
+              "message": "Console member log is not allowed in this scope.",
+              "severity": "error",
+              "mode": "enforce",
+              "startLine": 2,
+              "endLine": 2,
+              "column": 1,
+              "endColumn": 12,
+              "evidence": [
+                {
+                  "kind": "document",
+                  "path": "synthetic:workflow/cases.json",
+                  "sha256": "29f6b7b2eab78be1e3b2bfd7b1c2340a0d5eb9182949db990aa1d51298636a92",
+                  "excerpt": "Declared synthetic workflow policy: team.console"
+                }
+              ],
+              "project": "app",
+              "path": "src/main.js",
+              "scope": "team",
+              "changeRelation": "not-compared",
+              "sourceHash": "a4bf84b9bc75c9613939147ab3f04d32dfbc9d4682a5c53a59cf3ff49e01d3b2"
+            }
+          ],
+          "errors": [],
+          "skipped": [
+            {
+              "path": ".selfreview/catalog.json",
+              "reason": "OUTSIDE_JS_TS_COVERAGE"
+            }
+          ],
+          "suppressed": [],
+          "manualChecklist": [],
+          "sources": [
+            {
+              "path": "src/main.js",
+              "sha256": "a4bf84b9bc75c9613939147ab3f04d32dfbc9d4682a5c53a59cf3ff49e01d3b2",
+              "origin": "working-tree"
+            }
+          ],
+          "limitations": [
+            "Only configured JS/TS syntax checks are evaluated; no proof of architecture, business logic, type safety or runtime correctness.",
+            "Changed-node findings may predate this change; use an eligible Git new-only comparison for occurrence attribution.",
+            "Natural-language conventions require an agent or human review; candidate rules are not enforced."
+          ],
+          "warnings": []
+        },
+        "baseCommit": "642b9e4312f281babad43dcdac5d8deefddc6b05"
+      },
+      "mismatches": []
+    },
+    {
+      "id": "aggregate-below-threshold-has-no-proposal",
+      "family": "sampling",
+      "outcome": "PASS",
+      "expected": {
+        "aggregateNoVarProposals": 0,
+        "logicalNoVarRules": 0,
+        "approvedRules": 0
+      },
+      "observed": {
+        "aggregateNoVarProposals": 0,
+        "logicalNoVarRules": 0,
+        "approvedRules": 0
+      },
+      "details": {
+        "imported": {
+          "schemaVersion": 1,
+          "scope": "team",
+          "status": "CANDIDATES_READY",
+          "added": [],
+          "unchanged": [],
+          "revisions": [],
+          "mergedEvidence": [],
+          "sources": [
+            "source-504d8575d94d8ef1b45c51c4b1cf27ca",
+            "source-bd3dc815fe9f4f5113bcfea00fb06c3b"
+          ],
+          "codeFilesAnalyzed": 2,
+          "inputs": [
+            {
+              "path": "<fixture>/aggregate-below-threshold-has-no-proposal/projects/large/src/main.js",
+              "evidencePath": "large/src/main.js",
+              "sha256": "d774b491dcc209863ab9873d0c9238785272bfb9fc262541cd5634483cc6a421",
+              "kind": "code",
+              "project": "large",
+              "complete": true
+            },
+            {
+              "path": "<fixture>/aggregate-below-threshold-has-no-proposal/projects/small/src/main.js",
+              "evidencePath": "small/src/main.js",
+              "sha256": "31ba00015147cc94c907fbc926296a89902455dfc3877e669096e2e369f6165f",
+              "kind": "code",
+              "project": "small",
+              "complete": true
+            }
+          ],
+          "unmapped": [],
+          "warnings": [],
+          "discovery": {
+            "aggregate": {
+              "declarations": {
+                "const": 20,
+                "let": 0,
+                "var": 4
+              },
+              "equality": {
+                "strict": 0,
+                "loose": 0,
+                "nullLoose": 0
+              },
+              "braces": {
+                "braced": 0,
+                "unbraced": 0
+              },
+              "functionLines": {
+                "count": 0
+              },
+              "componentLines": {
+                "count": 0
+              },
+              "parameters": {
+                "count": 0
+              },
+              "imports": []
+            },
+            "byProject": [
+              {
+                "project": "large",
+                "observations": {
+                  "declarations": {
+                    "const": 20,
+                    "let": 0,
+                    "var": 0
+                  },
+                  "equality": {
+                    "strict": 0,
+                    "loose": 0,
+                    "nullLoose": 0
+                  },
+                  "braces": {
+                    "braced": 0,
+                    "unbraced": 0
+                  },
+                  "functionLines": {
+                    "count": 0
+                  },
+                  "componentLines": {
+                    "count": 0
+                  },
+                  "parameters": {
+                    "count": 0
+                  },
+                  "imports": []
+                },
+                "coverage": {
+                  "files": 1,
+                  "filesWithMetrics": 1,
+                  "opportunities": {
+                    "declarations": 20,
+                    "comparisons": 0,
+                    "controls": 0
+                  },
+                  "candidates": 1,
+                  "executableCandidates": 1,
+                  "manualCandidates": 0,
+                  "complete": true,
+                  "vocabulary": [
+                    "no-var",
+                    "strict-equality",
+                    "require-braces"
+                  ],
+                  "architecturalConventionsInferred": false
+                },
+                "suggestedChecks": [
+                  {
+                    "kind": "no-var",
+                    "options": {}
+                  }
+                ]
+              },
+              {
+                "project": "small",
+                "observations": {
+                  "declarations": {
+                    "const": 0,
+                    "let": 0,
+                    "var": 4
+                  },
+                  "equality": {
+                    "strict": 0,
+                    "loose": 0,
+                    "nullLoose": 0
+                  },
+                  "braces": {
+                    "braced": 0,
+                    "unbraced": 0
+                  },
+                  "functionLines": {
+                    "count": 0
+                  },
+                  "componentLines": {
+                    "count": 0
+                  },
+                  "parameters": {
+                    "count": 0
+                  },
+                  "imports": []
+                },
+                "coverage": {
+                  "files": 1,
+                  "filesWithMetrics": 1,
+                  "opportunities": {
+                    "declarations": 4,
+                    "comparisons": 0,
+                    "controls": 0
+                  },
+                  "candidates": 0,
+                  "executableCandidates": 0,
+                  "manualCandidates": 0,
+                  "complete": true,
+                  "vocabulary": [
+                    "no-var",
+                    "strict-equality",
+                    "require-braces"
+                  ],
+                  "architecturalConventionsInferred": false
+                },
+                "suggestedChecks": []
+              }
+            ],
+            "samplePaths": [],
+            "note": "Sampling restricts observations, not the candidate scope. Review applicability before approval; per-project profiles can reveal inconsistent conventions.",
+            "withheldCandidates": [],
+            "proposals": []
+          },
+          "proposalCoverage": [],
+          "sourceCoverage": [
+            {
+              "source": "static discovery",
+              "files": 2,
+              "filesWithMetrics": 2,
+              "opportunities": {
+                "declarations": 24,
+                "comparisons": 0,
+                "controls": 0
+              },
+              "candidates": 0,
+              "executableCandidates": 0,
+              "manualCandidates": 0,
+              "complete": true,
+              "vocabulary": [
+                "no-var",
+                "strict-equality",
+                "require-braces"
+              ],
+              "architecturalConventionsInferred": false
+            }
+          ],
+          "coverage": {
+            "complete": true,
+            "exhaustive": false,
+            "approvedAutomatically": 0,
+            "discoveryFamilies": [
+              "no-var",
+              "strict-equality",
+              "require-braces"
+            ],
+            "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+          }
+        },
+        "discovery": {
+          "candidates": [],
+          "unmapped": [],
+          "warnings": [],
+          "observations": {
+            "declarations": {
+              "const": 20,
+              "let": 0,
+              "var": 4
+            },
+            "equality": {
+              "strict": 0,
+              "loose": 0,
+              "nullLoose": 0
+            },
+            "braces": {
+              "braced": 0,
+              "unbraced": 0
+            },
+            "functionLines": {
+              "count": 0
+            },
+            "componentLines": {
+              "count": 0
+            },
+            "parameters": {
+              "count": 0
+            },
+            "imports": []
+          },
+          "coverage": {
+            "files": 2,
+            "filesWithMetrics": 2,
+            "opportunities": {
+              "declarations": 24,
+              "comparisons": 0,
+              "controls": 0
+            },
+            "candidates": 0,
+            "executableCandidates": 0,
+            "manualCandidates": 0,
+            "complete": true,
+            "vocabulary": [
+              "no-var",
+              "strict-equality",
+              "require-braces"
+            ],
+            "architecturalConventionsInferred": false
+          }
+        },
+        "catalog": {
+          "schemaVersion": 1,
+          "rules": [],
+          "lifecycle": {
+            "schemaVersion": 1,
+            "sources": [
+              {
+                "id": "source-504d8575d94d8ef1b45c51c4b1cf27ca",
+                "scope": "team",
+                "kind": "code",
+                "path": "<fixture>/aggregate-below-threshold-has-no-proposal/projects/large/src/main.js",
+                "project": "large",
+                "evidencePath": "large/src/main.js",
+                "sha256": "d774b491dcc209863ab9873d0c9238785272bfb9fc262541cd5634483cc6a421",
+                "firstImportedAt": "2026-11-08T10:29:52.656Z",
+                "lastImportedAt": "2026-11-08T10:29:52.656Z",
+                "ruleIds": [],
+                "lastRuleIds": [],
+                "complete": true
+              },
+              {
+                "id": "source-bd3dc815fe9f4f5113bcfea00fb06c3b",
+                "scope": "team",
+                "kind": "code",
+                "path": "<fixture>/aggregate-below-threshold-has-no-proposal/projects/small/src/main.js",
+                "project": "small",
+                "evidencePath": "small/src/main.js",
+                "sha256": "31ba00015147cc94c907fbc926296a89902455dfc3877e669096e2e369f6165f",
+                "firstImportedAt": "2026-11-08T10:29:52.656Z",
+                "lastImportedAt": "2026-11-08T10:29:52.656Z",
+                "ruleIds": [],
+                "lastRuleIds": [],
+                "complete": true
+              }
+            ],
+            "rules": [],
+            "revisions": [],
+            "decisions": []
+          }
+        }
+      },
+      "mismatches": []
+    }
+  ]
+}

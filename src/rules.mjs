@@ -9,6 +9,58 @@ export const KINDS = Object.freeze({
 });
 const RULE_KEYS = new Set(['id','family','title','description','scope','status','severity','mode','check','applicability','evidence','rationale','confidence','observations','approval','overrides','overrideReason','rejection','examples','createdAt']);
 const ID = /^[a-z0-9][a-z0-9._-]{0,159}$/;
+
+// A logical identity is separate from the v1 approval hash below. Evidence,
+// source locations and discovery counts may grow without changing a policy.
+// Arbitrary prose remains part of the identity: equal AST parameters are not
+// sufficient evidence that two conditional/manual conventions mean the same.
+function sortedStrings(value, fallback = []) {
+  return Array.isArray(value) && value.every(x => typeof x === 'string')
+    ? [...new Set(value)].sort() : value === undefined ? fallback : value;
+}
+function policyDescription(rule) {
+  const description = rule.description;
+  if (!rule.observations?.datasetSha256 || !rule.evidence?.length || !rule.evidence.every(e => e.kind === 'code')) return description;
+  if (rule.check?.kind === 'no-var' && /^В выборке \d+ из \d+ объявлений используют const\/let; это кандидат на запрет var\.$/u.test(description)) return 'Наблюдение const/let: кандидат на запрет var.';
+  if (rule.check?.kind === 'require-braces' && /^В выборке \d+ из \d+ тел управляющих конструкций имеют фигурные скобки; это кандидат на договорённость\.$/u.test(description)) return 'Наблюдение фигурных скобок: кандидат на договорённость.';
+  if (rule.check?.kind === 'strict-equality') {
+    const matched = /^В выборке \d+ строгих сравнений, \d+ нестрогих \(\d+ с null\)\. Вариант allowNull=(true|false) требует подтверждения\.$/u.exec(description);
+    if (matched && (matched[1] === 'true') === Boolean(rule.check.options?.allowNull)) return `Наблюдение сравнений: вариант allowNull=${matched[1]} требует подтверждения.`;
+  }
+  return description;
+}
+export function logicalRuleDefinition(rule) {
+  const options = structuredClone(rule.check?.options === undefined ? {} : rule.check.options);
+  if (isObject(options)) {
+    for (const key of ['allowMethods','modules','callees']) if (options[key] !== undefined) options[key] = sortedStrings(options[key]);
+    if (rule.check?.kind === 'no-console' && options.allowMethods === undefined) options.allowMethods = [];
+    if (rule.check?.kind === 'strict-equality' && options.allowNull === undefined) options.allowNull = false;
+  }
+  const conditions = [...new Map((rule.evidence ?? []).map(e => {
+    const context = {};
+    if (e.proposedCheck !== undefined) context.proposedCheck = e.proposedCheck;
+    if (e.headingResolution !== undefined) context.headingResolution = e.headingResolution;
+    if (Array.isArray(e.headingContext)) context.headingContext = e.headingContext.map(({line, ...heading}) => heading);
+    return [digest(context), context];
+  }).filter(([, context]) => Object.keys(context).length)).entries()].sort(([a],[b]) => a.localeCompare(b)).map(([, context]) => context);
+  const definition = {
+    scope: rule.scope, family: rule.family, title: rule.title,
+    description: policyDescription(rule), mode: rule.mode, severity: rule.severity,
+    check: {kind: rule.check?.kind, options},
+    applicability: {
+      include: sortedStrings(rule.applicability?.include, ['**/*']),
+      exclude: sortedStrings(rule.applicability?.exclude, []),
+    },
+    overrides: sortedStrings(rule.overrides, []), conditions,
+  };
+  for (const key of ['rationale','overrideReason','examples']) if (rule[key] !== undefined) definition[key] = rule[key];
+  return definition;
+}
+export function logicalRuleKey(rule) { return digest(logicalRuleDefinition(rule)); }
+export function stableCandidateId(rule) {
+  const slug = (value, length) => String(value ?? '').replace(/[^a-z0-9._-]/g, '-').replace(/-+/g, '-').slice(0,length) || 'unknown';
+  return `candidate-${slug(rule.scope,48)}-${slug(rule.check?.kind,32)}-${logicalRuleKey(rule).slice(0,24)}`;
+}
 export function behaviorHash(rule) {
   const { approval, status, rejection, createdAt, ...behavior } = rule;
   return digest(behavior);

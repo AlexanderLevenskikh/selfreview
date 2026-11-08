@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "version": "0.2.0",
+  "baseCommit": "67a42ad980a4b82f8b58c0c9c7e2bbaed19e4fe4",
+  "recordedAt": "2026-11-08T10:48:55.876798+00:00",
+  "environment": {
+    "platform": "Linux",
+    "node": "v24.22.1",
+    "npm": "11.9.0",
+    "git": "git version 2.51.1"
+  },
+  "gates": {
+    "npmTest": {
+      "command": "npm test",
+      "exitCode": 0,
+      "tests": 163,
+      "pass": 163,
+      "fail": 0,
+      "skipped": 0
+    },
+    "publicReplay": {
+      "command": "node evaluation/public/run.mjs",
+      "exitCode": 0,
+      "status": "OBSERVATIONS_MATCH_IN_SELECTED_CORPUS",
+      "selectedFiles": 229,
+      "parsedFiles": 229
+    },
+    "workflow": {
+      "record": "evaluation/workflow/results/current-02.json",
+      "status": "ALL_DECLARED_CASES_MET",
+      "total": 17,
+      "passed": 17,
+      "failed": 0,
+      "notAvailable": 0,
+      "errors": 0
+    }
+  },
+  "files": {
+    "bin/selfreview.mjs": "4960a28f9628d8735586c40dbf33927e5637fca5b66c92c15245881bbd369004",
+    "package-lock.json": "468bb28772f8b5580f26df0eddc21c87eececf5755df6cc393a632fff20e9de4",
+    "package.json": "52808fbc56ddab006a945405f5c0f41719ab18e7f64852c85d2cd5838ea52743",
+    "src/agent-guidance.mjs": "bf99ff7fda9166d24c4632b7f3d83806d01602dbaeae199f15197c2265c3fdb3",
+    "src/ast.mjs": "ecbc886e3315a35c934e2d9b778c35a0621774a5e967bd9fe1de19db023c6a99",
+    "src/baseline.mjs": "c45d5f7b3adb8c37b4c61cca98edf8d3ecf1d44abce0982c4809afa34299456b",
+    "src/config.mjs": "5659360551c620cb1631b9b736555d83e992f56e9e2c3f73c0ba344a06d64c8c",
+    "src/context.mjs": "9ea7c5b5a3ad88d805d04bdbb8eda0dd5f4fcdd572842710ea7b60caacf09630",
+    "src/diff.mjs": "d0afccdbfc865e4b5bfd2f96ed78f4341b1f43d6ab458d836b56b4263a2e2667",
+    "src/eslint.mjs": "00d744004f908584dda8cd62ec603a611c3ac2bd3984597db38b3198888be862",
+    "src/examples.mjs": "512fc9a409a759922ef3f1e486ec95e34c7ca68e06ed377c73b24ad47d5dfa97",
+    "src/export.mjs": "05ed084e8cc6ed661a6c6df2becf4db89aad64c8548d86141bda8b7933146b5e",
+    "src/git.mjs": "8b49ec676dd89e74dd1d099eeaf33e3eb288c933d6917ff47ae81797d1eee41f",
+    "src/index.mjs": "6b87addea616d77409ecd9a10e8383ad13e07db0b2d02e92393719e42875ef83",
+    "src/ingest.mjs": "f2718f60b224ca37c719ffafc634e898e2eab4555d386bd8ba6d5ded1d328452",
+    "src/learn.mjs": "48f2e72943f53069b6774c42d6baf818ce63689ba0d0f7bc0a1ba3997e9c6286",
+    "src/lifecycle.mjs": "dd8278989df88f8a3f6425d12e902908c8acf15f1eba2788beba669212e5e09e",
+    "src/review.mjs": "4a523d6f66611ff6eaf09b772a2ed484292d226c8e4b0f0f7ff38f45076a374d",
+    "src/rules.mjs": "7709c363141251005da5c2066a17ba1556ed05b9b86e2033372f5b5366ff0d1b",
+    "src/util.mjs": "cebf2a4e8f7bed504841d5983e388baa443ba269c5ac5eb7e4472be0cd5b747b",
+    "test/ast.test.mjs": "95bc6a169b4ee546f9bbcea568beb4a8d41716926c427bf83fda5a3c2ec087d5",
+    "test/cli.test.mjs": "0215681b1dc19912b821f2bbf4ffb3037dab1bb2ff022247f4a026e725305305",
+    "test/context.test.mjs": "c209d226c4c5f301302b9c35c5424b8708c462d836d3c7902ce37ce841b0a91d",
+    "test/core.test.mjs": "00c09d60ae2aa5d0b5c931ab7d08ac166dee37e9b3f8e43ddb70d5af4101dff3",
+    "test/diff.test.mjs": "c7beb3df512ceee930c6bcf3fda8ee1da9b5eb9b1924d0af3f8c07da73fb11e5",
+    "test/eslint.test.mjs": "3bd0aaeb9e5ec6bb49d7d92ea0445593dda0a7fb1d30274f8d4c3a7628bae43f",
+    "test/ingest.test.mjs": "1bf36f3d7c1736a12ec255c4383ef295f4d8c28f55eeb05673a1652fea1a7284",
+    "test/learning-boundaries.test.mjs": "8b452206107e5bd5e2c4fea0dd2e3d2748639c07056fc87e0085b250168f8e27",
+    "test/lifecycle.test.mjs": "be513e975a7372a5605a49aa1dd98134b73448c61f8f4f70320bcb60a7ccb607",
+    "test/review-workflow.test.mjs": "2fcf699e46a0bb549c1108262c1adf2e615ff963bfaa75c495dfa7346556adc6",
+    "test/workflow-acceptance.test.mjs": "0d796d5909cc61a7cd14c7d9bbe468ce3e0d6ca01a47ee443639fddeb49ca2bc",
+    "test/workflow-cli.test.mjs": "d8b688c7fccedc58f56c881fb2cce185619c3df74e0227955d70cea8c62fb7f8"
+  },
+  "artifacts": {
+    "verification/workflow-v0.2/npm-test.log": "ab00afa84055d02d85ff8d34134c87e15dd99a9c953302ba6fe8f40397f1852b",
+    "verification/workflow-v0.2/public-results.json": "fa03ba79533f362068990614274dd474811081f36a0b15ef0662a743417420ba",
+    "verification/workflow-v0.2/public-replay.log": "85dfe7563482c20ee1012d64bcb1b11d794c5ce501b4ae3366f6c5d01ac1f72d",
+    "evaluation/workflow/results/current-02.json": "c601a4722ed84e455082d32d0410ed99c454279128d1e06d38dd451081ff94c6"
+  },
+  "notMeasured": [
+    "human active time",
+    "agent efficacy/cost/latency",
+    "real MR comment reduction",
+    "architectural correctness"
+  ],
+  "hostedMatrix": [
+    "ubuntu-node22",
+    "ubuntu-node24",
+    "windows-node22",
+    "windows-node24"
+  ],
+  "hostedResults": "See GitHub Actions checks for the exact published commit; this local record does not assert Windows success."
+}
