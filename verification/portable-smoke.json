@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "node": "v24.22.1",
+  "platform": "linux",
+  "runtimeDependencies": [
+    "typescript@5.9.3"
+  ],
+  "developmentDependenciesPresent": false,
+  "npmInstallPerformedInStage": false,
+  "results": [
+    {
+      "case": "version",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "passed": true,
+      "stderr": "",
+      "version": "0.1.0"
+    },
+    {
+      "case": "project-a",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "passed": true,
+      "stderr": "",
+      "status": "VIOLATIONS",
+      "findingCount": 2
+    },
+    {
+      "case": "team-bcd",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "passed": true,
+      "stderr": "",
+      "results": [
+        {
+          "project": "project-b",
+          "status": "CHECKS_PASSED",
+          "findingCount": 0
+        },
+        {
+          "project": "project-c",
+          "status": "CHECKS_PASSED",
+          "findingCount": 0
+        },
+        {
+          "project": "project-d",
+          "status": "CHECKS_PASSED",
+          "findingCount": 0
+        }
+      ]
+    },
+    {
+      "case": "project-e",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "passed": true,
+      "stderr": "",
+      "status": "CHECKS_PASSED",
+      "findingCount": 0
+    }
+  ]
+}

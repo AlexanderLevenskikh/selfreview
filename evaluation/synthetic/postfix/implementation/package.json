@@ -1,0 +1,30 @@
+{
+  "name": "@selfreview/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local scope-aware JS/TS self-review with evidence-backed rules",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "bin": {
+    "selfreview": "./bin/selfreview.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./eslint": "./src/eslint.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node ./bin/selfreview.mjs review --config ./examples/selfreview.config.json --project project-a",
+    "check": "node --check ./bin/selfreview.mjs"
+  },
+  "dependencies": {
+    "typescript": "5.9.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "8.72.1",
+    "eslint": "10.14.0"
+  },
+  "license": "UNLICENSED"
+}

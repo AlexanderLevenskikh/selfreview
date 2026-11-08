@@ -1,0 +1,4566 @@
+{
+  "schemaVersion": 1,
+  "status": "COMPLETED_WITH_IDENTIFIED_GAPS",
+  "startedAt": "2026-11-08T07:09:37.565Z",
+  "finishedAt": "2026-11-08T07:09:38.536Z",
+  "manifestSha256": "009f4793b91f1cfa279113cb754b4af7f99655dfad5d4540efbdb5981e505031",
+  "evaluatorSha256": "793271e956c4c1cf5920c4a3f4afcdba61cdfd45c55e52d4fbad36f727b12477",
+  "runtime": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "arch": "x64",
+    "parser": "5.9.3"
+  },
+  "thresholds": {
+    "minSamples": 5,
+    "threshold": 0.9
+  },
+  "qualification": "Author-constructed held-out-style fixtures, not a random sample, external benchmark, or statistical estimate of real-repository precision/recall.",
+  "counts": {
+    "corpusFiles": 35,
+    "variantFiles": 12,
+    "parseErrors": 0,
+    "correctObservations": 72,
+    "expectedObservations": 72,
+    "matchedExpectedHypotheses": 12,
+    "expectedHypotheses": 12,
+    "unexpectedHypotheses": 0,
+    "missingHypotheses": 0,
+    "correctScopedOutcomes": 24,
+    "scopedOutcomes": 24,
+    "correctUiAssertions": 4,
+    "uiAssertions": 4,
+    "correctDocumentAssertions": 5,
+    "documentAssertions": 5,
+    "correctMrAssertions": 9,
+    "mrAssertions": 9,
+    "manualCandidatesFromClausesAndMr": 6,
+    "manualUnsupportedScenarios": 7,
+    "automaticallyApprovedCandidates": 0,
+    "qualityProbesMet": 3,
+    "qualityProbes": 5,
+    "unqualifiedAggregateHypotheses": 3
+  },
+  "failedChecks": [
+    {
+      "id": "heading-condition-preserved",
+      "expected": true,
+      "actual": false,
+      "correct": false,
+      "meaning": "The production-only condition survives extraction or forces manual review."
+    },
+    {
+      "id": "mixed-scope-hypotheses-qualified",
+      "expected": true,
+      "actual": false,
+      "correct": false,
+      "meaning": "Scope-wide aggregate hypotheses carry an explicit warning naming the contradictory minority project, or are narrowed to supported projects. A general caveat about sampling alone is insufficient."
+    }
+  ],
+  "facts": [
+    {
+      "id": "modern:coverage.filesWithMetrics",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.declarations.const",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.declarations.let",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.declarations.var",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.equality.strict",
+      "expected": 12,
+      "actual": 12,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.equality.loose",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.equality.nullLoose",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.braces.braced",
+      "expected": 12,
+      "actual": 12,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.braces.unbraced",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.functionLines.count",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.functionLines.min",
+      "expected": 11,
+      "actual": 11,
+      "correct": true
+    },
+    {
+      "id": "modern:observations.functionLines.max",
+      "expected": 11,
+      "actual": 11,
+      "correct": true
+    },
+    {
+      "id": "nullable:coverage.filesWithMetrics",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.declarations.const",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.declarations.let",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.declarations.var",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.equality.strict",
+      "expected": 12,
+      "actual": 12,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.equality.loose",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.equality.nullLoose",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.braces.braced",
+      "expected": 18,
+      "actual": 18,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.braces.unbraced",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.functionLines.count",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.functionLines.min",
+      "expected": 13,
+      "actual": 13,
+      "correct": true
+    },
+    {
+      "id": "nullable:observations.functionLines.max",
+      "expected": 13,
+      "actual": 13,
+      "correct": true
+    },
+    {
+      "id": "legacy:coverage.filesWithMetrics",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.declarations.const",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.declarations.let",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.declarations.var",
+      "expected": 12,
+      "actual": 12,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.equality.strict",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.equality.loose",
+      "expected": 12,
+      "actual": 12,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.equality.nullLoose",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.braces.braced",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.braces.unbraced",
+      "expected": 12,
+      "actual": 12,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.functionLines.count",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.functionLines.min",
+      "expected": 7,
+      "actual": 7,
+      "correct": true
+    },
+    {
+      "id": "legacy:observations.functionLines.max",
+      "expected": 7,
+      "actual": 7,
+      "correct": true
+    },
+    {
+      "id": "major:coverage.filesWithMetrics",
+      "expected": 10,
+      "actual": 10,
+      "correct": true
+    },
+    {
+      "id": "major:observations.declarations.const",
+      "expected": 200,
+      "actual": 200,
+      "correct": true
+    },
+    {
+      "id": "major:observations.declarations.let",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "major:observations.declarations.var",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "major:observations.equality.strict",
+      "expected": 50,
+      "actual": 50,
+      "correct": true
+    },
+    {
+      "id": "major:observations.equality.loose",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "major:observations.equality.nullLoose",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "major:observations.braces.braced",
+      "expected": 50,
+      "actual": 50,
+      "correct": true
+    },
+    {
+      "id": "major:observations.braces.unbraced",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "major:observations.functionLines.count",
+      "expected": 10,
+      "actual": 10,
+      "correct": true
+    },
+    {
+      "id": "major:observations.functionLines.min",
+      "expected": 28,
+      "actual": 28,
+      "correct": true
+    },
+    {
+      "id": "major:observations.functionLines.max",
+      "expected": 28,
+      "actual": 28,
+      "correct": true
+    },
+    {
+      "id": "minor:coverage.filesWithMetrics",
+      "expected": 5,
+      "actual": 5,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.declarations.const",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.declarations.let",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.declarations.var",
+      "expected": 10,
+      "actual": 10,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.equality.strict",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.equality.loose",
+      "expected": 5,
+      "actual": 5,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.equality.nullLoose",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.braces.braced",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.braces.unbraced",
+      "expected": 5,
+      "actual": 5,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.functionLines.count",
+      "expected": 5,
+      "actual": 5,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.functionLines.min",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "minor:observations.functionLines.max",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "mixed:coverage.filesWithMetrics",
+      "expected": 15,
+      "actual": 15,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.declarations.const",
+      "expected": 200,
+      "actual": 200,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.declarations.let",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.declarations.var",
+      "expected": 10,
+      "actual": 10,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.equality.strict",
+      "expected": 50,
+      "actual": 50,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.equality.loose",
+      "expected": 5,
+      "actual": 5,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.equality.nullLoose",
+      "expected": 0,
+      "actual": 0,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.braces.braced",
+      "expected": 50,
+      "actual": 50,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.braces.unbraced",
+      "expected": 5,
+      "actual": 5,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.functionLines.count",
+      "expected": 15,
+      "actual": 15,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.functionLines.min",
+      "expected": 6,
+      "actual": 6,
+      "correct": true
+    },
+    {
+      "id": "mixed:observations.functionLines.max",
+      "expected": 28,
+      "actual": 28,
+      "correct": true
+    }
+  ],
+  "discovery": [
+    {
+      "id": "modern",
+      "result": {
+        "candidates": [
+          {
+            "id": "candidate-modern-no-var-1254884c0427",
+            "family": "no-var",
+            "title": "Не использовать var",
+            "description": "В выборке 12 из 12 объявлений используют const/let; это кандидат на запрет var.",
+            "scope": "modern",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "no-var",
+              "options": {}
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "modern/normalize-1.ts",
+                "sha256": "12699ec7963b2670f2d3feb7d39b518b99d0313efd4dee8bd452976249dd1d3a",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-2.ts",
+                "sha256": "f548603476e956f607fb0eb9c57e3b5f409dbb41c1c74cdbb0afe62095405dc4",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-3.ts",
+                "sha256": "a0bf26001f9e7b11872371618be3effbcaf9d5da00b7d2458b7656859faa739f",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-4.ts",
+                "sha256": "1faf92c4dbed05c70f771e792b3372eb6cc2089a1e8c98eda5757cb77a283e32",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-5.ts",
+                "sha256": "0c9372d3f13a3483397df5b5166b0028b255953f3b305a652f85b6b3c67b5ae2",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-6.ts",
+                "sha256": "952bbd141cd7ca418f088ba64a9a2f99ea01a77ef2d40a354f303345a4de05d6",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 1,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 1,
+              "files": 6,
+              "evidenceFilesShown": 6,
+              "datasetSha256": "1254884c0427ce2761166e68ad9f104114509c681dd97636406526058df4cc87"
+            }
+          },
+          {
+            "id": "candidate-modern-strict-equality-1254884c0427",
+            "family": "strict-equality",
+            "title": "Использовать строгое сравнение",
+            "description": "В выборке 12 строгих сравнений, 0 нестрогих (0 с null). Вариант allowNull=false требует подтверждения.",
+            "scope": "modern",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "strict-equality",
+              "options": {
+                "allowNull": false
+              }
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "modern/normalize-1.ts",
+                "sha256": "12699ec7963b2670f2d3feb7d39b518b99d0313efd4dee8bd452976249dd1d3a",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-2.ts",
+                "sha256": "f548603476e956f607fb0eb9c57e3b5f409dbb41c1c74cdbb0afe62095405dc4",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-3.ts",
+                "sha256": "a0bf26001f9e7b11872371618be3effbcaf9d5da00b7d2458b7656859faa739f",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-4.ts",
+                "sha256": "1faf92c4dbed05c70f771e792b3372eb6cc2089a1e8c98eda5757cb77a283e32",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-5.ts",
+                "sha256": "0c9372d3f13a3483397df5b5166b0028b255953f3b305a652f85b6b3c67b5ae2",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-6.ts",
+                "sha256": "952bbd141cd7ca418f088ba64a9a2f99ea01a77ef2d40a354f303345a4de05d6",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 1,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 1,
+              "files": 6,
+              "evidenceFilesShown": 6,
+              "datasetSha256": "1254884c0427ce2761166e68ad9f104114509c681dd97636406526058df4cc87"
+            }
+          },
+          {
+            "id": "candidate-modern-require-braces-1254884c0427",
+            "family": "require-braces",
+            "title": "Использовать фигурные скобки",
+            "description": "В выборке 12 из 12 тел управляющих конструкций имеют фигурные скобки; это кандидат на договорённость.",
+            "scope": "modern",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "require-braces",
+              "options": {}
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "modern/normalize-1.ts",
+                "sha256": "12699ec7963b2670f2d3feb7d39b518b99d0313efd4dee8bd452976249dd1d3a",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-2.ts",
+                "sha256": "f548603476e956f607fb0eb9c57e3b5f409dbb41c1c74cdbb0afe62095405dc4",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-3.ts",
+                "sha256": "a0bf26001f9e7b11872371618be3effbcaf9d5da00b7d2458b7656859faa739f",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-4.ts",
+                "sha256": "1faf92c4dbed05c70f771e792b3372eb6cc2089a1e8c98eda5757cb77a283e32",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-5.ts",
+                "sha256": "0c9372d3f13a3483397df5b5166b0028b255953f3b305a652f85b6b3c67b5ae2",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "modern/normalize-6.ts",
+                "sha256": "952bbd141cd7ca418f088ba64a9a2f99ea01a77ef2d40a354f303345a4de05d6",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":1,\"var\":0},\"equality\":{\"strict\":2,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":2,\"unbraced\":0}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 1,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 1,
+              "files": 6,
+              "evidenceFilesShown": 6,
+              "datasetSha256": "1254884c0427ce2761166e68ad9f104114509c681dd97636406526058df4cc87"
+            }
+          }
+        ],
+        "unmapped": [],
+        "warnings": [],
+        "observations": {
+          "declarations": {
+            "const": 6,
+            "let": 6,
+            "var": 0
+          },
+          "equality": {
+            "strict": 12,
+            "loose": 0,
+            "nullLoose": 0
+          },
+          "braces": {
+            "braced": 12,
+            "unbraced": 0
+          },
+          "functionLines": {
+            "count": 6,
+            "min": 11,
+            "median": 11,
+            "p95": 11,
+            "max": 11
+          },
+          "componentLines": {
+            "count": 0
+          },
+          "parameters": {
+            "count": 6,
+            "min": 1,
+            "median": 1,
+            "p95": 1,
+            "max": 1
+          },
+          "imports": []
+        },
+        "coverage": {
+          "files": 6,
+          "filesWithMetrics": 6,
+          "opportunities": {
+            "declarations": 12,
+            "comparisons": 12,
+            "controls": 12
+          },
+          "candidates": 3,
+          "executableCandidates": 3,
+          "manualCandidates": 0,
+          "complete": true,
+          "vocabulary": [
+            "no-var",
+            "strict-equality",
+            "require-braces"
+          ],
+          "architecturalConventionsInferred": false
+        }
+      }
+    },
+    {
+      "id": "nullable",
+      "result": {
+        "candidates": [
+          {
+            "id": "candidate-nullable-no-var-f320f80dc921",
+            "family": "no-var",
+            "title": "Не использовать var",
+            "description": "В выборке 6 из 6 объявлений используют const/let; это кандидат на запрет var.",
+            "scope": "nullable",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "no-var",
+              "options": {}
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "nullable/name-1.ts",
+                "sha256": "1e5fabfcd6a9834b11108a967d1503c4c1d965575193b95eb3274b2e64e77163",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-2.ts",
+                "sha256": "07b9d94bc4f853b976da86502f4a4c7c3a7ccd6b9d81e58a5ab1e76a661fcf5e",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-3.ts",
+                "sha256": "578263f8dda16d4d20cb20e18003e66a694607780d3fc0ea970245b731a0fd9f",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-4.ts",
+                "sha256": "00ca08fadd2ffb049bbfbeab0b592655dd84707dca56aec308d6cb9875fd6c9b",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-5.ts",
+                "sha256": "a71b97467158d6c6a6aa313609d92aa69672cf1209d273e36c2a7eb50b03251f",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-6.ts",
+                "sha256": "db04efc77d14056ccef49dab537375bfbcbc0908d872c9852bec621e6ce5f22d",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 1,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 1,
+              "files": 6,
+              "evidenceFilesShown": 6,
+              "datasetSha256": "f320f80dc921f1e3714b36cb4cbc6083556adc648b67f4dad4802bfa7d6f4889"
+            }
+          },
+          {
+            "id": "candidate-nullable-strict-equality-f320f80dc921",
+            "family": "strict-equality",
+            "title": "Использовать строгое сравнение",
+            "description": "В выборке 12 строгих сравнений, 6 нестрогих (6 с null). Вариант allowNull=true требует подтверждения.",
+            "scope": "nullable",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "strict-equality",
+              "options": {
+                "allowNull": true
+              }
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "nullable/name-1.ts",
+                "sha256": "1e5fabfcd6a9834b11108a967d1503c4c1d965575193b95eb3274b2e64e77163",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-2.ts",
+                "sha256": "07b9d94bc4f853b976da86502f4a4c7c3a7ccd6b9d81e58a5ab1e76a661fcf5e",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-3.ts",
+                "sha256": "578263f8dda16d4d20cb20e18003e66a694607780d3fc0ea970245b731a0fd9f",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-4.ts",
+                "sha256": "00ca08fadd2ffb049bbfbeab0b592655dd84707dca56aec308d6cb9875fd6c9b",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-5.ts",
+                "sha256": "a71b97467158d6c6a6aa313609d92aa69672cf1209d273e36c2a7eb50b03251f",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-6.ts",
+                "sha256": "db04efc77d14056ccef49dab537375bfbcbc0908d872c9852bec621e6ce5f22d",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 1,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 1,
+              "files": 6,
+              "evidenceFilesShown": 6,
+              "datasetSha256": "f320f80dc921f1e3714b36cb4cbc6083556adc648b67f4dad4802bfa7d6f4889"
+            }
+          },
+          {
+            "id": "candidate-nullable-require-braces-f320f80dc921",
+            "family": "require-braces",
+            "title": "Использовать фигурные скобки",
+            "description": "В выборке 18 из 18 тел управляющих конструкций имеют фигурные скобки; это кандидат на договорённость.",
+            "scope": "nullable",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "require-braces",
+              "options": {}
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "nullable/name-1.ts",
+                "sha256": "1e5fabfcd6a9834b11108a967d1503c4c1d965575193b95eb3274b2e64e77163",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-2.ts",
+                "sha256": "07b9d94bc4f853b976da86502f4a4c7c3a7ccd6b9d81e58a5ab1e76a661fcf5e",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-3.ts",
+                "sha256": "578263f8dda16d4d20cb20e18003e66a694607780d3fc0ea970245b731a0fd9f",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-4.ts",
+                "sha256": "00ca08fadd2ffb049bbfbeab0b592655dd84707dca56aec308d6cb9875fd6c9b",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-5.ts",
+                "sha256": "a71b97467158d6c6a6aa313609d92aa69672cf1209d273e36c2a7eb50b03251f",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "nullable/name-6.ts",
+                "sha256": "db04efc77d14056ccef49dab537375bfbcbc0908d872c9852bec621e6ce5f22d",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":1,\"let\":0,\"var\":0},\"equality\":{\"strict\":2,\"loose\":1,\"nullLoose\":1},\"braces\":{\"braced\":3,\"unbraced\":0}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 1,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 1,
+              "files": 6,
+              "evidenceFilesShown": 6,
+              "datasetSha256": "f320f80dc921f1e3714b36cb4cbc6083556adc648b67f4dad4802bfa7d6f4889"
+            }
+          }
+        ],
+        "unmapped": [],
+        "warnings": [],
+        "observations": {
+          "declarations": {
+            "const": 6,
+            "let": 0,
+            "var": 0
+          },
+          "equality": {
+            "strict": 12,
+            "loose": 6,
+            "nullLoose": 6
+          },
+          "braces": {
+            "braced": 18,
+            "unbraced": 0
+          },
+          "functionLines": {
+            "count": 6,
+            "min": 13,
+            "median": 13,
+            "p95": 13,
+            "max": 13
+          },
+          "componentLines": {
+            "count": 0
+          },
+          "parameters": {
+            "count": 6,
+            "min": 2,
+            "median": 2,
+            "p95": 2,
+            "max": 2
+          },
+          "imports": []
+        },
+        "coverage": {
+          "files": 6,
+          "filesWithMetrics": 6,
+          "opportunities": {
+            "declarations": 6,
+            "comparisons": 18,
+            "controls": 18
+          },
+          "candidates": 3,
+          "executableCandidates": 3,
+          "manualCandidates": 0,
+          "complete": true,
+          "vocabulary": [
+            "no-var",
+            "strict-equality",
+            "require-braces"
+          ],
+          "architecturalConventionsInferred": false
+        }
+      }
+    },
+    {
+      "id": "legacy",
+      "result": {
+        "candidates": [],
+        "unmapped": [],
+        "warnings": [],
+        "observations": {
+          "declarations": {
+            "const": 0,
+            "let": 0,
+            "var": 12
+          },
+          "equality": {
+            "strict": 0,
+            "loose": 12,
+            "nullLoose": 0
+          },
+          "braces": {
+            "braced": 0,
+            "unbraced": 12
+          },
+          "functionLines": {
+            "count": 6,
+            "min": 7,
+            "median": 7,
+            "p95": 7,
+            "max": 7
+          },
+          "componentLines": {
+            "count": 0
+          },
+          "parameters": {
+            "count": 6,
+            "min": 1,
+            "median": 1,
+            "p95": 1,
+            "max": 1
+          },
+          "imports": []
+        },
+        "coverage": {
+          "files": 6,
+          "filesWithMetrics": 6,
+          "opportunities": {
+            "declarations": 12,
+            "comparisons": 12,
+            "controls": 12
+          },
+          "candidates": 0,
+          "executableCandidates": 0,
+          "manualCandidates": 0,
+          "complete": true,
+          "vocabulary": [
+            "no-var",
+            "strict-equality",
+            "require-braces"
+          ],
+          "architecturalConventionsInferred": false
+        }
+      }
+    },
+    {
+      "id": "major",
+      "result": {
+        "candidates": [
+          {
+            "id": "candidate-major-no-var-de213e50fad0",
+            "family": "no-var",
+            "title": "Не использовать var",
+            "description": "В выборке 200 из 200 объявлений используют const/let; это кандидат на запрет var.",
+            "scope": "major",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "no-var",
+              "options": {}
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "major/modern-1.ts",
+                "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-2.ts",
+                "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-3.ts",
+                "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-4.ts",
+                "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-5.ts",
+                "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-6.ts",
+                "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-7.ts",
+                "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-8.ts",
+                "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-9.ts",
+                "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-10.ts",
+                "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 1,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 1,
+              "files": 10,
+              "evidenceFilesShown": 10,
+              "datasetSha256": "de213e50fad025b7ac9e8deb33a44d541fb9e0337af15ca6bf99ed529e8f0cdb"
+            }
+          },
+          {
+            "id": "candidate-major-strict-equality-de213e50fad0",
+            "family": "strict-equality",
+            "title": "Использовать строгое сравнение",
+            "description": "В выборке 50 строгих сравнений, 0 нестрогих (0 с null). Вариант allowNull=false требует подтверждения.",
+            "scope": "major",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "strict-equality",
+              "options": {
+                "allowNull": false
+              }
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "major/modern-1.ts",
+                "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-2.ts",
+                "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-3.ts",
+                "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-4.ts",
+                "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-5.ts",
+                "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-6.ts",
+                "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-7.ts",
+                "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-8.ts",
+                "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-9.ts",
+                "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-10.ts",
+                "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 1,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 1,
+              "files": 10,
+              "evidenceFilesShown": 10,
+              "datasetSha256": "de213e50fad025b7ac9e8deb33a44d541fb9e0337af15ca6bf99ed529e8f0cdb"
+            }
+          },
+          {
+            "id": "candidate-major-require-braces-de213e50fad0",
+            "family": "require-braces",
+            "title": "Использовать фигурные скобки",
+            "description": "В выборке 50 из 50 тел управляющих конструкций имеют фигурные скобки; это кандидат на договорённость.",
+            "scope": "major",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "require-braces",
+              "options": {}
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "major/modern-1.ts",
+                "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-2.ts",
+                "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-3.ts",
+                "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-4.ts",
+                "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-5.ts",
+                "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-6.ts",
+                "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-7.ts",
+                "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-8.ts",
+                "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-9.ts",
+                "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-10.ts",
+                "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 1,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 1,
+              "files": 10,
+              "evidenceFilesShown": 10,
+              "datasetSha256": "de213e50fad025b7ac9e8deb33a44d541fb9e0337af15ca6bf99ed529e8f0cdb"
+            }
+          }
+        ],
+        "unmapped": [],
+        "warnings": [],
+        "observations": {
+          "declarations": {
+            "const": 200,
+            "let": 0,
+            "var": 0
+          },
+          "equality": {
+            "strict": 50,
+            "loose": 0,
+            "nullLoose": 0
+          },
+          "braces": {
+            "braced": 50,
+            "unbraced": 0
+          },
+          "functionLines": {
+            "count": 10,
+            "min": 28,
+            "median": 28,
+            "p95": 28,
+            "max": 28
+          },
+          "componentLines": {
+            "count": 0
+          },
+          "parameters": {
+            "count": 10,
+            "min": 1,
+            "median": 1,
+            "p95": 1,
+            "max": 1
+          },
+          "imports": []
+        },
+        "coverage": {
+          "files": 10,
+          "filesWithMetrics": 10,
+          "opportunities": {
+            "declarations": 200,
+            "comparisons": 50,
+            "controls": 50
+          },
+          "candidates": 3,
+          "executableCandidates": 3,
+          "manualCandidates": 0,
+          "complete": true,
+          "vocabulary": [
+            "no-var",
+            "strict-equality",
+            "require-braces"
+          ],
+          "architecturalConventionsInferred": false
+        }
+      }
+    },
+    {
+      "id": "minor",
+      "result": {
+        "candidates": [],
+        "unmapped": [],
+        "warnings": [],
+        "observations": {
+          "declarations": {
+            "const": 0,
+            "let": 0,
+            "var": 10
+          },
+          "equality": {
+            "strict": 0,
+            "loose": 5,
+            "nullLoose": 0
+          },
+          "braces": {
+            "braced": 0,
+            "unbraced": 5
+          },
+          "functionLines": {
+            "count": 5,
+            "min": 6,
+            "median": 6,
+            "p95": 6,
+            "max": 6
+          },
+          "componentLines": {
+            "count": 0
+          },
+          "parameters": {
+            "count": 5,
+            "min": 1,
+            "median": 1,
+            "p95": 1,
+            "max": 1
+          },
+          "imports": []
+        },
+        "coverage": {
+          "files": 5,
+          "filesWithMetrics": 5,
+          "opportunities": {
+            "declarations": 10,
+            "comparisons": 5,
+            "controls": 5
+          },
+          "candidates": 0,
+          "executableCandidates": 0,
+          "manualCandidates": 0,
+          "complete": true,
+          "vocabulary": [
+            "no-var",
+            "strict-equality",
+            "require-braces"
+          ],
+          "architecturalConventionsInferred": false
+        }
+      }
+    },
+    {
+      "id": "mixed",
+      "result": {
+        "candidates": [
+          {
+            "id": "candidate-mixed-no-var-4cf0cc03e2e0",
+            "family": "no-var",
+            "title": "Не использовать var",
+            "description": "В выборке 200 из 210 объявлений используют const/let; это кандидат на запрет var.",
+            "scope": "mixed",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "no-var",
+              "options": {}
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "major/modern-1.ts",
+                "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-2.ts",
+                "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-3.ts",
+                "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-4.ts",
+                "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-5.ts",
+                "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-6.ts",
+                "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-7.ts",
+                "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-8.ts",
+                "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-9.ts",
+                "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-10.ts",
+                "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-1.js",
+                "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-2.js",
+                "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-3.js",
+                "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-4.js",
+                "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-5.js",
+                "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 0.9523809523809523,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 0.9523809523809523,
+              "files": 15,
+              "evidenceFilesShown": 15,
+              "datasetSha256": "4cf0cc03e2e0bf662454fe413d3089fdbb472d5e8979918e8ab3cd1ce010a196"
+            }
+          },
+          {
+            "id": "candidate-mixed-strict-equality-4cf0cc03e2e0",
+            "family": "strict-equality",
+            "title": "Использовать строгое сравнение",
+            "description": "В выборке 50 строгих сравнений, 5 нестрогих (0 с null). Вариант allowNull=false требует подтверждения.",
+            "scope": "mixed",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "strict-equality",
+              "options": {
+                "allowNull": false
+              }
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "major/modern-1.ts",
+                "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-2.ts",
+                "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-3.ts",
+                "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-4.ts",
+                "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-5.ts",
+                "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-6.ts",
+                "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-7.ts",
+                "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-8.ts",
+                "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-9.ts",
+                "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-10.ts",
+                "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-1.js",
+                "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-2.js",
+                "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-3.js",
+                "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-4.js",
+                "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-5.js",
+                "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 0.9090909090909091,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 0.9090909090909091,
+              "files": 15,
+              "evidenceFilesShown": 15,
+              "datasetSha256": "4cf0cc03e2e0bf662454fe413d3089fdbb472d5e8979918e8ab3cd1ce010a196"
+            }
+          },
+          {
+            "id": "candidate-mixed-require-braces-4cf0cc03e2e0",
+            "family": "require-braces",
+            "title": "Использовать фигурные скобки",
+            "description": "В выборке 50 из 55 тел управляющих конструкций имеют фигурные скобки; это кандидат на договорённость.",
+            "scope": "mixed",
+            "status": "candidate",
+            "severity": "error",
+            "mode": "enforce",
+            "check": {
+              "kind": "require-braces",
+              "options": {}
+            },
+            "applicability": {
+              "include": [
+                "**/*"
+              ],
+              "exclude": []
+            },
+            "evidence": [
+              {
+                "kind": "code",
+                "path": "major/modern-1.ts",
+                "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-2.ts",
+                "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-3.ts",
+                "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-4.ts",
+                "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-5.ts",
+                "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-6.ts",
+                "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-7.ts",
+                "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-8.ts",
+                "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-9.ts",
+                "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "major/modern-10.ts",
+                "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-1.js",
+                "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-2.js",
+                "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-3.js",
+                "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-4.js",
+                "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              },
+              {
+                "kind": "code",
+                "path": "minor/compat-5.js",
+                "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6",
+                "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+              }
+            ],
+            "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+            "confidence": 0.9090909090909091,
+            "observations": {
+              "minSamples": 5,
+              "threshold": 0.9,
+              "ratio": 0.9090909090909091,
+              "files": 15,
+              "evidenceFilesShown": 15,
+              "datasetSha256": "4cf0cc03e2e0bf662454fe413d3089fdbb472d5e8979918e8ab3cd1ce010a196"
+            }
+          }
+        ],
+        "unmapped": [],
+        "warnings": [],
+        "observations": {
+          "declarations": {
+            "const": 200,
+            "let": 0,
+            "var": 10
+          },
+          "equality": {
+            "strict": 50,
+            "loose": 5,
+            "nullLoose": 0
+          },
+          "braces": {
+            "braced": 50,
+            "unbraced": 5
+          },
+          "functionLines": {
+            "count": 15,
+            "min": 6,
+            "median": 28,
+            "p95": 28,
+            "max": 28
+          },
+          "componentLines": {
+            "count": 0
+          },
+          "parameters": {
+            "count": 15,
+            "min": 1,
+            "median": 1,
+            "p95": 1,
+            "max": 1
+          },
+          "imports": []
+        },
+        "coverage": {
+          "files": 15,
+          "filesWithMetrics": 15,
+          "opportunities": {
+            "declarations": 210,
+            "comparisons": 55,
+            "controls": 55
+          },
+          "candidates": 3,
+          "executableCandidates": 3,
+          "manualCandidates": 0,
+          "complete": true,
+          "vocabulary": [
+            "no-var",
+            "strict-equality",
+            "require-braces"
+          ],
+          "architecturalConventionsInferred": false
+        }
+      }
+    }
+  ],
+  "unexpectedHypotheses": [],
+  "missingHypotheses": [],
+  "scopedOutcomes": [
+    {
+      "id": "null-guard:strict",
+      "expected": [
+        "strict-equality"
+      ],
+      "actual": [
+        "strict-equality"
+      ],
+      "correct": true,
+      "scope": "strict",
+      "file": "null-guard.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [
+        {
+          "ruleId": "strict.strict-equality",
+          "family": "strict-equality",
+          "title": "Synthetic strict strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule.",
+          "severity": "error",
+          "mode": "enforce",
+          "startLine": 1,
+          "endLine": 1,
+          "column": 39,
+          "endColumn": 48,
+          "evidence": [
+            {
+              "kind": "synthetic-evaluation-policy",
+              "path": "synthetic-policy.json",
+              "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2",
+              "excerpt": "Explicitly preregistered synthetic variants, unrelated to any user project."
+            }
+          ]
+        }
+      ],
+      "limitation": null
+    },
+    {
+      "id": "null-guard:compatible",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "compatible",
+      "file": "null-guard.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    },
+    {
+      "id": "non-null-loose:strict",
+      "expected": [
+        "strict-equality"
+      ],
+      "actual": [
+        "strict-equality"
+      ],
+      "correct": true,
+      "scope": "strict",
+      "file": "non-null-loose.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [
+        {
+          "ruleId": "strict.strict-equality",
+          "family": "strict-equality",
+          "title": "Synthetic strict strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule.",
+          "severity": "error",
+          "mode": "enforce",
+          "startLine": 1,
+          "endLine": 1,
+          "column": 37,
+          "endColumn": 43,
+          "evidence": [
+            {
+              "kind": "synthetic-evaluation-policy",
+              "path": "synthetic-policy.json",
+              "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2",
+              "excerpt": "Explicitly preregistered synthetic variants, unrelated to any user project."
+            }
+          ]
+        }
+      ],
+      "limitation": null
+    },
+    {
+      "id": "non-null-loose:compatible",
+      "expected": [
+        "strict-equality"
+      ],
+      "actual": [
+        "strict-equality"
+      ],
+      "correct": true,
+      "scope": "compatible",
+      "file": "non-null-loose.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [
+        {
+          "ruleId": "compatible.strict-equality",
+          "family": "strict-equality",
+          "title": "Synthetic compatible strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule.",
+          "severity": "error",
+          "mode": "enforce",
+          "startLine": 1,
+          "endLine": 1,
+          "column": 37,
+          "endColumn": 43,
+          "evidence": [
+            {
+              "kind": "synthetic-evaluation-policy",
+              "path": "synthetic-policy.json",
+              "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2",
+              "excerpt": "Explicitly preregistered synthetic variants, unrelated to any user project."
+            }
+          ]
+        }
+      ],
+      "limitation": null
+    },
+    {
+      "id": "strict-guard:strict",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "strict",
+      "file": "strict-guard.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    },
+    {
+      "id": "strict-guard:compatible",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "compatible",
+      "file": "strict-guard.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    },
+    {
+      "id": "console-log:strict",
+      "expected": [
+        "no-console"
+      ],
+      "actual": [
+        "no-console"
+      ],
+      "correct": true,
+      "scope": "strict",
+      "file": "console-log.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [
+        {
+          "ruleId": "strict.no-console",
+          "family": "no-console",
+          "title": "Synthetic strict no-console",
+          "message": "Console member log is not allowed in this scope.",
+          "severity": "error",
+          "mode": "enforce",
+          "startLine": 1,
+          "endLine": 1,
+          "column": 1,
+          "endColumn": 12,
+          "evidence": [
+            {
+              "kind": "synthetic-evaluation-policy",
+              "path": "synthetic-policy.json",
+              "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2",
+              "excerpt": "Explicitly preregistered synthetic variants, unrelated to any user project."
+            }
+          ]
+        }
+      ],
+      "limitation": null
+    },
+    {
+      "id": "console-log:compatible",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "compatible",
+      "file": "console-log.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    },
+    {
+      "id": "console-warn:strict",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "strict",
+      "file": "console-warn.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    },
+    {
+      "id": "console-warn:compatible",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "compatible",
+      "file": "console-warn.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    },
+    {
+      "id": "shadowed-console:strict",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "strict",
+      "file": "shadowed-console.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    },
+    {
+      "id": "shadowed-console:compatible",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "compatible",
+      "file": "shadowed-console.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    },
+    {
+      "id": "literal-console-member:strict",
+      "expected": [
+        "no-console"
+      ],
+      "actual": [
+        "no-console"
+      ],
+      "correct": true,
+      "scope": "strict",
+      "file": "literal-console-member.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [
+        {
+          "ruleId": "strict.no-console",
+          "family": "no-console",
+          "title": "Synthetic strict no-console",
+          "message": "Console member log is not allowed in this scope.",
+          "severity": "error",
+          "mode": "enforce",
+          "startLine": 1,
+          "endLine": 1,
+          "column": 1,
+          "endColumn": 15,
+          "evidence": [
+            {
+              "kind": "synthetic-evaluation-policy",
+              "path": "synthetic-policy.json",
+              "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2",
+              "excerpt": "Explicitly preregistered synthetic variants, unrelated to any user project."
+            }
+          ]
+        }
+      ],
+      "limitation": null
+    },
+    {
+      "id": "literal-console-member:compatible",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "compatible",
+      "file": "literal-console-member.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    },
+    {
+      "id": "dynamic-console-member:strict",
+      "expected": [
+        "no-console"
+      ],
+      "actual": [
+        "no-console"
+      ],
+      "correct": true,
+      "scope": "strict",
+      "file": "dynamic-console-member.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [
+        {
+          "ruleId": "strict.no-console",
+          "family": "no-console",
+          "title": "Synthetic strict no-console",
+          "message": "Console member [dynamic] is not allowed in this scope.",
+          "severity": "error",
+          "mode": "enforce",
+          "startLine": 1,
+          "endLine": 1,
+          "column": 23,
+          "endColumn": 38,
+          "evidence": [
+            {
+              "kind": "synthetic-evaluation-policy",
+              "path": "synthetic-policy.json",
+              "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2",
+              "excerpt": "Explicitly preregistered synthetic variants, unrelated to any user project."
+            }
+          ]
+        }
+      ],
+      "limitation": "Constant propagation is not performed; dynamic membership cannot prove an allowed member."
+    },
+    {
+      "id": "dynamic-console-member:compatible",
+      "expected": [
+        "no-console"
+      ],
+      "actual": [
+        "no-console"
+      ],
+      "correct": true,
+      "scope": "compatible",
+      "file": "dynamic-console-member.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [
+        {
+          "ruleId": "compatible.no-console",
+          "family": "no-console",
+          "title": "Synthetic compatible no-console",
+          "message": "Console member [dynamic] is not allowed in this scope.",
+          "severity": "error",
+          "mode": "enforce",
+          "startLine": 1,
+          "endLine": 1,
+          "column": 23,
+          "endColumn": 38,
+          "evidence": [
+            {
+              "kind": "synthetic-evaluation-policy",
+              "path": "synthetic-policy.json",
+              "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2",
+              "excerpt": "Explicitly preregistered synthetic variants, unrelated to any user project."
+            }
+          ]
+        }
+      ],
+      "limitation": "Constant propagation is not performed; dynamic membership cannot prove an allowed member."
+    },
+    {
+      "id": "string-substr:strict",
+      "expected": [
+        "restricted-call"
+      ],
+      "actual": [
+        "restricted-call"
+      ],
+      "correct": true,
+      "scope": "strict",
+      "file": "string-substr.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [
+        {
+          "ruleId": "strict.restricted-call",
+          "family": "restricted-call",
+          "title": "Synthetic strict restricted-call",
+          "message": "Call matches *.substr. This is a syntax match; verify receiver type and compatibility before changing it.",
+          "severity": "error",
+          "mode": "enforce",
+          "startLine": 1,
+          "endLine": 1,
+          "column": 41,
+          "endColumn": 58,
+          "evidence": [
+            {
+              "kind": "synthetic-evaluation-policy",
+              "path": "synthetic-policy.json",
+              "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2",
+              "excerpt": "Explicitly preregistered synthetic variants, unrelated to any user project."
+            }
+          ],
+          "symbol": "text.substr",
+          "matchPrecision": "syntax"
+        }
+      ],
+      "limitation": null
+    },
+    {
+      "id": "string-substr:compatible",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "compatible",
+      "file": "string-substr.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    },
+    {
+      "id": "user-method-substr:strict",
+      "expected": [
+        "restricted-call"
+      ],
+      "actual": [
+        "restricted-call"
+      ],
+      "correct": true,
+      "scope": "strict",
+      "file": "user-method-substr.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [
+        {
+          "ruleId": "strict.restricted-call",
+          "family": "restricted-call",
+          "title": "Synthetic strict restricted-call",
+          "message": "Call matches *.substr. This is a syntax match; verify receiver type and compatibility before changing it.",
+          "severity": "error",
+          "mode": "enforce",
+          "startLine": 1,
+          "endLine": 1,
+          "column": 50,
+          "endColumn": 63,
+          "evidence": [
+            {
+              "kind": "synthetic-evaluation-policy",
+              "path": "synthetic-policy.json",
+              "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2",
+              "excerpt": "Explicitly preregistered synthetic variants, unrelated to any user project."
+            }
+          ],
+          "symbol": "own.substr",
+          "matchPrecision": "syntax"
+        }
+      ],
+      "limitation": "The configured wildcard also flags an unrelated method; it is not type-aware deprecation evidence."
+    },
+    {
+      "id": "user-method-substr:compatible",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "compatible",
+      "file": "user-method-substr.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": "The configured wildcard also flags an unrelated method; it is not type-aware deprecation evidence."
+    },
+    {
+      "id": "aliased-substr:strict",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "strict",
+      "file": "aliased-substr.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": "The same legacy API through an alias is outside this syntax matcher."
+    },
+    {
+      "id": "aliased-substr:compatible",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "compatible",
+      "file": "aliased-substr.ts",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": "The same legacy API through an alias is outside this syntax matcher."
+    },
+    {
+      "id": "component-variant:strict",
+      "expected": [
+        "component-max-lines"
+      ],
+      "actual": [
+        "component-max-lines"
+      ],
+      "correct": true,
+      "scope": "strict",
+      "file": "VariantCard.tsx",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [
+        {
+          "ruleId": "strict.component-max-lines",
+          "family": "component-max-lines",
+          "title": "Synthetic strict component-max-lines",
+          "message": "Component VariantCard spans 12 physical lines (limit 8). Review responsibilities before decomposing.",
+          "severity": "error",
+          "mode": "enforce",
+          "startLine": 1,
+          "endLine": 12,
+          "column": 1,
+          "endColumn": 2,
+          "evidence": [
+            {
+              "kind": "synthetic-evaluation-policy",
+              "path": "synthetic-policy.json",
+              "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2",
+              "excerpt": "Explicitly preregistered synthetic variants, unrelated to any user project."
+            }
+          ],
+          "symbol": "VariantCard",
+          "metric": {
+            "name": "physical-lines",
+            "value": 12,
+            "limit": 8
+          },
+          "matchPrecision": "structural-heuristic"
+        }
+      ],
+      "limitation": null
+    },
+    {
+      "id": "component-variant:compatible",
+      "expected": [],
+      "actual": [],
+      "correct": true,
+      "scope": "compatible",
+      "file": "VariantCard.tsx",
+      "conflicts": [],
+      "parseErrors": [],
+      "findings": [],
+      "limitation": null
+    }
+  ],
+  "uiAssertions": [
+    {
+      "id": "large:component-lines",
+      "expected": 163,
+      "actual": 163,
+      "correct": true
+    },
+    {
+      "id": "large:findings",
+      "expected": [
+        "component-max-lines",
+        "function-max-lines"
+      ],
+      "actual": [
+        "component-max-lines",
+        "function-max-lines"
+      ],
+      "correct": true
+    },
+    {
+      "id": "compact:component-lines",
+      "expected": 11,
+      "actual": 11,
+      "correct": true
+    },
+    {
+      "id": "compact:findings",
+      "expected": [],
+      "actual": [],
+      "correct": true
+    }
+  ],
+  "uiResults": [
+    {
+      "id": "large",
+      "analysis": {
+        "findings": [
+          {
+            "ruleId": "bp.component-size",
+            "family": "component-max-lines",
+            "title": "Проверьте обязанности компонента",
+            "message": "Component LargeReport spans 163 physical lines (limit 150). Review responsibilities before decomposing.",
+            "severity": "info",
+            "mode": "advisory",
+            "startLine": 1,
+            "endLine": 163,
+            "column": 1,
+            "endColumn": 2,
+            "evidence": [
+              {
+                "kind": "builtin",
+                "path": "selfreview:best-practices/v1",
+                "sha256": "3643084ae93de73628769a46830359dfc54a1d7177f393ff10db4867338c955e",
+                "excerpt": "Advisory heuristic, not a project convention."
+              }
+            ],
+            "symbol": "LargeReport",
+            "metric": {
+              "name": "physical-lines",
+              "value": 163,
+              "limit": 150
+            },
+            "matchPrecision": "structural-heuristic"
+          },
+          {
+            "ruleId": "bp.function-size",
+            "family": "function-max-lines",
+            "title": "Проверьте обязанности функции",
+            "message": "Function LargeReport spans 163 physical lines (limit 80). Review responsibilities before decomposing.",
+            "severity": "info",
+            "mode": "advisory",
+            "startLine": 1,
+            "endLine": 163,
+            "column": 1,
+            "endColumn": 2,
+            "evidence": [
+              {
+                "kind": "builtin",
+                "path": "selfreview:best-practices/v1",
+                "sha256": "1681e84e9fdbec98935fa76db077f4108659010f2ad66f478705ba96cd37b568",
+                "excerpt": "Advisory heuristic, not a project convention."
+              }
+            ],
+            "symbol": "LargeReport",
+            "metric": {
+              "name": "physical-lines",
+              "value": 163,
+              "limit": 80
+            },
+            "matchPrecision": "syntax"
+          }
+        ],
+        "parseErrors": [],
+        "metrics": {
+          "declarations": {
+            "const": 1,
+            "let": 0,
+            "var": 0
+          },
+          "equality": {
+            "strict": 0,
+            "loose": 0,
+            "nullLoose": 0
+          },
+          "braces": {
+            "braced": 0,
+            "unbraced": 0
+          },
+          "functions": [
+            {
+              "name": "LargeReport",
+              "kind": "FunctionDeclaration",
+              "startLine": 1,
+              "endLine": 163,
+              "lines": 163,
+              "parameters": 0,
+              "component": true
+            }
+          ],
+          "components": [
+            {
+              "name": "LargeReport",
+              "kind": "FunctionDeclaration",
+              "startLine": 1,
+              "endLine": 163,
+              "lines": 163,
+              "parameters": 0,
+              "component": true
+            }
+          ],
+          "imports": []
+        },
+        "coverage": {
+          "parser": "typescript",
+          "parserVersion": "5.9.3",
+          "parsed": true,
+          "typeChecked": false,
+          "bindingScope": "single-file",
+          "componentDetection": "structural-heuristic",
+          "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+        }
+      },
+      "interpretation": "Long static rendering with one main responsibility; size alone does not prove poor decomposition."
+    },
+    {
+      "id": "compact",
+      "analysis": {
+        "findings": [],
+        "parseErrors": [],
+        "metrics": {
+          "declarations": {
+            "const": 4,
+            "let": 0,
+            "var": 0
+          },
+          "equality": {
+            "strict": 0,
+            "loose": 0,
+            "nullLoose": 0
+          },
+          "braces": {
+            "braced": 0,
+            "unbraced": 0
+          },
+          "functions": [
+            {
+              "name": "CheckoutHub",
+              "kind": "FunctionDeclaration",
+              "startLine": 1,
+              "endLine": 11,
+              "lines": 11,
+              "parameters": 1,
+              "component": true
+            },
+            {
+              "name": "onClick",
+              "kind": "ArrowFunction",
+              "startLine": 3,
+              "endLine": 8,
+              "lines": 6,
+              "parameters": 0,
+              "component": false
+            }
+          ],
+          "components": [
+            {
+              "name": "CheckoutHub",
+              "kind": "FunctionDeclaration",
+              "startLine": 1,
+              "endLine": 11,
+              "lines": 11,
+              "parameters": 1,
+              "component": true
+            }
+          ],
+          "imports": []
+        },
+        "coverage": {
+          "parser": "typescript",
+          "parserVersion": "5.9.3",
+          "parsed": true,
+          "typeChecked": false,
+          "bindingScope": "single-file",
+          "componentDetection": "structural-heuristic",
+          "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+        }
+      },
+      "interpretation": [
+        "UI rendering",
+        "billing network request",
+        "token access",
+        "receipt and cookie persistence",
+        "navigation",
+        "formatting"
+      ]
+    }
+  ],
+  "documentAssertions": [
+    {
+      "id": "clauses:units",
+      "expected": 8,
+      "actual": 8,
+      "correct": true
+    },
+    {
+      "id": "clauses:executableCandidates",
+      "expected": 3,
+      "actual": 3,
+      "correct": true
+    },
+    {
+      "id": "clauses:manualCandidates",
+      "expected": 5,
+      "actual": 5,
+      "correct": true
+    },
+    {
+      "id": "clauses:executable-checks",
+      "expected": [
+        "{\"kind\":\"max-parameters\",\"options\":{\"max\":4}}",
+        "{\"kind\":\"no-console\",\"options\":{\"allowMethods\":[\"warn\"]}}",
+        "{\"kind\":\"strict-equality\",\"options\":{\"allowNull\":true}}"
+      ],
+      "actual": [
+        "{\"kind\":\"max-parameters\",\"options\":{\"max\":4}}",
+        "{\"kind\":\"no-console\",\"options\":{\"allowMethods\":[\"warn\"]}}",
+        "{\"kind\":\"strict-equality\",\"options\":{\"allowNull\":true}}"
+      ],
+      "correct": true
+    },
+    {
+      "id": "clauses:conditional-var-remains-manual",
+      "expected": true,
+      "actual": true,
+      "correct": true
+    }
+  ],
+  "documentResults": {
+    "clauses": {
+      "candidates": [
+        {
+          "id": "candidate-document-evaluation-strict-equality-9166afa588d6",
+          "family": "strict-equality",
+          "title": "Использовать строгое сравнение",
+          "description": "Use strict equality except null.",
+          "scope": "document-evaluation",
+          "status": "candidate",
+          "severity": "error",
+          "mode": "enforce",
+          "check": {
+            "kind": "strict-equality",
+            "options": {
+              "allowNull": true
+            }
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "document",
+              "path": "documents/clauses.md",
+              "excerpt": "Use strict equality except null.",
+              "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+              "line": 3
+            }
+          ],
+          "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+        },
+        {
+          "id": "candidate-document-evaluation-manual-a6d6364a15bb",
+          "family": "manual:15716f69747d9ff3",
+          "title": "Never use var except in generated compatibility shims.",
+          "description": "Never use var\nexcept in generated compatibility shims.",
+          "scope": "document-evaluation",
+          "status": "candidate",
+          "severity": "info",
+          "mode": "advisory",
+          "check": {
+            "kind": "manual",
+            "options": {}
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "document",
+              "path": "documents/clauses.md",
+              "excerpt": "Never use var\nexcept in generated compatibility shims.",
+              "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+              "line": 4
+            }
+          ],
+          "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+        },
+        {
+          "id": "candidate-document-evaluation-no-console-535409f016e9",
+          "family": "no-console",
+          "title": "Ограничить обращения к console",
+          "description": "Do not use console except warn.",
+          "scope": "document-evaluation",
+          "status": "candidate",
+          "severity": "error",
+          "mode": "enforce",
+          "check": {
+            "kind": "no-console",
+            "options": {
+              "allowMethods": [
+                "warn"
+              ]
+            }
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "document",
+              "path": "documents/clauses.md",
+              "excerpt": "Do not use console except warn.",
+              "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+              "line": 6
+            }
+          ],
+          "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+        },
+        {
+          "id": "candidate-document-evaluation-max-parameters-c6083c36a508",
+          "family": "max-parameters",
+          "title": "Ограничить число параметров",
+          "description": "Functions must have at most 4 parameters.",
+          "scope": "document-evaluation",
+          "status": "candidate",
+          "severity": "error",
+          "mode": "enforce",
+          "check": {
+            "kind": "max-parameters",
+            "options": {
+              "max": 4
+            }
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "document",
+              "path": "documents/clauses.md",
+              "excerpt": "Functions must have at most 4 parameters.",
+              "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+              "line": 7
+            }
+          ],
+          "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+        },
+        {
+          "id": "candidate-document-evaluation-manual-4ee6d6baced8",
+          "family": "manual:e79bd50023084129",
+          "title": "Components should have a single reason to change.",
+          "description": "Components should have a single reason to change.",
+          "scope": "document-evaluation",
+          "status": "candidate",
+          "severity": "info",
+          "mode": "advisory",
+          "check": {
+            "kind": "manual",
+            "options": {}
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "document",
+              "path": "documents/clauses.md",
+              "excerpt": "Components should have a single reason to change.",
+              "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+              "line": 8
+            }
+          ],
+          "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+        },
+        {
+          "id": "candidate-document-evaluation-manual-c59f1cf824c5",
+          "family": "manual:31b3ed02cda0bd87",
+          "title": "When retrying a payment request, reuse the idempotency key across attempts.",
+          "description": "When retrying a payment request, reuse the idempotency key across attempts.",
+          "scope": "document-evaluation",
+          "status": "candidate",
+          "severity": "info",
+          "mode": "advisory",
+          "check": {
+            "kind": "manual",
+            "options": {}
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "document",
+              "path": "documents/clauses.md",
+              "excerpt": "When retrying a payment request, reuse the idempotency key across attempts.",
+              "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+              "line": 9
+            }
+          ],
+          "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+        },
+        {
+          "id": "candidate-document-evaluation-manual-e3c58e8a8983",
+          "family": "manual:111be29f4e859d59",
+          "title": "Keep domain calculations independent from UI components.",
+          "description": "Keep domain calculations independent from UI components.",
+          "scope": "document-evaluation",
+          "status": "candidate",
+          "severity": "info",
+          "mode": "advisory",
+          "check": {
+            "kind": "manual",
+            "options": {}
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "document",
+              "path": "documents/clauses.md",
+              "excerpt": "Keep domain calculations independent from UI components.",
+              "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+              "line": 10
+            }
+          ],
+          "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+        },
+        {
+          "id": "candidate-document-evaluation-manual-1863ffc57030",
+          "family": "manual:63d076941befdf7a",
+          "title": "В тестах допустим console.log, в production коде запрещён.",
+          "description": "В тестах допустим console.log, в production коде запрещён.",
+          "scope": "document-evaluation",
+          "status": "candidate",
+          "severity": "info",
+          "mode": "advisory",
+          "check": {
+            "kind": "manual",
+            "options": {}
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "document",
+              "path": "documents/clauses.md",
+              "excerpt": "В тестах допустим console.log, в production коде запрещён.",
+              "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+              "line": 11
+            }
+          ],
+          "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+        }
+      ],
+      "unmapped": [
+        {
+          "ruleId": "candidate-document-evaluation-manual-a6d6364a15bb",
+          "reason": "MANUAL_REVIEW_REQUIRED",
+          "kind": "document",
+          "path": "documents/clauses.md",
+          "excerpt": "Never use var\nexcept in generated compatibility shims.",
+          "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+          "line": 4
+        },
+        {
+          "ruleId": "candidate-document-evaluation-manual-4ee6d6baced8",
+          "reason": "MANUAL_REVIEW_REQUIRED",
+          "kind": "document",
+          "path": "documents/clauses.md",
+          "excerpt": "Components should have a single reason to change.",
+          "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+          "line": 8
+        },
+        {
+          "ruleId": "candidate-document-evaluation-manual-c59f1cf824c5",
+          "reason": "MANUAL_REVIEW_REQUIRED",
+          "kind": "document",
+          "path": "documents/clauses.md",
+          "excerpt": "When retrying a payment request, reuse the idempotency key across attempts.",
+          "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+          "line": 9
+        },
+        {
+          "ruleId": "candidate-document-evaluation-manual-e3c58e8a8983",
+          "reason": "MANUAL_REVIEW_REQUIRED",
+          "kind": "document",
+          "path": "documents/clauses.md",
+          "excerpt": "Keep domain calculations independent from UI components.",
+          "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+          "line": 10
+        },
+        {
+          "ruleId": "candidate-document-evaluation-manual-1863ffc57030",
+          "reason": "MANUAL_REVIEW_REQUIRED",
+          "kind": "document",
+          "path": "documents/clauses.md",
+          "excerpt": "В тестах допустим console.log, в production коде запрещён.",
+          "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+          "line": 11
+        }
+      ],
+      "warnings": [],
+      "coverage": {
+        "units": 8,
+        "ignoredHeadings": 1,
+        "ignoredCodeBlocks": 0,
+        "structuredBlocks": 0,
+        "sourceBytes": 474,
+        "complete": true,
+        "candidates": 8,
+        "executableCandidates": 3,
+        "manualCandidates": 5
+      }
+    },
+    "headings": {
+      "candidates": [
+        {
+          "id": "candidate-document-evaluation-no-console-49ead72ee4f0",
+          "family": "no-console",
+          "title": "Ограничить обращения к console",
+          "description": "Do not use console.",
+          "scope": "document-evaluation",
+          "status": "candidate",
+          "severity": "error",
+          "mode": "enforce",
+          "check": {
+            "kind": "no-console",
+            "options": {
+              "allowMethods": []
+            }
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "document",
+              "path": "documents/headings.md",
+              "excerpt": "Do not use console.",
+              "sha256": "1aa5ccc072f882790ea945529d1c9128aa75be35259cd328b9df5ca499c85117",
+              "line": 5
+            }
+          ],
+          "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+        },
+        {
+          "id": "candidate-document-evaluation-manual-679e2d63a79c",
+          "family": "manual:17e5531bf0da29b5",
+          "title": "Console logging is permitted for diagnostics.",
+          "description": "Console logging is permitted for diagnostics.",
+          "scope": "document-evaluation",
+          "status": "candidate",
+          "severity": "info",
+          "mode": "advisory",
+          "check": {
+            "kind": "manual",
+            "options": {}
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "document",
+              "path": "documents/headings.md",
+              "excerpt": "Console logging is permitted for diagnostics.",
+              "sha256": "1aa5ccc072f882790ea945529d1c9128aa75be35259cd328b9df5ca499c85117",
+              "line": 9
+            }
+          ],
+          "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+        }
+      ],
+      "unmapped": [
+        {
+          "ruleId": "candidate-document-evaluation-manual-679e2d63a79c",
+          "reason": "MANUAL_REVIEW_REQUIRED",
+          "kind": "document",
+          "path": "documents/headings.md",
+          "excerpt": "Console logging is permitted for diagnostics.",
+          "sha256": "1aa5ccc072f882790ea945529d1c9128aa75be35259cd328b9df5ca499c85117",
+          "line": 9
+        }
+      ],
+      "warnings": [],
+      "coverage": {
+        "units": 2,
+        "ignoredHeadings": 3,
+        "ignoredCodeBlocks": 0,
+        "structuredBlocks": 0,
+        "sourceBytes": 135,
+        "complete": true,
+        "candidates": 2,
+        "executableCandidates": 1,
+        "manualCandidates": 1
+      }
+    }
+  },
+  "mrAssertions": [
+    {
+      "id": "mr:comments",
+      "expected": 4,
+      "actual": 4,
+      "correct": true
+    },
+    {
+      "id": "mr:systemComments",
+      "expected": 1,
+      "actual": 1,
+      "correct": true
+    },
+    {
+      "id": "mr:executableCandidates",
+      "expected": 3,
+      "actual": 3,
+      "correct": true
+    },
+    {
+      "id": "mr:manualCandidates",
+      "expected": 1,
+      "actual": 1,
+      "correct": true
+    },
+    {
+      "id": "mr:context:new-1",
+      "expected": "in-diff",
+      "actual": "in-diff",
+      "correct": true
+    },
+    {
+      "id": "mr:context:old-2",
+      "expected": "old-side",
+      "actual": "old-side",
+      "correct": true
+    },
+    {
+      "id": "mr:context:absent-3",
+      "expected": "not-in-diff",
+      "actual": "not-in-diff",
+      "correct": true
+    },
+    {
+      "id": "mr:context:general-4",
+      "expected": "unlocated",
+      "actual": "unlocated",
+      "correct": true
+    },
+    {
+      "id": "mr:context-not-semantically-verified",
+      "expected": true,
+      "actual": true,
+      "correct": true
+    }
+  ],
+  "mrResult": {
+    "candidates": [
+      {
+        "id": "candidate-mr-evaluation-no-var-609385c27d06",
+        "family": "no-var",
+        "title": "Не использовать var",
+        "description": "Never use var.",
+        "scope": "mr-evaluation",
+        "status": "candidate",
+        "severity": "error",
+        "mode": "enforce",
+        "check": {
+          "kind": "no-var",
+          "options": {}
+        },
+        "applicability": {
+          "include": [
+            "**/*"
+          ],
+          "exclude": []
+        },
+        "evidence": [
+          {
+            "kind": "mr",
+            "path": "documents/mr.json",
+            "excerpt": "Never use var.",
+            "sha256": "f570ae78f4b37a6db91acf24e87c0711b7157681f8dba693a9d381e6951abad1",
+            "commentIndex": 1,
+            "contextVerified": false,
+            "commentId": "new-1",
+            "targetPath": "src/counter.ts",
+            "targetLine": 1,
+            "side": "new",
+            "resolved": true,
+            "author": "synthetic-reviewer",
+            "diffSha256": "76b6166f0df1f8974a5ce924d4824f45c17d56e99a2e037e95f2df6fc9ce5c68",
+            "mrTitle": "Synthetic discussion; a suggestion is not a project-wide agreement",
+            "contextState": "in-diff",
+            "diffLine": "const count = 1;"
+          }
+        ],
+        "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+      },
+      {
+        "id": "candidate-mr-evaluation-strict-equality-02560c94b174",
+        "family": "strict-equality",
+        "title": "Использовать строгое сравнение",
+        "description": "Use strict equality except null.",
+        "scope": "mr-evaluation",
+        "status": "candidate",
+        "severity": "error",
+        "mode": "enforce",
+        "check": {
+          "kind": "strict-equality",
+          "options": {
+            "allowNull": true
+          }
+        },
+        "applicability": {
+          "include": [
+            "**/*"
+          ],
+          "exclude": []
+        },
+        "evidence": [
+          {
+            "kind": "mr",
+            "path": "documents/mr.json",
+            "excerpt": "Use strict equality except null.",
+            "sha256": "f570ae78f4b37a6db91acf24e87c0711b7157681f8dba693a9d381e6951abad1",
+            "commentIndex": 2,
+            "contextVerified": false,
+            "commentId": "old-2",
+            "targetPath": "src/counter.ts",
+            "targetLine": 1,
+            "side": "old",
+            "outdated": true,
+            "diffSha256": "76b6166f0df1f8974a5ce924d4824f45c17d56e99a2e037e95f2df6fc9ce5c68",
+            "mrTitle": "Synthetic discussion; a suggestion is not a project-wide agreement",
+            "contextState": "old-side"
+          }
+        ],
+        "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+      },
+      {
+        "id": "candidate-mr-evaluation-manual-895314132aba",
+        "family": "manual:a44151546ef8bcba",
+        "title": "Please separate request handling from rendering in this component.",
+        "description": "Please separate request handling from rendering in this component.",
+        "scope": "mr-evaluation",
+        "status": "candidate",
+        "severity": "info",
+        "mode": "advisory",
+        "check": {
+          "kind": "manual",
+          "options": {}
+        },
+        "applicability": {
+          "include": [
+            "**/*"
+          ],
+          "exclude": []
+        },
+        "evidence": [
+          {
+            "kind": "mr",
+            "path": "documents/mr.json",
+            "excerpt": "Please separate request handling from rendering in this component.",
+            "sha256": "f570ae78f4b37a6db91acf24e87c0711b7157681f8dba693a9d381e6951abad1",
+            "commentIndex": 3,
+            "contextVerified": false,
+            "commentId": "absent-3",
+            "targetPath": "src/CheckoutHub.tsx",
+            "targetLine": 99,
+            "diffSha256": "76b6166f0df1f8974a5ce924d4824f45c17d56e99a2e037e95f2df6fc9ce5c68",
+            "mrTitle": "Synthetic discussion; a suggestion is not a project-wide agreement",
+            "contextState": "not-in-diff"
+          }
+        ],
+        "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+      },
+      {
+        "id": "candidate-mr-evaluation-no-console-633c58a4262b",
+        "family": "no-console",
+        "title": "Ограничить обращения к console",
+        "description": "Do not use console except warn.",
+        "scope": "mr-evaluation",
+        "status": "candidate",
+        "severity": "error",
+        "mode": "enforce",
+        "check": {
+          "kind": "no-console",
+          "options": {
+            "allowMethods": [
+              "warn"
+            ]
+          }
+        },
+        "applicability": {
+          "include": [
+            "**/*"
+          ],
+          "exclude": []
+        },
+        "evidence": [
+          {
+            "kind": "mr",
+            "path": "documents/mr.json",
+            "excerpt": "Do not use console except warn.",
+            "sha256": "f570ae78f4b37a6db91acf24e87c0711b7157681f8dba693a9d381e6951abad1",
+            "commentIndex": 4,
+            "contextVerified": false,
+            "commentId": "general-4",
+            "diffSha256": "76b6166f0df1f8974a5ce924d4824f45c17d56e99a2e037e95f2df6fc9ce5c68",
+            "mrTitle": "Synthetic discussion; a suggestion is not a project-wide agreement",
+            "contextState": "unlocated"
+          }
+        ],
+        "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+      }
+    ],
+    "unmapped": [
+      {
+        "ruleId": "candidate-mr-evaluation-manual-895314132aba",
+        "reason": "MANUAL_REVIEW_REQUIRED",
+        "kind": "mr",
+        "path": "documents/mr.json",
+        "excerpt": "Please separate request handling from rendering in this component.",
+        "sha256": "f570ae78f4b37a6db91acf24e87c0711b7157681f8dba693a9d381e6951abad1",
+        "commentIndex": 3,
+        "contextVerified": false,
+        "commentId": "absent-3",
+        "targetPath": "src/CheckoutHub.tsx",
+        "targetLine": 99,
+        "diffSha256": "76b6166f0df1f8974a5ce924d4824f45c17d56e99a2e037e95f2df6fc9ce5c68",
+        "mrTitle": "Synthetic discussion; a suggestion is not a project-wide agreement",
+        "contextState": "not-in-diff"
+      }
+    ],
+    "warnings": [],
+    "diff": {
+      "files": [
+        {
+          "oldPath": "src/counter.ts",
+          "newPath": "src/counter.ts",
+          "addedLines": [
+            1
+          ],
+          "touchedRanges": [
+            {
+              "start": 1,
+              "end": 1
+            }
+          ],
+          "newLineContent": [
+            {
+              "line": 1,
+              "text": "const count = 1;"
+            }
+          ],
+          "deleted": false,
+          "metadataOnly": false
+        }
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    "metadata": {
+      "title": "Synthetic discussion; a suggestion is not a project-wide agreement"
+    },
+    "coverage": {
+      "comments": 4,
+      "systemComments": 1,
+      "invalidComments": 0,
+      "units": 4,
+      "candidates": 4,
+      "executableCandidates": 3,
+      "manualCandidates": 1,
+      "sourceBytes": 768,
+      "complete": true
+    }
+  },
+  "quality": [
+    {
+      "id": "heading-condition-preserved",
+      "expected": true,
+      "actual": false,
+      "correct": false,
+      "meaning": "The production-only condition survives extraction or forces manual review."
+    },
+    {
+      "id": "mixed-scope-dissent-explicit",
+      "expected": true,
+      "actual": true,
+      "correct": true,
+      "meaning": "Opposite per-project observations are exposed by the actual CLI learning report."
+    },
+    {
+      "id": "mixed-scope-hypotheses-qualified",
+      "expected": true,
+      "actual": false,
+      "correct": false,
+      "meaning": "Scope-wide aggregate hypotheses carry an explicit warning naming the contradictory minority project, or are narrowed to supported projects. A general caveat about sampling alone is insufficient."
+    },
+    {
+      "id": "candidate-not-approval",
+      "expected": true,
+      "actual": true,
+      "correct": true,
+      "meaning": "All imported/discovered rules stay candidates."
+    },
+    {
+      "id": "source-immutability",
+      "expected": true,
+      "actual": true,
+      "correct": true,
+      "meaning": "Analysis, importing and learning preserve all fixture source bytes."
+    }
+  ],
+  "aggregateRisk": {
+    "scope": "mixed",
+    "candidateCount": 3,
+    "explicitlyWarnedAboutMinority": false,
+    "applicabilityNarrowed": false,
+    "unqualifiedScopeWideHypotheses": 3,
+    "countWeightedRatios": {
+      "noVar": 0.9523809523809523,
+      "strictEquality": 0.9090909090909091,
+      "requireBraces": 0.9090909090909091
+    },
+    "minority": {
+      "files": 5,
+      "varDeclarations": 10,
+      "looseComparisons": 5,
+      "unbracedControls": 5
+    },
+    "interpretation": "Aggregate frequencies can meet the threshold while every minority-project opportunity follows the opposite style. Candidates are still unapproved; per-project observations expose dissent, but a scope-wide proposal needs an explicit qualification."
+  },
+  "manualUnsupportedScenarios": [
+    {
+      "id": "legacy-require-var",
+      "reason": "The current discovery vocabulary cannot propose an inverse require-var convention, despite counted observations."
+    },
+    {
+      "id": "legacy-loose-equality",
+      "reason": "Discovery cannot propose a general prefer-loose-equality convention."
+    },
+    {
+      "id": "legacy-braceless",
+      "reason": "Discovery cannot propose a general braceless convention."
+    },
+    {
+      "id": "long-component-responsibility",
+      "reason": "A 163-line rendering component is a size signal, not proof of multiple responsibilities."
+    },
+    {
+      "id": "compact-component-responsibility",
+      "reason": "The 11-line component mixes multiple responsibilities; no current AST heuristic detects that."
+    },
+    {
+      "id": "receiver-type-deprecation",
+      "reason": "The *.substr matcher also flags a user-defined method with the same name."
+    },
+    {
+      "id": "alias-deprecation",
+      "reason": "Aliasing String.prototype.substr escapes the direct-call matcher."
+    }
+  ],
+  "cli": {
+    "status": 0,
+    "signal": null,
+    "error": null,
+    "argv": [
+      "implementation/bin/selfreview.mjs",
+      "learn",
+      "--config",
+      "runs/runtime.config.json",
+      "--scope",
+      "mixed",
+      "--min-samples",
+      "5",
+      "--threshold",
+      "0.9"
+    ],
+    "report": {
+      "schemaVersion": 1,
+      "scope": "mixed",
+      "status": "CANDIDATES_READY",
+      "added": [
+        "candidate-mixed-no-var-4cf0cc03e2e0",
+        "candidate-mixed-strict-equality-4cf0cc03e2e0",
+        "candidate-mixed-require-braces-4cf0cc03e2e0"
+      ],
+      "unchanged": [],
+      "revisions": [],
+      "codeFilesAnalyzed": 15,
+      "inputs": [],
+      "unmapped": [],
+      "warnings": [],
+      "discovery": {
+        "aggregate": {
+          "declarations": {
+            "const": 200,
+            "let": 0,
+            "var": 10
+          },
+          "equality": {
+            "strict": 50,
+            "loose": 5,
+            "nullLoose": 0
+          },
+          "braces": {
+            "braced": 50,
+            "unbraced": 5
+          },
+          "functionLines": {
+            "count": 15,
+            "min": 6,
+            "median": 28,
+            "p95": 28,
+            "max": 28
+          },
+          "componentLines": {
+            "count": 0
+          },
+          "parameters": {
+            "count": 15,
+            "min": 1,
+            "median": 1,
+            "p95": 1,
+            "max": 1
+          },
+          "imports": []
+        },
+        "byProject": [
+          {
+            "project": "major",
+            "observations": {
+              "declarations": {
+                "const": 200,
+                "let": 0,
+                "var": 0
+              },
+              "equality": {
+                "strict": 50,
+                "loose": 0,
+                "nullLoose": 0
+              },
+              "braces": {
+                "braced": 50,
+                "unbraced": 0
+              },
+              "functionLines": {
+                "count": 10,
+                "min": 28,
+                "median": 28,
+                "p95": 28,
+                "max": 28
+              },
+              "componentLines": {
+                "count": 0
+              },
+              "parameters": {
+                "count": 10,
+                "min": 1,
+                "median": 1,
+                "p95": 1,
+                "max": 1
+              },
+              "imports": []
+            },
+            "coverage": {
+              "files": 10,
+              "filesWithMetrics": 10,
+              "opportunities": {
+                "declarations": 200,
+                "comparisons": 50,
+                "controls": 50
+              },
+              "candidates": 3,
+              "executableCandidates": 3,
+              "manualCandidates": 0,
+              "complete": true,
+              "vocabulary": [
+                "no-var",
+                "strict-equality",
+                "require-braces"
+              ],
+              "architecturalConventionsInferred": false
+            },
+            "suggestedChecks": [
+              {
+                "kind": "no-var",
+                "options": {}
+              },
+              {
+                "kind": "strict-equality",
+                "options": {
+                  "allowNull": false
+                }
+              },
+              {
+                "kind": "require-braces",
+                "options": {}
+              }
+            ]
+          },
+          {
+            "project": "minor",
+            "observations": {
+              "declarations": {
+                "const": 0,
+                "let": 0,
+                "var": 10
+              },
+              "equality": {
+                "strict": 0,
+                "loose": 5,
+                "nullLoose": 0
+              },
+              "braces": {
+                "braced": 0,
+                "unbraced": 5
+              },
+              "functionLines": {
+                "count": 5,
+                "min": 6,
+                "median": 6,
+                "p95": 6,
+                "max": 6
+              },
+              "componentLines": {
+                "count": 0
+              },
+              "parameters": {
+                "count": 5,
+                "min": 1,
+                "median": 1,
+                "p95": 1,
+                "max": 1
+              },
+              "imports": []
+            },
+            "coverage": {
+              "files": 5,
+              "filesWithMetrics": 5,
+              "opportunities": {
+                "declarations": 10,
+                "comparisons": 5,
+                "controls": 5
+              },
+              "candidates": 0,
+              "executableCandidates": 0,
+              "manualCandidates": 0,
+              "complete": true,
+              "vocabulary": [
+                "no-var",
+                "strict-equality",
+                "require-braces"
+              ],
+              "architecturalConventionsInferred": false
+            },
+            "suggestedChecks": []
+          }
+        ],
+        "samplePaths": [],
+        "note": "Sampling restricts observations, not the candidate scope. Review applicability before approval; per-project profiles can reveal inconsistent conventions."
+      },
+      "sourceCoverage": [
+        {
+          "source": "static discovery",
+          "files": 15,
+          "filesWithMetrics": 15,
+          "opportunities": {
+            "declarations": 210,
+            "comparisons": 55,
+            "controls": 55
+          },
+          "candidates": 3,
+          "executableCandidates": 3,
+          "manualCandidates": 0,
+          "complete": true,
+          "vocabulary": [
+            "no-var",
+            "strict-equality",
+            "require-braces"
+          ],
+          "architecturalConventionsInferred": false
+        }
+      ],
+      "coverage": {
+        "exhaustive": false,
+        "approvedAutomatically": 0,
+        "discoveryFamilies": [
+          "no-var",
+          "strict-equality",
+          "require-braces"
+        ],
+        "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+      }
+    },
+    "learnedCatalog": {
+      "schemaVersion": 1,
+      "rules": [
+        {
+          "id": "candidate-mixed-no-var-4cf0cc03e2e0",
+          "family": "no-var",
+          "title": "Не использовать var",
+          "description": "В выборке 200 из 210 объявлений используют const/let; это кандидат на запрет var.",
+          "scope": "mixed",
+          "status": "candidate",
+          "severity": "error",
+          "mode": "enforce",
+          "check": {
+            "kind": "no-var",
+            "options": {}
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "code",
+              "path": "major/modern-1.ts",
+              "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-10.ts",
+              "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-2.ts",
+              "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-3.ts",
+              "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-4.ts",
+              "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-5.ts",
+              "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-6.ts",
+              "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-7.ts",
+              "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-8.ts",
+              "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-9.ts",
+              "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-1.js",
+              "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-2.js",
+              "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-3.js",
+              "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-4.js",
+              "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-5.js",
+              "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            }
+          ],
+          "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+          "confidence": 0.9523809523809523,
+          "observations": {
+            "minSamples": 5,
+            "threshold": 0.9,
+            "ratio": 0.9523809523809523,
+            "files": 15,
+            "evidenceFilesShown": 15,
+            "datasetSha256": "4cf0cc03e2e0bf662454fe413d3089fdbb472d5e8979918e8ab3cd1ce010a196"
+          }
+        },
+        {
+          "id": "candidate-mixed-strict-equality-4cf0cc03e2e0",
+          "family": "strict-equality",
+          "title": "Использовать строгое сравнение",
+          "description": "В выборке 50 строгих сравнений, 5 нестрогих (0 с null). Вариант allowNull=false требует подтверждения.",
+          "scope": "mixed",
+          "status": "candidate",
+          "severity": "error",
+          "mode": "enforce",
+          "check": {
+            "kind": "strict-equality",
+            "options": {
+              "allowNull": false
+            }
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "code",
+              "path": "major/modern-1.ts",
+              "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-10.ts",
+              "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-2.ts",
+              "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-3.ts",
+              "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-4.ts",
+              "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-5.ts",
+              "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-6.ts",
+              "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-7.ts",
+              "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-8.ts",
+              "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-9.ts",
+              "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-1.js",
+              "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-2.js",
+              "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-3.js",
+              "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-4.js",
+              "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-5.js",
+              "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            }
+          ],
+          "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+          "confidence": 0.9090909090909091,
+          "observations": {
+            "minSamples": 5,
+            "threshold": 0.9,
+            "ratio": 0.9090909090909091,
+            "files": 15,
+            "evidenceFilesShown": 15,
+            "datasetSha256": "4cf0cc03e2e0bf662454fe413d3089fdbb472d5e8979918e8ab3cd1ce010a196"
+          }
+        },
+        {
+          "id": "candidate-mixed-require-braces-4cf0cc03e2e0",
+          "family": "require-braces",
+          "title": "Использовать фигурные скобки",
+          "description": "В выборке 50 из 55 тел управляющих конструкций имеют фигурные скобки; это кандидат на договорённость.",
+          "scope": "mixed",
+          "status": "candidate",
+          "severity": "error",
+          "mode": "enforce",
+          "check": {
+            "kind": "require-braces",
+            "options": {}
+          },
+          "applicability": {
+            "include": [
+              "**/*"
+            ],
+            "exclude": []
+          },
+          "evidence": [
+            {
+              "kind": "code",
+              "path": "major/modern-1.ts",
+              "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-10.ts",
+              "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-2.ts",
+              "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-3.ts",
+              "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-4.ts",
+              "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-5.ts",
+              "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-6.ts",
+              "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-7.ts",
+              "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-8.ts",
+              "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "major/modern-9.ts",
+              "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-1.js",
+              "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-2.js",
+              "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-3.js",
+              "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-4.js",
+              "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            },
+            {
+              "kind": "code",
+              "path": "minor/compat-5.js",
+              "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6",
+              "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+            }
+          ],
+          "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+          "confidence": 0.9090909090909091,
+          "observations": {
+            "minSamples": 5,
+            "threshold": 0.9,
+            "ratio": 0.9090909090909091,
+            "files": 15,
+            "evidenceFilesShown": 15,
+            "datasetSha256": "4cf0cc03e2e0bf662454fe413d3089fdbb472d5e8979918e8ab3cd1ce010a196"
+          }
+        }
+      ]
+    }
+  },
+  "parseDiagnostics": [
+    {
+      "path": "corpora/modern/normalize-1.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/nullable/name-1.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/legacy/legacy-1.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/modern/normalize-2.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/nullable/name-2.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/legacy/legacy-2.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/modern/normalize-3.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/nullable/name-3.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/legacy/legacy-3.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/modern/normalize-4.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/nullable/name-4.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/legacy/legacy-4.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/modern/normalize-5.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/nullable/name-5.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/legacy/legacy-5.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/modern/normalize-6.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/nullable/name-6.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/legacy/legacy-6.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/major/modern-1.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/major/modern-2.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/major/modern-3.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/major/modern-4.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/major/modern-5.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/major/modern-6.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/major/modern-7.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/major/modern-8.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/major/modern-9.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/major/modern-10.ts",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/minor/compat-1.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/minor/compat-2.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/minor/compat-3.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/minor/compat-4.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/minor/compat-5.js",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/ui/LargeReport.tsx",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    },
+    {
+      "path": "corpora/ui/CheckoutHub.tsx",
+      "errors": [],
+      "coverage": {
+        "parser": "typescript",
+        "parserVersion": "5.9.3",
+        "parsed": true,
+        "typeChecked": false,
+        "bindingScope": "single-file",
+        "componentDetection": "structural-heuristic",
+        "restrictedCalls": "static-syntax-no-alias-or-type-resolution"
+      }
+    }
+  ],
+  "inputChanges": [],
+  "implementationChanges": []
+}

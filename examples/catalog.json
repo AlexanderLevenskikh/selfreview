@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "id": "a.no-var",
+      "family": "no-var",
+      "scope": "a",
+      "title": "a.no-var",
+      "description": "Synthetic fixture agreement, not a real team policy",
+      "status": "approved",
+      "severity": "error",
+      "mode": "enforce",
+      "check": {
+        "kind": "no-var",
+        "options": {}
+      },
+      "applicability": {
+        "include": [
+          "src/**"
+        ],
+        "exclude": []
+      },
+      "evidence": [
+        {
+          "kind": "manual",
+          "path": "synthetic:demo-agreement",
+          "sha256": "d9dbf7bc4f13d363ce89c77060ed0e80c0f2b899b2c45fde7940f93adcfa234f",
+          "excerpt": "Synthetic fixture agreement, not a real team policy"
+        }
+      ],
+      "approval": {
+        "by": "Synthetic fixture",
+        "reason": "Explicit demonstration agreement; replace with real reviewed conventions",
+        "at": "2026-11-08T00:00:00.000Z",
+        "behaviorHash": "79a974cb3c6eff46cc98adb26ae412a6612e01e1067d8b4de48cbd3ce2ffb0c0"
+      }
+    },
+    {
+      "id": "a.no-console",
+      "family": "no-console",
+      "scope": "a",
+      "title": "a.no-console",
+      "description": "Synthetic fixture agreement, not a real team policy",
+      "status": "approved",
+      "severity": "error",
+      "mode": "enforce",
+      "check": {
+        "kind": "no-console",
+        "options": {
+          "allowMethods": []
+        }
+      },
+      "applicability": {
+        "include": [
+          "src/**"
+        ],
+        "exclude": []
+      },
+      "evidence": [
+        {
+          "kind": "manual",
+          "path": "synthetic:demo-agreement",
+          "sha256": "d9dbf7bc4f13d363ce89c77060ed0e80c0f2b899b2c45fde7940f93adcfa234f",
+          "excerpt": "Synthetic fixture agreement, not a real team policy"
+        }
+      ],
+      "approval": {
+        "by": "Synthetic fixture",
+        "reason": "Explicit demonstration agreement; replace with real reviewed conventions",
+        "at": "2026-11-08T00:00:00.000Z",
+        "behaviorHash": "af7f24d406b29b0d6cc5d9caa7ae09fa1db3548d4589f4be49f3384cc9105588"
+      }
+    },
+    {
+      "id": "team.no-console",
+      "family": "no-console",
+      "scope": "team-bcd",
+      "title": "team.no-console",
+      "description": "Synthetic fixture agreement, not a real team policy",
+      "status": "approved",
+      "severity": "error",
+      "mode": "enforce",
+      "check": {
+        "kind": "no-console",
+        "options": {
+          "allowMethods": [
+            "warn",
+            "error"
+          ]
+        }
+      },
+      "applicability": {
+        "include": [
+          "src/**"
+        ],
+        "exclude": []
+      },
+      "evidence": [
+        {
+          "kind": "manual",
+          "path": "synthetic:demo-agreement",
+          "sha256": "d9dbf7bc4f13d363ce89c77060ed0e80c0f2b899b2c45fde7940f93adcfa234f",
+          "excerpt": "Synthetic fixture agreement, not a real team policy"
+        }
+      ],
+      "approval": {
+        "by": "Synthetic fixture",
+        "reason": "Explicit demonstration agreement; replace with real reviewed conventions",
+        "at": "2026-11-08T00:00:00.000Z",
+        "behaviorHash": "e6c6e378f2921ba0a1d7260feccac3aa8720ad7e4ca6b087d4d4d5d14c3a0256"
+      }
+    },
+    {
+      "id": "legacy.null-equality",
+      "family": "strict-equality",
+      "scope": "legacy-e",
+      "title": "legacy.null-equality",
+      "description": "Synthetic fixture agreement, not a real team policy",
+      "status": "approved",
+      "severity": "error",
+      "mode": "enforce",
+      "check": {
+        "kind": "strict-equality",
+        "options": {
+          "allowNull": true
+        }
+      },
+      "applicability": {
+        "include": [
+          "src/**"
+        ],
+        "exclude": []
+      },
+      "evidence": [
+        {
+          "kind": "manual",
+          "path": "synthetic:demo-agreement",
+          "sha256": "d9dbf7bc4f13d363ce89c77060ed0e80c0f2b899b2c45fde7940f93adcfa234f",
+          "excerpt": "Synthetic fixture agreement, not a real team policy"
+        }
+      ],
+      "approval": {
+        "by": "Synthetic fixture",
+        "reason": "Explicit demonstration agreement; replace with real reviewed conventions",
+        "at": "2026-11-08T00:00:00.000Z",
+        "behaviorHash": "4f9a147b2ede4de56617820da374a805f246f2faf466eef7ae2625ad863b1829"
+      }
+    }
+  ]
+}

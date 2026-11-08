@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "catalog": "catalog.json",
+  "bestPractices": true,
+  "scopes": [
+    {
+      "id": "a",
+      "extends": [],
+      "disabledRules": []
+    },
+    {
+      "id": "team-bcd",
+      "extends": [],
+      "disabledRules": []
+    },
+    {
+      "id": "legacy-e",
+      "extends": [],
+      "disabledRules": [
+        {
+          "id": "bp.no-var",
+          "reason": "Synthetic legacy example preserves var for compatibility."
+        },
+        {
+          "id": "bp.legacy-calls",
+          "reason": "Synthetic legacy contract preserves substr semantics."
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-a",
+      "root": "./project-a",
+      "scope": "a"
+    },
+    {
+      "id": "project-b",
+      "root": "./project-b",
+      "scope": "team-bcd"
+    },
+    {
+      "id": "project-c",
+      "root": "./project-c",
+      "scope": "team-bcd"
+    },
+    {
+      "id": "project-d",
+      "root": "./project-d",
+      "scope": "team-bcd"
+    },
+    {
+      "id": "project-e",
+      "root": "./project-e",
+      "scope": "legacy-e"
+    }
+  ]
+}

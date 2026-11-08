@@ -1,0 +1,64 @@
+{
+  "strict": [
+    {
+      "kind": "strict-equality",
+      "options": {
+        "allowNull": false
+      }
+    },
+    {
+      "kind": "no-console",
+      "options": {
+        "allowMethods": [
+          "warn"
+        ]
+      }
+    },
+    {
+      "kind": "restricted-call",
+      "options": {
+        "callees": [
+          "document.write",
+          "*.substr"
+        ]
+      }
+    },
+    {
+      "kind": "component-max-lines",
+      "options": {
+        "max": 8
+      }
+    }
+  ],
+  "compatible": [
+    {
+      "kind": "strict-equality",
+      "options": {
+        "allowNull": true
+      }
+    },
+    {
+      "kind": "no-console",
+      "options": {
+        "allowMethods": [
+          "log",
+          "warn"
+        ]
+      }
+    },
+    {
+      "kind": "restricted-call",
+      "options": {
+        "callees": [
+          "document.write"
+        ]
+      }
+    },
+    {
+      "kind": "component-max-lines",
+      "options": {
+        "max": 20
+      }
+    }
+  ]
+}

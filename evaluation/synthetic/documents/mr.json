@@ -1,0 +1,41 @@
+{
+  "title": "Synthetic discussion; a suggestion is not a project-wide agreement",
+  "diff": "diff --git a/src/counter.ts b/src/counter.ts\n--- a/src/counter.ts\n+++ b/src/counter.ts\n@@ -1 +1 @@\n-var count = 1;\n+const count = 1;\n",
+  "comments": [
+    {
+      "id": "new-1",
+      "body": "Never use var.",
+      "position": {
+        "new_path": "src/counter.ts",
+        "new_line": 1
+      },
+      "author": "synthetic-reviewer",
+      "resolved": true
+    },
+    {
+      "id": "old-2",
+      "body": "Use strict equality except null.",
+      "position": {
+        "old_path": "src/counter.ts",
+        "old_line": 1
+      },
+      "side": "old",
+      "outdated": true
+    },
+    {
+      "id": "absent-3",
+      "body": "Please separate request handling from rendering in this component.",
+      "path": "src/CheckoutHub.tsx",
+      "line": 99
+    },
+    {
+      "id": "general-4",
+      "body": "Do not use console except warn."
+    },
+    {
+      "id": "system-5",
+      "body": "Never use var.",
+      "system": true
+    }
+  ]
+}

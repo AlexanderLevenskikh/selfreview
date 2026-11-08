@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "catalog": "learned-catalog.json",
+  "bestPractices": false,
+  "scopes": [
+    {
+      "id": "mixed"
+    }
+  ],
+  "projects": [
+    {
+      "id": "major",
+      "root": "../corpora/major",
+      "scope": "mixed"
+    },
+    {
+      "id": "minor",
+      "root": "../corpora/minor",
+      "scope": "mixed"
+    }
+  ]
+}

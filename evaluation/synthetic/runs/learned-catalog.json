@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "id": "candidate-mixed-no-var-4cf0cc03e2e0",
+      "family": "no-var",
+      "title": "Не использовать var",
+      "description": "В выборке 200 из 210 объявлений используют const/let; это кандидат на запрет var.",
+      "scope": "mixed",
+      "status": "candidate",
+      "severity": "error",
+      "mode": "enforce",
+      "check": {
+        "kind": "no-var",
+        "options": {}
+      },
+      "applicability": {
+        "include": [
+          "**/*"
+        ],
+        "exclude": []
+      },
+      "evidence": [
+        {
+          "kind": "code",
+          "path": "major/modern-1.ts",
+          "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-10.ts",
+          "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-2.ts",
+          "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-3.ts",
+          "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-4.ts",
+          "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-5.ts",
+          "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-6.ts",
+          "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-7.ts",
+          "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-8.ts",
+          "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-9.ts",
+          "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-1.js",
+          "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-2.js",
+          "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-3.js",
+          "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-4.js",
+          "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-5.js",
+          "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        }
+      ],
+      "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+      "confidence": 0.9523809523809523,
+      "observations": {
+        "minSamples": 5,
+        "threshold": 0.9,
+        "ratio": 0.9523809523809523,
+        "files": 15,
+        "evidenceFilesShown": 15,
+        "datasetSha256": "4cf0cc03e2e0bf662454fe413d3089fdbb472d5e8979918e8ab3cd1ce010a196"
+      }
+    },
+    {
+      "id": "candidate-mixed-strict-equality-4cf0cc03e2e0",
+      "family": "strict-equality",
+      "title": "Использовать строгое сравнение",
+      "description": "В выборке 50 строгих сравнений, 5 нестрогих (0 с null). Вариант allowNull=false требует подтверждения.",
+      "scope": "mixed",
+      "status": "candidate",
+      "severity": "error",
+      "mode": "enforce",
+      "check": {
+        "kind": "strict-equality",
+        "options": {
+          "allowNull": false
+        }
+      },
+      "applicability": {
+        "include": [
+          "**/*"
+        ],
+        "exclude": []
+      },
+      "evidence": [
+        {
+          "kind": "code",
+          "path": "major/modern-1.ts",
+          "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-10.ts",
+          "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-2.ts",
+          "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-3.ts",
+          "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-4.ts",
+          "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-5.ts",
+          "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-6.ts",
+          "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-7.ts",
+          "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-8.ts",
+          "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-9.ts",
+          "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-1.js",
+          "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-2.js",
+          "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-3.js",
+          "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-4.js",
+          "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-5.js",
+          "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        }
+      ],
+      "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+      "confidence": 0.9090909090909091,
+      "observations": {
+        "minSamples": 5,
+        "threshold": 0.9,
+        "ratio": 0.9090909090909091,
+        "files": 15,
+        "evidenceFilesShown": 15,
+        "datasetSha256": "4cf0cc03e2e0bf662454fe413d3089fdbb472d5e8979918e8ab3cd1ce010a196"
+      }
+    },
+    {
+      "id": "candidate-mixed-require-braces-4cf0cc03e2e0",
+      "family": "require-braces",
+      "title": "Использовать фигурные скобки",
+      "description": "В выборке 50 из 55 тел управляющих конструкций имеют фигурные скобки; это кандидат на договорённость.",
+      "scope": "mixed",
+      "status": "candidate",
+      "severity": "error",
+      "mode": "enforce",
+      "check": {
+        "kind": "require-braces",
+        "options": {}
+      },
+      "applicability": {
+        "include": [
+          "**/*"
+        ],
+        "exclude": []
+      },
+      "evidence": [
+        {
+          "kind": "code",
+          "path": "major/modern-1.ts",
+          "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-10.ts",
+          "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-2.ts",
+          "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-3.ts",
+          "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-4.ts",
+          "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-5.ts",
+          "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-6.ts",
+          "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-7.ts",
+          "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-8.ts",
+          "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "major/modern-9.ts",
+          "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":20,\"let\":0,\"var\":0},\"equality\":{\"strict\":5,\"loose\":0,\"nullLoose\":0},\"braces\":{\"braced\":5,\"unbraced\":0}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-1.js",
+          "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-2.js",
+          "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-3.js",
+          "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-4.js",
+          "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        },
+        {
+          "kind": "code",
+          "path": "minor/compat-5.js",
+          "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6",
+          "excerpt": "AST observation: {\"declarations\":{\"const\":0,\"let\":0,\"var\":2},\"equality\":{\"strict\":0,\"loose\":1,\"nullLoose\":0},\"braces\":{\"braced\":0,\"unbraced\":1}}"
+        }
+      ],
+      "rationale": "Частота в существующем коде описывает выборку, а не обязательную договорённость. Проверьте исключения и подтвердите правило отдельно.",
+      "confidence": 0.9090909090909091,
+      "observations": {
+        "minSamples": 5,
+        "threshold": 0.9,
+        "ratio": 0.9090909090909091,
+        "files": 15,
+        "evidenceFilesShown": 15,
+        "datasetSha256": "4cf0cc03e2e0bf662454fe413d3089fdbb472d5e8979918e8ab3cd1ce010a196"
+      }
+    }
+  ]
+}

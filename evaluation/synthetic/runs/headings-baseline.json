@@ -1,0 +1,89 @@
+{
+  "candidates": [
+    {
+      "id": "candidate-document-evaluation-no-console-c5078c4b050a",
+      "family": "no-console",
+      "title": "Ограничить обращения к console",
+      "description": "Do not use console.",
+      "scope": "document-evaluation",
+      "status": "candidate",
+      "severity": "error",
+      "mode": "enforce",
+      "check": {
+        "kind": "no-console",
+        "options": {
+          "allowMethods": []
+        }
+      },
+      "applicability": {
+        "include": [
+          "**/*"
+        ],
+        "exclude": []
+      },
+      "evidence": [
+        {
+          "kind": "document",
+          "path": "evaluation/synthetic/documents/headings.md",
+          "excerpt": "Do not use console.",
+          "sha256": "1aa5ccc072f882790ea945529d1c9128aa75be35259cd328b9df5ca499c85117",
+          "line": 5
+        }
+      ],
+      "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+    },
+    {
+      "id": "candidate-document-evaluation-manual-74b5a9f92aa6",
+      "family": "manual:17e5531bf0da29b5",
+      "title": "Console logging is permitted for diagnostics.",
+      "description": "Console logging is permitted for diagnostics.",
+      "scope": "document-evaluation",
+      "status": "candidate",
+      "severity": "info",
+      "mode": "advisory",
+      "check": {
+        "kind": "manual",
+        "options": {}
+      },
+      "applicability": {
+        "include": [
+          "**/*"
+        ],
+        "exclude": []
+      },
+      "evidence": [
+        {
+          "kind": "document",
+          "path": "evaluation/synthetic/documents/headings.md",
+          "excerpt": "Console logging is permitted for diagnostics.",
+          "sha256": "1aa5ccc072f882790ea945529d1c9128aa75be35259cd328b9df5ca499c85117",
+          "line": 9
+        }
+      ],
+      "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+    }
+  ],
+  "unmapped": [
+    {
+      "ruleId": "candidate-document-evaluation-manual-74b5a9f92aa6",
+      "reason": "MANUAL_REVIEW_REQUIRED",
+      "kind": "document",
+      "path": "evaluation/synthetic/documents/headings.md",
+      "excerpt": "Console logging is permitted for diagnostics.",
+      "sha256": "1aa5ccc072f882790ea945529d1c9128aa75be35259cd328b9df5ca499c85117",
+      "line": 9
+    }
+  ],
+  "warnings": [],
+  "coverage": {
+    "units": 2,
+    "ignoredHeadings": 3,
+    "ignoredCodeBlocks": 0,
+    "structuredBlocks": 0,
+    "sourceBytes": 135,
+    "complete": true,
+    "candidates": 2,
+    "executableCandidates": 1,
+    "manualCandidates": 1
+  }
+}

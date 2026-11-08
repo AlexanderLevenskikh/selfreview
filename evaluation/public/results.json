@@ -1,0 +1,2888 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-08T07:19:10.460Z",
+  "planHash": "ad0f718158bbbd977898168e16f092d33d52ce5e0f2d232d15265ce760c31032",
+  "status": "OBSERVATIONS_MATCH_IN_SELECTED_CORPUS",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "coreParser": "typescript 5.9.3",
+    "independentJsParser": "Espree",
+    "tsRecount": "typescript-eslint ESTree; shared TypeScript parser underneath"
+  },
+  "scope": "Read-only source observation; not actual convention authority, runtime correctness or generic recall benchmark",
+  "reports": [
+    {
+      "id": "p-limit",
+      "url": "https://github.com/sindresorhus/p-limit.git",
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+      "files": 1,
+      "parsedFiles": 1,
+      "sourceBytes": 3868,
+      "analysisMs": 87,
+      "parseFailures": [],
+      "counterFailures": [],
+      "inventoryErrors": [],
+      "skipped": [],
+      "metrics": {
+        "declarations": {
+          "const": 14,
+          "let": 2,
+          "var": 0
+        },
+        "equality": {
+          "strict": 3,
+          "loose": 0,
+          "nullLoose": 0
+        },
+        "braces": {
+          "braced": 9,
+          "unbraced": 0
+        }
+      },
+      "observations": {
+        "declarations": {
+          "const": 14,
+          "let": 2,
+          "var": 0
+        },
+        "equality": {
+          "strict": 3,
+          "loose": 0,
+          "nullLoose": 0
+        },
+        "braces": {
+          "braced": 9,
+          "unbraced": 0
+        },
+        "functionLines": {
+          "count": 22,
+          "min": 1,
+          "median": 4,
+          "p95": 20,
+          "max": 129
+        },
+        "componentLines": {
+          "count": 0
+        },
+        "parameters": {
+          "count": 22,
+          "min": 0,
+          "median": 1,
+          "p95": 3,
+          "max": 4
+        },
+        "imports": [
+          {
+            "module": "yocto-queue",
+            "occurrences": 1
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "candidate-p-limit-no-var-092eef860e27",
+          "check": {
+            "kind": "no-var",
+            "options": {}
+          },
+          "status": "candidate",
+          "observations": {
+            "minSamples": 5,
+            "threshold": 0.9,
+            "ratio": 1,
+            "files": 1,
+            "evidenceFilesShown": 1,
+            "datasetSha256": "092eef860e2772ddd17e839fcc954b82cf516ac7d623229b50506b5af0f32616"
+          },
+          "description": "В выборке 16 из 16 объявлений используют const/let; это кандидат на запрет var."
+        },
+        {
+          "id": "candidate-p-limit-require-braces-092eef860e27",
+          "check": {
+            "kind": "require-braces",
+            "options": {}
+          },
+          "status": "candidate",
+          "observations": {
+            "minSamples": 5,
+            "threshold": 0.9,
+            "ratio": 1,
+            "files": 1,
+            "evidenceFilesShown": 1,
+            "datasetSha256": "092eef860e2772ddd17e839fcc954b82cf516ac7d623229b50506b5af0f32616"
+          },
+          "description": "В выборке 9 из 9 тел управляющих конструкций имеют фигурные скобки; это кандидат на договорённость."
+        }
+      ],
+      "adviceCounts": {
+        "bp.function-size": 1
+      },
+      "adviceSamples": [
+        {
+          "path": "index.js",
+          "line": 3,
+          "ruleId": "bp.function-size",
+          "symbol": "pLimit",
+          "message": "Function pLimit spans 129 physical lines (limit 80). Review responsibilities before decomposing."
+        }
+      ],
+      "allAdvice": [
+        {
+          "path": "index.js",
+          "line": 3,
+          "ruleId": "bp.function-size",
+          "symbol": "pLimit",
+          "message": "Function pLimit spans 129 physical lines (limit 80). Review responsibilities before decomposing."
+        }
+      ],
+      "limits": {
+        "files": 1,
+        "filesWithMetrics": 1,
+        "opportunities": {
+          "declarations": 16,
+          "comparisons": 3,
+          "controls": 9
+        },
+        "candidates": 2,
+        "executableCandidates": 2,
+        "manualCandidates": 0,
+        "complete": true,
+        "vocabulary": [
+          "no-var",
+          "strict-equality",
+          "require-braces"
+        ],
+        "architecturalConventionsInferred": false
+      }
+    },
+    {
+      "id": "usehooks-ts",
+      "url": "https://github.com/juliencrn/usehooks-ts.git",
+      "revision": "61949134144d3690fe9f521260a16c779a6d3797",
+      "files": 67,
+      "parsedFiles": 67,
+      "sourceBytes": 86661,
+      "analysisMs": 104,
+      "parseFailures": [],
+      "counterFailures": [],
+      "inventoryErrors": [],
+      "skipped": [],
+      "metrics": {
+        "declarations": {
+          "const": 160,
+          "let": 8,
+          "var": 0
+        },
+        "equality": {
+          "strict": 37,
+          "loose": 0,
+          "nullLoose": 0
+        },
+        "braces": {
+          "braced": 75,
+          "unbraced": 7
+        }
+      },
+      "observations": {
+        "declarations": {
+          "const": 160,
+          "let": 8,
+          "var": 0
+        },
+        "equality": {
+          "strict": 37,
+          "loose": 0,
+          "nullLoose": 0
+        },
+        "braces": {
+          "braced": 75,
+          "unbraced": 7
+        },
+        "functionLines": {
+          "count": 160,
+          "min": 1,
+          "median": 6,
+          "p95": 54,
+          "max": 144
+        },
+        "componentLines": {
+          "count": 0
+        },
+        "parameters": {
+          "count": 160,
+          "min": 0,
+          "median": 0,
+          "p95": 2,
+          "max": 4
+        },
+        "imports": [
+          {
+            "module": "react",
+            "occurrences": 40
+          },
+          {
+            "module": "../useIsomorphicLayoutEffect",
+            "occurrences": 9
+          },
+          {
+            "module": "../useEventListener",
+            "occurrences": 8
+          },
+          {
+            "module": "../useDebounceCallback",
+            "occurrences": 4
+          },
+          {
+            "module": "../useEventCallback",
+            "occurrences": 2
+          },
+          {
+            "module": "../useLocalStorage",
+            "occurrences": 2
+          },
+          {
+            "module": "../useMediaQuery",
+            "occurrences": 2
+          },
+          {
+            "module": "../useUnmount",
+            "occurrences": 2
+          },
+          {
+            "module": "./useBoolean",
+            "occurrences": 2
+          },
+          {
+            "module": "./useClickAnyWhere",
+            "occurrences": 2
+          },
+          {
+            "module": "./useCopyToClipboard",
+            "occurrences": 2
+          },
+          {
+            "module": "./useCountdown",
+            "occurrences": 2
+          },
+          {
+            "module": "./useCounter",
+            "occurrences": 2
+          },
+          {
+            "module": "./useDarkMode",
+            "occurrences": 2
+          },
+          {
+            "module": "./useDebounceCallback",
+            "occurrences": 2
+          },
+          {
+            "module": "./useDebounceValue",
+            "occurrences": 2
+          },
+          {
+            "module": "./useDocumentTitle",
+            "occurrences": 2
+          },
+          {
+            "module": "./useEventCallback",
+            "occurrences": 2
+          },
+          {
+            "module": "./useEventListener",
+            "occurrences": 2
+          },
+          {
+            "module": "./useHover",
+            "occurrences": 2
+          },
+          {
+            "module": "./useIntersectionObserver",
+            "occurrences": 2
+          },
+          {
+            "module": "./useInterval",
+            "occurrences": 2
+          },
+          {
+            "module": "./useIsClient",
+            "occurrences": 2
+          },
+          {
+            "module": "./useIsMounted",
+            "occurrences": 2
+          },
+          {
+            "module": "./useIsomorphicLayoutEffect",
+            "occurrences": 2
+          },
+          {
+            "module": "./useLocalStorage",
+            "occurrences": 2
+          },
+          {
+            "module": "./useMap",
+            "occurrences": 2
+          },
+          {
+            "module": "./useMediaQuery",
+            "occurrences": 2
+          },
+          {
+            "module": "./useOnClickOutside",
+            "occurrences": 2
+          },
+          {
+            "module": "./useReadLocalStorage",
+            "occurrences": 2
+          },
+          {
+            "module": "./useResizeObserver",
+            "occurrences": 2
+          },
+          {
+            "module": "./useScreen",
+            "occurrences": 2
+          },
+          {
+            "module": "./useScript",
+            "occurrences": 2
+          },
+          {
+            "module": "./useScrollLock",
+            "occurrences": 2
+          },
+          {
+            "module": "./useSessionStorage",
+            "occurrences": 2
+          },
+          {
+            "module": "./useStep",
+            "occurrences": 2
+          },
+          {
+            "module": "./useTernaryDarkMode",
+            "occurrences": 2
+          },
+          {
+            "module": "./useTimeout",
+            "occurrences": 2
+          },
+          {
+            "module": "./useToggle",
+            "occurrences": 2
+          },
+          {
+            "module": "./useUnmount",
+            "occurrences": 2
+          },
+          {
+            "module": "./useWindowSize",
+            "occurrences": 2
+          },
+          {
+            "module": "../useBoolean",
+            "occurrences": 1
+          },
+          {
+            "module": "../useCounter",
+            "occurrences": 1
+          },
+          {
+            "module": "../useInterval",
+            "occurrences": 1
+          },
+          {
+            "module": "../useIsMounted",
+            "occurrences": 1
+          },
+          {
+            "module": "../useIsomorphicLayoutEffect/useIsomorphicLayoutEffect",
+            "occurrences": 1
+          },
+          {
+            "module": "lodash.debounce",
+            "occurrences": 1
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "id": "candidate-usehooks-ts-no-var-8d2ea9ca6ef8",
+          "check": {
+            "kind": "no-var",
+            "options": {}
+          },
+          "status": "candidate",
+          "observations": {
+            "minSamples": 5,
+            "threshold": 0.9,
+            "ratio": 1,
+            "files": 32,
+            "evidenceFilesShown": 20,
+            "datasetSha256": "8d2ea9ca6ef8017298f2c6df6acb947ffac3986afbe5f7a430834b81fd193d52"
+          },
+          "description": "В выборке 168 из 168 объявлений используют const/let; это кандидат на запрет var."
+        },
+        {
+          "id": "candidate-usehooks-ts-strict-equality-6bfe167417d7",
+          "check": {
+            "kind": "strict-equality",
+            "options": {
+              "allowNull": false
+            }
+          },
+          "status": "candidate",
+          "observations": {
+            "minSamples": 5,
+            "threshold": 0.9,
+            "ratio": 1,
+            "files": 18,
+            "evidenceFilesShown": 18,
+            "datasetSha256": "6bfe167417d7ec0be7ae4a20674d4187faf8ba68f7db69963c471a5f9f17285c"
+          },
+          "description": "В выборке 37 строгих сравнений, 0 нестрогих (0 с null). Вариант allowNull=false требует подтверждения."
+        },
+        {
+          "id": "candidate-usehooks-ts-require-braces-d3b7b809e37f",
+          "check": {
+            "kind": "require-braces",
+            "options": {}
+          },
+          "status": "candidate",
+          "observations": {
+            "minSamples": 5,
+            "threshold": 0.9,
+            "ratio": 0.9146341463414634,
+            "files": 22,
+            "evidenceFilesShown": 20,
+            "datasetSha256": "d3b7b809e37f6b16f95919e592f8ea1d813927dcaca84e1be517748d32c608bf"
+          },
+          "description": "В выборке 75 из 82 тел управляющих конструкций имеют фигурные скобки; это кандидат на договорённость."
+        }
+      ],
+      "adviceCounts": {
+        "bp.function-size": 5
+      },
+      "adviceSamples": [
+        {
+          "path": "packages/usehooks-ts/src/useIntersectionObserver/useIntersectionObserver.ts",
+          "line": 82,
+          "ruleId": "bp.function-size",
+          "symbol": "useIntersectionObserver",
+          "message": "Function useIntersectionObserver spans 105 physical lines (limit 80). Review responsibilities before decomposing."
+        },
+        {
+          "path": "packages/usehooks-ts/src/useLocalStorage/useLocalStorage.ts",
+          "line": 48,
+          "ruleId": "bp.function-size",
+          "symbol": "useLocalStorage",
+          "message": "Function useLocalStorage spans 144 physical lines (limit 80). Review responsibilities before decomposing."
+        },
+        {
+          "path": "packages/usehooks-ts/src/useReadLocalStorage/useReadLocalStorage.ts",
+          "line": 42,
+          "ruleId": "bp.function-size",
+          "symbol": "useReadLocalStorage",
+          "message": "Function useReadLocalStorage spans 81 physical lines (limit 80). Review responsibilities before decomposing."
+        },
+        {
+          "path": "packages/usehooks-ts/src/useScript/useScript.ts",
+          "line": 53,
+          "ruleId": "bp.function-size",
+          "symbol": "useScript",
+          "message": "Function useScript spans 90 physical lines (limit 80). Review responsibilities before decomposing."
+        },
+        {
+          "path": "packages/usehooks-ts/src/useSessionStorage/useSessionStorage.ts",
+          "line": 48,
+          "ruleId": "bp.function-size",
+          "symbol": "useSessionStorage",
+          "message": "Function useSessionStorage spans 144 physical lines (limit 80). Review responsibilities before decomposing."
+        }
+      ],
+      "allAdvice": [
+        {
+          "path": "packages/usehooks-ts/src/useIntersectionObserver/useIntersectionObserver.ts",
+          "line": 82,
+          "ruleId": "bp.function-size",
+          "symbol": "useIntersectionObserver",
+          "message": "Function useIntersectionObserver spans 105 physical lines (limit 80). Review responsibilities before decomposing."
+        },
+        {
+          "path": "packages/usehooks-ts/src/useLocalStorage/useLocalStorage.ts",
+          "line": 48,
+          "ruleId": "bp.function-size",
+          "symbol": "useLocalStorage",
+          "message": "Function useLocalStorage spans 144 physical lines (limit 80). Review responsibilities before decomposing."
+        },
+        {
+          "path": "packages/usehooks-ts/src/useReadLocalStorage/useReadLocalStorage.ts",
+          "line": 42,
+          "ruleId": "bp.function-size",
+          "symbol": "useReadLocalStorage",
+          "message": "Function useReadLocalStorage spans 81 physical lines (limit 80). Review responsibilities before decomposing."
+        },
+        {
+          "path": "packages/usehooks-ts/src/useScript/useScript.ts",
+          "line": 53,
+          "ruleId": "bp.function-size",
+          "symbol": "useScript",
+          "message": "Function useScript spans 90 physical lines (limit 80). Review responsibilities before decomposing."
+        },
+        {
+          "path": "packages/usehooks-ts/src/useSessionStorage/useSessionStorage.ts",
+          "line": 48,
+          "ruleId": "bp.function-size",
+          "symbol": "useSessionStorage",
+          "message": "Function useSessionStorage spans 144 physical lines (limit 80). Review responsibilities before decomposing."
+        }
+      ],
+      "limits": {
+        "files": 67,
+        "filesWithMetrics": 67,
+        "opportunities": {
+          "declarations": 168,
+          "comparisons": 37,
+          "controls": 82
+        },
+        "candidates": 3,
+        "executableCandidates": 3,
+        "manualCandidates": 0,
+        "complete": true,
+        "vocabulary": [
+          "no-var",
+          "strict-equality",
+          "require-braces"
+        ],
+        "architecturalConventionsInferred": false
+      }
+    },
+    {
+      "id": "underscore",
+      "url": "https://github.com/jashkenas/underscore.git",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "files": 161,
+      "parsedFiles": 161,
+      "sourceBytes": 90774,
+      "analysisMs": 66,
+      "parseFailures": [],
+      "counterFailures": [],
+      "inventoryErrors": [],
+      "skipped": [],
+      "metrics": {
+        "declarations": {
+          "const": 0,
+          "let": 0,
+          "var": 282
+        },
+        "equality": {
+          "strict": 71,
+          "loose": 59,
+          "nullLoose": 41
+        },
+        "braces": {
+          "braced": 115,
+          "unbraced": 115
+        }
+      },
+      "observations": {
+        "declarations": {
+          "const": 0,
+          "let": 0,
+          "var": 282
+        },
+        "equality": {
+          "strict": 71,
+          "loose": 59,
+          "nullLoose": 41
+        },
+        "braces": {
+          "braced": 115,
+          "unbraced": 115
+        },
+        "functionLines": {
+          "count": 193,
+          "min": 1,
+          "median": 6,
+          "p95": 24,
+          "max": 143
+        },
+        "componentLines": {
+          "count": 0
+        },
+        "parameters": {
+          "count": 193,
+          "min": 0,
+          "median": 1,
+          "p95": 3,
+          "max": 5
+        },
+        "imports": [
+          {
+            "module": "./_setup.js",
+            "occurrences": 24
+          },
+          {
+            "module": "./keys.js",
+            "occurrences": 17
+          },
+          {
+            "module": "./_tagTester.js",
+            "occurrences": 16
+          },
+          {
+            "module": "./_cb.js",
+            "occurrences": 14
+          },
+          {
+            "module": "./_isArrayLike.js",
+            "occurrences": 13
+          },
+          {
+            "module": "./restArguments.js",
+            "occurrences": 13
+          },
+          {
+            "module": "./underscore.js",
+            "occurrences": 13
+          },
+          {
+            "module": "./_getLength.js",
+            "occurrences": 12
+          },
+          {
+            "module": "./isFunction.js",
+            "occurrences": 12
+          },
+          {
+            "module": "./_has.js",
+            "occurrences": 8
+          },
+          {
+            "module": "./each.js",
+            "occurrences": 7
+          },
+          {
+            "module": "./isArray.js",
+            "occurrences": 7
+          },
+          {
+            "module": "./isObject.js",
+            "occurrences": 7
+          },
+          {
+            "module": "./_flatten.js",
+            "occurrences": 6
+          },
+          {
+            "module": "./map.js",
+            "occurrences": 6
+          },
+          {
+            "module": "./values.js",
+            "occurrences": 6
+          },
+          {
+            "module": "./_optimizeCb.js",
+            "occurrences": 5
+          },
+          {
+            "module": "./_stringTagBug.js",
+            "occurrences": 5
+          },
+          {
+            "module": "./_toPath.js",
+            "occurrences": 5
+          },
+          {
+            "module": "./allKeys.js",
+            "occurrences": 5
+          },
+          {
+            "module": "./contains.js",
+            "occurrences": 5
+          },
+          {
+            "module": "./filter.js",
+            "occurrences": 5
+          },
+          {
+            "module": "./_group.js",
+            "occurrences": 4
+          },
+          {
+            "module": "./matcher.js",
+            "occurrences": 4
+          },
+          {
+            "module": "./partial.js",
+            "occurrences": 4
+          },
+          {
+            "module": "./_createAssigner.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./_deepGet.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./_getByteLength.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./_methodFingerprint.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./extendOwn.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./findIndex.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./identity.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./index.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./isArguments.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./isDataView.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./isString.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./negate.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./now.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./pluck.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./property.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./random.js",
+            "occurrences": 3
+          },
+          {
+            "module": "./_baseCreate.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_baseIteratee.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_chainResult.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_collectNonEnumProps.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_createEscaper.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_createIndexFinder.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_createPredicateIndexFinder.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_createReduce.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_createSizePropertyCheck.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_escapeMap.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_executeBound.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_shallowProperty.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./before.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./bind.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./constant.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./defaults.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./delay.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./difference.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./extend.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./find.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./findKey.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./findLastIndex.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./functions.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./get.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./indexOf.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./initial.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./invert.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./isArrayBuffer.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./isBoolean.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./isMatch.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./isNaN.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./isNumber.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./isSymbol.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./isTypedArray.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./isUndefined.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./iteratee.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./max.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./noop.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./pick.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./rest.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./sample.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./sortedIndex.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./templateSettings.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./toArray.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./toPath.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./uniq.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./uniqueId.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./unzip.js",
+            "occurrences": 2
+          },
+          {
+            "module": "./_hasObjectTag.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./_isBufferLike.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./_keyInObj.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./_toBufferView.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./_unescapeMap.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./after.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./bindAll.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./chain.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./chunk.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./clone.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./compact.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./compose.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./countBy.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./create.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./debounce.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./defer.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./escape.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./every.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./findWhere.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./first.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./flatten.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./groupBy.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./has.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./index-default.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./indexBy.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./intersection.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./invoke.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isDate.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isElement.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isEmpty.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isEqual.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isError.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isFinite.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isMap.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isNull.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isRegExp.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isSet.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isWeakMap.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./isWeakSet.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./last.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./lastIndexOf.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./mapObject.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./memoize.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./min.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./mixin.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./object.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./omit.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./once.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./pairs.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./partition.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./propertyOf.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./range.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./reduce.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./reduceRight.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./reject.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./result.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./shuffle.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./size.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./some.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./sortBy.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./tap.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./template.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./throttle.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./times.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./underscore-array-methods.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./unescape.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./union.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./where.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./without.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./wrap.js",
+            "occurrences": 1
+          },
+          {
+            "module": "./zip.js",
+            "occurrences": 1
+          }
+        ]
+      },
+      "candidates": [],
+      "adviceCounts": {
+        "bp.no-var": 215,
+        "bp.strict-equality": 18,
+        "bp.function-size": 2
+      },
+      "adviceSamples": [
+        {
+          "path": "modules/_baseCreate.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_baseCreate.js",
+          "line": 15,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 26,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 27,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 28,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 31,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createAssigner.js",
+          "line": 4,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createAssigner.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createAssigner.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createAssigner.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createAssigner.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createEscaper.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createEscaper.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createEscaper.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createEscaper.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createIndexFinder.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createIndexFinder.js",
+          "line": 9,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/_createPredicateIndexFinder.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createPredicateIndexFinder.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createReduce.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createReduce.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createReduce.js",
+          "line": 18,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createReduce.js",
+          "line": 25,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createSizePropertyCheck.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createSizePropertyCheck.js",
+          "line": 7,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/_deepGet.js",
+          "line": 3,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_deepGet.js",
+          "line": 4,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_executeBound.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        }
+      ],
+      "allAdvice": [
+        {
+          "path": "modules/_baseCreate.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_baseCreate.js",
+          "line": 15,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 26,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 27,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 28,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_collectNonEnumProps.js",
+          "line": 31,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createAssigner.js",
+          "line": 4,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createAssigner.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createAssigner.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createAssigner.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createAssigner.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createEscaper.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createEscaper.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createEscaper.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createEscaper.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createIndexFinder.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createIndexFinder.js",
+          "line": 9,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/_createPredicateIndexFinder.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createPredicateIndexFinder.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createReduce.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createReduce.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createReduce.js",
+          "line": 18,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createReduce.js",
+          "line": 25,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createSizePropertyCheck.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_createSizePropertyCheck.js",
+          "line": 7,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/_deepGet.js",
+          "line": 3,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_deepGet.js",
+          "line": 4,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_executeBound.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_executeBound.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_flatten.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_flatten.js",
+          "line": 16,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_flatten.js",
+          "line": 22,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_group.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_group.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_methodFingerprint.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_methodFingerprint.js",
+          "line": 14,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_methodFingerprint.js",
+          "line": 16,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_methodFingerprint.js",
+          "line": 28,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_methodFingerprint.js",
+          "line": 35,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 2,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 7,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 8,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 14,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 17,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 23,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 28,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 34,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 38,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 39,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_setup.js",
+          "line": 43,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_stringTagBug.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/_tagTester.js",
+          "line": 5,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/allKeys.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/allKeys.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/before.js",
+          "line": 4,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/bind.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/bindAll.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/bindAll.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/chain.js",
+          "line": 5,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/chunk.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/chunk.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/compose.js",
+          "line": 4,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/compose.js",
+          "line": 5,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/compose.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/compose.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/contains.js",
+          "line": 8,
+          "ruleId": "bp.strict-equality",
+          "message": "Use !==; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/create.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/debounce.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/debounce.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/debounce.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/debounce.js",
+          "line": 23,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/each.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/each.js",
+          "line": 17,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/every.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/every.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/every.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/filter.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/find.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/find.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/findKey.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/findKey.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/functions.js",
+          "line": 5,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/functions.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/get.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/has.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/has.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/has.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/index-default.js",
+          "line": 23,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/intersection.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/intersection.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/intersection.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/intersection.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/intersection.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/invert.js",
+          "line": 5,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/invert.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/invert.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/invoke.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/invoke.js",
+          "line": 18,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isArguments.js",
+          "line": 4,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isDataView.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEmpty.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEmpty.js",
+          "line": 14,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 21,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 25,
+          "ruleId": "bp.function-size",
+          "symbol": "cycleTracker",
+          "message": "Function cycleTracker spans 96 physical lines (limit 80). Review responsibilities before decomposing."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 92,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 123,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 126,
+          "ruleId": "bp.function-size",
+          "symbol": "isEqual",
+          "message": "Function isEqual spans 143 physical lines (limit 80). Review responsibilities before decomposing."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 130,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 132,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 136,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 160,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 161,
+          "ruleId": "bp.strict-equality",
+          "message": "Use !==; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 169,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 172,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 205,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 207,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 213,
+          "ruleId": "bp.strict-equality",
+          "message": "Use !==; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 213,
+          "ruleId": "bp.strict-equality",
+          "message": "Use !==; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 217,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 228,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 243,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isEqual.js",
+          "line": 254,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isFunction.js",
+          "line": 4,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isFunction.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isFunction.js",
+          "line": 9,
+          "ruleId": "bp.strict-equality",
+          "message": "Use !==; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/isFunction.js",
+          "line": 9,
+          "ruleId": "bp.strict-equality",
+          "message": "Use !==; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/isFunction.js",
+          "line": 9,
+          "ruleId": "bp.strict-equality",
+          "message": "Use !==; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/isFunction.js",
+          "line": 11,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/isMatch.js",
+          "line": 5,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isMatch.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isMatch.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isMatch.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isObject.js",
+          "line": 3,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/isTypedArray.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/keys.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/keys.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/map.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/map.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/map.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/mapObject.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/mapObject.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/mapObject.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/max.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/max.js",
+          "line": 11,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/max.js",
+          "line": 11,
+          "ruleId": "bp.strict-equality",
+          "message": "Use !==; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/max.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/memoize.js",
+          "line": 5,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/memoize.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/memoize.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/min.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/min.js",
+          "line": 11,
+          "ruleId": "bp.strict-equality",
+          "message": "Use ===; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/min.js",
+          "line": 11,
+          "ruleId": "bp.strict-equality",
+          "message": "Use !==; loose equality is not allowed by this rule."
+        },
+        {
+          "path": "modules/min.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/mixin.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/mixin.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/object.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/object.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/omit.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/pairs.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/pairs.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/pairs.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/pairs.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/partial.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/partial.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/partial.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/partial.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/partial.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/partial.js",
+          "line": 14,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/pick.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/pick.js",
+          "line": 20,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/pick.js",
+          "line": 21,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/pick.js",
+          "line": 22,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/range.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/range.js",
+          "line": 14,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/range.js",
+          "line": 16,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/restArguments.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/restArguments.js",
+          "line": 20,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/result.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/result.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/result.js",
+          "line": 14,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sample.js",
+          "line": 16,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sample.js",
+          "line": 17,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sample.js",
+          "line": 19,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sample.js",
+          "line": 20,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sample.js",
+          "line": 21,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sample.js",
+          "line": 22,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/some.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/some.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/some.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sortBy.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sortBy.js",
+          "line": 16,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sortBy.js",
+          "line": 17,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sortedIndex.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sortedIndex.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/sortedIndex.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/template.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/template.js",
+          "line": 12,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/template.js",
+          "line": 21,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/template.js",
+          "line": 32,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/template.js",
+          "line": 43,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/template.js",
+          "line": 50,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/template.js",
+          "line": 51,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/template.js",
+          "line": 69,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/template.js",
+          "line": 85,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/template.js",
+          "line": 93,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/throttle.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/throttle.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/throttle.js",
+          "line": 13,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/throttle.js",
+          "line": 20,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/throttle.js",
+          "line": 21,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/throttle.js",
+          "line": 23,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/times.js",
+          "line": 5,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/times.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/toArray.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/underscore-array-methods.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/underscore-array-methods.js",
+          "line": 10,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/underscore-array-methods.js",
+          "line": 23,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/underscore-array-methods.js",
+          "line": 25,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/uniq.js",
+          "line": 18,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/uniq.js",
+          "line": 19,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/uniq.js",
+          "line": 20,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/uniq.js",
+          "line": 21,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/uniqueId.js",
+          "line": 3,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/uniqueId.js",
+          "line": 5,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/unzip.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/unzip.js",
+          "line": 9,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/unzip.js",
+          "line": 11,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/values.js",
+          "line": 5,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/values.js",
+          "line": 6,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/values.js",
+          "line": 7,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        },
+        {
+          "path": "modules/values.js",
+          "line": 8,
+          "ruleId": "bp.no-var",
+          "message": "Use let or const instead of var."
+        }
+      ],
+      "limits": {
+        "files": 161,
+        "filesWithMetrics": 161,
+        "opportunities": {
+          "declarations": 282,
+          "comparisons": 130,
+          "controls": 230
+        },
+        "candidates": 0,
+        "executableCandidates": 0,
+        "manualCandidates": 0,
+        "complete": true,
+        "vocabulary": [
+          "no-var",
+          "strict-equality",
+          "require-braces"
+        ],
+        "architecturalConventionsInferred": false
+      }
+    }
+  ]
+}
