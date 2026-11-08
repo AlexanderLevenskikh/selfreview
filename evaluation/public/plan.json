@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "createdBeforeMeasurement": true,
+  "goal": "Test observable feature capture and abstention on public production source; do not infer team policy authority or benchmark developer quality.",
+  "settings": {
+    "minSamples": 5,
+    "threshold": 0.9,
+    "automaticApproval": false,
+    "sourceExecution": false,
+    "installProjectDependencies": false
+  },
+  "repositories": [
+    {
+      "id": "p-limit",
+      "url": "https://github.com/sindresorhus/p-limit.git",
+      "include": [
+        "index.js"
+      ],
+      "exclude": [],
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb"
+    },
+    {
+      "id": "usehooks-ts",
+      "url": "https://github.com/juliencrn/usehooks-ts.git",
+      "include": [
+        "packages/usehooks-ts/src/**/*.ts",
+        "packages/usehooks-ts/src/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.demo.ts",
+        "**/*.demo.tsx"
+      ],
+      "revision": "61949134144d3690fe9f521260a16c779a6d3797"
+    },
+    {
+      "id": "underscore",
+      "url": "https://github.com/jashkenas/underscore.git",
+      "include": [
+        "modules/**/*.js"
+      ],
+      "exclude": [],
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b"
+    }
+  ],
+  "checks": [
+    "Pin exact analyzed Git SHA and per-file SHA256.",
+    "Record every parse failure and omitted source path.",
+    "Compare declaration/equality/braces counters with a separately implemented ESTree visitor (Espree for JS; typescript-eslint for TS, same underlying TS parser for TS).",
+    "Compare emitted candidate parameters against measured counts and fixed thresholds; never label a candidate a confirmed convention.",
+    "Count default advice to reveal potential noise on legacy source.",
+    "Preserve all failures/abstentions; do not change selection or thresholds after observing outputs."
+  ],
+  "limitations": [
+    "Repository sample is purposive, not random; no statistical or general accuracy claim.",
+    "No claim about actual team conventions without approved documents.",
+    "No runtime/build/typecheck and no whole-repository acceptance."
+  ]
+}

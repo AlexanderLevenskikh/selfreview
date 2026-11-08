@@ -1,0 +1,657 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @selfreview/core@0.1.0 test
+> node --test --test-reporter=tap
+
+TAP version 13
+# Subtest: no-var analyzes syntax, excludes strings/comments, and preserves location
+ok 1 - no-var analyzes syntax, excludes strings/comments, and preserves location
+  ---
+  duration_ms: 15.417128
+  type: 'test'
+  ...
+# Subtest: console rule respects permitted methods and catches computed/optional access
+ok 2 - console rule respects permitted methods and catches computed/optional access
+  ---
+  duration_ms: 29.82726
+  type: 'test'
+  ...
+# Subtest: single-file binding excludes locally shadowed console, including hoisted variables and parameters
+ok 3 - single-file binding excludes locally shadowed console, including hoisted variables and parameters
+  ---
+  duration_ms: 7.448535
+  type: 'test'
+  ...
+# Subtest: an imported or destructured console binding is not the global console
+ok 4 - an imported or destructured console binding is not the global console
+  ---
+  duration_ms: 12.862065
+  type: 'test'
+  ...
+# Subtest: strict equality can retain the explicit null comparison convention
+ok 5 - strict equality can retain the explicit null comparison convention
+  ---
+  duration_ms: 2.045947
+  type: 'test'
+  ...
+# Subtest: restricted imports cover static imports, reexports, require, dynamic imports and TS import types
+ok 6 - restricted imports cover static imports, reexports, require, dynamic imports and TS import types
+  ---
+  duration_ms: 7.340952
+  type: 'test'
+  ...
+# Subtest: restricted calls support exact paths and wildcard methods without claiming type resolution
+ok 7 - restricted calls support exact paths and wildcard methods without claiming type resolution
+  ---
+  duration_ms: 1.840743
+  type: 'test'
+  ...
+# Subtest: TSX component size spans the full AST node, even if the change is in its body
+ok 8 - TSX component size spans the full AST node, even if the change is in its body
+  ---
+  duration_ms: 3.644876
+  type: 'test'
+  ...
+# Subtest: memo-wrapped/default/class components are structurally detected
+ok 9 - memo-wrapped/default/class components are structurally detected
+  ---
+  duration_ms: 2.510986
+  type: 'test'
+  ...
+# Subtest: nested helper JSX does not turn an uppercase non-component function into a component
+ok 10 - nested helper JSX does not turn an uppercase non-component function into a component
+  ---
+  duration_ms: 1.26323
+  type: 'test'
+  ...
+# Subtest: max parameters excludes the TypeScript this pseudo-parameter and ignores overload signatures
+ok 11 - max parameters excludes the TypeScript this pseudo-parameter and ignores overload signatures
+  ---
+  duration_ms: 1.44608
+  type: 'test'
+  ...
+# Subtest: async Promise executor requires the unshadowed Promise constructor
+ok 12 - async Promise executor requires the unshadowed Promise constructor
+  ---
+  duration_ms: 6.193681
+  type: 'test'
+  ...
+# Subtest: require-braces counts loop and branch bodies; else-if itself needs no extra braces
+ok 13 - require-braces counts loop and branch bodies; else-if itself needs no extra braces
+  ---
+  duration_ms: 2.139443
+  type: 'test'
+  ...
+# Subtest: parse failure cannot produce a deceptively clean analyzed result
+ok 14 - parse failure cannot produce a deceptively clean analyzed result
+  ---
+  duration_ms: 2.449261
+  type: 'test'
+  ...
+# Subtest: manual rule is intentionally non-executable and unknown checks fail closed
+ok 15 - manual rule is intentionally non-executable and unknown checks fail closed
+  ---
+  duration_ms: 1.603372
+  type: 'test'
+  ...
+# Subtest: all supported source extensions parse and debugger finding retains evidence
+ok 16 - all supported source extensions parse and debugger finding retains evidence
+  ---
+  duration_ms: 1.135208
+  type: 'test'
+  ...
+# Subtest: resource-management declarations are not confused with var
+ok 17 - resource-management declarations are not confused with var
+  ---
+  duration_ms: 0.885224
+  type: 'test'
+  ...
+# Subtest: actual CLI workflow imports scope-specific candidates, approves one rule, and exports working integrations
+ok 18 - actual CLI workflow imports scope-specific candidates, approves one rule, and exports working integrations
+  ---
+  duration_ms: 5746.303394
+  type: 'test'
+  ...
+# Subtest: CLI configuration and invocation errors exit 2; a missing catalog is not treated as empty policy
+ok 19 - CLI configuration and invocation errors exit 2; a missing catalog is not treated as empty policy
+  ---
+  duration_ms: 1769.605327
+  type: 'test'
+  ...
+# Subtest: --base refuses to inspect a parent Git repository when only its subfolder is configured
+ok 20 - --base refuses to inspect a parent Git repository when only its subfolder is configured
+  ---
+  duration_ms: 781.229336
+  type: 'test'
+  ...
+# Subtest: --base at the exact Git root includes both modified tracked files and untracked sources
+ok 21 - --base at the exact Git root includes both modified tracked files and untracked sources
+  ---
+  duration_ms: 814.66363
+  type: 'test'
+  ...
+# Subtest: scope A is isolated from the shared B/C/D scope and independent E scope
+ok 22 - scope A is isolated from the shared B/C/D scope and independent E scope
+  ---
+  duration_ms: 53.346154
+  type: 'test'
+  ...
+# Subtest: candidate and rejected rules never become enforced by confidence or evidence
+ok 23 - candidate and rejected rules never become enforced by confidence or evidence
+  ---
+  duration_ms: 3.036412
+  type: 'test'
+  ...
+# Subtest: overlapping same-family variants block review until an explicit override is approved
+ok 24 - overlapping same-family variants block review until an explicit override is approved
+  ---
+  duration_ms: 12.20036
+  type: 'test'
+  ...
+# Subtest: disjoint file variants of one family apply without imposing global equality
+ok 25 - disjoint file variants of one family apply without imposing global equality
+  ---
+  duration_ms: 18.065794
+  type: 'test'
+  ...
+# Subtest: override cycles cannot hide every enforced rule and manufacture a pass
+ok 26 - override cycles cannot hide every enforced rule and manufacture a pass
+  ---
+  duration_ms: 3.805303
+  type: 'test'
+  ...
+# Subtest: a convention cannot override a same-family rule from an unrelated scope
+ok 27 - a convention cannot override a same-family rule from an unrelated scope
+  ---
+  duration_ms: 4.472366
+  type: 'test'
+  ...
+# Subtest: approval hashes bind behavior, applicability, scope and evidence
+ok 28 - approval hashes bind behavior, applicability, scope and evidence
+  ---
+  duration_ms: 2.951241
+  type: 'test'
+  ...
+# Subtest: stale approvals prevent review and two drifted rules can be repaired sequentially
+ok 29 - stale approvals prevent review and two drifted rules can be repaired sequentially
+  ---
+  duration_ms: 11.638538
+  type: 'test'
+  ...
+# Subtest: a missing catalog is an error rather than an empty or satisfied policy
+ok 30 - a missing catalog is an error rather than an empty or satisfied policy
+  ---
+  duration_ms: 2.834632
+  type: 'test'
+  ...
+# Subtest: invalid applicability cannot silently widen a rule to all source files
+ok 31 - invalid applicability cannot silently widen a rule to all source files
+  ---
+  duration_ms: 1.566631
+  type: 'test'
+  ...
+# Subtest: project configuration rejects an empty include
+ok 32 - project configuration rejects an empty include
+  ---
+  duration_ms: 2.919594
+  type: 'test'
+  ...
+# Subtest: project configuration rejects a string in place of include
+ok 33 - project configuration rejects a string in place of include
+  ---
+  duration_ms: 1.629072
+  type: 'test'
+  ...
+# Subtest: project configuration rejects an invalid later include pattern
+ok 34 - project configuration rejects an invalid later include pattern
+  ---
+  duration_ms: 1.824734
+  type: 'test'
+  ...
+# Subtest: project configuration rejects an invalid later exclude pattern
+ok 35 - project configuration rejects an invalid later exclude pattern
+  ---
+  duration_ms: 1.620789
+  type: 'test'
+  ...
+# Subtest: project configuration rejects an invalid exclude despite a nonmatching include
+ok 36 - project configuration rejects an invalid exclude despite a nonmatching include
+  ---
+  duration_ms: 2.131589
+  type: 'test'
+  ...
+# Subtest: an approved convention suppresses the equivalent builtin even with a custom family name
+ok 37 - an approved convention suppresses the equivalent builtin even with a custom family name
+  ---
+  duration_ms: 5.204823
+  type: 'test'
+  ...
+# Subtest: explicit disabling of a builtin preserves its explanation
+ok 38 - explicit disabling of a builtin preserves its explanation
+  ---
+  duration_ms: 4.382551
+  type: 'test'
+  ...
+# Subtest: a parse error makes partial review INCOMPLETE even if another file is checked
+ok 39 - a parse error makes partial review INCOMPLETE even if another file is checked
+  ---
+  duration_ms: 6.232493
+  type: 'test'
+  ...
+# Subtest: diff review analyzes a complete touched function when its heading is outside added lines
+ok 40 - diff review analyzes a complete touched function when its heading is outside added lines
+  ---
+  duration_ms: 8.902542
+  type: 'test'
+  ...
+# Subtest: unchanged violations in the same file are excluded from changed-node findings
+ok 41 - unchanged violations in the same file are excluded from changed-node findings
+  ---
+  duration_ms: 12.276078
+  type: 'test'
+  ...
+# Subtest: stale postimage text is refused and the supplied patch is never applied
+ok 42 - stale postimage text is refused and the supplied patch is never applied
+  ---
+  duration_ms: 14.365863
+  type: 'test'
+  ...
+# Subtest: malformed diff (truncated hunk) never becomes an empty successful review
+ok 43 - malformed diff (truncated hunk) never becomes an empty successful review
+  ---
+  duration_ms: 12.088147
+  type: 'test'
+  ...
+# Subtest: malformed diff (non-patch text) never becomes an empty successful review
+ok 44 - malformed diff (non-patch text) never becomes an empty successful review
+  ---
+  duration_ms: 7.686023
+  type: 'test'
+  ...
+# Subtest: malformed diff (path traversal) never becomes an empty successful review
+ok 45 - malformed diff (path traversal) never becomes an empty successful review
+  ---
+  duration_ms: 10.226538
+  type: 'test'
+  ...
+# Subtest: an empty diff reports NO_CHANGES instead of full-project verification
+ok 46 - an empty diff reports NO_CHANGES instead of full-project verification
+  ---
+  duration_ms: 3.964949
+  type: 'test'
+  ...
+# Subtest: configured roots outside the config directory do not include a sibling sharing a path prefix
+ok 47 - configured roots outside the config directory do not include a sibling sharing a path prefix
+  ---
+  duration_ms: 6.269523
+  type: 'test'
+  ...
+# Subtest: overlapping project roots and scope inheritance cycles are rejected
+ok 48 - overlapping project roots and scope inheritance cycles are rejected
+  ---
+  duration_ms: 2.565102
+  type: 'test'
+  ...
+# Subtest: source-file symlinks are not followed and prevent a complete review
+ok 49 - source-file symlinks are not followed and prevent a complete review
+  ---
+  duration_ms: 4.557374
+  type: 'test'
+  ...
+# Subtest: directory symlinks cannot conceal selected source behind a CHECKS_PASSED result
+ok 50 - directory symlinks cannot conceal selected source behind a CHECKS_PASSED result
+  ---
+  duration_ms: 3.281814
+  type: 'test'
+  ...
+# Subtest: review preserves every source byte and mtime as well as configuration and catalog
+ok 51 - review preserves every source byte and mtime as well as configuration and catalog
+  ---
+  duration_ms: 6.300897
+  type: 'test'
+  ...
+# Subtest: manual conventions remain an explicit checklist instead of a fabricated AST pass
+ok 52 - manual conventions remain an explicit checklist instead of a fabricated AST pass
+  ---
+  duration_ms: 7.146551
+  type: 'test'
+  ...
+# Subtest: unknown scope resolution cannot silently select global advice
+ok 53 - unknown scope resolution cannot silently select global advice
+  ---
+  duration_ms: 1.747858
+  type: 'test'
+  ...
+# Subtest: unified diff keeps context and added lines for stale-snapshot checks
+ok 54 - unified diff keeps context and added lines for stale-snapshot checks
+  ---
+  duration_ms: 5.433616
+  type: 'test'
+  ...
+# Subtest: deletion-only zero-context diff retains a positive new-side anchor
+ok 55 - deletion-only zero-context diff retains a positive new-side anchor
+  ---
+  duration_ms: 1.237275
+  type: 'test'
+  ...
+# Subtest: deletion at EOF anchors to the surviving new-side line rather than one past EOF
+ok 56 - deletion at EOF anchors to the surviving new-side line rather than one past EOF
+  ---
+  duration_ms: 0.47882
+  type: 'test'
+  ...
+# Subtest: new and deleted files are represented without phantom sources
+ok 57 - new and deleted files are represented without phantom sources
+  ---
+  duration_ms: 0.787479
+  type: 'test'
+  ...
+# Subtest: rename-only and mode-only changes retain paths and declare metadataOnly
+ok 58 - rename-only and mode-only changes retain paths and declare metadataOnly
+  ---
+  duration_ms: 0.688194
+  type: 'test'
+  ...
+# Subtest: unprefixed paths beginning with b/ are not silently redirected to a sibling
+ok 59 - unprefixed paths beginning with b/ are not silently redirected to a sibling
+  ---
+  duration_ms: 0.446388
+  type: 'test'
+  ...
+# Subtest: quoted UTF-8 octal Git paths and spaces are decoded without shell evaluation
+ok 60 - quoted UTF-8 octal Git paths and spaces are decoded without shell evaluation
+  ---
+  duration_ms: 1.282786
+  type: 'test'
+  ...
+# Subtest: hunk content beginning with file-header markers is still source text
+ok 61 - hunk content beginning with file-header markers is still source text
+  ---
+  duration_ms: 0.533819
+  type: 'test'
+  ...
+# Subtest: truncated and excess hunk counts cannot become a clean result
+ok 62 - truncated and excess hunk counts cannot become a clean result
+  ---
+  duration_ms: 0.948396
+  type: 'test'
+  ...
+# Subtest: unsafe paths are rejected before a caller considers reading them
+ok 63 - unsafe paths are rejected before a caller considers reading them
+  ---
+  duration_ms: 1.293286
+  type: 'test'
+  ...
+# Subtest: combined, binary, malformed, overlapping, and duplicate diffs are explicit errors
+ok 64 - combined, binary, malformed, overlapping, and duplicate diffs are explicit errors
+  ---
+  duration_ms: 2.203836
+  type: 'test'
+  ...
+# Subtest: empty diff is empty, while text without a diff is not a clean empty diff
+ok 65 - empty diff is empty, while text without a diff is not a clean empty diff
+  ---
+  duration_ms: 0.226878
+  type: 'test'
+  ...
+# Subtest: CRLF and missing-final-newline markers preserve line count validation
+ok 66 - CRLF and missing-final-newline markers preserve line count validation
+  ---
+  duration_ms: 0.273308
+  type: 'test'
+  ...
+# Subtest: ESLint uses the same AST results and actual buffer text, not the on-disk source
+ok 67 - ESLint uses the same AST results and actual buffer text, not the on-disk source
+  ---
+  duration_ms: 96.725002
+  type: 'test'
+  ...
+# Subtest: TSX results retain full component ranges through the host TypeScript parser
+ok 68 - TSX results retain full component ranges through the host TypeScript parser
+  ---
+  duration_ms: 21.518478
+  type: 'test'
+  ...
+# Subtest: project scope and per-rule applicability do not leak to another project or folder
+ok 69 - project scope and per-rule applicability do not leak to another project or folder
+  ---
+  duration_ms: 16.394982
+  type: 'test'
+  ...
+# Subtest: best-practice advice remains an ESLint warning and can be superseded by convention
+ok 70 - best-practice advice remains an ESLint warning and can be superseded by convention
+  ---
+  duration_ms: 8.375488
+  type: 'test'
+  ...
+# Subtest: conflicting approved variants produce an integrity error and no contradictory enforcement
+ok 71 - conflicting approved variants produce an integrity error and no contradictory enforcement
+  ---
+  duration_ms: 3.549804
+  type: 'test'
+  ...
+# Subtest: stale approvals fail when the configuration is loaded
+ok 72 - stale approvals fail when the configuration is loaded
+  ---
+  duration_ms: 1.603749
+  type: 'test'
+  ...
+# Subtest: manual and candidate rules are explicitly absent from enforced ESLint coverage
+ok 73 - manual and candidate rules are explicitly absent from enforced ESLint coverage
+  ---
+  duration_ms: 4.950337
+  type: 'test'
+  ...
+# Subtest: direct plugin use detects a filename outside the selected project
+ok 74 - direct plugin use detects a filename outside the selected project
+  ---
+  duration_ms: 2.907493
+  type: 'test'
+  ...
+# Subtest: symlink paths cannot redirect the adapter outside its project scope
+ok 75 - symlink paths cannot redirect the adapter outside its project scope
+  ---
+  duration_ms: 3.300642
+  type: 'test'
+  ...
+# Subtest: a parser failure is an ESLint error, never a successful empty review
+ok 76 - a parser failure is an ESLint error, never a successful empty review
+  ---
+  duration_ms: 3.433625
+  type: 'test'
+  ...
+# Subtest: RU/EN templates become source-backed candidates, never approved rules
+ok 77 - RU/EN templates become source-backed candidates, never approved rules
+  ---
+  duration_ms: 20.549107
+  type: 'test'
+  ...
+# Subtest: negation, permission, local exceptions, and unsupported qualifications stay manual
+ok 78 - negation, permission, local exceptions, and unsupported qualifications stay manual
+  ---
+  duration_ms: 1.051642
+  type: 'test'
+  ...
+# Subtest: wrapped qualifications are retained as part of the same bullet
+ok 79 - wrapped qualifications are retained as part of the same bullet
+  ---
+  duration_ms: 0.539866
+  type: 'test'
+  ...
+# Subtest: comments and arbitrary instructions cannot execute code or become approval
+ok 80 - comments and arbitrary instructions cannot execute code or become approval
+  ---
+  duration_ms: 0.905969
+  type: 'test'
+  ...
+# Subtest: structured rule blocks preserve variants but replace claimed scope, provenance, and approval
+ok 81 - structured rule blocks preserve variants but replace claimed scope, provenance, and approval
+  ---
+  duration_ms: 1.024242
+  type: 'test'
+  ...
+# Subtest: unknown checker kinds remain explicit data for strict catalog rejection
+ok 82 - unknown checker kinds remain explicit data for strict catalog rejection
+  ---
+  duration_ms: 0.491918
+  type: 'test'
+  ...
+# Subtest: malformed structured input is retained and makes import coverage incomplete
+ok 83 - malformed structured input is retained and makes import coverage incomplete
+  ---
+  duration_ms: 0.469172
+  type: 'test'
+  ...
+# Subtest: imports are deterministic and distinct restricted targets have distinct families
+ok 84 - imports are deterministic and distinct restricted targets have distinct families
+  ---
+  duration_ms: 0.721884
+  type: 'test'
+  ...
+# Subtest: neutral MR keeps resolved status and code coordinates without promoting a rule
+ok 85 - neutral MR keeps resolved status and code coordinates without promoting a rule
+  ---
+  duration_ms: 2.500704
+  type: 'test'
+  ...
+# Subtest: GitLab discussions preserve old-side positions and filter system notes
+ok 86 - GitLab discussions preserve old-side positions and filter system notes
+  ---
+  duration_ms: 1.042533
+  type: 'test'
+  ...
+# Subtest: a diff alone does not become a convention; stale or malformed context is visible
+ok 87 - a diff alone does not become a convention; stale or malformed context is visible
+  ---
+  duration_ms: 0.633789
+  type: 'test'
+  ...
+# Subtest: discovery produces observational candidates and supports the null-equality variant
+ok 88 - discovery produces observational candidates and supports the null-equality variant
+  ---
+  duration_ms: 1.814693
+  type: 'test'
+  ...
+# Subtest: tiny samples and dominant legacy style are not declared modern conventions
+ok 89 - tiny samples and dominant legacy style are not declared modern conventions
+  ---
+  duration_ms: 0.261332
+  type: 'test'
+  ...
+# Subtest: missing metrics and empty imports do not conceal incomplete input
+ok 90 - missing metrics and empty imports do not conceal incomplete input
+  ---
+  duration_ms: 0.373576
+  type: 'test'
+  ...
+# Subtest: neutral document and syntax-topic headings preserve templates and provenance
+ok 91 - neutral document and syntax-topic headings preserve templates and provenance
+  ---
+  duration_ms: 1.029934
+  type: 'test'
+  ...
+# Subtest: scope, path, and condition headings cannot widen a prose check to the whole scope
+ok 92 - scope, path, and condition headings cannot widen a prose check to the whole scope
+  ---
+  duration_ms: 6.795342
+  type: 'test'
+  ...
+# Subtest: unknown headings and mismatched topics prefer manual applicability over guessing
+ok 93 - unknown headings and mismatched topics prefer manual applicability over guessing
+  ---
+  duration_ms: 0.79981
+  type: 'test'
+  ...
+# Subtest: sibling headings reset their descendants while neutral children retain a qualified parent
+ok 94 - sibling headings reset their descendants while neutral children retain a qualified parent
+  ---
+  duration_ms: 0.51858
+  type: 'test'
+  ...
+# Subtest: Russian neutral topics work and Russian qualified ancestors remain manual
+ok 95 - Russian neutral topics work and Russian qualified ancestors remain manual
+  ---
+  duration_ms: 0.388173
+  type: 'test'
+  ...
+# Subtest: Setext headings preserve applicability and horizontal separators do not clear it
+ok 96 - Setext headings preserve applicability and horizontal separators do not clear it
+  ---
+  duration_ms: 0.312494
+  type: 'test'
+  ...
+# Subtest: explicit structured applicability remains a candidate while heading context is preserved
+ok 97 - explicit structured applicability remains a candidate while heading context is preserved
+  ---
+  duration_ms: 0.270056
+  type: 'test'
+  ...
+# Subtest: structured checks without explicit applicability do not erase a scoped heading
+ok 98 - structured checks without explicit applicability do not erase a scoped heading
+  ---
+  duration_ms: 0.33619
+  type: 'test'
+  ...
+# Subtest: a scoped heading does not launder an unknown executable checker into an approved feature
+ok 99 - a scoped heading does not launder an unknown executable checker into an approved feature
+  ---
+  duration_ms: 0.232313
+  type: 'test'
+  ...
+# Subtest: paragraph qualifications are retained in titles and descriptions without sentence-prefix extraction
+ok 100 - paragraph qualifications are retained in titles and descriptions without sentence-prefix extraction
+  ---
+  duration_ms: 0.186442
+  type: 'test'
+  ...
+# Subtest: console prose exceptions retain canonical case and do not treat arbitrary words as method names
+ok 101 - console prose exceptions retain canonical case and do not treat arbitrary words as method names
+  ---
+  duration_ms: 0.364523
+  type: 'test'
+  ...
+# Subtest: quoted heading instructions stay inert and code-fence headings do not alter prose context
+ok 102 - quoted heading instructions stay inert and code-fence headings do not alter prose context
+  ---
+  duration_ms: 0.479529
+  type: 'test'
+  ...
+# Subtest: oversized headings fail explicitly rather than dropping or repeatedly expanding the qualifier
+ok 103 - oversized headings fail explicitly rather than dropping or repeatedly expanding the qualifier
+  ---
+  duration_ms: 0.585738
+  type: 'test'
+  ...
+# Subtest: a large modern project cannot impose its inferred style on a smaller legacy project in the same scope
+ok 104 - a large modern project cannot impose its inferred style on a smaller legacy project in the same scope
+  ---
+  duration_ms: 41.434195
+  type: 'test'
+  ...
+# Subtest: Git diff collection disables repository clean filters without changing their configuration
+ok 105 - Git diff collection disables repository clean filters without changing their configuration
+  ---
+  duration_ms: 119.866802
+  type: 'test'
+  ...
+# Subtest: text review groups repeated advice while JSON retains every occurrence
+ok 106 - text review groups repeated advice while JSON retains every occurrence
+  ---
+  duration_ms: 7.674275
+  type: 'test'
+  ...
+# Subtest: UTF-8 BOM and CRLF source matches its supplied postimage without rewriting the file
+ok 107 - UTF-8 BOM and CRLF source matches its supplied postimage without rewriting the file
+  ---
+  duration_ms: 4.685579
+  type: 'test'
+  ...
+1..107
+# tests 107
+# suites 0
+# pass 107
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9620.778961

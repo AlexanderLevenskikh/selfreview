@@ -1,0 +1,20 @@
+{
+  "title": "Synthetic review — extraction demonstration",
+  "diff": "diff --git a/src/Panel.tsx b/src/Panel.tsx\n--- a/src/Panel.tsx\n+++ b/src/Panel.tsx\n@@ -1,4 +1,5 @@\n export function Panel({ name }: { name: string }) {\n-  const label = name;\n+  var label = name;\n+  console.log(label);\n   return <section>{label}</section>;\n }\n",
+  "comments": [
+    {
+      "body": "Не использовать var.",
+      "path": "src/Panel.tsx",
+      "line": 2,
+      "side": "new",
+      "resolved": false
+    },
+    {
+      "body": "Выдели получение данных в отдельный слой: у компонента две ответственности.",
+      "path": "src/Panel.tsx",
+      "line": 1,
+      "side": "new",
+      "resolved": true
+    }
+  ]
+}

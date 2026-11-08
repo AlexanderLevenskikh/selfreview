@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Лимит размера компонентов",
+    "description": "Демонстрационный вариант: максимум 120 физических строк.",
+    "family": "component-max-lines",
+    "check": {
+      "kind": "component-max-lines",
+      "options": {
+        "max": 120
+      }
+    },
+    "applicability": {
+      "include": [
+        "src/components/**"
+      ],
+      "exclude": [
+        "**/*.test.tsx"
+      ]
+    }
+  },
+  {
+    "title": "Лимит размера страниц",
+    "description": "Демонстрационный вариант: максимум 220 физических строк.",
+    "family": "component-max-lines",
+    "check": {
+      "kind": "component-max-lines",
+      "options": {
+        "max": 220
+      }
+    },
+    "applicability": {
+      "include": [
+        "src/pages/**"
+      ],
+      "exclude": []
+    }
+  }
+]

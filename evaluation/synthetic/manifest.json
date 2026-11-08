@@ -1,0 +1,877 @@
+{
+  "schemaVersion": 1,
+  "name": "Independent synthetic characterization; fixed before any analysis run",
+  "preregisteredAt": "2026-11-08T07:06:57.751Z",
+  "protocol": {
+    "minSamples": 5,
+    "threshold": 0.9,
+    "noProductionEdits": true,
+    "noThresholdTuning": true,
+    "noNetwork": true,
+    "noUserFiles": true,
+    "noProjectCodeExecution": true,
+    "qualification": "Author-constructed held-out-style fixtures, not a random sample, external benchmark, or statistical estimate of real-repository precision/recall.",
+    "evidenceMeaning": "Detected frequencies are observations and candidate hypotheses. They are never evidence of team agreement or permission to approve a rule.",
+    "fixedImplementation": "Frozen byte-for-byte copy of the production modules before evaluation; current production may later differ."
+  },
+  "inputFiles": [
+    {
+      "path": "corpora/modern/normalize-1.ts",
+      "sha256": "12699ec7963b2670f2d3feb7d39b518b99d0313efd4dee8bd452976249dd1d3a"
+    },
+    {
+      "path": "corpora/nullable/name-1.ts",
+      "sha256": "1e5fabfcd6a9834b11108a967d1503c4c1d965575193b95eb3274b2e64e77163"
+    },
+    {
+      "path": "corpora/legacy/legacy-1.js",
+      "sha256": "06415f1324825d9da751e246ee7d7cb7b44c885e360996dc62e71409d933cf8a"
+    },
+    {
+      "path": "corpora/modern/normalize-2.ts",
+      "sha256": "f548603476e956f607fb0eb9c57e3b5f409dbb41c1c74cdbb0afe62095405dc4"
+    },
+    {
+      "path": "corpora/nullable/name-2.ts",
+      "sha256": "07b9d94bc4f853b976da86502f4a4c7c3a7ccd6b9d81e58a5ab1e76a661fcf5e"
+    },
+    {
+      "path": "corpora/legacy/legacy-2.js",
+      "sha256": "44fbe23b958370edb5af239ed4ac4abe2cdcf41969e877aeab22fd578707df01"
+    },
+    {
+      "path": "corpora/modern/normalize-3.ts",
+      "sha256": "a0bf26001f9e7b11872371618be3effbcaf9d5da00b7d2458b7656859faa739f"
+    },
+    {
+      "path": "corpora/nullable/name-3.ts",
+      "sha256": "578263f8dda16d4d20cb20e18003e66a694607780d3fc0ea970245b731a0fd9f"
+    },
+    {
+      "path": "corpora/legacy/legacy-3.js",
+      "sha256": "8da1e9acde7d711b1ab61ced015ddb5a36d6fc39ba85df32acaa39f309c4fbc7"
+    },
+    {
+      "path": "corpora/modern/normalize-4.ts",
+      "sha256": "1faf92c4dbed05c70f771e792b3372eb6cc2089a1e8c98eda5757cb77a283e32"
+    },
+    {
+      "path": "corpora/nullable/name-4.ts",
+      "sha256": "00ca08fadd2ffb049bbfbeab0b592655dd84707dca56aec308d6cb9875fd6c9b"
+    },
+    {
+      "path": "corpora/legacy/legacy-4.js",
+      "sha256": "8c40051ea820f890e045926adfa67fdbeec652808f0f7591c3261616abfe12fe"
+    },
+    {
+      "path": "corpora/modern/normalize-5.ts",
+      "sha256": "0c9372d3f13a3483397df5b5166b0028b255953f3b305a652f85b6b3c67b5ae2"
+    },
+    {
+      "path": "corpora/nullable/name-5.ts",
+      "sha256": "a71b97467158d6c6a6aa313609d92aa69672cf1209d273e36c2a7eb50b03251f"
+    },
+    {
+      "path": "corpora/legacy/legacy-5.js",
+      "sha256": "d24698a74f0d3be56fde3956f1df33abe15670666080167e99ae9339f35eff82"
+    },
+    {
+      "path": "corpora/modern/normalize-6.ts",
+      "sha256": "952bbd141cd7ca418f088ba64a9a2f99ea01a77ef2d40a354f303345a4de05d6"
+    },
+    {
+      "path": "corpora/nullable/name-6.ts",
+      "sha256": "db04efc77d14056ccef49dab537375bfbcbc0908d872c9852bec621e6ce5f22d"
+    },
+    {
+      "path": "corpora/legacy/legacy-6.js",
+      "sha256": "869fd84be2763a49f9b9d801c40f2e0662a329d51c491548fcf1f65a50c0554b"
+    },
+    {
+      "path": "corpora/major/modern-1.ts",
+      "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03"
+    },
+    {
+      "path": "corpora/major/modern-2.ts",
+      "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8"
+    },
+    {
+      "path": "corpora/major/modern-3.ts",
+      "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c"
+    },
+    {
+      "path": "corpora/major/modern-4.ts",
+      "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687"
+    },
+    {
+      "path": "corpora/major/modern-5.ts",
+      "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164"
+    },
+    {
+      "path": "corpora/major/modern-6.ts",
+      "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703"
+    },
+    {
+      "path": "corpora/major/modern-7.ts",
+      "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18"
+    },
+    {
+      "path": "corpora/major/modern-8.ts",
+      "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea"
+    },
+    {
+      "path": "corpora/major/modern-9.ts",
+      "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380"
+    },
+    {
+      "path": "corpora/major/modern-10.ts",
+      "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2"
+    },
+    {
+      "path": "corpora/minor/compat-1.js",
+      "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38"
+    },
+    {
+      "path": "corpora/minor/compat-2.js",
+      "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240"
+    },
+    {
+      "path": "corpora/minor/compat-3.js",
+      "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e"
+    },
+    {
+      "path": "corpora/minor/compat-4.js",
+      "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c"
+    },
+    {
+      "path": "corpora/minor/compat-5.js",
+      "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6"
+    },
+    {
+      "path": "corpora/ui/LargeReport.tsx",
+      "sha256": "e31a19e9fd26fe00b17dd1a42f2be292c8993f5f500dc17e48df5bd456250f86"
+    },
+    {
+      "path": "corpora/ui/CheckoutHub.tsx",
+      "sha256": "32dd500d313a6d251a7d4004b5df16879e33879953d58a95efa489e8ce8b9a4b"
+    },
+    {
+      "path": "variants/null-guard.ts",
+      "sha256": "cb231cf65d13e57bc6baf8c3233ebac45ccc2c94161e9674dee30b769b168104"
+    },
+    {
+      "path": "variants/non-null-loose.ts",
+      "sha256": "9efe46d955860239aeaf613b1703148ae60c437b9520aa1fbe9cca0acdf4122d"
+    },
+    {
+      "path": "variants/strict-guard.ts",
+      "sha256": "7815df140d02cd51da4064ef2ea6df44e4bcea471dca4089bb27bd2a550c1b1f"
+    },
+    {
+      "path": "variants/console-log.ts",
+      "sha256": "a0e324d4a7e7d4737bbc1667c6dee168b9622e369409b249911dec2d6ff45992"
+    },
+    {
+      "path": "variants/console-warn.ts",
+      "sha256": "c7580b28ba28b2e7e64ec9b0de4a53751c7c8c82b1f5cc1223783b1d1865c980"
+    },
+    {
+      "path": "variants/shadowed-console.ts",
+      "sha256": "fff6e50a9a6d21a6ac6e6d3741f14821a2404e21cf2b62ccafc7320c0881d15d"
+    },
+    {
+      "path": "variants/literal-console-member.ts",
+      "sha256": "c33bc8e64f2a67861014da2c49121a423c7e5095923f61fdc63fbeb8184010fc"
+    },
+    {
+      "path": "variants/dynamic-console-member.ts",
+      "sha256": "b332e9d3b899f3923b94c4f280b7e9d071a1b32e605ef08eef86e460b4373d54"
+    },
+    {
+      "path": "variants/string-substr.ts",
+      "sha256": "357f9c08c360429e52a29a966742b2f6f3362d419b2342aa85692d3eba8e7192"
+    },
+    {
+      "path": "variants/user-method-substr.ts",
+      "sha256": "2ff21e08919513471cade82c5f831c818d2eec9a38683e364e6b7918b7a65099"
+    },
+    {
+      "path": "variants/aliased-substr.ts",
+      "sha256": "7a3b28992c48aff136f0bd4c802fec2e3ecd1951de5e3dd18fd39c873afb55de"
+    },
+    {
+      "path": "variants/VariantCard.tsx",
+      "sha256": "173e6dfcbd3cbbee36f973f8012a6be45f370cb5d9fbec259c8b2230560a3fe3"
+    },
+    {
+      "path": "documents/clauses.md",
+      "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d"
+    },
+    {
+      "path": "documents/headings.md",
+      "sha256": "1aa5ccc072f882790ea945529d1c9128aa75be35259cd328b9df5ca499c85117"
+    },
+    {
+      "path": "documents/mr.json",
+      "sha256": "f570ae78f4b37a6db91acf24e87c0711b7157681f8dba693a9d381e6951abad1"
+    },
+    {
+      "path": "synthetic-policy.json",
+      "sha256": "7d2460879ab542f1035d326855f691cafab823eef67c739111d9782fcfe113b2"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "corpus": "modern",
+      "path": "corpora/modern/normalize-1.ts",
+      "sha256": "12699ec7963b2670f2d3feb7d39b518b99d0313efd4dee8bd452976249dd1d3a"
+    },
+    {
+      "corpus": "nullable",
+      "path": "corpora/nullable/name-1.ts",
+      "sha256": "1e5fabfcd6a9834b11108a967d1503c4c1d965575193b95eb3274b2e64e77163"
+    },
+    {
+      "corpus": "legacy",
+      "path": "corpora/legacy/legacy-1.js",
+      "sha256": "06415f1324825d9da751e246ee7d7cb7b44c885e360996dc62e71409d933cf8a"
+    },
+    {
+      "corpus": "modern",
+      "path": "corpora/modern/normalize-2.ts",
+      "sha256": "f548603476e956f607fb0eb9c57e3b5f409dbb41c1c74cdbb0afe62095405dc4"
+    },
+    {
+      "corpus": "nullable",
+      "path": "corpora/nullable/name-2.ts",
+      "sha256": "07b9d94bc4f853b976da86502f4a4c7c3a7ccd6b9d81e58a5ab1e76a661fcf5e"
+    },
+    {
+      "corpus": "legacy",
+      "path": "corpora/legacy/legacy-2.js",
+      "sha256": "44fbe23b958370edb5af239ed4ac4abe2cdcf41969e877aeab22fd578707df01"
+    },
+    {
+      "corpus": "modern",
+      "path": "corpora/modern/normalize-3.ts",
+      "sha256": "a0bf26001f9e7b11872371618be3effbcaf9d5da00b7d2458b7656859faa739f"
+    },
+    {
+      "corpus": "nullable",
+      "path": "corpora/nullable/name-3.ts",
+      "sha256": "578263f8dda16d4d20cb20e18003e66a694607780d3fc0ea970245b731a0fd9f"
+    },
+    {
+      "corpus": "legacy",
+      "path": "corpora/legacy/legacy-3.js",
+      "sha256": "8da1e9acde7d711b1ab61ced015ddb5a36d6fc39ba85df32acaa39f309c4fbc7"
+    },
+    {
+      "corpus": "modern",
+      "path": "corpora/modern/normalize-4.ts",
+      "sha256": "1faf92c4dbed05c70f771e792b3372eb6cc2089a1e8c98eda5757cb77a283e32"
+    },
+    {
+      "corpus": "nullable",
+      "path": "corpora/nullable/name-4.ts",
+      "sha256": "00ca08fadd2ffb049bbfbeab0b592655dd84707dca56aec308d6cb9875fd6c9b"
+    },
+    {
+      "corpus": "legacy",
+      "path": "corpora/legacy/legacy-4.js",
+      "sha256": "8c40051ea820f890e045926adfa67fdbeec652808f0f7591c3261616abfe12fe"
+    },
+    {
+      "corpus": "modern",
+      "path": "corpora/modern/normalize-5.ts",
+      "sha256": "0c9372d3f13a3483397df5b5166b0028b255953f3b305a652f85b6b3c67b5ae2"
+    },
+    {
+      "corpus": "nullable",
+      "path": "corpora/nullable/name-5.ts",
+      "sha256": "a71b97467158d6c6a6aa313609d92aa69672cf1209d273e36c2a7eb50b03251f"
+    },
+    {
+      "corpus": "legacy",
+      "path": "corpora/legacy/legacy-5.js",
+      "sha256": "d24698a74f0d3be56fde3956f1df33abe15670666080167e99ae9339f35eff82"
+    },
+    {
+      "corpus": "modern",
+      "path": "corpora/modern/normalize-6.ts",
+      "sha256": "952bbd141cd7ca418f088ba64a9a2f99ea01a77ef2d40a354f303345a4de05d6"
+    },
+    {
+      "corpus": "nullable",
+      "path": "corpora/nullable/name-6.ts",
+      "sha256": "db04efc77d14056ccef49dab537375bfbcbc0908d872c9852bec621e6ce5f22d"
+    },
+    {
+      "corpus": "legacy",
+      "path": "corpora/legacy/legacy-6.js",
+      "sha256": "869fd84be2763a49f9b9d801c40f2e0662a329d51c491548fcf1f65a50c0554b"
+    },
+    {
+      "corpus": "major",
+      "path": "corpora/major/modern-1.ts",
+      "sha256": "fd89d2cc390dececbf650aa9367658b7fdf75548de85ef921c6b66d7b6057c03"
+    },
+    {
+      "corpus": "major",
+      "path": "corpora/major/modern-2.ts",
+      "sha256": "da8f9ac5565b3149cc7e0260fb9f0cc49dc1d407b8163b0db82580f9fc35cdc8"
+    },
+    {
+      "corpus": "major",
+      "path": "corpora/major/modern-3.ts",
+      "sha256": "38352fd904d9878ce367a2e1e534703ff272b1f6ae03af92c32bfbf06a11ad8c"
+    },
+    {
+      "corpus": "major",
+      "path": "corpora/major/modern-4.ts",
+      "sha256": "115db21c4ceb36a2190248ea7a079afb94ec7520e8800ba037d79f54abd34687"
+    },
+    {
+      "corpus": "major",
+      "path": "corpora/major/modern-5.ts",
+      "sha256": "efc96d302de79edd12d5fd84406c6aa21c130ec634847ad8cd1be61743853164"
+    },
+    {
+      "corpus": "major",
+      "path": "corpora/major/modern-6.ts",
+      "sha256": "f44c1a7f2c1210b3b6feb15a7bfb18e2efc595b1e8d21a51c43117c3d9375703"
+    },
+    {
+      "corpus": "major",
+      "path": "corpora/major/modern-7.ts",
+      "sha256": "c24232318819187b8d18bbd136c39fe1038830d719ebb41ea858dd42ef546e18"
+    },
+    {
+      "corpus": "major",
+      "path": "corpora/major/modern-8.ts",
+      "sha256": "1b290b8a74b5bfe087e195fa4dd849ef506127daeb3d334c13d0de0c226fdaea"
+    },
+    {
+      "corpus": "major",
+      "path": "corpora/major/modern-9.ts",
+      "sha256": "78c788fd02ca8d04749e0ecf87e70a90d169aa3dcfd7be994d5c6a581614d380"
+    },
+    {
+      "corpus": "major",
+      "path": "corpora/major/modern-10.ts",
+      "sha256": "f4a60b0d472e70bbe23b2b2a26a9100cbcfd54dddb1bfa607d5c20374c6eadb2"
+    },
+    {
+      "corpus": "minor",
+      "path": "corpora/minor/compat-1.js",
+      "sha256": "abadf956390e7eb7c8b7364f04af0623e80e3a67ed1df5bd88e94f83d180bb38"
+    },
+    {
+      "corpus": "minor",
+      "path": "corpora/minor/compat-2.js",
+      "sha256": "c3b8f688f063c5c002d77103b9ddd416945f88aaadee08521fcdd32557671240"
+    },
+    {
+      "corpus": "minor",
+      "path": "corpora/minor/compat-3.js",
+      "sha256": "5f69153097284e3bee13f129d93123eed3a9a0a249e30061e0c26c60ff51218e"
+    },
+    {
+      "corpus": "minor",
+      "path": "corpora/minor/compat-4.js",
+      "sha256": "d4903ee531d4c7fba5c47b459ec8a0b411708cbebb354a473b72689634b0250c"
+    },
+    {
+      "corpus": "minor",
+      "path": "corpora/minor/compat-5.js",
+      "sha256": "54abaff72e42ff53d1ec069649eac637787980a242e5cf4fd7073376739a89b6"
+    },
+    {
+      "corpus": "ui",
+      "path": "corpora/ui/LargeReport.tsx",
+      "sha256": "e31a19e9fd26fe00b17dd1a42f2be292c8993f5f500dc17e48df5bd456250f86"
+    },
+    {
+      "corpus": "ui",
+      "path": "corpora/ui/CheckoutHub.tsx",
+      "sha256": "32dd500d313a6d251a7d4004b5df16879e33879953d58a95efa489e8ce8b9a4b"
+    }
+  ],
+  "implementation": [
+    {
+      "path": "implementation/src/ast.mjs",
+      "originalPath": "src/ast.mjs",
+      "sha256": "ecbc886e3315a35c934e2d9b778c35a0621774a5e967bd9fe1de19db023c6a99"
+    },
+    {
+      "path": "implementation/src/config.mjs",
+      "originalPath": "src/config.mjs",
+      "sha256": "ca0cd921547b1bece46f7096455668af7c6b5f35461af4446d58c8c25eb8a395"
+    },
+    {
+      "path": "implementation/src/diff.mjs",
+      "originalPath": "src/diff.mjs",
+      "sha256": "80e7daa4c6c1836796f404e7e04b5425315c061cdda70200eee1c275a6c3b6da"
+    },
+    {
+      "path": "implementation/src/eslint.mjs",
+      "originalPath": "src/eslint.mjs",
+      "sha256": "00d744004f908584dda8cd62ec603a611c3ac2bd3984597db38b3198888be862"
+    },
+    {
+      "path": "implementation/src/export.mjs",
+      "originalPath": "src/export.mjs",
+      "sha256": "707ac33b53fcaa8f8278bb3331c18d2c69f1723ad1d1cac210c399ba1aa6c78e"
+    },
+    {
+      "path": "implementation/src/index.mjs",
+      "originalPath": "src/index.mjs",
+      "sha256": "fb2fc5d362adc535d2fd82b28c625ffe6f1ce21a364ecc3748db12cc02b45f8f"
+    },
+    {
+      "path": "implementation/src/ingest.mjs",
+      "originalPath": "src/ingest.mjs",
+      "sha256": "defc5db3343cd9b8f84e94c1b7846d15413527b0bb97fbe3b9c02db47f360f79"
+    },
+    {
+      "path": "implementation/src/learn.mjs",
+      "originalPath": "src/learn.mjs",
+      "sha256": "dbc250c7000318f022bd2bf9ae33b925915bcb2764076844a6b129c04f05d05a"
+    },
+    {
+      "path": "implementation/src/review.mjs",
+      "originalPath": "src/review.mjs",
+      "sha256": "dbdd8b046bf2424e35ce89e62476494340fb37a5897cc7e7ead614a5a857be44"
+    },
+    {
+      "path": "implementation/src/rules.mjs",
+      "originalPath": "src/rules.mjs",
+      "sha256": "93b9c7b754d6ce9b919c419256e51f64ec3c1831d83e5eafbc12ecffe8196674"
+    },
+    {
+      "path": "implementation/src/util.mjs",
+      "originalPath": "src/util.mjs",
+      "sha256": "8125ab8d87593b4020ffcf7f30a072a79d36389ddc6d4b1887c9c648852a50a6"
+    },
+    {
+      "path": "implementation/bin/selfreview.mjs",
+      "originalPath": "bin/selfreview.mjs",
+      "sha256": "90bcb5981fb2488f592e3406aad6ab42d0bff978f382d0c04c2fca43cc9d27fe"
+    }
+  ],
+  "discoveryCases": [
+    {
+      "id": "modern",
+      "corpora": [
+        "modern"
+      ],
+      "facts": {
+        "coverage.filesWithMetrics": 6,
+        "observations.declarations.const": 6,
+        "observations.declarations.let": 6,
+        "observations.declarations.var": 0,
+        "observations.equality.strict": 12,
+        "observations.equality.loose": 0,
+        "observations.equality.nullLoose": 0,
+        "observations.braces.braced": 12,
+        "observations.braces.unbraced": 0,
+        "observations.functionLines.count": 6,
+        "observations.functionLines.min": 11,
+        "observations.functionLines.max": 11
+      },
+      "hypotheses": [
+        {
+          "kind": "no-var",
+          "options": {}
+        },
+        {
+          "kind": "strict-equality",
+          "options": {
+            "allowNull": false
+          }
+        },
+        {
+          "kind": "require-braces",
+          "options": {}
+        }
+      ]
+    },
+    {
+      "id": "nullable",
+      "corpora": [
+        "nullable"
+      ],
+      "facts": {
+        "coverage.filesWithMetrics": 6,
+        "observations.declarations.const": 6,
+        "observations.declarations.let": 0,
+        "observations.declarations.var": 0,
+        "observations.equality.strict": 12,
+        "observations.equality.loose": 6,
+        "observations.equality.nullLoose": 6,
+        "observations.braces.braced": 18,
+        "observations.braces.unbraced": 0,
+        "observations.functionLines.count": 6,
+        "observations.functionLines.min": 13,
+        "observations.functionLines.max": 13
+      },
+      "hypotheses": [
+        {
+          "kind": "no-var",
+          "options": {}
+        },
+        {
+          "kind": "strict-equality",
+          "options": {
+            "allowNull": true
+          }
+        },
+        {
+          "kind": "require-braces",
+          "options": {}
+        }
+      ]
+    },
+    {
+      "id": "legacy",
+      "corpora": [
+        "legacy"
+      ],
+      "facts": {
+        "coverage.filesWithMetrics": 6,
+        "observations.declarations.const": 0,
+        "observations.declarations.let": 0,
+        "observations.declarations.var": 12,
+        "observations.equality.strict": 0,
+        "observations.equality.loose": 12,
+        "observations.equality.nullLoose": 0,
+        "observations.braces.braced": 0,
+        "observations.braces.unbraced": 12,
+        "observations.functionLines.count": 6,
+        "observations.functionLines.min": 7,
+        "observations.functionLines.max": 7
+      },
+      "hypotheses": []
+    },
+    {
+      "id": "major",
+      "corpora": [
+        "major"
+      ],
+      "facts": {
+        "coverage.filesWithMetrics": 10,
+        "observations.declarations.const": 200,
+        "observations.declarations.let": 0,
+        "observations.declarations.var": 0,
+        "observations.equality.strict": 50,
+        "observations.equality.loose": 0,
+        "observations.equality.nullLoose": 0,
+        "observations.braces.braced": 50,
+        "observations.braces.unbraced": 0,
+        "observations.functionLines.count": 10,
+        "observations.functionLines.min": 28,
+        "observations.functionLines.max": 28
+      },
+      "hypotheses": [
+        {
+          "kind": "no-var",
+          "options": {}
+        },
+        {
+          "kind": "strict-equality",
+          "options": {
+            "allowNull": false
+          }
+        },
+        {
+          "kind": "require-braces",
+          "options": {}
+        }
+      ]
+    },
+    {
+      "id": "minor",
+      "corpora": [
+        "minor"
+      ],
+      "facts": {
+        "coverage.filesWithMetrics": 5,
+        "observations.declarations.const": 0,
+        "observations.declarations.let": 0,
+        "observations.declarations.var": 10,
+        "observations.equality.strict": 0,
+        "observations.equality.loose": 5,
+        "observations.equality.nullLoose": 0,
+        "observations.braces.braced": 0,
+        "observations.braces.unbraced": 5,
+        "observations.functionLines.count": 5,
+        "observations.functionLines.min": 6,
+        "observations.functionLines.max": 6
+      },
+      "hypotheses": []
+    },
+    {
+      "id": "mixed",
+      "corpora": [
+        "major",
+        "minor"
+      ],
+      "facts": {
+        "coverage.filesWithMetrics": 15,
+        "observations.declarations.const": 200,
+        "observations.declarations.let": 0,
+        "observations.declarations.var": 10,
+        "observations.equality.strict": 50,
+        "observations.equality.loose": 5,
+        "observations.equality.nullLoose": 0,
+        "observations.braces.braced": 50,
+        "observations.braces.unbraced": 5,
+        "observations.functionLines.count": 15,
+        "observations.functionLines.min": 6,
+        "observations.functionLines.max": 28
+      },
+      "hypotheses": [
+        {
+          "kind": "no-var",
+          "options": {}
+        },
+        {
+          "kind": "strict-equality",
+          "options": {
+            "allowNull": false
+          }
+        },
+        {
+          "kind": "require-braces",
+          "options": {}
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": "null-guard",
+      "file": "null-guard.ts",
+      "strict": [
+        "strict-equality"
+      ],
+      "compatible": []
+    },
+    {
+      "id": "non-null-loose",
+      "file": "non-null-loose.ts",
+      "strict": [
+        "strict-equality"
+      ],
+      "compatible": [
+        "strict-equality"
+      ]
+    },
+    {
+      "id": "strict-guard",
+      "file": "strict-guard.ts",
+      "strict": [],
+      "compatible": []
+    },
+    {
+      "id": "console-log",
+      "file": "console-log.ts",
+      "strict": [
+        "no-console"
+      ],
+      "compatible": []
+    },
+    {
+      "id": "console-warn",
+      "file": "console-warn.ts",
+      "strict": [],
+      "compatible": []
+    },
+    {
+      "id": "shadowed-console",
+      "file": "shadowed-console.ts",
+      "strict": [],
+      "compatible": []
+    },
+    {
+      "id": "literal-console-member",
+      "file": "literal-console-member.ts",
+      "strict": [
+        "no-console"
+      ],
+      "compatible": []
+    },
+    {
+      "id": "dynamic-console-member",
+      "file": "dynamic-console-member.ts",
+      "strict": [
+        "no-console"
+      ],
+      "compatible": [
+        "no-console"
+      ],
+      "limitation": "Constant propagation is not performed; dynamic membership cannot prove an allowed member."
+    },
+    {
+      "id": "string-substr",
+      "file": "string-substr.ts",
+      "strict": [
+        "restricted-call"
+      ],
+      "compatible": []
+    },
+    {
+      "id": "user-method-substr",
+      "file": "user-method-substr.ts",
+      "strict": [
+        "restricted-call"
+      ],
+      "compatible": [],
+      "limitation": "The configured wildcard also flags an unrelated method; it is not type-aware deprecation evidence."
+    },
+    {
+      "id": "aliased-substr",
+      "file": "aliased-substr.ts",
+      "strict": [],
+      "compatible": [],
+      "limitation": "The same legacy API through an alias is outside this syntax matcher."
+    },
+    {
+      "id": "component-variant",
+      "file": "VariantCard.tsx",
+      "strict": [
+        "component-max-lines"
+      ],
+      "compatible": []
+    }
+  ],
+  "ui": {
+    "large": {
+      "path": "corpora/ui/LargeReport.tsx",
+      "componentLines": 163,
+      "expectedFindings": [
+        "component-max-lines",
+        "function-max-lines"
+      ],
+      "semanticInterpretation": "Long static rendering with one main responsibility; size alone does not prove poor decomposition."
+    },
+    "compact": {
+      "path": "corpora/ui/CheckoutHub.tsx",
+      "componentLines": 11,
+      "expectedFindings": [],
+      "responsibilitiesForManualReview": [
+        "UI rendering",
+        "billing network request",
+        "token access",
+        "receipt and cookie persistence",
+        "navigation",
+        "formatting"
+      ]
+    }
+  },
+  "documentExpectations": {
+    "clauses": {
+      "units": 8,
+      "executableCandidates": 3,
+      "manualCandidates": 5,
+      "executableChecks": [
+        {
+          "kind": "strict-equality",
+          "options": {
+            "allowNull": true
+          }
+        },
+        {
+          "kind": "no-console",
+          "options": {
+            "allowMethods": [
+              "warn"
+            ]
+          }
+        },
+        {
+          "kind": "max-parameters",
+          "options": {
+            "max": 4
+          }
+        }
+      ],
+      "conditionalVarMustStayManual": true
+    },
+    "headings": {
+      "qualityProbe": "A production-only section must not yield a context-free rule applicable to all files. Retaining a manual rule with heading context is sufficient; no filesystem path must be invented.",
+      "expectedContextPreserved": true
+    }
+  },
+  "mrExpectations": {
+    "comments": 4,
+    "systemComments": 1,
+    "executableCandidates": 3,
+    "manualCandidates": 1,
+    "contexts": {
+      "new-1": "in-diff",
+      "old-2": "old-side",
+      "absent-3": "not-in-diff",
+      "general-4": "unlocated"
+    },
+    "expectedAutomaticallyApproved": 0,
+    "contextVerifiedMustRemainFalse": true
+  },
+  "qualityProbes": [
+    {
+      "id": "heading-condition-preserved",
+      "expected": true,
+      "meaning": "The production-only condition survives extraction or forces manual review."
+    },
+    {
+      "id": "mixed-scope-dissent-explicit",
+      "expected": true,
+      "meaning": "Opposite per-project observations are exposed by the actual CLI learning report."
+    },
+    {
+      "id": "mixed-scope-hypotheses-qualified",
+      "expected": true,
+      "meaning": "Scope-wide aggregate hypotheses carry an explicit warning naming the contradictory minority project, or are narrowed to supported projects. A general caveat about sampling alone is insufficient."
+    },
+    {
+      "id": "candidate-not-approval",
+      "expected": true,
+      "meaning": "All imported/discovered rules stay candidates."
+    },
+    {
+      "id": "source-immutability",
+      "expected": true,
+      "meaning": "Analysis, importing and learning preserve all fixture source bytes."
+    }
+  ],
+  "manualUnsupportedScenarios": [
+    {
+      "id": "legacy-require-var",
+      "reason": "The current discovery vocabulary cannot propose an inverse require-var convention, despite counted observations."
+    },
+    {
+      "id": "legacy-loose-equality",
+      "reason": "Discovery cannot propose a general prefer-loose-equality convention."
+    },
+    {
+      "id": "legacy-braceless",
+      "reason": "Discovery cannot propose a general braceless convention."
+    },
+    {
+      "id": "long-component-responsibility",
+      "reason": "A 163-line rendering component is a size signal, not proof of multiple responsibilities."
+    },
+    {
+      "id": "compact-component-responsibility",
+      "reason": "The 11-line component mixes multiple responsibilities; no current AST heuristic detects that."
+    },
+    {
+      "id": "receiver-type-deprecation",
+      "reason": "The *.substr matcher also flags a user-defined method with the same name."
+    },
+    {
+      "id": "alias-deprecation",
+      "reason": "Aliasing String.prototype.substr escapes the direct-call matcher."
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "scope": "mixed",
+  "status": "CANDIDATES_READY",
+  "added": [
+    "candidate-mixed-no-var-4cf0cc03e2e0",
+    "candidate-mixed-strict-equality-4cf0cc03e2e0",
+    "candidate-mixed-require-braces-4cf0cc03e2e0"
+  ],
+  "unchanged": [],
+  "revisions": [],
+  "codeFilesAnalyzed": 15,
+  "inputs": [],
+  "unmapped": [],
+  "warnings": [],
+  "discovery": {
+    "aggregate": {
+      "declarations": {
+        "const": 200,
+        "let": 0,
+        "var": 10
+      },
+      "equality": {
+        "strict": 50,
+        "loose": 5,
+        "nullLoose": 0
+      },
+      "braces": {
+        "braced": 50,
+        "unbraced": 5
+      },
+      "functionLines": {
+        "count": 15,
+        "min": 6,
+        "median": 28,
+        "p95": 28,
+        "max": 28
+      },
+      "componentLines": {
+        "count": 0
+      },
+      "parameters": {
+        "count": 15,
+        "min": 1,
+        "median": 1,
+        "p95": 1,
+        "max": 1
+      },
+      "imports": []
+    },
+    "byProject": [
+      {
+        "project": "major",
+        "observations": {
+          "declarations": {
+            "const": 200,
+            "let": 0,
+            "var": 0
+          },
+          "equality": {
+            "strict": 50,
+            "loose": 0,
+            "nullLoose": 0
+          },
+          "braces": {
+            "braced": 50,
+            "unbraced": 0
+          },
+          "functionLines": {
+            "count": 10,
+            "min": 28,
+            "median": 28,
+            "p95": 28,
+            "max": 28
+          },
+          "componentLines": {
+            "count": 0
+          },
+          "parameters": {
+            "count": 10,
+            "min": 1,
+            "median": 1,
+            "p95": 1,
+            "max": 1
+          },
+          "imports": []
+        },
+        "coverage": {
+          "files": 10,
+          "filesWithMetrics": 10,
+          "opportunities": {
+            "declarations": 200,
+            "comparisons": 50,
+            "controls": 50
+          },
+          "candidates": 3,
+          "executableCandidates": 3,
+          "manualCandidates": 0,
+          "complete": true,
+          "vocabulary": [
+            "no-var",
+            "strict-equality",
+            "require-braces"
+          ],
+          "architecturalConventionsInferred": false
+        },
+        "suggestedChecks": [
+          {
+            "kind": "no-var",
+            "options": {}
+          },
+          {
+            "kind": "strict-equality",
+            "options": {
+              "allowNull": false
+            }
+          },
+          {
+            "kind": "require-braces",
+            "options": {}
+          }
+        ]
+      },
+      {
+        "project": "minor",
+        "observations": {
+          "declarations": {
+            "const": 0,
+            "let": 0,
+            "var": 10
+          },
+          "equality": {
+            "strict": 0,
+            "loose": 5,
+            "nullLoose": 0
+          },
+          "braces": {
+            "braced": 0,
+            "unbraced": 5
+          },
+          "functionLines": {
+            "count": 5,
+            "min": 6,
+            "median": 6,
+            "p95": 6,
+            "max": 6
+          },
+          "componentLines": {
+            "count": 0
+          },
+          "parameters": {
+            "count": 5,
+            "min": 1,
+            "median": 1,
+            "p95": 1,
+            "max": 1
+          },
+          "imports": []
+        },
+        "coverage": {
+          "files": 5,
+          "filesWithMetrics": 5,
+          "opportunities": {
+            "declarations": 10,
+            "comparisons": 5,
+            "controls": 5
+          },
+          "candidates": 0,
+          "executableCandidates": 0,
+          "manualCandidates": 0,
+          "complete": true,
+          "vocabulary": [
+            "no-var",
+            "strict-equality",
+            "require-braces"
+          ],
+          "architecturalConventionsInferred": false
+        },
+        "suggestedChecks": []
+      }
+    ],
+    "samplePaths": [],
+    "note": "Sampling restricts observations, not the candidate scope. Review applicability before approval; per-project profiles can reveal inconsistent conventions."
+  },
+  "sourceCoverage": [
+    {
+      "source": "static discovery",
+      "files": 15,
+      "filesWithMetrics": 15,
+      "opportunities": {
+        "declarations": 210,
+        "comparisons": 55,
+        "controls": 55
+      },
+      "candidates": 3,
+      "executableCandidates": 3,
+      "manualCandidates": 0,
+      "complete": true,
+      "vocabulary": [
+        "no-var",
+        "strict-equality",
+        "require-braces"
+      ],
+      "architecturalConventionsInferred": false
+    }
+  ],
+  "coverage": {
+    "exhaustive": false,
+    "approvedAutomatically": 0,
+    "discoveryFamilies": [
+      "no-var",
+      "strict-equality",
+      "require-braces"
+    ],
+    "naturalLanguage": "Conservative templates plus manual candidates; interpretation needs review."
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "status": "EVALUATOR_SELECTOR_ERROR_ADJUDICATED",
+  "generatedAt": "2026-11-08T07:20:43.408Z",
+  "assertionId": "clauses:conditional-var-remains-manual",
+  "preregisteredExpected": true,
+  "originalAssertion": {
+    "id": "clauses:conditional-var-remains-manual",
+    "expected": true,
+    "actual": false,
+    "correct": false
+  },
+  "unchangedSemanticRequirement": "The rule for the source unit at documents/clauses.md:4 must remain manual and retain the generated-compatibility-shims exception.",
+  "originalSelector": "candidate.description.startsWith('Never use var')",
+  "selectorCorrection": "Select the unique candidate by immutable document path, source line and source hash; inspect the complete original clause in description and matching evidence. Neutral heading prefixes are permitted.",
+  "whyOriginalSelectorFailed": "The heading-context fix prepended the neutral document title to description. The rule remained manual and preserved the entire conditional clause.",
+  "actual": true,
+  "controls": [
+    {
+      "id": "removed-qualifier-is-rejected",
+      "expected": false,
+      "observed": false,
+      "correct": true
+    },
+    {
+      "id": "executable-overbroad-no-var-is-rejected",
+      "expected": false,
+      "observed": false,
+      "correct": true
+    },
+    {
+      "id": "wrong-document-source-is-rejected",
+      "expected": false,
+      "observed": false,
+      "correct": true
+    },
+    {
+      "id": "wrong-source-line-is-rejected",
+      "expected": false,
+      "observed": false,
+      "correct": true
+    },
+    {
+      "id": "wrong-source-hash-is-rejected",
+      "expected": false,
+      "observed": false,
+      "correct": true
+    },
+    {
+      "id": "neutral-prefix-does-not-change-the-semantic-result",
+      "expected": true,
+      "observed": true,
+      "correct": true
+    }
+  ],
+  "allControlsCorrect": true,
+  "source": {
+    "path": "documents/clauses.md",
+    "line": 4,
+    "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+    "originalUnit": "Never use var\nexcept in generated compatibility shims."
+  },
+  "selectedRule": {
+    "id": "candidate-document-evaluation-manual-8796eaeed747",
+    "family": "manual:e630a5b23bd4a8bd",
+    "title": "Synthetic agreements — Never use var except in generated compatibility shims.",
+    "description": "# Synthetic agreements\n\nNever use var\nexcept in generated compatibility shims.",
+    "scope": "document-evaluation",
+    "status": "candidate",
+    "severity": "info",
+    "mode": "advisory",
+    "check": {
+      "kind": "manual",
+      "options": {}
+    },
+    "applicability": {
+      "include": [
+        "**/*"
+      ],
+      "exclude": []
+    },
+    "evidence": [
+      {
+        "kind": "document",
+        "path": "documents/clauses.md",
+        "excerpt": "# Synthetic agreements\n\nNever use var\nexcept in generated compatibility shims.",
+        "sha256": "def47b7fd83bf6d01c7b048922cfaea76e24ed9c3ac723d8d37cf65264212e5d",
+        "line": 4,
+        "headingContext": [
+          {
+            "level": 1,
+            "title": "Synthetic agreements",
+            "line": 1,
+            "classification": "neutral",
+            "reason": "DOCUMENT_LABEL"
+          }
+        ],
+        "headingResolution": "UNQUALIFIED_CONTEXT"
+      }
+    ],
+    "rationale": "Наблюдение из источника; требуется явное подтверждение применимости и формулировки."
+  },
+  "evidence": {
+    "manifestSha256": "009f4793b91f1cfa279113cb754b4af7f99655dfad5d4540efbdb5981e505031",
+    "rawReplaySha256": "36ca0a18fa835fb512291af7440546d05d5d5359b962d029a89fd946f9fe6bc1",
+    "baselineSha256": "9d46aef6f9b369963a80b5eab810d172ccab2b4af2cb86f5685c642752626377",
+    "evaluatorSha256": "45be6a905328edfd669cc4651163bfd79b29fa9805b76a8abb2043702b058616",
+    "manifestPreserved": true,
+    "baselinePreserved": true,
+    "rawReplayPreserved": true,
+    "corpusChanges": [],
+    "snapshotChanges": []
+  },
+  "criteriaChanged": false,
+  "thresholdsChanged": false,
+  "corpusChanged": false,
+  "productionChanged": false,
+  "rawCounts": {
+    "corpusFiles": 35,
+    "variantFiles": 12,
+    "parseErrors": 0,
+    "correctObservations": 72,
+    "expectedObservations": 72,
+    "matchedExpectedHypotheses": 12,
+    "expectedHypotheses": 12,
+    "unexpectedHypotheses": 0,
+    "missingHypotheses": 0,
+    "correctScopedOutcomes": 24,
+    "scopedOutcomes": 24,
+    "correctUiAssertions": 4,
+    "uiAssertions": 4,
+    "correctDocumentAssertions": 4,
+    "documentAssertions": 5,
+    "correctMrAssertions": 9,
+    "mrAssertions": 9,
+    "manualCandidatesFromClausesAndMr": 6,
+    "manualUnsupportedScenarios": 7,
+    "automaticallyApprovedCandidates": 0,
+    "qualityProbesMet": 5,
+    "qualityProbes": 5,
+    "unqualifiedAggregateHypotheses": 0
+  },
+  "effectiveCounts": {
+    "corpusFiles": 35,
+    "variantFiles": 12,
+    "parseErrors": 0,
+    "correctObservations": 72,
+    "expectedObservations": 72,
+    "matchedExpectedHypotheses": 12,
+    "expectedHypotheses": 12,
+    "unexpectedHypotheses": 0,
+    "missingHypotheses": 0,
+    "correctScopedOutcomes": 24,
+    "scopedOutcomes": 24,
+    "correctUiAssertions": 4,
+    "uiAssertions": 4,
+    "correctDocumentAssertions": 5,
+    "documentAssertions": 5,
+    "correctMrAssertions": 9,
+    "mrAssertions": 9,
+    "manualCandidatesFromClausesAndMr": 6,
+    "manualUnsupportedScenarios": 7,
+    "automaticallyApprovedCandidates": 0,
+    "qualityProbesMet": 5,
+    "qualityProbes": 5,
+    "unqualifiedAggregateHypotheses": 0
+  },
+  "remainingFailedChecks": [],
+  "semanticLimitationsUnchanged": [
+    {
+      "id": "legacy-require-var",
+      "reason": "The current discovery vocabulary cannot propose an inverse require-var convention, despite counted observations."
+    },
+    {
+      "id": "legacy-loose-equality",
+      "reason": "Discovery cannot propose a general prefer-loose-equality convention."
+    },
+    {
+      "id": "legacy-braceless",
+      "reason": "Discovery cannot propose a general braceless convention."
+    },
+    {
+      "id": "long-component-responsibility",
+      "reason": "A 163-line rendering component is a size signal, not proof of multiple responsibilities."
+    },
+    {
+      "id": "compact-component-responsibility",
+      "reason": "The 11-line component mixes multiple responsibilities; no current AST heuristic detects that."
+    },
+    {
+      "id": "receiver-type-deprecation",
+      "reason": "The *.substr matcher also flags a user-defined method with the same name."
+    },
+    {
+      "id": "alias-deprecation",
+      "reason": "Aliasing String.prototype.substr escapes the direct-call matcher."
+    }
+  ]
+}

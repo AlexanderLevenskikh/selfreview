@@ -1,0 +1,2 @@
+* text=auto eol=lf
+evaluation/public/corpus/** -text
