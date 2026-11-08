@@ -1,0 +1,310 @@
+﻿2026-11-08T08:09:41.0187554Z Current runner version: '2.338.2'
+2026-11-08T08:09:41.0208583Z ##[group]Runner Image Provisioner
+2026-11-08T08:09:41.0209352Z Hosted Compute Agent
+2026-11-08T08:09:41.0209841Z Version: 20261103.629
+2026-11-08T08:09:41.0210383Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-08T08:09:41.0210993Z Build Date: 2026-11-03T17:26:59Z
+2026-11-08T08:09:41.0211571Z Worker ID: {962a7f49-3083-4f4d-9ae9-aeda19119347}
+2026-11-08T08:09:41.0212153Z Region: centralus
+2026-11-08T08:09:41.0212585Z Cloud: Azure
+2026-11-08T08:09:41.0213036Z ##[endgroup]
+2026-11-08T08:09:41.0214048Z ##[group]Operating System
+2026-11-08T08:09:41.0214617Z Microsoft Windows Server 2025
+2026-11-08T08:09:41.0215130Z 10.0.26100
+2026-11-08T08:09:41.0215551Z Datacenter
+2026-11-08T08:09:41.0215994Z ##[endgroup]
+2026-11-08T08:09:41.0216425Z ##[group]Runner Image
+2026-11-08T08:09:41.0216898Z Image: windows-2025-vs2026
+2026-11-08T08:09:41.0217401Z Version: 20261103.298.1
+2026-11-08T08:09:41.0219308Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261103.298/images/windows/Windows2025-VS2026-Readme.md
+2026-11-08T08:09:41.0220748Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261103.298
+2026-11-08T08:09:41.0221545Z ##[endgroup]
+2026-11-08T08:09:41.0222503Z ##[group]GITHUB_TOKEN Permissions
+2026-11-08T08:09:41.0224221Z Contents: read
+2026-11-08T08:09:41.0224690Z Metadata: read
+2026-11-08T08:09:41.0225190Z ##[endgroup]
+2026-11-08T08:09:41.0226924Z Secret source: Actions
+2026-11-08T08:09:41.0227628Z Cache mode: write
+2026-11-08T08:09:41.0228238Z Prepare workflow directory
+2026-11-08T08:09:41.0536328Z Prepare all required actions
+2026-11-08T08:09:41.0579376Z Getting action download info
+2026-11-08T08:09:41.2599296Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-08T08:09:41.3790950Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-08T08:09:41.5972508Z Complete job name: test (windows-latest, 24)
+2026-11-08T08:09:41.7214327Z ##[group]Run actions/checkout@v4
+2026-11-08T08:09:41.7215577Z with:
+2026-11-08T08:09:41.7216042Z   repository: AlexanderLevenskikh/selfreview
+2026-11-08T08:09:41.7219484Z   token: ***
+2026-11-08T08:09:41.7220006Z   ssh-strict: true
+2026-11-08T08:09:41.7220798Z   ssh-user: git
+2026-11-08T08:09:41.7221243Z   persist-credentials: true
+2026-11-08T08:09:41.7221701Z   clean: true
+2026-11-08T08:09:41.7222151Z   sparse-checkout-cone-mode: true
+2026-11-08T08:09:41.7222648Z   fetch-depth: 1
+2026-11-08T08:09:41.7223081Z   fetch-tags: false
+2026-11-08T08:09:41.7223525Z   show-progress: true
+2026-11-08T08:09:41.7223951Z   lfs: false
+2026-11-08T08:09:41.7224362Z   submodules: false
+2026-11-08T08:09:41.7224819Z   set-safe-directory: true
+2026-11-08T08:09:41.7225290Z   allow-unsafe-pr-checkout: false
+2026-11-08T08:09:41.7226091Z ##[endgroup]
+2026-11-08T08:09:41.8494208Z Syncing repository: AlexanderLevenskikh/selfreview
+2026-11-08T08:09:41.8496069Z ##[group]Getting Git version info
+2026-11-08T08:09:41.8496650Z Working directory is 'D:\a\selfreview\selfreview'
+2026-11-08T08:09:41.9169660Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-08T08:09:42.1917865Z git version 2.56.0.windows.4
+2026-11-08T08:09:42.1971210Z ##[endgroup]
+2026-11-08T08:09:42.1990951Z Temporarily overriding HOME='D:\a\_temp\3bc02331-55e4-41dc-9dc7-d00561148458' before making global git config changes
+2026-11-08T08:09:42.1992714Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-08T08:09:42.2001534Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\selfreview\selfreview
+2026-11-08T08:09:42.2616766Z Deleting the contents of 'D:\a\selfreview\selfreview'
+2026-11-08T08:09:42.2622188Z ##[group]Initializing the repository
+2026-11-08T08:09:42.2629773Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\selfreview\selfreview
+2026-11-08T08:09:42.3343215Z Initialized empty Git repository in D:/a/selfreview/selfreview/.git/
+2026-11-08T08:09:42.3390048Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/AlexanderLevenskikh/selfreview
+2026-11-08T08:09:42.3994292Z ##[endgroup]
+2026-11-08T08:09:42.3995075Z ##[group]Disabling automatic garbage collection
+2026-11-08T08:09:42.4002304Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-11-08T08:09:42.4325408Z ##[endgroup]
+2026-11-08T08:09:42.4326570Z ##[group]Setting up auth
+2026-11-08T08:09:42.4336147Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-08T08:09:42.4675916Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-08T08:09:43.7222702Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-08T08:09:43.7555089Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-08T08:09:44.2693352Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-08T08:09:44.3076185Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-08T08:09:44.8235324Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-08T08:09:44.8579322Z ##[endgroup]
+2026-11-08T08:09:44.8580355Z ##[group]Fetching the repository
+2026-11-08T08:09:44.8591736Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6734bdfc3291516843abdc898b1ab3750807e1ce:refs/remotes/origin/main
+2026-11-08T08:09:45.8787148Z From https://github.com/AlexanderLevenskikh/selfreview
+2026-11-08T08:09:45.8791389Z  * [new ref]         6734bdfc3291516843abdc898b1ab3750807e1ce -> origin/main
+2026-11-08T08:09:45.8835735Z ##[endgroup]
+2026-11-08T08:09:45.8836535Z ##[group]Determining the checkout info
+2026-11-08T08:09:45.8837356Z ##[endgroup]
+2026-11-08T08:09:45.8846752Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-11-08T08:09:45.9335799Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-08T08:09:45.9652316Z ##[group]Checking out the ref
+2026-11-08T08:09:45.9658891Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-11-08T08:09:46.0762041Z Switched to a new branch 'main'
+2026-11-08T08:09:46.0854528Z branch 'main' set up to track 'origin/main'.
+2026-11-08T08:09:46.0898535Z ##[endgroup]
+2026-11-08T08:09:46.1325786Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-11-08T08:09:46.1624853Z 6734bdfc3291516843abdc898b1ab3750807e1ce
+2026-11-08T08:09:46.2056933Z ##[group]Run actions/setup-node@v4
+2026-11-08T08:09:46.2057370Z with:
+2026-11-08T08:09:46.2057698Z   node-version: 24
+2026-11-08T08:09:46.2057989Z   cache: npm
+2026-11-08T08:09:46.2058259Z   always-auth: false
+2026-11-08T08:09:46.2058548Z   check-latest: false
+2026-11-08T08:09:46.2060635Z   token: ***
+2026-11-08T08:09:46.2060894Z ##[endgroup]
+2026-11-08T08:09:46.3564320Z Found in cache @ C:\hostedtoolcache\windows\node\24.22.2\x64
+2026-11-08T08:09:46.3570474Z (node:7944) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-08T08:09:46.3571326Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-08T08:09:46.3573943Z ##[group]Environment details
+2026-11-08T08:09:50.2405688Z node: v24.22.2
+2026-11-08T08:09:50.2406949Z npm: 11.19.1
+2026-11-08T08:09:50.2407202Z yarn: 1.22.22
+2026-11-08T08:09:50.2407827Z ##[endgroup]
+2026-11-08T08:09:50.2998654Z [command]C:\Windows\system32\cmd.exe /D /S /C "C:\hostedtoolcache\windows\node\24.22.2\x64\npm.cmd config get cache"
+2026-11-08T08:09:50.7161665Z C:\npm\cache
+2026-11-08T08:09:50.9866154Z npm cache is not found
+2026-11-08T08:09:51.0180862Z ##[group]Run npm ci --ignore-scripts
+2026-11-08T08:09:51.0181608Z [36;1mnpm ci --ignore-scripts[0m
+2026-11-08T08:09:51.0788753Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-08T08:09:51.0789157Z ##[endgroup]
+2026-11-08T08:10:11.8238235Z 
+2026-11-08T08:10:11.8245926Z added 90 packages, and audited 91 packages in 20s
+2026-11-08T08:10:11.8246479Z 
+2026-11-08T08:10:11.8246798Z 25 packages are looking for funding
+2026-11-08T08:10:11.8247473Z   run `npm fund` for details
+2026-11-08T08:10:11.8782436Z 
+2026-11-08T08:10:12.7685419Z 5 moderate severity vulnerabilities
+2026-11-08T08:10:12.7685778Z 
+2026-11-08T08:10:12.7686107Z To address all issues (including breaking changes), run:
+2026-11-08T08:10:12.7686538Z   npm audit fix --force
+2026-11-08T08:10:12.7686774Z 
+2026-11-08T08:10:12.7686908Z Run `npm audit` for details.
+2026-11-08T08:10:12.7834160Z ##[group]Run npm test
+2026-11-08T08:10:12.7834565Z [36;1mnpm test[0m
+2026-11-08T08:10:12.7892746Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-08T08:10:12.7893160Z ##[endgroup]
+2026-11-08T08:10:13.3717691Z 
+2026-11-08T08:10:13.3718879Z > @selfreview/core@0.1.0 test
+2026-11-08T08:10:13.3719632Z > node --test
+2026-11-08T08:10:13.3720490Z 
+2026-11-08T08:10:13.8984458Z ✔ no-var analyzes syntax, excludes strings/comments, and preserves location (8.2155ms)
+2026-11-08T08:10:13.8986392Z ✔ console rule respects permitted methods and catches computed/optional access (17.3166ms)
+2026-11-08T08:10:13.9017835Z ✔ single-file binding excludes locally shadowed console, including hoisted variables and parameters (5.8744ms)
+2026-11-08T08:10:13.9026226Z ✔ an imported or destructured console binding is not the global console (9.1458ms)
+2026-11-08T08:10:13.9035516Z ✔ strict equality can retain the explicit null comparison convention (1.3406ms)
+2026-11-08T08:10:13.9037021Z ✔ restricted imports cover static imports, reexports, require, dynamic imports and TS import types (5.5718ms)
+2026-11-08T08:10:13.9055874Z ✔ restricted calls support exact paths and wildcard methods without claiming type resolution (1.4742ms)
+2026-11-08T08:10:13.9057207Z ✔ TSX component size spans the full AST node, even if the change is in its body (3.0928ms)
+2026-11-08T08:10:13.9058207Z ✔ memo-wrapped/default/class components are structurally detected (2.3652ms)
+2026-11-08T08:10:13.9059601Z ✔ nested helper JSX does not turn an uppercase non-component function into a component (1.0089ms)
+2026-11-08T08:10:13.9060873Z ✔ max parameters excludes the TypeScript this pseudo-parameter and ignores overload signatures (1.2452ms)
+2026-11-08T08:10:13.9061984Z ✔ async Promise executor requires the unshadowed Promise constructor (4.5953ms)
+2026-11-08T08:10:13.9063131Z ✔ require-braces counts loop and branch bodies; else-if itself needs no extra braces (1.3831ms)
+2026-11-08T08:10:13.9064122Z ✔ parse failure cannot produce a deceptively clean analyzed result (1.329ms)
+2026-11-08T08:10:13.9065144Z ✔ manual rule is intentionally non-executable and unknown checks fail closed (0.7626ms)
+2026-11-08T08:10:13.9067031Z ✔ all supported source extensions parse and debugger finding retains evidence (0.9611ms)
+2026-11-08T08:10:13.9068108Z ✔ resource-management declarations are not confused with var (0.5235ms)
+2026-11-08T08:10:21.1313908Z ✔ actual CLI workflow imports scope-specific candidates, approves one rule, and exports working integrations (4505.2504ms)
+2026-11-08T08:10:21.1315718Z ✔ CLI configuration and invocation errors exit 2; a missing catalog is not treated as empty policy (1377.8686ms)
+2026-11-08T08:10:21.1318036Z ✔ --base refuses to inspect a parent Git repository when only its subfolder is configured (755.5637ms)
+2026-11-08T08:10:21.1326326Z ✖ --base at the exact Git root includes both modified tracked files and untracked sources (776.5668ms)
+2026-11-08T08:10:21.1604661Z ✔ scope A is isolated from the shared B/C/D scope and independent E scope (81.3268ms)
+2026-11-08T08:10:21.1606045Z ✔ candidate and rejected rules never become enforced by confidence or evidence (8.4668ms)
+2026-11-08T08:10:21.1607217Z ✔ overlapping same-family variants block review until an explicit override is approved (16.6247ms)
+2026-11-08T08:10:21.1608404Z ✔ disjoint file variants of one family apply without imposing global equality (23.9547ms)
+2026-11-08T08:10:21.1609380Z ✔ override cycles cannot hide every enforced rule and manufacture a pass (7.0337ms)
+2026-11-08T08:10:21.1611077Z ✔ a convention cannot override a same-family rule from an unrelated scope (7.6856ms)
+2026-11-08T08:10:21.1612507Z ✔ approval hashes bind behavior, applicability, scope and evidence (1.35ms)
+2026-11-08T08:10:21.1613662Z ✔ stale approvals prevent review and two drifted rules can be repaired sequentially (18.5864ms)
+2026-11-08T08:10:21.1614749Z ✔ a missing catalog is an error rather than an empty or satisfied policy (6.7327ms)
+2026-11-08T08:10:21.1623953Z ✔ invalid applicability cannot silently widen a rule to all source files (0.6627ms)
+2026-11-08T08:10:21.1625600Z ✔ project configuration rejects an empty include (5.2536ms)
+2026-11-08T08:10:21.1626461Z ✔ project configuration rejects a string in place of include (5.6775ms)
+2026-11-08T08:10:21.1627638Z ✔ project configuration rejects an invalid later include pattern (5.373ms)
+2026-11-08T08:10:21.1628837Z ✔ project configuration rejects an invalid later exclude pattern (9.7596ms)
+2026-11-08T08:10:21.1629843Z ✔ project configuration rejects an invalid exclude despite a nonmatching include (6.3841ms)
+2026-11-08T08:10:21.1630925Z ✔ an approved convention suppresses the equivalent builtin even with a custom family name (8.0811ms)
+2026-11-08T08:10:21.1631872Z ✔ explicit disabling of a builtin preserves its explanation (8.6813ms)
+2026-11-08T08:10:21.1632764Z ✔ a parse error makes partial review INCOMPLETE even if another file is checked (8.1963ms)
+2026-11-08T08:10:21.1633750Z ✔ diff review analyzes a complete touched function when its heading is outside added lines (11.8857ms)
+2026-11-08T08:10:21.1634674Z ✔ unchanged violations in the same file are excluded from changed-node findings (7.6725ms)
+2026-11-08T08:10:21.1635906Z ✔ stale postimage text is refused and the supplied patch is never applied (7.2993ms)
+2026-11-08T08:10:21.1636770Z ✔ malformed diff (truncated hunk) never becomes an empty successful review (6.5202ms)
+2026-11-08T08:10:21.1637538Z ✔ malformed diff (non-patch text) never becomes an empty successful review (6.0818ms)
+2026-11-08T08:10:21.1638151Z ✔ malformed diff (path traversal) never becomes an empty successful review (6.2487ms)
+2026-11-08T08:10:21.1638751Z ✔ an empty diff reports NO_CHANGES instead of full-project verification (6.3627ms)
+2026-11-08T08:10:21.1641174Z ✔ configured roots outside the config directory do not include a sibling sharing a path prefix (11.0762ms)
+2026-11-08T08:10:21.1641925Z ✔ overlapping project roots and scope inheritance cycles are rejected (9.4393ms)
+2026-11-08T08:10:21.1642553Z ✔ source-file symlinks are not followed and prevent a complete review (7.2262ms)
+2026-11-08T08:10:21.1643194Z ✔ directory symlinks cannot conceal selected source behind a CHECKS_PASSED result (7.8262ms)
+2026-11-08T08:10:21.1643944Z ✔ review preserves every source byte and mtime as well as configuration and catalog (11.1958ms)
+2026-11-08T08:10:21.1644770Z ✔ manual conventions remain an explicit checklist instead of a fabricated AST pass (6.4435ms)
+2026-11-08T08:10:21.1645541Z ✔ unknown scope resolution cannot silently select global advice (4.9857ms)
+2026-11-08T08:10:21.1646136Z ✔ unified diff keeps context and added lines for stale-snapshot checks (4.3591ms)
+2026-11-08T08:10:21.1646752Z ✔ deletion-only zero-context diff retains a positive new-side anchor (0.3596ms)
+2026-11-08T08:10:21.1647663Z ✔ deletion at EOF anchors to the surviving new-side line rather than one past EOF (0.2098ms)
+2026-11-08T08:10:21.1648273Z ✔ new and deleted files are represented without phantom sources (0.4742ms)
+2026-11-08T08:10:21.1648848Z ✔ rename-only and mode-only changes retain paths and declare metadataOnly (0.3788ms)
+2026-11-08T08:10:21.1649496Z ✔ unprefixed paths beginning with b/ are not silently redirected to a sibling (0.2059ms)
+2026-11-08T08:10:21.1650201Z ✔ quoted UTF-8 octal Git paths and spaces are decoded without shell evaluation (0.6941ms)
+2026-11-08T08:10:21.1650822Z ✔ hunk content beginning with file-header markers is still source text (0.2943ms)
+2026-11-08T08:10:21.1651383Z ✔ truncated and excess hunk counts cannot become a clean result (0.5224ms)
+2026-11-08T08:10:21.1652150Z ✔ unsafe paths are rejected before a caller considers reading them (0.5396ms)
+2026-11-08T08:10:21.1652802Z ✔ combined, binary, malformed, overlapping, and duplicate diffs are explicit errors (1.1544ms)
+2026-11-08T08:10:21.1653936Z ✔ empty diff is empty, while text without a diff is not a clean empty diff (0.1673ms)
+2026-11-08T08:10:21.1655147Z ✔ CRLF and missing-final-newline markers preserve line count validation (0.1601ms)
+2026-11-08T08:10:21.1655819Z ✔ ESLint uses the same AST results and actual buffer text, not the on-disk source (140.6084ms)
+2026-11-08T08:10:21.1656476Z ✔ TSX results retain full component ranges through the host TypeScript parser (31.5532ms)
+2026-11-08T08:10:21.1657173Z ✔ project scope and per-rule applicability do not leak to another project or folder (18.6604ms)
+2026-11-08T08:10:21.1658244Z ✔ best-practice advice remains an ESLint warning and can be superseded by convention (15.6529ms)
+2026-11-08T08:10:21.1659150Z ✔ conflicting approved variants produce an integrity error and no contradictory enforcement (9.0513ms)
+2026-11-08T08:10:21.1659760Z ✔ stale approvals fail when the configuration is loaded (8.7563ms)
+2026-11-08T08:10:21.1660347Z ✔ manual and candidate rules are explicitly absent from enforced ESLint coverage (10.6587ms)
+2026-11-08T08:10:21.1661032Z ✔ direct plugin use detects a filename outside the selected project (8.0957ms)
+2026-11-08T08:10:21.1661736Z ✔ symlink paths cannot redirect the adapter outside its project scope (9.6657ms)
+2026-11-08T08:10:21.1662361Z ✔ a parser failure is an ESLint error, never a successful empty review (8.6137ms)
+2026-11-08T08:10:21.1662952Z ✔ RU/EN templates become source-backed candidates, never approved rules (10.7797ms)
+2026-11-08T08:10:21.1664020Z ✔ negation, permission, local exceptions, and unsupported qualifications stay manual (1.2096ms)
+2026-11-08T08:10:21.1665108Z ✔ wrapped qualifications are retained as part of the same bullet (0.6298ms)
+2026-11-08T08:10:21.1665927Z ✔ comments and arbitrary instructions cannot execute code or become approval (0.4948ms)
+2026-11-08T08:10:21.1666970Z ✔ structured rule blocks preserve variants but replace claimed scope, provenance, and approval (1.0233ms)
+2026-11-08T08:10:21.1667963Z ✔ unknown checker kinds remain explicit data for strict catalog rejection (0.4344ms)
+2026-11-08T08:10:21.1668602Z ✔ malformed structured input is retained and makes import coverage incomplete (0.3285ms)
+2026-11-08T08:10:21.1669563Z ✔ imports are deterministic and distinct restricted targets have distinct families (0.5911ms)
+2026-11-08T08:10:21.1670549Z ✔ neutral MR keeps resolved status and code coordinates without promoting a rule (2.5587ms)
+2026-11-08T08:10:21.1671283Z ✔ GitLab discussions preserve old-side positions and filter system notes (0.8659ms)
+2026-11-08T08:10:21.1672252Z ✔ a diff alone does not become a convention; stale or malformed context is visible (0.643ms)
+2026-11-08T08:10:21.1673095Z ✔ discovery produces observational candidates and supports the null-equality variant (1.622ms)
+2026-11-08T08:10:21.1674071Z ✔ tiny samples and dominant legacy style are not declared modern conventions (0.2867ms)
+2026-11-08T08:10:21.1674673Z ✔ missing metrics and empty imports do not conceal incomplete input (0.2426ms)
+2026-11-08T08:10:21.1676105Z ✔ neutral document and syntax-topic headings preserve templates and provenance (1.0093ms)
+2026-11-08T08:10:21.1676791Z ✔ scope, path, and condition headings cannot widen a prose check to the whole scope (2.5976ms)
+2026-11-08T08:10:21.1677507Z ✔ unknown headings and mismatched topics prefer manual applicability over guessing (0.8154ms)
+2026-11-08T08:10:21.1678217Z ✔ sibling headings reset their descendants while neutral children retain a qualified parent (1.4107ms)
+2026-11-08T08:10:21.1678875Z ✔ Russian neutral topics work and Russian qualified ancestors remain manual (0.433ms)
+2026-11-08T08:10:21.1679547Z ✔ Setext headings preserve applicability and horizontal separators do not clear it (0.3411ms)
+2026-11-08T08:10:21.1680261Z ✔ explicit structured applicability remains a candidate while heading context is preserved (0.3251ms)
+2026-11-08T08:10:21.1681006Z ✔ structured checks without explicit applicability do not erase a scoped heading (0.3221ms)
+2026-11-08T08:10:21.1681725Z ✔ a scoped heading does not launder an unknown executable checker into an approved feature (0.2295ms)
+2026-11-08T08:10:21.1682585Z ✔ paragraph qualifications are retained in titles and descriptions without sentence-prefix extraction (0.2083ms)
+2026-11-08T08:10:21.1683393Z ✔ console prose exceptions retain canonical case and do not treat arbitrary words as method names (0.2055ms)
+2026-11-08T08:10:21.1684194Z ✔ quoted heading instructions stay inert and code-fence headings do not alter prose context (0.3096ms)
+2026-11-08T08:10:21.1685267Z ✔ oversized headings fail explicitly rather than dropping or repeatedly expanding the qualifier (0.4968ms)
+2026-11-08T08:10:21.1686070Z ✔ a large modern project cannot impose its inferred style on a smaller legacy project in the same scope (63.5372ms)
+2026-11-08T08:10:21.1686836Z ✖ Git diff collection disables repository clean filters without changing their configuration (462.0721ms)
+2026-11-08T08:10:21.1687577Z ✔ text review groups repeated advice while JSON retains every occurrence (8.5758ms)
+2026-11-08T08:10:21.1688235Z ✔ UTF-8 BOM and CRLF source matches its supplied postimage without rewriting the file (7.7199ms)
+2026-11-08T08:10:21.1688756Z ℹ tests 107
+2026-11-08T08:10:21.1689013Z ℹ suites 0
+2026-11-08T08:10:21.1689259Z ℹ pass 105
+2026-11-08T08:10:21.1689571Z ℹ fail 2
+2026-11-08T08:10:21.1689830Z ℹ cancelled 0
+2026-11-08T08:10:21.1690105Z ℹ skipped 0
+2026-11-08T08:10:21.1690356Z ℹ todo 0
+2026-11-08T08:10:21.1690642Z ℹ duration_ms 7734.2234
+2026-11-08T08:10:21.1690853Z 
+2026-11-08T08:10:21.1691004Z ✖ failing tests:
+2026-11-08T08:10:21.1691127Z 
+2026-11-08T08:10:21.1691312Z test at test\cli.test.mjs:187:1
+2026-11-08T08:10:21.1691910Z ✖ --base at the exact Git root includes both modified tracked files and untracked sources (776.5668ms)
+2026-11-08T08:10:21.1692529Z   AssertionError [ERR_ASSERTION]: CLI review --project repo --base HEAD --format json
+2026-11-08T08:10:21.1692978Z   stdout:
+2026-11-08T08:10:21.1693231Z   
+2026-11-08T08:10:21.1693469Z   stderr:
+2026-11-08T08:10:21.1694366Z   SelfReview INCOMPLETE: The configured project must be the Git root; refusing to inspect a parent repository
+2026-11-08T08:10:21.1694840Z   
+2026-11-08T08:10:21.1695059Z   
+2026-11-08T08:10:21.1695335Z   2 !== 0
+2026-11-08T08:10:21.1696228Z   
+2026-11-08T08:10:21.1697102Z       at cli (file:///D:/a/selfreview/selfreview/test/cli.test.mjs:24:10)
+2026-11-08T08:10:21.1698892Z       at TestContext.<anonymous> (file:///D:/a/selfreview/selfreview/test/cli.test.mjs:191:18)
+2026-11-08T08:10:21.1699640Z       at Test.runInAsyncScope (node:async_hooks:227:14)
+2026-11-08T08:10:21.1700094Z       at Test.run (node:internal/test_runner/test:1402:25)
+2026-11-08T08:10:21.1700633Z       at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+2026-11-08T08:10:21.1701141Z       at Test.postRun (node:internal/test_runner/test:1542:19)
+2026-11-08T08:10:21.1701566Z       at Test.run (node:internal/test_runner/test:1467:12)
+2026-11-08T08:10:21.1702296Z       at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+2026-11-08T08:10:21.1702779Z     generatedMessage: false,
+2026-11-08T08:10:21.1703117Z     code: 'ERR_ASSERTION',
+2026-11-08T08:10:21.1703412Z     actual: 2,
+2026-11-08T08:10:21.1703673Z     expected: 0,
+2026-11-08T08:10:21.1703931Z     operator: 'strictEqual',
+2026-11-08T08:10:21.1704232Z     diff: 'simple'
+2026-11-08T08:10:21.1704488Z   }
+2026-11-08T08:10:21.1704631Z 
+2026-11-08T08:10:21.1704864Z test at test\learning-boundaries.test.mjs:28:1
+2026-11-08T08:10:21.1705605Z ✖ Git diff collection disables repository clean filters without changing their configuration (462.0721ms)
+2026-11-08T08:10:21.1706358Z   Error: The configured project must be the Git root; refusing to inspect a parent repository
+2026-11-08T08:10:21.1707645Z       at assert (file:///D:/a/selfreview/selfreview/src/util.mjs:18:68)
+2026-11-08T08:10:21.1708380Z       at diffFromGit (file:///D:/a/selfreview/selfreview/src/review.mjs:18:3)
+2026-11-08T08:10:21.1709240Z       at TestContext.<anonymous> (file:///D:/a/selfreview/selfreview/test/learning-boundaries.test.mjs:37:16)
+2026-11-08T08:10:21.1710219Z       at Test.runInAsyncScope (node:async_hooks:227:14)
+2026-11-08T08:10:21.1710750Z       at Test.run (node:internal/test_runner/test:1402:25)
+2026-11-08T08:10:21.1711400Z       at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+2026-11-08T08:10:21.1712078Z       at Test.postRun (node:internal/test_runner/test:1542:19)
+2026-11-08T08:10:21.1712635Z       at Test.run (node:internal/test_runner/test:1467:12)
+2026-11-08T08:10:21.1713278Z       at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+2026-11-08T08:10:21.2396676Z ##[error]Process completed with exit code 1.
+2026-11-08T08:10:21.2638940Z Post job cleanup.
+2026-11-08T08:10:21.4201951Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-08T08:10:21.4511802Z git version 2.56.0.windows.4
+2026-11-08T08:10:21.4585635Z Temporarily overriding HOME='D:\a\_temp\87dc4d70-c833-4466-910b-c9c4aa804e72' before making global git config changes
+2026-11-08T08:10:21.4586808Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-08T08:10:21.4596618Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\selfreview\selfreview
+2026-11-08T08:10:21.4960042Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-08T08:10:21.5310887Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-08T08:10:22.0352611Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-08T08:10:22.0641141Z http.https://github.com/.extraheader
+2026-11-08T08:10:22.0682884Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-08T08:10:22.1010468Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-08T08:10:22.6202450Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-08T08:10:22.6530851Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-08T08:10:23.1605708Z Cleaning up orphan processes
+2026-11-08T08:10:23.2285626Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -14,7 +14,8 @@ General best-practice checks remain advisory and yield to approved conventions.
 **Version:** 0.1.0 · **Runtime:** Node.js 22.13+ · **Languages:** JS / TS / JSX / TSX
 
 [English user guide](USERGUIDE.md) · [Руководство на русском](USERGUIDE.ru.md) ·
-[Verification report](VERIFICATION.md)
+[Verification report](VERIFICATION.md) ·
+[GitHub Actions](https://github.com/levencode-labs/selfreview/actions/workflows/ci.yml)
 
 ## Why this exists
 
@@ -175,7 +176,10 @@ Current limitations:
 
 Native Windows execution was not part of the recorded local verification.
 The included GitHub Actions workflow is configured for Ubuntu and Windows on
-Node.js 22 and 24; consult its actual run results for CI status.
+Node.js 22 and 24. The first hosted Windows run exposed a Git-root path comparison
+issue; the current implementation checks the working-tree location through Git.
+See the [CI follow-up](verification/GITHUB_CI.md) for the original failure,
+the correction, and links to current run results.
 
 ## Development
 

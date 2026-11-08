@@ -40,7 +40,7 @@ node bin/selfreview.mjs --help
 
 The remaining examples assume that SelfReview is in `C:\SelfReview` and your projects are in `C:\Repos\A` through `C:\Repos\E`. Run them from the SelfReview root. Keep quotes around paths with spaces. The `$srConfig` variable lasts only for the current PowerShell session; set it again in a new terminal. On Linux/macOS, replace the Windows paths and use `node bin/selfreview.mjs`.
 
-Implementation checks were run on Linux with Node.js 24.22.1. The PowerShell examples have been reviewed for 5.1 syntax, but have not been exercised on native Windows. CLI help, some diagnostic messages, and generated reference explanations are currently in Russian. The detailed rule reference (`docs/RULES.md`), architecture notes (`docs/ARCHITECTURE.md`), and verification report (`VERIFICATION.md`) are also in Russian. This guide does not imply complete interface localization; command names and JSON field names do not depend on the guide language.
+Implementation checks were run on Linux with Node.js 24.22.1. The PowerShell examples have been reviewed for 5.1 syntax; a full manual run of every example on Windows PowerShell 5.1 has not been performed. Automated Windows runs and the Git-root correction are documented in the [CI follow-up](verification/GITHUB_CI.md). CLI help, some diagnostic messages, and generated reference explanations are currently in Russian. The detailed rule reference (`docs/RULES.md`), architecture notes (`docs/ARCHITECTURE.md`), and verification report (`VERIFICATION.md`) are also in Russian. This guide does not imply complete interface localization; command names and JSON field names do not depend on the guide language.
 
 ## 2. Register scopes A, B/C/D, and E
 

@@ -1,4 +1,3 @@
-import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { analyzeSource } from './ast.mjs';
@@ -14,8 +13,10 @@ export function diffFromGit(projectRoot, base) {
   const prefix=['-c','core.fsmonitor=false','-c',`core.hooksPath=${nullDevice}`];
   const options = {cwd:projectRoot,env,encoding:'utf8',maxBuffer:32*1024*1024,timeout:30000,stdio:['ignore','pipe','pipe']};
   const git=args=>execFileSync('git',[...prefix,...args],options);
-  const root = git(['rev-parse','--show-toplevel']).trim();
-  assert(fs.realpathSync(root) === fs.realpathSync(projectRoot), 'The configured project must be the Git root; refusing to inspect a parent repository');
+  // The root is inside the worktree and has an empty relative prefix. Let Git
+  // resolve Windows aliases/casing instead of comparing absolute path strings.
+  const location = git(['rev-parse','--is-inside-work-tree','--show-prefix']).replace(/\r\n/g,'\n');
+  assert(location === 'true\n\n', 'The configured project must be the Git root; refusing to inspect a parent repository');
   // Even --no-textconv can otherwise invoke configured clean/process filters.
   // Inspect names only, then disable those commands for this subprocess.
   let filterKeys='';
