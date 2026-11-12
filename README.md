@@ -127,6 +127,75 @@ An export destination must be new or empty.
 The [English guide](USERGUIDE.md) and [Russian guide](USERGUIDE.ru.md) cover input
 formats, rule variants, approval, ESLint setup, agent workflows, and troubleshooting.
 
+## I already have a knowledge base — what next?
+
+You do not need to start over. If you collected Markdown, text or JSON
+agreements for **one project**, import them as *candidates*. If they are
+already in a SelfReview catalog, **skip `init` and `learn`** and begin with
+`rules list`.
+
+The example below uses Windows PowerShell 5.1 from an installed `C:\SelfReview`
+(Node.js dependencies already installed). Replace the sample paths and IDs.
+
+**1. Register the project and import its knowledge base (once):**
+
+~~~powershell
+Set-Location 'C:\SelfReview'
+$srConfig = 'C:\SelfReview\workspace\selfreview.config.json'
+# Only if this config does not exist; the project folder must already exist:
+node .\bin\selfreview.mjs init --config $srConfig --scope sample-app --project 'C:\Repos\sample-app'
+# Only if the documents have not been imported already:
+node .\bin\selfreview.mjs learn --config $srConfig --scope sample-app --no-code --docs 'C:\Rules\sample-app'
+node .\bin\selfreview.mjs rules list --config $srConfig --scope sample-app
+~~~
+
+`--no-code` imports documents without sampling source code. The project ID
+`sample-app` comes from the folder name; check your real ID using `doctor`.
+
+**2. Inspect, preview and explicitly approve an appropriate candidate:**
+
+~~~powershell
+$ruleId = Read-Host 'Paste a candidate ID from rules list'
+node .\bin\selfreview.mjs rules show $ruleId --config $srConfig
+node .\bin\selfreview.mjs rules preview $ruleId --config $srConfig --project sample-app
+# Only after reviewing the agreement, scope, exceptions and preview:
+node .\bin\selfreview.mjs rules approve $ruleId --config $srConfig --by 'Reviewer' --reason 'Confirmed the current team agreement and exceptions'
+~~~
+
+No imported statement is automatically approved. Unsupported or ambiguous
+natural-language conventions stay manual review questions.
+
+**3. Before coding, give your agent the effective rules for its files:**
+
+~~~powershell
+node .\bin\selfreview.mjs context --config $srConfig --project sample-app --file src/Panel.tsx --out 'C:\SelfReview\workspace\task-context.json'
+node .\bin\selfreview.mjs context check --config $srConfig --input 'C:\SelfReview\workspace\task-context.json'
+~~~
+
+Give the JSON to the agent with the instruction to respect effective rules,
+handle manual questions and **never approve new candidates automatically**.
+A planned file can be included. Run `context check` **before editing**; the
+saved context normally becomes stale after the code changes.
+
+**4. After editing, run a fresh review and your project's own tests/build:**
+
+~~~powershell
+node .\bin\selfreview.mjs review --config $srConfig --project sample-app --file src/Panel.tsx
+# Optional if C:\Repos\sample-app itself is the Git repository root:
+node .\bin\selfreview.mjs review --config $srConfig --project sample-app --base HEAD
+~~~
+
+`CHECKS_PASSED` only covers enabled AST checks, not semantic correctness,
+types, tests or runtime behavior. `--new-only` needs recoverable history of
+a compatible policy; a catalog outside Git may trigger an explicit full
+review. Saved context can include local paths and private excerpts: check it
+before sharing with a cloud agent.
+
+When documents change, use `sources status` and `sources refresh`; to detect
+*new* files in an agreement folder, run `learn --docs` again. For full
+instructions see the [Russian guide](USERGUIDE.ru.md) and
+[English guide](USERGUIDE.md).
+
 ## Interpret the result
 
 | Exit code | Meaning |
