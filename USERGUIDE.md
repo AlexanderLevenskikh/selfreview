@@ -353,7 +353,7 @@ node .\bin\selfreview.mjs review --config $srConfig --project a --diff 'C:\Revie
 
 Diff paths must be relative to the selected project root. Added and context lines must match current files. Stale or unverifiable context makes the review incomplete. A supplied deletion-only `-U0` diff has no new-side lines against which to verify the current file; use a fresh `--base` review or a diff containing context. Diff and base review require a single project; do not combine `--diff` with `--base`.
 
-The complete file is parsed, then findings are filtered by overlap with touched nodes. Adding a line inside a large component can therefore report its size even if the declaration is outside the diff. This means the finding **touches the change**; it does not prove that the change introduced the issue. Strict regression attribution would also require analysis of the base version.
+The complete file is parsed, then findings are filtered by overlap with touched nodes. Adding a line inside a large component can therefore report its size even if the declaration is outside the diff. This means the finding **touches the change**; it does not prove that the change introduced the issue. Use opt-in `--new-only` with a trusted Git baseline and compatible policy to compare the old and current findings; see section 11. Without that, a touched-node finding alone is not proof of a new regression.
 
 ### Statuses and exit codes
 
