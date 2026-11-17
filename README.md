@@ -1,5 +1,7 @@
 # SelfReview
 
+[English](README.md) · [Русский](README.ru.md)
+
 **Project conventions you can trace, approve, and check before code review.**
 
 SelfReview is a local toolkit for JavaScript, TypeScript, and React/TSX. It collects
