@@ -69,3 +69,26 @@ test('current guides identify the actual package version; historical reports are
   assert.match(fs.readFileSync(path.join(root, 'VERIFICATION.md'), 'utf8'),
     /0\.1\.0/, 'Historical verification stays labeled as 0.1.0');
 });
+
+
+test('Russian-origin documents retain their complete original content in the paired file', () => {
+  // These originals are already Russian: historical evidence stays immutable,
+  // and a generated/mirrored Russian pair cannot silently drift from it.
+  const russianOriginals = [
+    'VERIFICATION.md',
+    'docs/ARCHITECTURE.md',
+    'docs/RULES.md',
+    'docs/USER_GUIDE_RU.md',
+    'evaluation/synthetic/RESULTS.md',
+    'evaluation/synthetic/postfix/ADJUDICATION.md',
+    'evaluation/synthetic/postfix/RESULTS.md',
+    'examples/agreements/project-a.md',
+  ];
+  for (const source of russianOriginals) {
+    const primary = fs.readFileSync(path.join(root, source), 'utf8');
+    const pair = source.slice(0, -3) + '.ru.md';
+    const translated = fs.readFileSync(path.join(root, pair), 'utf8');
+    assert.ok(translated.endsWith(primary),
+      'The Russian mirror ' + pair + ' must preserve its original ' + source);
+  }
+});
