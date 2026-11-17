@@ -25,10 +25,10 @@ test('every tracked Markdown primary document has a tracked .ru.md counterpart',
   const set = new Set(paths);
   const primary = paths.filter(p => !p.endsWith('.ru.md'));
   const missing = primary.filter(p => !set.has(p.slice(0, -3) + '.ru.md'));
-  assert.deepEqual(missing, [], \`Missing paired Russian documents: \${missing.join(', ')}\`);
+  assert.deepEqual(missing, [], `Missing paired Russian documents: ${missing.join(', ')}`);
   for (const p of primary) {
     const ru = p.slice(0, -3) + '.ru.md';
-    assert.ok(fs.statSync(path.join(root, ru)).size > 0, \`Empty Russian pair: \${ru}\`);
+    assert.ok(fs.statSync(path.join(root, ru)).size > 0, `Empty Russian pair: ${ru}`);
   }
 });
 
@@ -48,12 +48,12 @@ test('tracked Markdown local links resolve to checked-in files', () => {
       target = target.split('#', 1)[0].split('?', 1)[0];
       if (!target) continue;
       try { target = decodeURIComponent(target); }
-      catch { failures.push(\`\${p}: invalid URI-encoded link \${target}\`); continue; }
+      catch { failures.push(`${p}: invalid URI-encoded link ${target}`); continue; }
       const candidate = path.resolve(root, path.dirname(p), target);
       if (!candidate.startsWith(root + path.sep) && candidate !== root) {
-        failures.push(\`\${p}: link escapes repository: \${target}\`);
+        failures.push(`${p}: link escapes repository: ${target}`);
       } else if (!fs.existsSync(candidate)) {
-        failures.push(\`\${p}: missing target \${target}\`);
+        failures.push(`${p}: missing target ${target}`);
       }
     }
   }
@@ -64,7 +64,7 @@ test('current guides identify the actual package version; historical reports are
   const pkg = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
   for (const p of ['README.md', 'README.ru.md', 'CHANGELOG.md', 'CHANGELOG.ru.md']) {
     assert.match(fs.readFileSync(path.join(root, p), 'utf8'), new RegExp(pkg.version.replaceAll('.', '\\.')),
-      \`\${p} should mention package version \${pkg.version}\`);
+      `${p} should mention package version ${pkg.version}`);
   }
   assert.match(fs.readFileSync(path.join(root, 'VERIFICATION.md'), 'utf8'),
     /0\.1\.0/, 'Historical verification stays labeled as 0.1.0');
